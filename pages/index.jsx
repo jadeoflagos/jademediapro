@@ -164,9 +164,10 @@ export default function Home() {
           description="We design brands that tell compelling stories that resonate with customers, strengthen loyalty, communicate shared values and explore new possibilities. "
         />
       </div>
-      <p className="px-20 pt-32 pb-12 text-6xl text-center">
+      <p className="px-20 pt-32 pb-12 text-7xl text-center">
         Exclusive interviews with industry leading professionals
       </p>
+      <div></div>
       <Footer />
     </div>
   );
