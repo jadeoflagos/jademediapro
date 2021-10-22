@@ -5,8 +5,15 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import ArrowIcon from "./vectors/ArrowIcon";
+import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 
-export default function BlogCard() {
+export default function BlogCard({
+  date,
+  title = "Work from home has taken new turn in the pandemic",
+  desc = "A quick guide to assisting users in the challenging steps from learning about your podcast on the web. A quick guide to assisting  users in the challenging steps from learning about your podcast on the web.",
+  img,
+}) {
   return (
     <Card className="border-none shadow-none">
       <CardMedia
@@ -22,21 +29,20 @@ export default function BlogCard() {
           component="div"
           className="text-sm"
         >
-          Nov 01 2020
+          {date}
         </Typography>
         <Typography gutterBottom variant="h5" component="div">
-          Work from home has taken new turn in the pandemic
+          {title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          A quick guide to assisting users in the challenging steps from
-          learning about your podcast on the web. A quick guide to assisting
-          users in the challenging steps from learning about your podcast on the
-          web.{" "}
+          {desc}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Read More</Button>
+        <IconButton aria-label="add to favorites">
+          <ArrowIcon />
+        </IconButton>
       </CardActions>
     </Card>
   );

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-
 import BlogCard from "../components/BlogCard";
+import Footer from "../components/Footer";
+
 const Blog = () => {
   const tabs = [
     "All",
@@ -82,9 +83,9 @@ const Blog = () => {
           ))}
         </div>
         <div className="mt-12 w-full grid grid-cols-3 gap-x-20 gap-y-5">
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
+          <BlogCard date="Nov 01 2020" />
+          <BlogCard date="Oct 31 2021" />
+          <BlogCard date="Oct 31 2021" />
           <BlogCard />
           <BlogCard />
           <BlogCard />
@@ -93,6 +94,7 @@ const Blog = () => {
           <BlogCard />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
