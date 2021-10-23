@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import BlogCard from "../components/BlogCard";
 import Footer from "../components/Footer";
+import InterviewCard from "../components/InterviewCard";
 
 const Blog = () => {
   const tabs = [
@@ -92,6 +93,16 @@ const Blog = () => {
           <BlogCard />
           <BlogCard />
           <BlogCard />
+        </div>
+      </div>
+      <div className="px-20 py-20">
+        <p className=" pb-12 text-6xl">
+          Watch Exclusive interviews with profesionals
+        </p>
+        <div className="grid grid-cols-3 h-64 gap-x-8">
+          <InterviewCard />
+          <InterviewCard />
+          <InterviewCard />
         </div>
       </div>
       <Footer />
