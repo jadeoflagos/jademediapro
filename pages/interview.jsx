@@ -13,7 +13,7 @@ const Interview = () => {
           <Navbar textColor="white" />
         </div>
         <div className="flex items-center justify-between px-20 text-white pt-12 space-x-12">
-          <div className="w-3/5 ">
+          <div className="w-7/12">
             <p className="font-bold text-7xl">
               Engaging One-on-One discussion with Big Guns
             </p>
@@ -26,7 +26,8 @@ const Interview = () => {
               <SocialButtons />
             </div>
           </div>
-          <div>
+          <span className="w-1/12" />
+          <div className="w-4/12 flex items-center justify-center">
             <Image
               src="/images/interview.png"
               alt="Avatar"

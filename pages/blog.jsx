@@ -24,7 +24,7 @@ const Blog = () => {
           <Navbar textColor="white" />
         </div>
         <div className="flex items-center justify-between px-20 text-white">
-          <div>
+          <div className="w-7/12">
             <p className="font-bold text-8xl">Blog Posts</p>
             <p className="py-12 text-2xl tracking-wider">
               Experient design thinking and innovative stories
@@ -33,7 +33,8 @@ const Blog = () => {
               <SocialButtons />
             </div>
           </div>
-          <div>
+          <span className="w-1/12" />
+          <div className="w-4/12 flex items-center justify-center">
             <Image
               src="/images/blogbg.png"
               alt="Avatar"
