@@ -1,6 +1,8 @@
+import { TextField } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import Footer from "../components/Footer";
+import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
 
 const About = () => {
@@ -8,7 +10,7 @@ const About = () => {
     {
       title: "Expand Your Reach",
       desc: "With just a few clicks you can save time and resources where it",
-      img: "",
+      img: "reachlogo.png",
     },
     {
       title: "Empower Your Manpower ",
@@ -104,7 +106,7 @@ const About = () => {
           backgroundPosition: "center",
         }}
       ></div>
-      <div className="bg-[#044841] px-20 py-24 grid grid-cols-3 gap-x-8 text-white">
+      <section className="bg-[#044841] px-20 py-24 grid grid-cols-3 gap-x-8 text-white">
         <div>
           <Image
             src="/vectors/w-logo.svg"
@@ -136,10 +138,10 @@ const About = () => {
           {wwwh.map((w, wIndex) => (
             <div className="flex">
               <Image
-                src={`/vectors/${w.img}`}
+                src={`/images/${w.img}`}
                 alt="Avatar"
-                width={50}
-                height={50}
+                width={80}
+                height={77}
               />
               <div>
                 <p>{w.title} </p>
@@ -148,8 +150,56 @@ const About = () => {
             </div>
           ))}
         </div>
-      </div>
-
+      </section>
+      <section className="px-20 py-20">
+        <p className="mb-10">Volunteering</p>
+        <p className="text-6xl">
+          Bridging Africa’s transition from the analog age to the Digital age by
+          Training young Professionals and solving Digital challenges at
+          individual and corporate levels.
+        </p>
+      </section>
+      <section className="grid grid-cols-2 gap-x-8 px-20 py-20">
+        <p>video</p>
+        <div>
+          <p>
+            In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa for
+            a family emergency and that trip changed her life. She returned
+            committed to leveraging years of experience, network and unique
+            trade skills working for leading global brand including Walmart
+            Corporation to support Africa’s quest for sustainable economic
+            transformation. She returned committed to years of experience.
+          </p>
+        </div>
+      </section>
+      <section className="px-20">
+        <p>The Team</p>
+      </section>
+      <section className="px-20">
+        <p>Book Your FREE Consultation Now</p>
+        <div className="flex items-center">
+          <form action="" className="w-3/5 grid grid-cols-2 gap-x-10">
+            <TextField
+              id="standard-basic"
+              label="Standard"
+              variant="standard"
+            />
+            <TextField
+              id="standard-basic"
+              label="Standard"
+              variant="standard"
+            />
+            <SelectVariants />
+            <SelectVariants />
+          </form>
+          <Image
+            src="/vectors/blogger.svg"
+            alt="Avatar"
+            width={517}
+            height={688}
+          />
+        </div>
+      </section>
       <Footer />
     </div>
   );
