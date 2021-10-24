@@ -65,7 +65,7 @@ const Footer = () => {
           </Link>
           <div className="flex flex-col space-y-2">
             <Link href="/blog">Blog</Link>
-            <Link href="/about">Interview</Link>
+            <Link href="/interview">Interview</Link>
             <Link href="/about">Community</Link>
             <Link href="/about">Collaboration</Link>
             <Link href="/about">Event</Link>

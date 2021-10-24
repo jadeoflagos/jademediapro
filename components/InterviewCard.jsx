@@ -3,7 +3,7 @@ import React from "react";
 const InterviewCard = () => {
   return (
     <div
-      className="text-white"
+      className="text-white h-64"
       style={{
         background: `url("/images/interview1.png")`,
         backgroundSize: "cover",
