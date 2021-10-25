@@ -149,8 +149,12 @@ const Footer = () => {
       <div className="grid grid-cols-2 items-center text-white mt-28 font-normal">
         <p>© 2021 Jade Media Pro. All rights reserved. </p>
         <div className="flex items-center justify-end">
-          <p className="mr-8">Terms & Conditions</p>
-          <p>Privacy Policy</p>
+          <Link href="/terms-and-condition">
+            <p className="mr-8 cursor-default">Terms & Conditions</p>
+          </Link>
+          <Link href="/privacy-policy">
+            <p className="cursor-default">Privacy Policy</p>
+          </Link>
         </div>
       </div>
     </footer>

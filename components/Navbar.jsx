@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navbar = ({ bg, textColor }) => {
   return (
     <nav
-      className={`flex items-center justify-between px-20 py-8 sticky top-0 left-0`}
+      className={`flex items-center justify-between pl-36 pr-32 py-8 sticky top-0 left-0`}
       style={{ backgroundColor: bg, color: textColor }}
     >
       <div>

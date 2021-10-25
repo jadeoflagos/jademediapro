@@ -32,6 +32,7 @@ const About = () => {
           </div>
         </div>
       </div>
+
       <div className=" items-center px-20 my-14 grid grid-cols-2">
         <div>
           <p className="text-5xl">Our Identity</p>
