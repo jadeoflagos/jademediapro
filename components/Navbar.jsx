@@ -1,14 +1,14 @@
 import React from "react";
 import Logo from "./vectors/Logo";
 import Link from "next/link";
-const Navbar = ({ bg, textColor }) => {
+const Navbar = ({ bg, textColor, darkLogo }) => {
   return (
     <nav
       className={`flex items-center justify-between px-20 py-8 sticky top-0 left-0`}
       style={{ backgroundColor: bg, color: textColor }}
     >
       <Link href="/">
-        <Logo />
+        <Logo color={darkLogo && "#000"} />
       </Link>
       <div className="flex items-center space-x-10">
         <Link href="/about">
