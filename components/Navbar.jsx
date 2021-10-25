@@ -27,7 +27,7 @@ const Navbar = ({ bg, textColor }) => {
           <a href="/about">Resources</a>
         </Link>{" "}
         <Link href="/contact">
-          <a href="/about">Contact</a>
+          <a href="/contact">Contact</a>
         </Link>
       </div>
     </nav>
