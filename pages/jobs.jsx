@@ -155,7 +155,7 @@ const Jobs = () => {
               <div className="bg-[#46BFB2] grid grid-cols-2 py-3 px-4">
                 <p className="text-[2.5rem] w-1/2">{op.position}</p>
                 <div className="border-l border-black pl-10">
-                  <div>
+                  <div className="flex flex-col justify-items-stretch">
                     <p>{op.location}</p>
                     <p>{op.type}</p>
                     <p>{op.company}</p>
