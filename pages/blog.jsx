@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import BlogCard from "../components/BlogCard";
 import Footer from "../components/Footer";
 import InterviewCard from "../components/InterviewCard";
+import SocialButtons from "../components/SocialButtons";
 
 const Blog = () => {
   const tabs = [
@@ -23,42 +24,17 @@ const Blog = () => {
           <Navbar textColor="white" />
         </div>
         <div className="flex items-center justify-between px-20 text-white">
-          <div>
+          <div className="w-7/12">
             <p className="font-bold text-8xl">Blog Posts</p>
             <p className="py-12 text-2xl tracking-wider">
               Experient design thinking and innovative stories
             </p>
-            <div className="flex space-x-4 items-center">
-              <p className="cursor-pointer py-3 px-12 flex items-center justify-center  bg-[#4477AA] max-w-max ">
-                <Image
-                  src="/vectors/twitter.svg"
-                  alt="Avatar"
-                  width={20}
-                  height={20}
-                />
-                <span className="text-xs pl-3"> TWITTER</span>
-              </p>
-              <p className="cursor-pointer py-3 px-12 flex items-center justify-center  bg-[#1275B1] max-w-max ">
-                <Image
-                  src="/vectors/linkdin.svg"
-                  alt="Avatar"
-                  width={20}
-                  height={20}
-                />
-                <span className="text-xs pl-3"> LINKEDIN</span>
-              </p>{" "}
-              <p className="cursor-pointer py-3 px-12 flex items-center justify-center  bg-black max-w-max ">
-                <Image
-                  src="/vectors/medium.svg"
-                  alt="Avatar"
-                  width={20}
-                  height={20}
-                />
-                <span className="text-xs pl-3"> MEDIUM</span>
-              </p>
+            <div>
+              <SocialButtons />
             </div>
           </div>
-          <div>
+          <span className="w-1/12" />
+          <div className="w-4/12 flex items-center justify-center">
             <Image
               src="/images/blogbg.png"
               alt="Avatar"
@@ -99,7 +75,7 @@ const Blog = () => {
         <p className=" pb-12 text-6xl">
           Watch Exclusive interviews with profesionals
         </p>
-        <div className="grid grid-cols-3 h-64 gap-x-8">
+        <div className="grid grid-cols-3 gap-x-8">
           <InterviewCard />
           <InterviewCard />
           <InterviewCard />
