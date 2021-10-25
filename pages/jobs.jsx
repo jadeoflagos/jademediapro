@@ -17,6 +17,99 @@ const Jobs = () => {
     "News",
   ];
   const [activeTab, setActiveTab] = useState(0);
+  const openings = [
+    {
+      position: "Project Manager",
+      location: "Lagos",
+      type: "Full Time",
+      company: "GIG Logistics",
+    },
+    {
+      position: "Graphic Designer",
+      location: "New Jersey",
+      type: "Contract",
+      company: "Crane Inc.",
+    },
+    {
+      position: "Sales Executive",
+      location: "Abuja",
+      type: "Full Time",
+      company: "NMI Pharmacy",
+    },
+
+    {
+      position: "Project Manager",
+      location: "Lagos",
+      type: "Full Time",
+      company: "GIG Logistics",
+    },
+    {
+      position: "Graphic Designer",
+      location: "New Jersey",
+      type: "Contract",
+      company: "Crane Inc.",
+    },
+    {
+      position: "Sales Executive",
+      location: "Abuja",
+      type: "Full Time",
+      company: "NMI Pharmacy",
+    },
+    {
+      position: "Project Manager",
+      location: "Lagos",
+      type: "Full Time",
+      company: "GIG Logistics",
+    },
+    {
+      position: "Graphic Designer",
+      location: "New Jersey",
+      type: "Contract",
+      company: "Crane Inc.",
+    },
+    {
+      position: "Sales Executive",
+      location: "Abuja",
+      type: "Full Time",
+      company: "NMI Pharmacy",
+    },
+    {
+      position: "Project Manager",
+      location: "Lagos",
+      type: "Full Time",
+      company: "GIG Logistics",
+    },
+    {
+      position: "Graphic Designer",
+      location: "New Jersey",
+      type: "Contract",
+      company: "Crane Inc.",
+    },
+    {
+      position: "Sales Executive",
+      location: "Abuja",
+      type: "Full Time",
+      company: "NMI Pharmacy",
+    },
+    {
+      position: "Project Manager",
+      location: "Lagos",
+      type: "Full Time",
+      company: "GIG Logistics",
+    },
+    {
+      position: "Graphic Designer",
+      location: "New Jersey",
+      type: "Contract",
+      company: "Crane Inc.",
+    },
+    {
+      position: "Sales Executive",
+      location: "Abuja",
+      type: "Full Time",
+      company: "NMI Pharmacy",
+    },
+  ];
   return (
     <div>
       <div className="w-screen min-h-[30rem]">
@@ -56,7 +149,23 @@ const Jobs = () => {
             </span>
           ))}
         </div>
-        <div className="mt-12 w-full grid grid-cols-3 gap-x-20 gap-y-5"></div>
+        <section className="mt-12 w-full flex">
+          <div className="w-[70%] pr-20 space-y-6">
+            {openings.map((op, opIndex) => (
+              <div className="bg-[#46BFB2] grid grid-cols-2 py-3 px-4">
+                <p className="text-[2.5rem] w-1/2">{op.position}</p>
+                <div className="border-l border-black pl-10">
+                  <div>
+                    <p>{op.location}</p>
+                    <p>{op.type}</p>
+                    <p>{op.company}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <aside className="w-[30%]"></aside>
+        </section>
       </div>
       <Footer />
     </div>
