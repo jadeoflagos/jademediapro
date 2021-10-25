@@ -119,3 +119,18 @@
     flex-direction: column;
   }
 }
+
+.sections {
+  @apply flex flex-col;
+}
+.section {
+  @apply grid grid-cols-[40%,1fr] mb-[5.56rem] text-[1.3rem];
+}
+.underline {
+  border-bottom: 2px solid #000;
+  @apply pb-4;
+}
+
+.privacyContent {
+  @apply pl-[9.19rem] pr-[24.69rem] pt-[9.8rem];
+}

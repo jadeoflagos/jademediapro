@@ -7,7 +7,7 @@ const Navbar = ({ bg, textColor }) => {
       className={`flex items-center justify-between px-20 py-8 sticky top-0 left-0`}
       style={{ backgroundColor: bg, color: textColor }}
     >
-      <Link href="/index">
+      <Link href="/">
         <Logo />
       </Link>
       <div className="flex items-center space-x-10">

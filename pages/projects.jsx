@@ -38,7 +38,7 @@ const Projects = () => {
         <div className="w-8/12">
           <div>
             <p className="flex justify-between items-center border-b border-black">
-              <span>Business Strategy</span>
+              <span>Process</span>
               <Image
                 src="/vectors/caretup.svg"
                 alt="Avatar"
