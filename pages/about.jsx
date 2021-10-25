@@ -1,4 +1,4 @@
-import { TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import Footer from "../components/Footer";
@@ -181,16 +181,25 @@ const About = () => {
           <form action="" className="w-3/5 grid grid-cols-2 gap-x-10">
             <TextField
               id="standard-basic"
-              label="Standard"
+              label="Full name"
               variant="standard"
             />
             <TextField
               id="standard-basic"
-              label="Standard"
+              label="Email address"
               variant="standard"
+              type="email"
             />
             <SelectVariants />
             <SelectVariants />
+            <div className="col-span-2 mt-16">
+              <Button
+                variant="contained"
+                className="bg-[#502A7A] w-7/12 py-2 hover:bg-[#502A7A]"
+              >
+                Book Appointment
+              </Button>
+            </div>
           </form>
           <Image
             src="/vectors/blogger.svg"

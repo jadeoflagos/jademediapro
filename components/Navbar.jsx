@@ -18,7 +18,7 @@ const Navbar = ({ bg, textColor }) => {
           <a href="/services">Services</a>
         </Link>
         <Link href="/projects">
-          <a href="/Projects">Projects</a>
+          <a href="/projects">Projects</a>
         </Link>
         <Link href="/hub">
           <a href="/about">Hub</a>
