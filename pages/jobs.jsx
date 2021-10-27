@@ -126,15 +126,15 @@ const Jobs = () => {
           <span className="w-1/12" />
           <div className="w-4/12 flex items-center justify-center">
             <Image
-              src="/images/blogbg.png"
+              src="/images/Saly-15.png"
               alt="Avatar"
-              width={494}
-              height={494}
+              width={363}
+              height={644}
             />
           </div>
         </div>
       </div>
-      <div className="mt-12 px-20 py-20">
+      <div className="px-20 pb-20">
         <div>
           {tabs.map((tab, tabIndex) => (
             <span
@@ -164,7 +164,9 @@ const Jobs = () => {
               </div>
             ))}
           </div>
-          <aside className="w-[30%]"></aside>
+          <aside className="w-[30%]">
+            <p>Filters</p>
+          </aside>
         </section>
       </div>
       <Footer />

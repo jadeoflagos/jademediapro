@@ -21,10 +21,10 @@ const Navbar = ({ bg, textColor, darkLogo }) => {
           <a href="/projects">Projects</a>
         </Link>
         <Link href="/hub">
-          <a href="/about">Hub</a>
+          <a href="/hub">Hub</a>
         </Link>
         <Link href="/resources">
-          <a href="/about">Resources</a>
+          <a href="/resources">Resources</a>
         </Link>{" "}
         <Link href="/contact">
           <a href="/contact">Contact</a>

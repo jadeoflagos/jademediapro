@@ -6,7 +6,7 @@ import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
 
 const Contact = () => {
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(-1);
 
   return (
     <div>
@@ -110,9 +110,76 @@ const Contact = () => {
               </p>
             )}
           </div>
+          <div>
+            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
+              <span className="font-semibold text-lg">
+                Is a one-hour hookah session the same as smoking 100 or 200
+                cigarettes ?
+              </span>
+              <span
+                className="cursor-pointer"
+                onClick={() => {
+                  activeTab !== 2 ? setActiveTab(2) : setActiveTab(-1);
+                }}
+              >
+                <Image
+                  src={`/vectors/${
+                    activeTab == 2 ? "caret-down.svg" : "caretup.svg"
+                  }`}
+                  alt="Avatar"
+                  width={20}
+                  height={10}
+                />
+              </span>
+            </p>
+          </div>
+          <div>
+            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
+              <span className="font-semibold text-lg">
+                Is hookah contributing to youth tobacco use?
+              </span>
+              <span
+                className="cursor-pointer"
+                onClick={() => {
+                  activeTab !== 3 ? setActiveTab(3) : setActiveTab(-1);
+                }}
+              >
+                <Image
+                  src={`/vectors/${
+                    activeTab == 3 ? "caret-down.svg" : "caretup.svg"
+                  }`}
+                  alt="Avatar"
+                  width={20}
+                  height={10}
+                />
+              </span>
+            </p>
+          </div>
+          <div>
+            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
+              <span className="font-semibold text-lg">
+                Is there a difference between flavored and unflavored hookah?
+              </span>
+              <span
+                className="cursor-pointer"
+                onClick={() => {
+                  activeTab !== 4 ? setActiveTab(4) : setActiveTab(-1);
+                }}
+              >
+                <Image
+                  src={`/vectors/${
+                    activeTab == 4 ? "caret-down.svg" : "caretup.svg"
+                  }`}
+                  alt="Avatar"
+                  width={20}
+                  height={10}
+                />
+              </span>
+            </p>
+          </div>
         </div>
       </section>
-      <section className="px-20">
+      <section className="px-20 mt-7">
         <div className="flex items-center">
           <form
             action=""
