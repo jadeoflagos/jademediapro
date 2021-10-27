@@ -205,8 +205,8 @@ const Services = () => {
             action=""
             className="w-3/5 pr-12 grid grid-cols-2 gap-x-10 gap-y-4"
           >
-            <p className="col-span-2 text-6xl">
-              We can help you with the process. Let's talk.
+            <p className="col-span-2 text-6xl text-[#046C62]">
+              Don’t know where to start, Book a FREE Consultation Now{" "}
             </p>
             <TextField
               id="standard-basic"
@@ -219,30 +219,20 @@ const Services = () => {
               variant="standard"
               type="email"
             />
-            <TextField id="standard-basic" label="mobile" variant="standard" />
             <SelectVariants />
-            <div className="col-span-2">
-              <SelectVariants className="w-full" />
-            </div>
+            <SelectVariants />
             <TextField
               id="standard-basic"
               label="What Services  do you  Offer?"
               variant="standard"
               className="col-span-2"
             />
-            <TextField
-              id="standard-basic"
-              label="How can we help you?"
-              variant="standard"
-              className="col-span-2"
-            />
-
             <div className="col-span-2 mt-16">
               <Button
                 variant="contained"
                 className="bg-[#502A7A] w-64 py-4 hover:bg-[#502A7A]"
               >
-                SUBMIT
+                Book Appointment
               </Button>
             </div>
           </form>
