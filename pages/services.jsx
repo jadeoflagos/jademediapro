@@ -1,6 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
+import CompanyLogo from "../components/CompanyButtons";
 import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
@@ -27,7 +28,7 @@ const Services = () => {
           </div>
           <div className="w-4/12 flex items-center justify-center">
             <Image
-              src="/images/contactbg.png"
+              src="/images/servicebg.png"
               alt="Avatar"
               width={494}
               height={494}
@@ -35,11 +36,12 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <CompanyButtons />
       <section className="px-20 py-16">
         <div className="w-3/5 space-y-6">
           <div>
             <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">Business Strategy </span>
+              <span className="font-semibold text-5xl">Business Strategy </span>
               <span
                 className="cursor-pointer"
                 onClick={() => {
@@ -76,30 +78,7 @@ const Services = () => {
           </div>
           <div>
             <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">
-                Does the water bowl act to purify the hookah aerosol? ?
-              </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 1 ? setActiveTab(1) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 1 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-            {activeTab === 1 && <p className="pt-6 pb-10">hh</p>}
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">Branding & Design </span>
+              <span className="font-semibold text-5xl">Branding & Design </span>
               <span
                 className="cursor-pointer"
                 onClick={() => {
@@ -119,7 +98,7 @@ const Services = () => {
           </div>
           <div>
             <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">Digital Marketing </span>
+              <span className="font-semibold text-5xl">Digital Marketing </span>
               <span
                 className="cursor-pointer"
                 onClick={() => {
@@ -139,7 +118,7 @@ const Services = () => {
           </div>
           <div>
             <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">Motion Design </span>
+              <span className="font-semibold text-5xl">Motion Design </span>
               <span
                 className="cursor-pointer"
                 onClick={() => {
@@ -159,7 +138,7 @@ const Services = () => {
           </div>
           <div>
             <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">Art & Photography</span>
+              <span className="font-semibold text-5xl">Art & Photography</span>
               <span
                 className="cursor-pointer"
                 onClick={() => {
@@ -179,7 +158,7 @@ const Services = () => {
           </div>
           <div>
             <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">Web & App Project </span>
+              <span className="font-semibold text-5xl">Web & App Project </span>
               <span
                 className="cursor-pointer"
                 onClick={() => {
