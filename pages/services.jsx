@@ -1,7 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
-import CompanyLogo from "../components/CompanyButtons";
+// import CompanyLogo from "../components/CompanyButtons";
 import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
@@ -36,7 +36,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <CompanyButtons />
+      {/* <CompanyButtons /> */}
       <section className="px-20 py-16">
         <div className="w-3/5 space-y-6">
           <div>

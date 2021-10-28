@@ -1,7 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import CompanyButtons from "../components/CompanyButtons";
+// import CompanyButtons from "../components/CompanyButtons";
 import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
@@ -177,7 +177,7 @@ const About = () => {
       <section className="px-20">
         <p>The Team</p>
       </section>
-      <CompanyButtons />
+      {/* <CompanyButtons /> */}
       <section className="px-20">
         <p>Book Your FREE Consultation Now</p>
         <div className="flex items-center">

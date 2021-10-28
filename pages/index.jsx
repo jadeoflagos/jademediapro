@@ -3,6 +3,7 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Illus from "../components/vectors/Iluust";
+import InterviewCard from "../components/InterviewCard";
 
 const Card = ({ title, description }) => {
   return (
@@ -167,7 +168,30 @@ export default function Home() {
       <p className="px-20 pt-32 pb-12 text-7xl text-center">
         Exclusive interviews with industry leading professionals
       </p>
-      <div></div>
+      <section className="flex items-center px-20">
+        <div className="w-4/6"></div>
+        <div className="w-2/6">
+          <p>60 minutes with Adaeze of CAV Digital</p>
+          <p>
+            We start by defining a clear image of exactly who you serve and
+            precisely how they think. Why? Because you can’t help people unless
+            you know them – their hopes, their fears, their problems, and their
+            pitfalls. What converts a total stranger into a die-hard fan of your
+            brand? A constant pull of value and inspiration. At this stage, we
+            map out your customer’s journey so you’ll be able to meet them at
+            their point of need before one of your competitors does. We partner
+            with brands to take communication.
+          </p>
+        </div>
+      </section>
+      <section className="px-20 pt-12 pb-20 grid grid-cols-3 gap-x-8">
+        <InterviewCard />
+        <InterviewCard />
+        <InterviewCard />
+      </section>
+      <section className="px-20">
+        <p className="text-6xl">Discover popular and profitable editorials</p>
+      </section>
       <Footer />
     </div>
   );
