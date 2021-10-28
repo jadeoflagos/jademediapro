@@ -25,7 +25,7 @@ const CompanyButtons = () => {
         />
         <Image src="/images/ibmlogo.png" alt="Avatar" width={100} height={40} />
         <Image src="/images/uberlogo.png" alt="Avatar" width={50} height={20} />
-      </div>{" "}
+      </div>
     </section>
   );
 };

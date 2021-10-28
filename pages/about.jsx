@@ -5,6 +5,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
+import CompanyButtons from "../components/CompanyButtons";
 
 const About = () => {
   const wwwh = [
@@ -15,8 +16,7 @@ const About = () => {
     },
     {
       title: "Empower Your Manpower ",
-      desc:
-        "The mobile app instantly matches consumers and businesses in need you can save time and where",
+      desc: "The mobile app instantly matches consumers and businesses in need you can save time and where",
       img: "",
     },
     {
@@ -177,7 +177,7 @@ const About = () => {
       <section className="px-20">
         <p>The Team</p>
       </section>
-      {/* <CompanyButtons /> */}
+      <CompanyButtons />
       <section className="px-20">
         <p>Book Your FREE Consultation Now</p>
         <div className="flex items-center">
