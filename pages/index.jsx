@@ -171,7 +171,9 @@ export default function Home() {
       <section className="flex items-center px-20">
         <div className="w-4/6"></div>
         <div className="w-2/6">
-          <p>60 minutes with Adaeze of CAV Digital</p>
+          <p className="text-[#046C62] mb-8 text-4xl">
+            60 minutes with Adaeze of <u>CAV Digital</u>
+          </p>
           <p>
             We start by defining a clear image of exactly who you serve and
             precisely how they think. Why? Because you can’t help people unless
