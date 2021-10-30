@@ -11,33 +11,53 @@ const About = () => {
   const wwwh = [
     {
       title: "Expand Your Reach",
-      desc: "With just a few clicks you can save time and resources where it",
+      desc:
+        "Implement a mix of strategies to both retain old customers and acquire new ones to produce sustainable growth for your businesses.",
       img: "reachlogo.png",
     },
     {
-      title: "Empower Your Manpower ",
-      desc: "The mobile app instantly matches consumers and businesses in need you can save time and where",
+      title: "Building  Quality Relationship ",
+      desc:
+        "Remember that your customers are the ones who keep your business running, so getting to know them and caring about them is crucial.",
       img: "",
     },
     {
-      title: "Track Your Manpower In Real-Time",
-      desc: "We work hard to ensure that you get the most out of our service, ",
+      title: "Set Goals and Track Them",
+      desc:
+        "When goals are set, it’s very important to track your progress to know if your business grows at all and how quickly it grows. ",
       img: "",
     },
+  ];
+  const culture = [
     {
-      title: "Boost Your Revenue ",
-      desc: "We can build and support community-centered services to ",
-      img: "",
+      title: "Proudly African",
+      desc:
+        "We stay true to our roots and embrace our diversity while we engage the global audience.",
     },
     {
-      title: "Easy HR Management Dashboard ",
-      desc: "We provide you with trained and quality Partners, on-hand to ",
-      img: "",
+      title: "People Oriented",
+      desc:
+        "We value the well-being and contributions of our team as our most important asset.",
     },
     {
-      title: "Productivity Insights & Analytics",
-      desc: "We provide the tech platform for all that have free time, to be ",
-      img: "",
+      title: "Result Oriented",
+      desc:
+        "We focus our time, energy, assets, and passion on quality results rather than process.",
+    },
+    {
+      title: "Excellence",
+      desc:
+        "We work persistently to deliver excellent services and satisfy our clients with utmost care.v",
+    },
+    {
+      title: "Integrity",
+      desc:
+        "We treat everyone with dignity, honesty, and hold our team and clients in high regard.",
+    },
+    {
+      title: "Communication",
+      desc:
+        "We have an open-door approach when it comes to communicating our functional message, values, and mission.",
     },
   ];
   return (
@@ -108,7 +128,7 @@ const About = () => {
           backgroundPosition: "center",
         }}
       ></div>
-      <section className="bg-[#044841] px-20 py-24 grid grid-cols-3 gap-x-8 text-white">
+      <section className="bg-[#044841] px-20 py-24 grid grid-cols-2 gap-x-8 text-white">
         <div>
           <Image
             src="/vectors/w-logo.svg"
@@ -116,27 +136,40 @@ const About = () => {
             width={530}
             height={88}
           />
-          <p className="mt-4">
-            What: we doOur entire team at MyKuya is focused on creating a
-            platform that is mutually beneficial to everyone.
-          </p>
-          <p className="mt-2">
-            Why: we do work hard to ensure that you get the most out of our
-            service, providing you accessible solutions to your problems.
-          </p>
-          <p className="mt-2">
-            When: do we work hard to ensure that you get the most out of our
-            service, providing you accessible solutions to your problems.
-          </p>
-          <p className="mt-2">
-            How: do we work hard to ensure that you get the most out of our
-            service, providing you accessible solutions to your problems.
-          </p>
-          <p className="border border-[#8A57A3] px-12 py-2 max-w-max mt-14 cursor-pointer">
-            BECOME A PARTNER
-          </p>
+          <div className="mt-4">
+            <p className="text-xl font-semibold">What:</p>
+            <p>
+              We bring brands to life through creative solutions, strong brand
+              identity and help market businesses, products, or services achieve
+              their dreams, earn income, and increase their impact.
+            </p>
+          </div>
+          <div className="mt-2">
+            <p className="text-xl font-semibold">Why: </p>
+            <p>
+              We do all the hard work to ensure that we are the preferred
+              facilitator of the world's most successful brands, providing
+              people with accessible solutions to their problems.
+            </p>
+          </div>
+          <div className="mt-2">
+            <p className="text-xl font-semibold">Who:</p>
+            <p>
+              We are here to give you the best solution whether you are a
+              start-up, small- or medium-sized business, and help you grow and
+              achieve your dreams at a very affordable cost and innovative way.
+            </p>
+          </div>
+          <div className="mt-2">
+            <p className="text-xl font-semibold">How: </p>
+            <p>
+              We create effective strategies, powerful identities, seamless
+              interactions, and memorable experiences to connect people to
+              brands and organizations.
+            </p>
+          </div>
         </div>
-        <div className="col-span-2 grid grid-cols-2 gap-x-8">
+        <div className="mx-20 flex flex-col justify-between">
           {wwwh.map((w, wIndex) => (
             <div className="flex">
               <Image
@@ -146,9 +179,23 @@ const About = () => {
                 height={77}
               />
               <div>
-                <p>{w.title} </p>
+                <p className="font-bold text-2xl">{w.title} </p>
                 <span>{w.desc}</span>
               </div>
+            </div>
+          ))}
+          <p className="border border-[#8A57A3] px-12 py-2 max-w-max mt-8 cursor-pointer">
+            BECOME A PARTNER
+          </p>
+        </div>
+      </section>
+      <section className="mt-24 px-20">
+        <h1 className="text-4xl">Culture & Values</h1>
+        <div className="grid grid-cols-3">
+          {culture.map((c, cIndex) => (
+            <div key={cIndex}>
+              <h3>{c.title}</h3>
+              <p>{c.desc}</p>
             </div>
           ))}
         </div>
