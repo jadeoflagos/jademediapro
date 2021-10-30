@@ -5,7 +5,7 @@ export const privacyPolicyData = [
         underline: true
     },
     {
-        title: 'Data cData collectedData collectedollected',
+        title: 'Data collected',
         content: 'We are Cyprus based company and operate web servers hosted in Germany. Our hosting provider Hetzner Online GmbH adheres to the EU/US “Privacy Shield”, ensuring that your data is securely stored and GDPR compliant. For more information on Hetzner Online GmbH privacy policy, please see here: Hetzner Data Privacy Policy.'
     },
     {

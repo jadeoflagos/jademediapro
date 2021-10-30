@@ -124,7 +124,7 @@
   @apply flex flex-col;
 }
 .section {
-  @apply grid grid-cols-[40%,1fr] mb-[5.56rem] text-[1.3rem];
+  @apply grid grid-cols-[40%,1fr] mb-[5.56rem] text-[1.2rem];
 }
 .underline {
   border-bottom: 2px solid #000;
@@ -132,5 +132,5 @@
 }
 
 .privacyContent {
-  @apply pl-[9.19rem] pr-[24.69rem] pt-[9.8rem];
+  @apply pl-20 pr-[24.69rem] pt-[9.8rem];
 }

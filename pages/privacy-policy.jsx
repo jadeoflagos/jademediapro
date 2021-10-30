@@ -12,12 +12,11 @@ const PrivacyPolicy = () => {
         <div>
           <Navbar textColor="white" />
         </div>
-        <div className="flex items-center justify-between pl-[9.18rem] pr-[14.12rem] py-8 bg-black ">
-          <span className="text-white text-[6.87rem] font-semibold">
-            Privacy
-            <br />
-            Policy
-          </span>
+        <div className="flex items-center justify-between px-20 py-8 bg-black ">
+          <div className="flex flex-col text-white text-[6rem] font-semibold leading-tight">
+            <span>Privacy</span>
+            <span>Policy</span>
+          </div>
           <img src="/images/privacy-policy.png" alt="privacy-policy-icon" />
         </div>
       </div>

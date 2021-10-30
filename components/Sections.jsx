@@ -20,7 +20,7 @@ const Sections = ({ data = [], pageTitle }) => {
               } max-w-[57.37rem]`}
             >
               {item.content.fullDescription && (
-                <p>{item.content.fullDescription}</p>
+                <p className="mb-[2.56rem]">{item.content.fullDescription}</p>
               )}
               {!checkObject &&
                 (checkArray ? (
@@ -31,8 +31,10 @@ const Sections = ({ data = [], pageTitle }) => {
                   <p>{item.content}</p>
                 ))}
               {checkObject && (
-                <div>
-                  <span>{item.content.title}</span>
+                <div className={`flex flex-col`}>
+                  <span className="text-[#502A7A] font-semibold mb-[2.56rem]">
+                    {item.content.title}
+                  </span>
                   {item.content.options.map((i) => (
                     <div className="flex">
                       <img src="/vectors/arrow-option.svg" alt="list-icon" />
