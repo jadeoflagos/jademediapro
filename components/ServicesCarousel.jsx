@@ -72,12 +72,15 @@ const ServicesCarousel = () => {
     setCarouselEL(el);
   };
   return (
-    <div className="px-20">
+    <div>
       <div className="flex items-center justify-end ">
-        <div className="mr-6 arrow" onClick={() => carouselEL.previous()}>
+        <div
+          className="mr-6 cursor-pointer"
+          onClick={() => carouselEL.previous()}
+        >
           <img src="/vectors/arrow-leftline.svg" alt="" />
         </div>
-        <div className="arrow" onClick={() => carouselEL.next()}>
+        <div className="cursor-pointer" onClick={() => carouselEL.next()}>
           <img src="/vectors/arrow-rightline.svg" alt="" />
         </div>
       </div>

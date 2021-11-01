@@ -6,10 +6,29 @@ import InterviewCard from "../components/InterviewCard";
 import { useState } from "react";
 import PostCard from "../components/PostCard";
 import ServicesCarousel from "../components/ServicesCarousel";
+import Product from "../components/Product";
 
 export default function Home() {
   const idea = ["Research", "Ideate", "Design", "Implement", "Result"];
   const [activeIdea, setActiveIdea] = useState(1);
+
+  const products = [
+    {
+      name: "Imperfection is perfect | Custom Poster",
+      price: "USD 45",
+      img: "winecup.png",
+    },
+    {
+      name: "Imperfection is perfect | Custom Poster",
+      price: "USD 45",
+      img: "winebottle.png",
+    },
+    {
+      name: "Imperfection is perfect | Custom Poster",
+      price: "USD 45",
+      img: "winebottle.png",
+    },
+  ];
   return (
     <div>
       <div
@@ -205,7 +224,9 @@ export default function Home() {
         <InterviewCard />
       </section>
       <section className="px-20 mt-32">
-        <p className="text-6xl">Discover popular and profitable editorials</p>
+        <p className="text-6xl">
+          Discover popular and profitable <u>editorials</u>
+        </p>
       </section>
       <section className="mt-11 grid grid-cols-3 gap-x-8 px-20 ">
         <PostCard
@@ -221,6 +242,21 @@ export default function Home() {
           title="A Guide to Google SEO Algorithm Updates"
           desc="Some SEO-related tools such as the Google Keyword Planner and Google Analytics provide quantitative data to help you understand your market, analyze the trends, and know your competitors’ standings. The  search engine management is to helps you identify popular keywords so you can decide how to structure or revise your needed content."
         />
+      </section>
+      <section className="mt-40 px-20">
+        <div className="grid grid-cols-3 gap-x-20">
+          {products.map((product, productIndex) => (
+            <Product
+              key={`product-${productIndex}`}
+              title={product.name}
+              price={product.price}
+              img={product.img}
+            />
+          ))}
+        </div>
+        <div>
+          <h1>Explore our full catalogue</h1>
+        </div>
       </section>
       <Footer />
     </div>

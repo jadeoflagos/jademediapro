@@ -89,35 +89,35 @@ const About = () => {
         </div>
       </div>
 
-      <div className=" items-center px-20 my-14 grid grid-cols-2">
+      <div className=" items-center px-20 my-14 grid grid-cols-2 gap-x-8">
         <div>
           <p className="text-5xl mb-10">Our Identity</p>
           <div>
             <p>
-              In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa
-              for a family emergency and that trip changed her life. She
-              returned committed to leveraging years of experience, network and
-              unique trade skills working for leading global brand including
-              Walmart Corporation to support Africa’s quest for sustainable
-              economic transformation.
+              Our origin lies in 2016 as Jade Grafix operating from a very small
+              room. Today we are Africa's most renowned content-creation graphic
+              design and integrated digital marketing service company focused on
+              creating strategic solutions for brand development, communication,
+              and business marketing. Jade Media Pro is a business services
+              company that connects Africa to the world through design,
+              products, market strategy, consulting, and training.{" "}
             </p>
             <p className="my-2">
-              {" "}
-              In Africa’s case, people wonder what good can come out of the
-              continent that has an history laden with war and famine and our
-              response is to come join us and see.... The new and emerging
-              Africa is filled with hard working men and women, young and old
-              focused on positioning themselves for a greater future.
-            </p>
-            <p>
-              Nazaru champions these efforts and invite others to join us on the
-              journey. Contact Us for more information on how we can serve you.
+              The new and emerging Africa is filled with hard-working young and
+              old focused on positioning themselves for a greater future. Jade
+              Media Pro champions these efforts and invites others to join us on
+              the journey with a fast-growing team of 11 young and vibrant minds
+              who have worked on over 300 projects leading the digital space in
+              Africa. We offer feasible and cost-effective solutions in the
+              projects that we enter into contracts with our clients. We focus
+              on setting visual, verbal, and experiential standards that drive
+              impactful experiences for our clients.
             </p>
           </div>
         </div>
-        <p className="text-6xl px-8">
-          We are on a Mission to Grow your small Business like never before
-          crafting your Brand Message
+        <p className="text-5xl pl-16 pr-8">
+          We are on a Mission to help our clients achieve excellence using
+          sustainable digital strategies
         </p>
       </div>
       <div
