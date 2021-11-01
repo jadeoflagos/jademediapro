@@ -100,7 +100,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full py-24 flex items-center px-8 bg-[#502A7A]">
+      <div className="w-full py-24 flex items-center px-20 bg-[#502A7A]">
         <div className="w-4/12 text-white space-y-8">
           {idea.map((i, index) => (
             <div className="flex items-center space-x-10">
@@ -171,28 +171,6 @@ export default function Home() {
       <div className="px-20">
         <ServicesCarousel />
       </div>
-      {/* <div className="grid grid-cols-4 gap-x-8 px-20">
-        <Card
-          title="Business Strategy"
-          description="We analyse change, explore vulnerability, and optimize market strengths to accomplish sustainable and healthy development because starting and running a business is not trial and error."
-        />
-        <Card
-          title="Branding"
-          description="We design powerful identities that inspire and stand the test of time through innovative and compelling visuals that resonate with customers and nurture lasting relationships."
-        />
-        <Card
-          title="Digital Marketing"
-          description="We help grow your business, stay relevant, and outweigh the competition by creating brand awareness, generating leads, and boosting your sales & revenue."
-        />
-        <Card
-          title="Motion Design"
-          description="We tell visually engaging stories by creating promotional videos and animation unveiling the grasp of what your brand does, and what it stands for."
-        /> */}
-      {/* <Card
-          title="Art & Photography"
-          description="We break boundaries with our painting, sculpture, drawing, and engraving in a unique and fun way while doing something creative as beautiful work of art."
-        /> */}
-      {/* </div> */}
       <p className="px-20 pt-32 pb-12 text-7xl text-center">
         Exclusive interviews with industry leading professionals
       </p>

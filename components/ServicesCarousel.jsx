@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 
 const Card = ({ title, description }) => {
   return (
-    <div className="w-[20rem] min-h-[29rem] text-white flex flex-col bg-black py-4 px-6 rounded-sm">
+    <div className="w-full min-h-[29rem] text-white flex flex-col bg-black py-4 px-6 rounded-sm">
       <span className="bg-[#C4C4C4] w-20 h-20 mb-16" />
       <p className="text-3xl">{title}</p>
       <span className="py-4 flex-grow">{description}</span>
@@ -95,11 +95,14 @@ const ServicesCarousel = () => {
           // slidesToSlide={2}
         >
           {services.map((service, serviceIndex) => (
-            <Card
-              key={`service-${serviceIndex}`}
-              title={service.title}
-              description={service.desc}
-            />
+            <div className="flex">
+              <Card
+                key={`service-${serviceIndex}`}
+                title={service.title}
+                description={service.desc}
+              />
+              <span className="w-4 h-full bg-white"></span>
+            </div>
           ))}
         </Carousel>
       </div>
