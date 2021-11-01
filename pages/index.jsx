@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Illus from "../components/vectors/Iluust";
 import InterviewCard from "../components/InterviewCard";
+import { useState } from "react";
 
 const Card = ({ title, description }) => {
   return (
@@ -18,6 +19,8 @@ const Card = ({ title, description }) => {
   );
 };
 export default function Home() {
+  const idea = ["Research", "Ideate", "Design", "Implement", "Result"];
+  const [activeIdea, setActiveIdea] = useState(1);
   return (
     <div>
       <div
@@ -36,11 +39,11 @@ export default function Home() {
             The passion of Idea, Business & Creativity:
           </p>
           <p className="my-10 text-2xl font-normal">
-            Helping startups and small businesses grow and achieve their dreams,
-            earn income, and increase their impact in this post-pandemic world
-            by developing innovative as well as sustainable design system and
-            marketing strategies to help you standout in a crowded marketplace
-            and make profit. YES! YOU CAN.
+            We help small and medium-sized businesses grow and achieve their
+            dreams, earn income, and increase their impact in this post-pandemic
+            world by developing innovative as well as sustainable design systems
+            and marketing strategies to help them stand out in a crowded
+            marketplace and make a profit. YES! WE CAN.
           </p>
           <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max ">
             VIEW PROJECTS
@@ -60,34 +63,42 @@ export default function Home() {
           </p>
           <div>
             <p className="mt-8">
-              Harness the collective power of people, data, and modern software
-              practices to reimagine your customer experience across regulated
-              environments. Businesses are under pressure to increase their
-              competitive advantage by creating compelling new experiences for
-              customers while adding value to existing software.
+              Few businesses live the test of time. Many businesses are
+              struggling with different strategies and identifying which one
+              truly fits. All sorts of brands - personal, entrepreneurial, or
+              small and even big players need something special to succeed and
+              we get it... you want to stand out in a crowded marketplace. In
+              fact, we hold the golden key in our hands. It's in our ability to
+              internalize what we actually believe in. Your business requires a
+              unique brand vision that you can communicate with the rest of the
+              world, as well as values that you can internalize. That’s what
+              makes you unique and different. Your brand should have a
+              personality. This allows customers and potential customers to
+              better relate to your company and your products and services.
+              According to studies, current and potential customers are far more
+              likely to connect with your business if they can visualize a
+              personality type. These are known as archetypes in the branding
+              field.
             </p>
             <p className="my-8">
-              Well-planned and executed API architecture is essential for
-              seamlessly connecting legacy software and data to modern cloud
-              applications.
-            </p>
-            <p>
-              Implementing API architecture doesn't just enable businesses to
-              deliver leading customer experiences and new functionality. It
-              also forms part of the foundation for delivering value frequently.
-            </p>
-            <p className="mt-8">
-              We have a simple idea—put money, attention and resources where
-              it's most effective— in front of students, not in administrators,
-              buildings, parking lots or monuments. Bring people together to
-              form a vibrant community and safe space to share, discuss and
-              learn. Connect learners from different cultures, interests, age
-              groups and life experiences. Enlist a global network of the most
-              dynamic teachers, and allow them to profit form their ideas.
+              On the other hand, Digital marketing is the practice of creating
+              content to attract more customers and build relationships. It is
+              more than just advertising; it is an essential component for any
+              company to grow its business. Through digital marketing,
+              businesses are able to harness the collective power of people,
+              data, and modern software practices to reimagine their customer
+              experience. The strategies that are most effective in digital
+              marketing with reference to data-driven attribution models, mobile
+              optimization, search engine optimization (SEO), email marketing,
+              social media advertising, and conversion rates. With these
+              strategies in mind and the help of Jade Media Pro, you can expand
+              your business and look ahead to the success of your business more
+              than it is right now in the coming times whether you are starting
+              a new business or you already have an existing business.
             </p>
             <p className="flex items-center mt-8">
               <span className="mr-2">
-                Find out more on what is Branding and how does it helps your
+                Find out more about what is Branding and how does it help your
                 Business?
               </span>
               <Image
@@ -101,8 +112,29 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full py-24 flex items-center px-8 bg-[#502A7A]">
-        <div className="w-5/12"></div>
-        <div className="w-7/12 px-12 text-white">
+        <div className="w-4/12 text-white space-y-8">
+          {idea.map((i, index) => (
+            <div className="flex items-center space-x-10">
+              <span
+                className={` ${
+                  activeIdea == index
+                    ? "w-4 h-4 border p-2"
+                    : " w-2 h-2 bg-opacity-50"
+                }  rounded-full bg-white `}
+              />
+              <p
+                className={`border-b ${
+                  activeIdea == index
+                    ? "text-7xl font-bold border-white"
+                    : "text-xl font-light border-transparent"
+                }  `}
+              >
+                {i}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="w-8/12 px-12 text-white">
           <p className="text-5xl font-bold">
             Our five foundational process to create your strategic brand’s
             success
@@ -122,20 +154,23 @@ export default function Home() {
             />
           </div>
           <p className="py-8">
-            We start by defining a clear image of exactly who you serve and
-            precisely how they think. Why? Because you can’t help people unless
-            you know them – their hopes, their fears, their problems, and their
-            pitfalls. What converts a total stranger into a die-hard fan of your
-            brand? A constant pull of value and inspiration. At this stage, we
-            map out your customer’s journey so you’ll be able to meet them at
-            their point of need before one of your competitors does.At this
-            stage, we will determine your unique sweet spot that makes you
-            different from your competitors and how we can place you as the
-            perfect choice for your customers. Together, we will discuss
-            critical questions like who you are, what you stand for, and how you
-            do things.
+            After we’ve examined all potential causes of the problem and have
+            used those questions to boil down exactly what you’re trying to
+            solve, it’s time to focus and consolidate values, business
+            aspirations, vision for the future and then align an effective
+            solution with your vision. Also, we put ourselves in your buyer’s
+            position by creating a narrative about them using statistics and
+            research data about your target audience like; ‘Where do they
+            shop?’, ‘What do they do for fun?’, ‘Which social media channels do
+            they use?’. Knowing these will help us optimize your branding and
+            marketing decisions. This process phase entails brainstorming
+            numerous ideas in a team discussion, selecting the best idea(s),
+            working to develop a plan to implement the idea, and finally putting
+            the idea into practice to set the tone of your communication, and
+            provide a unifying force to develop your brand values and business
+            direction.
           </p>
-          <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max ">
+          <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max uppercase">
             Get your Brand process
           </p>
         </div>
@@ -147,30 +182,35 @@ export default function Home() {
       <div className="grid grid-cols-4 gap-x-8 px-20">
         <Card
           title="Business Strategy"
-          description="Ideas not well developed will only generate poor performance. We design
-        brands that tell compelling stories that resonate with customers,
-        strengthen loyalty, communicate shared values and explore new
-        possibilities."
+          description="We analyse change, explore vulnerability, and optimize market strengths to accomplish sustainable and healthy development because starting and running a business is not trial and error."
         />
         <Card
           title="Branding"
-          description="We seamlessly combine expertise in brand identity, web development and product design to define every aspect of a brand’s experience."
+          description="We design powerful identities that inspire and stand the test of time through innovative and compelling visuals that resonate with customers and nurture lasting relationships."
         />
         <Card
           title="Digital Marketing"
-          description="We partner with brands to take communication beyond ethos and marketplace positioning conversed."
+          description="We help grow your business, stay relevant, and outweigh the competition by creating brand awareness, generating leads, and boosting your sales & revenue."
         />
         <Card
           title="Motion Design"
-          description="We design brands that tell compelling stories that resonate with customers, strengthen loyalty, communicate shared values and explore new possibilities. "
+          description="We tell visually engaging stories by creating promotional videos and animation unveiling the grasp of what your brand does, and what it stands for."
         />
+        {/* <Card
+          title="Art & Photography"
+          description="We break boundaries with our painting, sculpture, drawing, and engraving in a unique and fun way while doing something creative as beautiful work of art."
+        /> */}
       </div>
       <p className="px-20 pt-32 pb-12 text-7xl text-center">
         Exclusive interviews with industry leading professionals
       </p>
-      <section className="flex items-center px-20">
-        <div className="w-4/6"></div>
-        <div className="w-2/6">
+      <section className="flex items-start px-20">
+        <div className="w-4/6">
+          <video width="900" height="450" controls>
+            <source src="/arcnet.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="w-2/6 flex flex-col justify-start ">
           <p className="text-[#046C62] mb-8 text-4xl">
             60 minutes with Adaeze of <u>CAV Digital</u>
           </p>
@@ -181,8 +221,11 @@ export default function Home() {
             pitfalls. What converts a total stranger into a die-hard fan of your
             brand? A constant pull of value and inspiration. At this stage, we
             map out your customer’s journey so you’ll be able to meet them at
-            their point of need before one of your competitors does. We partner
-            with brands to take communication.
+            their point of need before one of your competitors does.
+          </p>
+          <p> We partner with brands to take communication.</p>
+          <p className="mt-10 cursor-pointer py-3 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
+            watch more
           </p>
         </div>
       </section>
