@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import BlogCard from "../components/BlogCard";
 import Footer from "../components/Footer";
+import PostCard from "../components/PostCard";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -34,37 +34,118 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <section className="mt-20 px-20 py-20 flex">
-        <div className="w-8/12">
+      <section className="mt-20 px-20 py-20 ">
+        <div className="w-3/5 space-y-6">
           <div>
-            <p className="flex justify-between items-center border-b border-black">
-              <span>Process</span>
-              <Image
-                src="/vectors/caretup.svg"
-                alt="Avatar"
-                width={26}
-                height={13}
-              />
+            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
+              <span className="font-semibold text-5xl">Case Studies </span>
+              <span
+                className="cursor-pointer"
+                onClick={() => {
+                  activeTab !== 0 ? setActiveTab(0) : setActiveTab(-1);
+                }}
+              >
+                <Image
+                  src={`/vectors/${
+                    activeTab == 0 ? "caret-down.svg" : "caretup.svg"
+                  }`}
+                  alt="Avatar"
+                  width={20}
+                  height={10}
+                />
+              </span>
+            </p>
+            {activeTab === 0 && (
+              <p className="pt-6 pb-10">
+                In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa
+                for a family emergency and that trip changed her life. She
+              </p>
+            )}
+          </div>
+          <div>
+            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
+              <span className="font-semibold text-5xl">Showreel </span>
+              <span
+                className="cursor-pointer"
+                onClick={() => {
+                  activeTab !== 2 ? setActiveTab(2) : setActiveTab(-1);
+                }}
+              >
+                <Image
+                  src={`/vectors/${
+                    activeTab == 2 ? "caret-down.svg" : "caretup.svg"
+                  }`}
+                  alt="Avatar"
+                  width={20}
+                  height={10}
+                />
+              </span>
+            </p>
+          </div>
+          <div>
+            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
+              <span className="font-semibold text-5xl">Process</span>
+              <span
+                className="cursor-pointer"
+                onClick={() => {
+                  activeTab !== 3 ? setActiveTab(3) : setActiveTab(-1);
+                }}
+              >
+                <Image
+                  src={`/vectors/${
+                    activeTab == 3 ? "caret-down.svg" : "caretup.svg"
+                  }`}
+                  alt="Avatar"
+                  width={20}
+                  height={10}
+                />
+              </span>
+            </p>
+          </div>
+          <div>
+            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
+              <span className="font-semibold text-5xl">Training </span>
+              <span
+                className="cursor-pointer"
+                onClick={() => {
+                  activeTab !== 4 ? setActiveTab(4) : setActiveTab(-1);
+                }}
+              >
+                <Image
+                  src={`/vectors/${
+                    activeTab == 4 ? "caret-down.svg" : "caretup.svg"
+                  }`}
+                  alt="Avatar"
+                  width={20}
+                  height={10}
+                />
+              </span>
             </p>
           </div>
         </div>
-        <div className="w-4/12 px-20">
-          <Image
-            src="/images/market.png"
-            alt="Avatar"
-            width={492}
-            height={259}
-          />
-        </div>
       </section>
-      <section className="px-20">
-        <p>Read related posts</p>
-        <div className="grid grid-cols-3 gap-x-10">
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-        </div>
+      <section className="mt-11 mb-28 grid grid-cols-3 gap-x-8 px-20 ">
+        <p className="col-span-3 text-4xl font-semibold mb-6">
+          Read related posts
+        </p>
+
+        <PostCard
+          date="October 21, 2021"
+          title="15 SEO Best Practices: Website Architecture"
+          desc="One SEO component called off-site SEO ensures that users of external pages or of social media can find your website. Being optimized for SEO increases the site’s potential to draw customers from other platforms other than the search engine. It also gives you insights on such as location, technologies used, product preferences, etc. "
+        />
+        <PostCard
+          date="October 20, 2021"
+          title="A Guide to Google SEO Algorithm Updates"
+          desc="Some SEO-related tools such as the Google Keyword Planner and Google Analytics provide quantitative data to help you understand your market, analyze the trends, and know your competitors’ standings. The  search engine management is to helps you identify popular keywords so you can decide how to structure or revise your needed content."
+        />
+        <PostCard
+          date="October 20, 2021"
+          title="A Guide to Google SEO Algorithm Updates"
+          desc="Some SEO-related tools such as the Google Keyword Planner and Google Analytics provide quantitative data to help you understand your market, analyze the trends, and know your competitors’ standings. The  search engine management is to helps you identify popular keywords so you can decide how to structure or revise your needed content."
+        />
       </section>
+
       <Footer />
     </div>
   );

@@ -1,23 +1,12 @@
-import Head from "next/head";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Illus from "../components/vectors/Iluust";
 import InterviewCard from "../components/InterviewCard";
 import { useState } from "react";
+import PostCard from "../components/PostCard";
+import ServicesCarousel from "../components/ServicesCarousel";
 
-const Card = ({ title, description }) => {
-  return (
-    <div className="w-full text-white flex flex-col bg-black py-4 px-6 rounded-sm">
-      <span className="bg-[#C4C4C4] w-20 h-20 mb-16" />
-      <p className="text-3xl">{title}</p>
-      <span className="py-4 flex-grow">{description}</span>
-      <p className="cursor-pointer py-2 px-10 flex justify-center text-black bg-[#0DFFE5] max-w-max ">
-        LEARN MORE
-      </p>
-    </div>
-  );
-};
 export default function Home() {
   const idea = ["Research", "Ideate", "Design", "Implement", "Result"];
   const [activeIdea, setActiveIdea] = useState(1);
@@ -179,7 +168,10 @@ export default function Home() {
         Put money, attention, and resources where it's most effective to
         generate income
       </p>
-      <div className="grid grid-cols-4 gap-x-8 px-20">
+      <div className="px-20">
+        <ServicesCarousel />
+      </div>
+      {/* <div className="grid grid-cols-4 gap-x-8 px-20">
         <Card
           title="Business Strategy"
           description="We analyse change, explore vulnerability, and optimize market strengths to accomplish sustainable and healthy development because starting and running a business is not trial and error."
@@ -195,12 +187,12 @@ export default function Home() {
         <Card
           title="Motion Design"
           description="We tell visually engaging stories by creating promotional videos and animation unveiling the grasp of what your brand does, and what it stands for."
-        />
-        {/* <Card
+        /> */}
+      {/* <Card
           title="Art & Photography"
           description="We break boundaries with our painting, sculpture, drawing, and engraving in a unique and fun way while doing something creative as beautiful work of art."
         /> */}
-      </div>
+      {/* </div> */}
       <p className="px-20 pt-32 pb-12 text-7xl text-center">
         Exclusive interviews with industry leading professionals
       </p>
@@ -229,13 +221,28 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="px-20 pt-12 pb-20 grid grid-cols-3 gap-x-8">
+      <section className="px-20 pt-12 mb-20 grid grid-cols-3 gap-x-8">
         <InterviewCard />
         <InterviewCard />
         <InterviewCard />
       </section>
-      <section className="px-20">
+      <section className="px-20 mt-32">
         <p className="text-6xl">Discover popular and profitable editorials</p>
+      </section>
+      <section className="mt-11 grid grid-cols-3 gap-x-8 px-20 ">
+        <PostCard
+          date="October 21, 2021"
+          title="15 SEO Best Practices: Website Architecture"
+          desc="One SEO component called off-site SEO ensures that users of external pages or of social media can find your website. Being optimized for SEO increases the site’s potential to draw customers from other platforms other than the search engine. It also gives you insights on such as location, technologies used, product preferences, etc. "
+        />
+        <PostCard
+          title="A Guide to Google SEO Algorithm Updates"
+          desc="Some SEO-related tools such as the Google Keyword Planner and Google Analytics provide quantitative data to help you understand your market, analyze the trends, and know your competitors’ standings. The  search engine management is to helps you identify popular keywords so you can decide how to structure or revise your needed content."
+        />
+        <PostCard
+          title="A Guide to Google SEO Algorithm Updates"
+          desc="Some SEO-related tools such as the Google Keyword Planner and Google Analytics provide quantitative data to help you understand your market, analyze the trends, and know your competitors’ standings. The  search engine management is to helps you identify popular keywords so you can decide how to structure or revise your needed content."
+        />
       </section>
       <Footer />
     </div>
