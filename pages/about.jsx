@@ -60,6 +60,25 @@ const About = () => {
         "We have an open-door approach when it comes to communicating our functional message, values, and mission.",
     },
   ];
+
+  const values = [
+    {
+      title: "Business",
+      details:
+        "We analyse change, explore vulnerability, and optimize market strengths to accomplish sustainable and healthy development because starting and running a business is not trial and error.",
+    },
+    {
+      title: "Branding",
+      details:
+        "We design powerful identities that inspire and stand the test of time through innovative and compelling visuals that resonate with customers and nurture lasting relationships.",
+    },
+    {
+      title: "Marketing",
+      details:
+        "We help grow your business, stay relevant, and outweigh the competition by creating brand awareness, generating leads, and boosting your sales & revenue.",
+    },
+  ];
+
   return (
     <div>
       <div className="bg-black w-screen min-h-[30rem]">
@@ -190,45 +209,86 @@ const About = () => {
         </div>
       </section>
       <section className="mt-24 px-20">
-        <h1 className="text-4xl">Culture & Values</h1>
-        <div className="grid grid-cols-3">
+        <h1 className="text-4xl mb-12">Culture & Values</h1>
+        <div className="grid grid-cols-3 gap-y-10 gap-x-20">
           {culture.map((c, cIndex) => (
-            <div key={cIndex}>
+            <div key={cIndex} className="py-10 px-14 border-2 border-[#77459B]">
               <h3>{c.title}</h3>
+              <span className="mt-8 mb-12 w-12 border-b-2 flex border-[#77459B]" />
               <p>{c.desc}</p>
             </div>
           ))}
         </div>
       </section>
-      <section className="px-20 py-20">
-        <p className="mb-10">Volunteering</p>
-        <p className="text-6xl">
+      <section className="px-20 mt-32">
+        <p className="mb-10 text-4xl">Volunteering</p>
+        <p className="text-5xl leading-tight">
           Bridging Africa’s transition from the analog age to the Digital age by
           Training young Professionals and solving Digital challenges at
           individual and corporate levels.
         </p>
       </section>
-      <section className="grid grid-cols-2 gap-x-8 px-20 py-20">
-        <p>video</p>
+      <section className="grid grid-cols-2  px-20 py-20">
         <div>
+          <video width="900" height="450" controls>
+            <source src="/arcnet.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="mx-20">
           <p>
-            In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa for
-            a family emergency and that trip changed her life. She returned
-            committed to leveraging years of experience, network and unique
-            trade skills working for leading global brand including Walmart
-            Corporation to support Africa’s quest for sustainable economic
-            transformation. She returned committed to years of experience.
+            In a world of uncontrolled population and widespread poverty, The
+            case of individuals being brought up without access to the basic
+            standards of living required for proper development is not
+            far-fetched. This problem would, without doubt, lead to stunting of
+            human development as such persons account for a great part of the
+            population and inevitably the state of affairs of society.
           </p>
+          <div className="flex items-center justify-between my-10">
+            <p className="flex flex-col">
+              <span className="text-[#046C62] text-4xl">$ 1.2M</span>
+              <span className="text-lg">funded</span>
+            </p>
+            <p className="flex flex-col">
+              <span className="text-[#046C62] text-4xl">1.6K</span>
+              <span className="text-lg">volunteers</span>
+            </p>
+            <p className="flex flex-col">
+              <span className="text-[#046C62] text-4xl">5.3K</span>
+              <span className="text-lg">Life’s changed</span>
+            </p>
+          </div>
+          <div className="flex justify-between items-center">
+            <p className=" bg-[#8A57A3] w-6/12  px-16 py-2 flex items-center justify-center cursor-pointer text-white uppercase">
+              Donate Now
+            </p>
+            <span className="w-2/12" />
+            <p className="border flex items-center justify-center border-[#8A57A3] px-12 py-2 w-4/12 cursor-pointer">
+              SHARE
+            </p>
+          </div>
         </div>
       </section>
-      <section className="px-20">
-        <p>The Team</p>
+      <section className="px-20 mt-10">
+        <p className="text-4xl">The Team</p>
+        <p>We are a team. We love what we do. Simple.</p>
       </section>
+      <p className="px-20">Our Clients </p>
       <CompanyButtons />
-      <section className="px-20">
-        <p>Book Your FREE Consultation Now</p>
-        <div className="flex items-center">
-          <form action="" className="w-3/5 grid grid-cols-2 gap-x-10">
+      <section className="px-20 grid grid-cols-3 gap-x-20 my-24">
+        {values.map((value, valueIndex) => (
+          <div key={`value-${valueIndex}`} className="bg-[#46BFB2] p-6">
+            <h3 className="mb-16 text-2xl">{value.title}</h3>
+            <p>{value.details}</p>
+          </div>
+        ))}
+      </section>
+      <section className="px-20 mb-16">
+        <p className="text-6xl font-bold">Book Your FREE Consultation Now</p>
+        <div className="flex py-0">
+          <form
+            action=""
+            className=" w-3/5 grid grid-cols-2 gap-10 place-content-start"
+          >
             <TextField
               id="standard-basic"
               label="Full name"
@@ -240,23 +300,32 @@ const About = () => {
               variant="standard"
               type="email"
             />
-            <SelectVariants />
-            <SelectVariants />
+            <SelectVariants label="Select Date" />
+            <SelectVariants label="Select Time" />
+            <div className="col-span-2">
+              <textarea
+                className="border-b-2 border-black resize-none w-full focus:outline-none"
+                rows="3"
+                placeholder="Message"
+              ></textarea>
+            </div>
             <div className="col-span-2 mt-16">
               <Button
                 variant="contained"
-                className="bg-[#502A7A] w-7/12 py-2 hover:bg-[#502A7A]"
+                className="bg-[#502A7A] w-7/12 py-3 hover:bg-[#502A7A]"
               >
                 Book Appointment
               </Button>
             </div>
           </form>
-          <Image
-            src="/vectors/blogger.svg"
-            alt="Avatar"
-            width={517}
-            height={688}
-          />
+          <div className="w-2/5 flex items-start">
+            <Image
+              src="/vectors/blogger.svg"
+              alt="Avatar"
+              width={517}
+              height={688}
+            />
+          </div>
         </div>
       </section>
       <Footer />

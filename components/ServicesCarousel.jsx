@@ -98,7 +98,7 @@ const ServicesCarousel = () => {
           // slidesToSlide={2}
         >
           {services.map((service, serviceIndex) => (
-            <div className="flex">
+            <div className="flex" key={`service-${serviceIndex}`}>
               <Card
                 key={`service-${serviceIndex}`}
                 title={service.title}
