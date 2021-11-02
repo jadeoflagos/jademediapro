@@ -7,13 +7,18 @@ const Sections = ({ data = [], pageTitle }) => {
       {data.map((item, itemIndex) => {
         const checkObject = isObject(item.content);
         const checkArray = isArray(item.content);
+        const checkIndex = itemIndex === 0 && pageTitle !== "privacy-policy";
 
         return (
           <div
             key={`${pageTitle}-section-index${itemIndex}`}
-            className={`${styles.section}`}
+            className={`${styles.section} ${
+              checkIndex ? styles.noBottomSpace : ""
+            }`}
           >
-            <span className="font-semibold">{item.title}</span>
+            <span className="font-semibold text-[1.3rem]">
+              {item.title === "heading" ? "" : item.title}
+            </span>
             <div
               className={`${
                 item.underline ? styles.underline : ""
@@ -35,21 +40,43 @@ const Sections = ({ data = [], pageTitle }) => {
                     </p>
                   ))
                 ) : (
-                  <p>{item.content}</p>
+                  <p
+                    className={`${
+                      item.title === "heading" ? "font-semibold" : ""
+                    }`}
+                  >
+                    {item.content}
+                  </p>
                 ))}
               {checkObject && (
                 <div className={`flex flex-col`}>
-                  <span className="text-[#502A7A] font-semibold mb-[2.56rem]">
+                  <span
+                    className={`${
+                      pageTitle !== "privacy-policy"
+                        ? ""
+                        : "text-[#502A7A] font-semibold "
+                    } mb-[2.56rem]`}
+                  >
                     {item.content.title}
                   </span>
                   {item.content.options.map((i) => (
-                    <div className="flex items-center">
-                      <img
-                        className="w-4 h-4"
-                        src="/vectors/arrow-option.svg"
-                        alt="list-icon"
-                      />
-                      <span className="ml-[1.18rem]">{i}</span>
+                    <div className="flex items-center leading-relaxed">
+                      {pageTitle !== "privacy-policy" ? (
+                        ""
+                      ) : (
+                        <img
+                          className="w-3 h-3"
+                          src="/vectors/arrow-option.svg"
+                          alt="list-icon"
+                        />
+                      )}
+                      <span
+                        className={`${
+                          pageTitle === "privacy-policy" ? "ml-[1.18rem]" : ""
+                        }`}
+                      >
+                        {i}
+                      </span>
                     </div>
                   ))}
                 </div>

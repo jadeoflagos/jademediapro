@@ -124,7 +124,10 @@
   @apply flex flex-col;
 }
 .section {
-  @apply grid grid-cols-[40%,1fr] mb-[5.56rem] text-[1.2rem];
+  @apply grid grid-cols-[40%,1fr] mb-[5.56rem] text-[1rem];
+}
+.noBottomSpace {
+  @apply mb-[2.8rem];
 }
 .underline {
   border-bottom: 2px solid #000;

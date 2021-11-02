@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Logo from "./vectors/Logo";
 import Link from "next/link";
+import { scrollToTop } from "../utils/helper";
 
 const Footer = () => {
   return (
@@ -12,6 +13,7 @@ const Footer = () => {
           alt="Avatar"
           width={50}
           height={50}
+          onClick={scrollToTop}
         />
       </div>
       <div className="grid grid-cols-6 text-white">
@@ -69,7 +71,7 @@ const Footer = () => {
             <Link href="/about">Community</Link>
             <Link href="/about">Collaboration</Link>
             <Link href="/about">Event</Link>
-            <Link href="/about">Job/Internship</Link>
+            <Link href="/jobs">Job/Internship</Link>
           </div>
         </div>
         <div className="flex flex-col">
@@ -79,7 +81,7 @@ const Footer = () => {
             </a>
           </Link>
           <div className="flex flex-col space-y-2">
-            <Link href="/about">Store</Link>
+            <Link href="/store">Store</Link>
             <Link href="/about">Freebies</Link>
             <Link href="/about">Tool</Link>
             <Link href="/about">Report a bug</Link>
