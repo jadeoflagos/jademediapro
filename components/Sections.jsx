@@ -24,8 +24,15 @@ const Sections = ({ data = [], pageTitle }) => {
               )}
               {!checkObject &&
                 (checkArray ? (
-                  item.content.map((i, iIndex) => (
-                    <p key={`content-item${iIndex}`}>{i}</p>
+                  item.content.map((i, iIndex, arr) => (
+                    <p
+                      className={`${
+                        arr.length - 1 !== iIndex ? "mb-[2.314rem]" : "mb-auto"
+                      }`}
+                      key={`content-item${iIndex}`}
+                    >
+                      {i}
+                    </p>
                   ))
                 ) : (
                   <p>{item.content}</p>
@@ -36,9 +43,13 @@ const Sections = ({ data = [], pageTitle }) => {
                     {item.content.title}
                   </span>
                   {item.content.options.map((i) => (
-                    <div className="flex">
-                      <img src="/vectors/arrow-option.svg" alt="list-icon" />
-                      <span>{i}</span>
+                    <div className="flex items-center">
+                      <img
+                        className="w-4 h-4"
+                        src="/vectors/arrow-option.svg"
+                        alt="list-icon"
+                      />
+                      <span className="ml-[1.18rem]">{i}</span>
                     </div>
                   ))}
                 </div>

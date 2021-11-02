@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
           <Navbar textColor="white" />
         </div>
         <div className="flex items-center justify-between px-20 py-8 bg-black ">
-          <div className="flex flex-col text-white text-[6rem] font-semibold leading-tight">
+          <div className="flex flex-col text-white text-8xl font-semibold leading-tight">
             <span>Privacy</span>
             <span>Policy</span>
           </div>
