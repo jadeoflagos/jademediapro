@@ -159,3 +159,24 @@ export const termsAndConditionData = [
     },
 
 ]
+
+export const freebiesTab = 'Illustrations,Books,plastic plugs,pucker shoes,vintage typewriter'.split(',')
+
+
+export const products = [
+    {
+        name: "Imperfection is perfect | Custom Poster",
+        price: "USD 45",
+        img: "winecup.png",
+    },
+    {
+        name: "Imperfection is perfect | Custom Poster",
+        price: "USD 45",
+        img: "winebottle.png",
+    },
+    {
+        name: "Imperfection is perfect | Custom Poster",
+        price: "USD 45",
+        img: "winebottle.png",
+    },
+];

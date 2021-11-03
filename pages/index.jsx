@@ -244,13 +244,14 @@ export default function Home() {
         />
       </section>
       <section className="mt-40 px-20">
-        <div className="grid grid-cols-3 gap-x-20">
+        <div className=" mb-[4.5rem] grid grid-cols-3 gap-x-20">
           {products.map((product, productIndex) => (
             <Product
               key={`product-${productIndex}`}
               title={product.name}
               price={product.price}
               img={product.img}
+              delivery="FREE Delivery"
             />
           ))}
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import LikeIcon from "./vectors/LikeIcon";
-const Product = ({ name, img, price }) => {
+const Product = ({ title, img, price, delivery }) => {
   return (
     <div>
       <div
@@ -15,8 +15,14 @@ const Product = ({ name, img, price }) => {
           <LikeIcon />
         </span>
       </div>
-      <p>{name}</p>
-      <p>{price}</p>
+
+      <p className="mt-[1rem] mb-[0.5rem] ">{title}</p>
+      <div className="flex items-center gap-[0.64rem]">
+        <p className="font-semibold text-[1.5rem]">{price}</p>
+        <span className="bg-[#C4C4C4] rounded-[1rem] py-0.5 font-normal px-8">
+          {delivery}
+        </span>
+      </div>
     </div>
   );
 };

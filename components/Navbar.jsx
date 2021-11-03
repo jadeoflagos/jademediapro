@@ -1,33 +1,70 @@
 import React from "react";
 import Logo from "./vectors/Logo";
 import Link from "next/link";
+import styles from "../styles/Home.module.css";
+
+import { useRouter } from "next/router";
+
 const Navbar = ({ bg, textColor, darkLogo }) => {
+  const router = useRouter();
+  const path = router.pathname;
+  console.log({ path });
   return (
     <nav
       className={`flex items-center justify-between px-20 py-8 sticky top-0 left-0`}
-      style={{ backgroundColor: bg, color: textColor }}
+      style={{ backgroundColor: bg, color: textColor, fontWeight: "normal" }}
     >
       <Link href="/">
         <Logo color={darkLogo && "#000"} />
       </Link>
       <div className="flex items-center space-x-10">
         <Link href="/about">
-          <a href="/about">About</a>
+          <a
+            href="/about"
+            className={`${path === "/about" ? styles.activeLink : ""}`}
+          >
+            About
+          </a>
         </Link>
         <Link href="/services">
-          <a href="/services">Services</a>
+          <a
+            href="/services"
+            className={`${path === "/services" ? styles.activeLink : ""}`}
+          >
+            Services
+          </a>
         </Link>
         <Link href="/projects">
-          <a href="/projects">Projects</a>
+          <a
+            href="/projects"
+            className={`${path === "/projects" ? styles.activeLink : ""}`}
+          >
+            Projects
+          </a>
         </Link>
         <Link href="/hub">
-          <a href="/hub">Hub</a>
+          <a
+            href="/hub"
+            className={`${path === "/hub" ? styles.activeLink : ""}`}
+          >
+            Hub
+          </a>
         </Link>
         <Link href="/resources">
-          <a href="/resources">Resources</a>
+          <a
+            href="/resources"
+            className={`${path === "/resources" ? styles.activeLink : ""}`}
+          >
+            Resources
+          </a>
         </Link>{" "}
         <Link href="/contact">
-          <a href="/contact">Contact</a>
+          <a
+            href="/contact"
+            className={`${path === "/contact" ? styles.activeLink : ""}`}
+          >
+            Contact
+          </a>
         </Link>
       </div>
     </nav>

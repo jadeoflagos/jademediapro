@@ -137,3 +137,7 @@
 .privacyContent {
   @apply pl-20 pr-[24.69rem] pt-[9.8rem];
 }
+
+.activeLink {
+  @apply font-bold;
+}

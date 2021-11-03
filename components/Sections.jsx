@@ -59,8 +59,11 @@ const Sections = ({ data = [], pageTitle }) => {
                   >
                     {item.content.title}
                   </span>
-                  {item.content.options.map((i) => (
-                    <div className="flex items-center leading-relaxed">
+                  {item.content.options.map((i, iIndex) => (
+                    <div
+                      key={`page-options-count${iIndex}`}
+                      className="flex items-center leading-relaxed"
+                    >
                       {pageTitle !== "privacy-policy" ? (
                         ""
                       ) : (
