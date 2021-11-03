@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import InterviewCard from "../components/InterviewCard";
 import SocialButtons from "../components/SocialButtons";
+import Pagination from "../components/Pagination";
 
 const Interview = () => {
   return (
@@ -51,6 +52,9 @@ const Interview = () => {
           <InterviewCard />
         </div>
       </div>
+      <section className="px-20">
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      </section>
       <Footer />
     </div>
   );

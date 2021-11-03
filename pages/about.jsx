@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
 import CompanyButtons from "../components/CompanyButtons";
+import TimePickerComponent from "../components/TimePicker";
+import DatePickerComponent from "../components/DatePicker";
 
 const About = () => {
   const wwwh = [
@@ -19,13 +21,13 @@ const About = () => {
       title: "Building  Quality Relationship ",
       desc:
         "Remember that your customers are the ones who keep your business running, so getting to know them and caring about them is crucial.",
-      img: "",
+      img: "qualitylogo.png",
     },
     {
       title: "Set Goals and Track Them",
       desc:
         "When goals are set, it’s very important to track your progress to know if your business grows at all and how quickly it grows. ",
-      img: "",
+      img: "goallogo.png",
     },
   ];
   const culture = [
@@ -190,13 +192,15 @@ const About = () => {
         </div>
         <div className="mx-20 flex flex-col justify-between">
           {wwwh.map((w, wIndex) => (
-            <div className="flex">
-              <Image
-                src={`/images/${w.img}`}
-                alt="Avatar"
-                width={80}
-                height={77}
-              />
+            <div className="flex items-center">
+              <div className="w-32 mr-6">
+                <Image
+                  src={`/images/${w.img}`}
+                  alt="Avatar"
+                  width={100}
+                  height={100}
+                />
+              </div>
               <div>
                 <p className="font-bold text-2xl">{w.title} </p>
                 <span>{w.desc}</span>
@@ -300,8 +304,10 @@ const About = () => {
               variant="standard"
               type="email"
             />
-            <SelectVariants label="Select Date" />
-            <SelectVariants label="Select Time" />
+            <DatePickerComponent />
+            {/* <SelectVariants label="Select Date" /> */}
+            <TimePickerComponent />
+            {/* <SelectVariants label="Select Time" /> */}
             <div className="col-span-2">
               <textarea
                 className="border-b-2 border-black resize-none w-full focus:outline-none"

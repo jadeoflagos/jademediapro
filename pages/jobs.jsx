@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import BlogCard from "../components/BlogCard";
 import Footer from "../components/Footer";
-import InterviewCard from "../components/InterviewCard";
-import SocialButtons from "../components/SocialButtons";
+import Pagination from "../components/Pagination";
 
 const Jobs = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
   const tabs = [
     "All",
     "UI Design",
@@ -169,6 +169,10 @@ const Jobs = () => {
           </aside>
         </section>
       </div>
+      <section className="px-20">
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      </section>
+
       <Footer />
     </div>
   );

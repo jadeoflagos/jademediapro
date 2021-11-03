@@ -11,7 +11,26 @@ import Product from "../components/Product";
 export default function Home() {
   const idea = ["Research", "Ideate", "Design", "Implement", "Result"];
   const [activeIdea, setActiveIdea] = useState(1);
-
+  const openings = [
+    {
+      position: "Project Manager",
+      location: "Lagos",
+      type: "Full Time",
+      company: "GIG Logistics",
+    },
+    {
+      position: "Graphic Designer",
+      location: "New Jersey",
+      type: "Contract",
+      company: "Crane Inc.",
+    },
+    {
+      position: "Sales Executive",
+      location: "Abuja",
+      type: "Full Time",
+      company: "NMI Pharmacy",
+    },
+  ];
   const products = [
     {
       name: "Imperfection is perfect | Custom Poster",
@@ -255,8 +274,35 @@ export default function Home() {
             />
           ))}
         </div>
+        <div className="flex items-center space-x-8 mb-24">
+          <h1 className="text-5xl">Explore our full catalogue</h1>
+          <p className="cursor-pointer py-3 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
+            VISIT STORE
+          </p>
+        </div>
+      </section>
+      <section className="grid grid-cols-2 px-20 mb-44">
         <div>
-          <h1>Explore our full catalogue</h1>
+          <p>Don’t miss the next live meeting to experience growth</p>
+        </div>
+        <div className="pl-32 border-l">
+          <p className="text-5xl mb-8">
+            Find the right job to boost your brilliant career
+          </p>
+          <div className="space-y-6 ">
+            {openings.map((op, opIndex) => (
+              <div className="bg-[#46BFB2] grid grid-cols-2 py-3 px-4">
+                <p className="text-[2rem] w-1/2">{op.position}</p>
+                <div className=" w-1/2 border-l border-black pl-10">
+                  <div className="flex flex-col justify-items-stretch">
+                    <p>{op.location}</p>
+                    <p>{op.type}</p>
+                    <p>{op.company}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       <Footer />
