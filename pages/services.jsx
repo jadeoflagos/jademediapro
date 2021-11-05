@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
+import { serviceData } from "../data";
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState(-1);
@@ -39,143 +40,40 @@ const Services = () => {
       {/* <CompanyButtons /> */}
       <section className="px-20 py-16">
         <div className="w-3/5 space-y-6">
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-5xl">Business Strategy </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 0 ? setActiveTab(0) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 0 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-            {activeTab === 0 && (
-              <p className="pt-6 pb-10">
-                In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa
-                for a family emergency and that trip changed her life. She
-                returned committed to leveraging years of experience, network
-                and unique trade skills working for leading global brand
-                including Walmart Corporation to support Africa’s quest for
-                sustainable economic transformation. In Africa’s case, people
-                wonder what good can come out of the continent that has an
-                history laden with war and famine and our response is to come
-                join us and see.... The new and emerging Africa is filled with
-                hard working men and women, young and old focused on positioning
-                themselves for a greater future. Nazaru champions these efforts
-                and invite others to join us on the journey. Contact Us for more
-                information on how we can serve you.{" "}
+          {serviceData.map((service, serviceIndex) => (
+            <div key={`service-${serviceIndex}`}>
+              <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
+                <span className="font-semibold text-lg">{service.title}</span>
+                <span
+                  className="cursor-pointer"
+                  onClick={() => {
+                    activeTab == serviceIndex
+                      ? setActiveTab(-1)
+                      : setActiveTab(serviceIndex);
+                  }}
+                >
+                  <Image
+                    src={`/vectors/${
+                      activeTab == serviceIndex
+                        ? "caret-down.svg"
+                        : "caretup.svg"
+                    }`}
+                    alt="Avatar"
+                    width={20}
+                    height={10}
+                  />
+                </span>
               </p>
-            )}
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-5xl">Branding & Design </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 2 ? setActiveTab(2) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 2 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-5xl">Digital Marketing </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 3 ? setActiveTab(3) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 3 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-5xl">Motion Design </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 4 ? setActiveTab(4) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 4 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-5xl">Art & Photography</span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 5 ? setActiveTab(5) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 5 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-5xl">Web & App Project </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 6 ? setActiveTab(6) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 6 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-          </div>
+
+              {activeTab == serviceIndex ? (
+                <p className="pt-6 pb-10">
+                  {serviceData[serviceIndex].details}
+                </p>
+              ) : (
+                ""
+              )}
+            </div>
+          ))}
         </div>
       </section>
       <section className="px-20 mt-7">

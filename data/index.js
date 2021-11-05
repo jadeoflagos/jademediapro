@@ -190,3 +190,189 @@ export const products = [
     img: "winebottle.png",
   },
 ];
+export const faqs = [
+  {
+    que: "Is enjoying hookah the same as smoking cigarettes?",
+    ans: `                No. All tobacco products have risks but comparing hookah to
+                cigarettes is erroneous and misleading. Hookah is heated at a
+                temperature that is four times cooler than a burning cigarette
+                and creates an aerosol that is 75% water (60%) and glycerol
+                (15%). By contrast, cigarette smoke is 75% tar, carbon monoxide,
+                and nicotine . Most people enjoy hookah in moderation, far less
+                often than typical smokers light up a cigarette. In the United
+                States, for example, 90% of people who enjoy hookah do so no
+                more than once per month. In comparison, the average American
+                cigarette smoker will smoke 14 cigarettes per day. Hookah takes
+                time to prepare and cannot be transported easily or used “on the
+                go.” Hookah is a unique cultural and social experience, whose
+                history, ingredients, and use make it incomparable to other
+                tobacco products characterized by high frequency use.
+`,
+  },
+  {
+    que: "Does the water bowl act to purify the hookah aerosol? ?",
+    ans: `                No. All tobacco products have risks but comparing hookah to
+                cigarettes is erroneous and misleading. Hookah is heated at a
+                temperature that is four times cooler than a burning cigarette
+                and creates an aerosol that is 75% water (60%) and glycerol
+                (15%). By contrast, cigarette smoke is 75% tar, carbon monoxide,
+                and nicotine . Most people enjoy hookah in moderation, far less
+                often than typical smokers light up a cigarette. In the United
+                States, for example, 90% of people who enjoy hookah do so no`,
+  },
+  {
+    que:
+      "Is a one-hour hookah session the same as smoking 100 or 200 cigarettes ?",
+    ans: "",
+  },
+];
+export const serviceData = [
+  {
+    title: "Art & Photography",
+    details: "",
+  },
+  {
+    title: "Branding & Design",
+    details: "",
+  },
+  {
+    title: "Business Strategy",
+    details: `The 80/20 Rule. You’re probably aware that 80 percent of your income is determined by 20 percent of your customers. If this isn't the case, you're probably missing out on a lot of profitable opportunities. What's really needed is a method to capture leads, convert those leads into small-time customers, and gradually build them towards customers that spend more with you.
+
+Our consultation workshop will help you to understand, analyse, and prioritize your business market supplying a summary of typical strategies and implementation describing how your product or service will be sold, managing your customers' expectations, and how the plan will be put into action together with its milestones to focus on a clear vision and achieve the anticipated growth.`,
+  },
+  {
+    title: "Digital Marketing",
+    details: "",
+  },
+  {
+    title: "Motion Design",
+    details: "",
+  },
+  {
+    title: "Web & App Project",
+    details: "",
+  },
+];
+export const projectData = [
+  {
+    title: "Case Studies",
+    details: "",
+  },
+  {
+    title: "Showreel",
+    details: "",
+  },
+  {
+    title: "Process",
+    details:
+      "Here we dive into conceptual design by sketching, wireframing and visualizing, until we have a high fidelity mockup. This process also yields interactive prototypes for our benefit while designing as well as yours to show stakeholders and potential users. Prototyping allows us to get your designs in front of the people that matter, so we can get the best feedback possible. This is an iterative process so hold on to your seats! It’s going to be a wild (but extremely fun) ride.",
+  },
+  {
+    title: "Training",
+    details: "",
+  },
+];
+export const openings = [
+  {
+    position: "Project Manager",
+    location: "Lagos",
+    type: "Full Time",
+    company: "GIG Logistics",
+  },
+  {
+    position: "Graphic Designer",
+    location: "New Jersey",
+    type: "Contract",
+    company: "Crane Inc.",
+  },
+  {
+    position: "Sales Executive",
+    location: "Abuja",
+    type: "Full Time",
+    company: "NMI Pharmacy",
+  },
+
+  {
+    position: "Project Manager",
+    location: "Lagos",
+    type: "Full Time",
+    company: "GIG Logistics",
+  },
+  {
+    position: "Graphic Designer",
+    location: "New Jersey",
+    type: "Contract",
+    company: "Crane Inc.",
+  },
+  {
+    position: "Sales Executive",
+    location: "Abuja",
+    type: "Full Time",
+    company: "NMI Pharmacy",
+  },
+  {
+    position: "Project Manager",
+    location: "Lagos",
+    type: "Full Time",
+    company: "GIG Logistics",
+  },
+  {
+    position: "Graphic Designer",
+    location: "New Jersey",
+    type: "Contract",
+    company: "Crane Inc.",
+  },
+  {
+    position: "Sales Executive",
+    location: "Abuja",
+    type: "Full Time",
+    company: "NMI Pharmacy",
+  },
+  {
+    position: "Project Manager",
+    location: "Lagos",
+    type: "Full Time",
+    company: "GIG Logistics",
+  },
+  {
+    position: "Graphic Designer",
+    location: "New Jersey",
+    type: "Contract",
+    company: "Crane Inc.",
+  },
+  {
+    position: "Sales Executive",
+    location: "Abuja",
+    type: "Full Time",
+    company: "NMI Pharmacy",
+  },
+  {
+    position: "Project Manager",
+    location: "Lagos",
+    type: "Full Time",
+    company: "GIG Logistics",
+  },
+  {
+    position: "Graphic Designer",
+    location: "New Jersey",
+    type: "Contract",
+    company: "Crane Inc.",
+  },
+  {
+    position: "Sales Executive",
+    location: "Abuja",
+    type: "Full Time",
+    company: "NMI Pharmacy",
+  },
+];
+export const eventData = [
+  {
+    title:
+      "WEBSITE TRAINING FOR UNDERGRADUATES, YOUTH CORPERS AND BUSINESS OWNERS",
+    venue: "Lagos, LA",
+    required: " Registration required",
+    month: "Oct",
+    date: "08",
+  },
+];

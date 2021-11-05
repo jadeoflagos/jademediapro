@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
-
+import { faqs } from "../data";
 const Contact = () => {
   const [activeTab, setActiveTab] = useState(-1);
 
@@ -36,147 +36,36 @@ const Contact = () => {
           Frequently asked questions about hookah and association
         </p>
         <div className="w-3/5 space-y-6">
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">
-                Is enjoying hookah the same as smoking cigarettes?
-              </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 0 ? setActiveTab(0) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 0 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-            {activeTab === 0 && (
-              <p className="pt-6 pb-10">
-                No. All tobacco products have risks but comparing hookah to
-                cigarettes is erroneous and misleading. Hookah is heated at a
-                temperature that is four times cooler than a burning cigarette
-                and creates an aerosol that is 75% water (60%) and glycerol
-                (15%). By contrast, cigarette smoke is 75% tar, carbon monoxide,
-                and nicotine . Most people enjoy hookah in moderation, far less
-                often than typical smokers light up a cigarette. In the United
-                States, for example, 90% of people who enjoy hookah do so no
-                more than once per month. In comparison, the average American
-                cigarette smoker will smoke 14 cigarettes per day. Hookah takes
-                time to prepare and cannot be transported easily or used “on the
-                go.” Hookah is a unique cultural and social experience, whose
-                history, ingredients, and use make it incomparable to other
-                tobacco products characterized by high frequency use.
+          {faqs.map((faq, faqIndex) => (
+            <div key={`faq-${faqIndex}`}>
+              <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
+                <span className="font-semibold text-lg">{faq.que}</span>
+                <span
+                  className="cursor-pointer"
+                  onClick={() => {
+                    activeTab == faqIndex
+                      ? setActiveTab(-1)
+                      : setActiveTab(faqIndex);
+                  }}
+                >
+                  <Image
+                    src={`/vectors/${
+                      activeTab == faqIndex ? "caret-down.svg" : "caretup.svg"
+                    }`}
+                    alt="Avatar"
+                    width={20}
+                    height={10}
+                  />
+                </span>
               </p>
-            )}
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">
-                Does the water bowl act to purify the hookah aerosol? ?
-              </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 1 ? setActiveTab(1) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 1 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-            {activeTab === 1 && (
-              <p className="pt-6 pb-10">
-                No. All tobacco products have risks but comparing hookah to
-                cigarettes is erroneous and misleading. Hookah is heated at a
-                temperature that is four times cooler than a burning cigarette
-                and creates an aerosol that is 75% water (60%) and glycerol
-                (15%). By contrast, cigarette smoke is 75% tar, carbon monoxide,
-                and nicotine . Most people enjoy hookah in moderation, far less
-                often than typical smokers light up a cigarette. In the United
-                States, for example, 90% of people who enjoy hookah do so no
-              </p>
-            )}
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">
-                Is a one-hour hookah session the same as smoking 100 or 200
-                cigarettes ?
-              </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 2 ? setActiveTab(2) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 2 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">
-                Is hookah contributing to youth tobacco use?
-              </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 3 ? setActiveTab(3) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 3 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-lg">
-                Is there a difference between flavored and unflavored hookah?
-              </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 4 ? setActiveTab(4) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 4 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-          </div>
+
+              {activeTab == faqIndex ? (
+                <p className="pt-6 pb-10"> {faqs[faqIndex].ans}</p>
+              ) : (
+                ""
+              )}
+            </div>
+          ))}
         </div>
       </section>
       <section className="px-20 mt-7">

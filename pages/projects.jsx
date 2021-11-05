@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PostCard from "../components/PostCard";
+import { projectData } from "../data";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -36,92 +37,40 @@ const Projects = () => {
       </div>
       <section className="mt-20 px-20 py-20 ">
         <div className="w-3/5 space-y-6">
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-5xl">Case Studies </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 0 ? setActiveTab(0) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 0 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-            {activeTab === 0 && (
-              <p className="pt-6 pb-10">
-                In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa
-                for a family emergency and that trip changed her life. She
+          {projectData.map((project, projectIndex) => (
+            <div key={`project-${projectIndex}`}>
+              <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
+                <span className="font-semibold text-lg">{project.title}</span>
+                <span
+                  className="cursor-pointer"
+                  onClick={() => {
+                    activeTab == projectIndex
+                      ? setActiveTab(-1)
+                      : setActiveTab(projectIndex);
+                  }}
+                >
+                  <Image
+                    src={`/vectors/${
+                      activeTab == projectIndex
+                        ? "caret-down.svg"
+                        : "caretup.svg"
+                    }`}
+                    alt="Avatar"
+                    width={20}
+                    height={10}
+                  />
+                </span>
               </p>
-            )}
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-5xl">Showreel </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 2 ? setActiveTab(2) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 2 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-5xl">Process</span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 3 ? setActiveTab(3) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 3 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-          </div>
-          <div>
-            <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-              <span className="font-semibold text-5xl">Training </span>
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  activeTab !== 4 ? setActiveTab(4) : setActiveTab(-1);
-                }}
-              >
-                <Image
-                  src={`/vectors/${
-                    activeTab == 4 ? "caret-down.svg" : "caretup.svg"
-                  }`}
-                  alt="Avatar"
-                  width={20}
-                  height={10}
-                />
-              </span>
-            </p>
-          </div>
+
+              {activeTab == projectIndex ? (
+                <p className="pt-6 pb-10">
+                  {projectData[projectIndex].details}
+                </p>
+              ) : (
+                ""
+              )}
+            </div>
+          ))}
         </div>
       </section>
       <section className="mt-11 mb-28 grid grid-cols-3 gap-x-8 px-20 ">

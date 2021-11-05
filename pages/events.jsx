@@ -5,30 +5,10 @@ import DailyEmailForm from "../components/DailyEmailForm";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Pagination from "../components/Pagination";
+import Tags from "../components/Tags";
+import { eventData } from "../data";
 
 const Events = () => {
-  const tags = [
-    "Technology",
-    "Open Source",
-    "JavaScript",
-    "Minimalism",
-    "Self-help",
-    "Animals",
-    "Herbivores",
-    "HTML",
-    "CSS",
-    "PHP",
-    "Web Technologies",
-    "Career",
-    "Life",
-    "Spirituality",
-    "Food",
-    "Cooking",
-    "Sports",
-    "Racing",
-    "Mountain Hiking",
-    "Cruising",
-  ];
   const [currentPage, setCurrentPage] = useState(1);
 
   return (
@@ -58,17 +38,38 @@ const Events = () => {
           </div>
         </div>
       </div>
-      <section className="grid grid-cols-3 mt-12">
-        <main className="col-span-2"></main>
+      <section className="px-20 grid grid-cols-3 gap-x-8 mt-12">
+        <main className="col-span-2">
+          {eventData.map((data, dataIndex) => (
+            <div className="flex items-center space-x-8 py-3 px-4">
+              <div>
+                <p className="text-lg">{data.title}</p>
+                <p className="text-lg">
+                  <span>{data.venue}</span>
+                  <span>{data.required}</span>
+                </p>
+              </div>
+              <div className="">
+                <p>{data.month}</p>
+                <p className="text-4xl">{data.date}</p>
+              </div>
+
+              <div className="flex items-center ">
+                <span className="mx-3">Get details</span>
+                <Image
+                  src="/vectors/arrow-left.svg"
+                  alt="Avatar"
+                  width={25}
+                  height={17}
+                />
+              </div>
+            </div>
+          ))}
+        </main>
         <div className="">
           <Calendar />
-          <div>
-            <h2 className="mb-4">Tags</h2>
-            <div className="space-y-4">
-              {tags.map((tag, tagIndex) => (
-                <p key={tagIndex}>{tag}</p>
-              ))}
-            </div>
+          <div className="mb-8">
+            <Tags />
           </div>
           <DailyEmailForm />
         </div>
