@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import CompanyButtons from "../components/CompanyButtons";
 import TimePickerComponent from "../components/TimePicker";
 import DatePickerComponent from "../components/DatePicker";
+import { team } from "../data";
 
 const About = () => {
   const wwwh = [
@@ -274,21 +275,114 @@ const About = () => {
       </section>
       <section className="px-20 mt-10">
         <p className="text-4xl">The Team</p>
-        <p>We are a team. We love what we do. Simple.</p>
+        <div className="grid grid-cols-3 gap-x-16 mt-6">
+          {team.slice(0, 3).map((teammember, memberIndex) => (
+            <div
+              key={`member-${memberIndex}`}
+              className="flex flex-col items-center"
+            >
+              <Image
+                src={`/images/${teammember.img}`}
+                alt="Avatar"
+                width={400}
+                height={500}
+              />
+              <p className="mt-5 mb-2 font-bold text-2xl">{teammember.name}</p>
+              <p>{teammember.position}</p>
+            </div>
+          ))}
+        </div>
+        <p className="my-8 text-5xl font-bold">
+          We are a team. We love what we do. Simple.
+        </p>
+        <div className="grid grid-cols-3 gap-x-16 mt-6">
+          {team.slice(3).map((teammember, memberIndex) => (
+            <div
+              key={`member-${memberIndex}`}
+              className="flex flex-col items-center"
+            >
+              <Image
+                src={`/images/${teammember.img}`}
+                alt="Avatar"
+                width={400}
+                height={500}
+              />
+              <p className="mt-5 mb-2 font-bold text-2xl">{teammember.name}</p>
+              <p>{teammember.position}</p>
+            </div>
+          ))}
+        </div>
       </section>
-      <p className="px-20">Our Clients </p>
+      <section className="px-20 mt-20">
+        <p className="text-3xl">Career Development</p>
+        <p className="text-6xl max-w-screen-xl my-8">
+          We exist for your Growth and Success. Got what it takes?
+          <span className="text-[#046C62]"> Join our Team today</span>
+        </p>
+        <div className="grid grid-cols-2 gap-x-16">
+          <div>
+            <p className="mb-6">
+              Professional opportunities for career growth and improvement in
+              personal skills and knowledge with great expectations are
+              available at Jade Media Pro. Our training and job/internship
+              programs offer a well-structured path to all-around professional
+              development and career advancement. We are dedicated to creating
+              and sustaining an environment that fosters creativity which is
+              excellent for young professionals. Great opportunities await you
+              in Jade Media Pro if you are: Creative and possess excellent
+              communication skills. A team player with the ability to work
+              methodically. Self-motivated and result-oriented (and meet
+              deadlines). A problem solver with a keen eye for aesthetics and
+              details. Excellent analytical abilities and up to date with
+              current digital trends We seek these qualities and more in young
+              professionals. We're looking for creative people that share our
+              company's basic values of excellence.
+            </p>
+            <p className=" bg-[#502A7A] max-w-max px-20 py-5 flex items-center justify-center cursor-pointer text-white uppercase">
+              APPLY NOW
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <Image
+              src="/images/careerpeople.png"
+              alt="Avatar"
+              width={650}
+              height={500}
+            />
+          </div>
+        </div>
+      </section>
+      <section className="px-20 mt-20">
+        <h3 className="text-4xl">Testimonials</h3>
+        <div className="grid grid-cols-2 my-6">
+          <p className="text-6xl">
+            Many people have already seen how working with Jade Media Pro has
+            enabled them to rebrand and grow their businesses.
+          </p>
+        </div>
+      </section>
+      <p className="px-20 text-4xl mt-16 mb-8">Our Clients </p>
       <CompanyButtons />
       <section className="px-20 grid grid-cols-3 gap-x-20 my-24">
         {values.map((value, valueIndex) => (
           <div key={`value-${valueIndex}`} className="bg-[#46BFB2] p-6">
             <h3 className="mb-16 text-2xl">{value.title}</h3>
             <p>{value.details}</p>
+            <div className="flex items-center space-x-3 mt-10">
+              <p>Learn More</p>
+              <Image
+                src="/vectors/arrow-left.svg"
+                alt="Avatar"
+                width={25}
+                height={17}
+              />
+            </div>
           </div>
         ))}
       </section>
       <section className="px-20 mb-16">
         <p className="text-6xl font-bold">Book Your FREE Consultation Now</p>
-        <div className="flex py-0">
+        <div className="flex py-4">
           <form
             action=""
             className=" w-3/5 grid grid-cols-2 gap-10 place-content-start"

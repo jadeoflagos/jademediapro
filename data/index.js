@@ -416,3 +416,45 @@ export const eventData = [
     date: "08",
   },
 ];
+export const team = [
+  {
+    name: "Rustam raz",
+    position: "Creative Director",
+    img: "director.png",
+  },
+  {
+    name: "Rustam raz",
+    position: "Product Manager",
+    img: "productmanager.png",
+  },
+  {
+    name: "Rustam raz",
+    position: "Art Director",
+    img: "artdirector.png",
+  },
+  {
+    name: "Rustam raz",
+    position: "Marketing Manager ",
+    img: "director.png",
+  },
+  {
+    name: "Rustam raz",
+    position: "Social Media Manager ",
+    img: "productmanager.png",
+  },
+  {
+    name: "Rustam raz",
+    position: "Content Creator",
+    img: "artdirector.png",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Rustam raz",
+    position: " CEO CRISPR BIOTECH",
+    img: "",
+    testimony:
+      "In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa for a family emergency and that trip changed her life. She returned committed to leveraging years of experience, for leading global brand including Walmart Corporation to support Africa’s quest for sustainable economic transformation.",
+  },
+];
