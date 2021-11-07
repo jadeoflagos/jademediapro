@@ -39,39 +39,42 @@ const Events = () => {
         </div>
       </div>
       <section className="px-20 grid grid-cols-3 gap-x-8 mt-12">
-        <main className="col-span-2">
+        <main className="col-span-2 space-y-8">
           {eventData.map((data, dataIndex) => (
-            <div className="flex items-center space-x-8 py-3 px-4">
-              <div>
-                <p className="text-lg">{data.title}</p>
-                <p className="text-lg">
-                  <span>{data.venue}</span>
-                  <span>{data.required}</span>
+            <div className="flex items-center border-b-2 border-black  space-x-8 py-3 px-4">
+              <div className="w-2/3">
+                <p className="text-xl font-semibold">{data.title}</p>
+                <p className="text-lg mt-3">
+                  <span className="pr-3">{data.venue}</span>
+                  <span className="border-l border-black pl-2">
+                    {data.required}
+                  </span>
                 </p>
               </div>
-              <div className="">
-                <p>{data.month}</p>
-                <p className="text-4xl">{data.date}</p>
-              </div>
-
-              <div className="flex items-center ">
-                <span className="mx-3">Get details</span>
-                <Image
-                  src="/vectors/arrow-left.svg"
-                  alt="Avatar"
-                  width={25}
-                  height={17}
-                />
+              <div className="w-1/3 flex items-end justify-between">
+                <div className="">
+                  <p className="text-lg">{data.month}</p>
+                  <p className="text-7xl">{data.date}</p>
+                </div>
+                <div className="flex items-center ">
+                  <span className="mx-1 whitespace-nowrap">Get details</span>
+                  <Image
+                    src="/vectors/arrow-left.svg"
+                    alt="Avatar"
+                    width={25}
+                    height={17}
+                  />
+                </div>
               </div>
             </div>
           ))}
         </main>
-        <div className="">
+        <div className="flex flex-col ">
           <Calendar />
-          <div className="mb-8">
+          <div className="space-y-8 ml-20">
             <Tags />
+            <DailyEmailForm />
           </div>
-          <DailyEmailForm />
         </div>
       </section>
       <section className="px-20">

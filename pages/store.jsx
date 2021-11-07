@@ -63,7 +63,25 @@ const Store = () => {
             ))}
           </div>
         </div>
-        <div className=" mt-[6.4rem] mb-32 grid grid-cols-3 gap-x-[6.375rem]">
+        <div className=" mt-[6.4rem] mb-32 grid grid-cols-3 gap-[6.375rem]">
+          {products.map((product, productIndex) => (
+            <Product
+              key={`product-${productIndex}`}
+              title={product.name}
+              price={product.price}
+              img={product.img}
+              delivery="FREE Delivery"
+            />
+          ))}
+          {products.map((product, productIndex) => (
+            <Product
+              key={`product-${productIndex}`}
+              title={product.name}
+              price={product.price}
+              img={product.img}
+              delivery="FREE Delivery"
+            />
+          ))}
           {products.map((product, productIndex) => (
             <Product
               key={`product-${productIndex}`}

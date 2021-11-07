@@ -375,4 +375,44 @@ export const eventData = [
     month: "Oct",
     date: "08",
   },
+  {
+    title:
+      "WEBSITE TRAINING FOR UNDERGRADUATES, YOUTH CORPERS AND BUSINESS OWNERS",
+    venue: "Lagos, LA",
+    required: " Registration required",
+    month: "Oct",
+    date: "08",
+  },
+  {
+    title:
+      "WEBSITE TRAINING FOR UNDERGRADUATES, YOUTH CORPERS AND BUSINESS OWNERS",
+    venue: "Lagos, LA",
+    required: " Registration required",
+    month: "Oct",
+    date: "08",
+  },
+  {
+    title:
+      "WEBSITE TRAINING FOR UNDERGRADUATES, YOUTH CORPERS AND BUSINESS OWNERS",
+    venue: "Lagos, LA",
+    required: " Registration required",
+    month: "Oct",
+    date: "08",
+  },
+  {
+    title:
+      "WEBSITE TRAINING FOR UNDERGRADUATES, YOUTH CORPERS AND BUSINESS OWNERS",
+    venue: "Lagos, LA",
+    required: " Registration required",
+    month: "Oct",
+    date: "08",
+  },
+  {
+    title:
+      "WEBSITE TRAINING FOR UNDERGRADUATES, YOUTH CORPERS AND BUSINESS OWNERS",
+    venue: "Lagos, LA",
+    required: " Registration required",
+    month: "Oct",
+    date: "08",
+  },
 ];

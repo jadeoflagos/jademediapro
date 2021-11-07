@@ -141,7 +141,7 @@ export default function Home() {
       <div className="w-full py-24 flex items-center px-20 bg-[#502A7A]">
         <div className="w-4/12 text-white space-y-8">
           {idea.map((i, index) => (
-            <div className="flex items-center space-x-10">
+            <div className="flex items-center space-x-10" key={index}>
               <span
                 className={` ${
                   activeIdea == index
@@ -214,9 +214,19 @@ export default function Home() {
       </p>
       <section className="flex items-start px-20">
         <div className="w-4/6">
-          <video width="900" height="450" controls>
-            <source src="/arcnet.mp4" type="video/mp4" />
-          </video>
+          <iframe
+            src="https://player.vimeo.com/video/636370372?h=734c780ecc"
+            width="900"
+            height="450"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <p>
+            <a href="https://vimeo.com/636370372">Ariwa-Leather-Fashion.mp4</a>{" "}
+            from <a href="https://vimeo.com/user147594847">John Ademiluyi</a> on{" "}
+            <a href="https://vimeo.com">Vimeo</a>.
+          </p>
         </div>
         <div className="w-2/6 flex flex-col justify-start ">
           <p className="text-[#046C62] mb-8 text-4xl">
