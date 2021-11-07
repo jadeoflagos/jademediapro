@@ -38,7 +38,7 @@ const Services = () => {
         </div>
       </div>
       {/* <CompanyButtons /> */}
-      <section className="px-20 py-16">
+      <section className="px-20 py-16 flex items-center">
         <div className="w-3/5 space-y-6">
           {serviceData.map((service, serviceIndex) => (
             <div key={`service-${serviceIndex}`}>
@@ -74,6 +74,15 @@ const Services = () => {
               )}
             </div>
           ))}
+        </div>
+        <div className="w-2/5 ml-24">
+          {" "}
+          <Image
+            src="/images/market.png"
+            alt="Avatar"
+            width={492}
+            height={259}
+          />
         </div>
       </section>
       <section className="px-20 mt-7">
