@@ -354,11 +354,32 @@ const About = () => {
       </section>
       <section className="px-20 mt-20">
         <h3 className="text-4xl">Testimonials</h3>
-        <div className="grid grid-cols-2 my-6">
+        <div className="grid grid-cols-2 gap-x-20 my-6">
           <p className="text-6xl">
             Many people have already seen how working with Jade Media Pro has
             enabled them to rebrand and grow their businesses.
           </p>
+          <div className="flex items-start relative">
+            <div>
+              <Image
+                src="/images/GOAT.png"
+                alt="Avatar"
+                width={200}
+                height={200}
+              />
+            </div>
+            <div>
+              <p>Rustam raz</p>
+              <p>CEO CRISPR BIOTECH</p>
+            </div>
+            <p className="absolute top-1/3 bg-[#044841] text-white px-9 py-12 w-96 left-28">
+              In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa
+              for a family emergency and that trip changed her life. She
+              returned committed to leveraging years of experience, for leading
+              global brand including Walmart Corporation to support Africa’s
+              quest for sustainable economic transformation.
+            </p>
+          </div>
         </div>
       </section>
       <p className="px-20 text-4xl mt-16 mb-8">Our Clients </p>
@@ -368,8 +389,8 @@ const About = () => {
           <div key={`value-${valueIndex}`} className="bg-[#46BFB2] p-6">
             <h3 className="mb-16 text-2xl">{value.title}</h3>
             <p>{value.details}</p>
-            <div className="flex items-center space-x-3 mt-10">
-              <p>Learn More</p>
+            <div className="flex items-center mt-10">
+              <p className="pr-2">Learn More</p>
               <Image
                 src="/vectors/arrow-left.svg"
                 alt="Avatar"
