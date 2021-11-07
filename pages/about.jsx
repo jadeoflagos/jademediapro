@@ -352,15 +352,15 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="px-20 mt-20">
+      <section className="px-20 my-20">
         <h3 className="text-4xl">Testimonials</h3>
         <div className="grid grid-cols-2 gap-x-20 my-6">
-          <p className="text-6xl">
+          <p className="text-5xl">
             Many people have already seen how working with Jade Media Pro has
             enabled them to rebrand and grow their businesses.
           </p>
           <div className="flex items-start relative">
-            <div>
+            <div className="">
               <Image
                 src="/images/GOAT.png"
                 alt="Avatar"
@@ -368,21 +368,29 @@ const About = () => {
                 height={200}
               />
             </div>
-            <div>
-              <p>Rustam raz</p>
-              <p>CEO CRISPR BIOTECH</p>
+            <div className="ml-10">
+              <p className="font-bold text-3xl mb-1">Rustam raz</p>
+              <p className="text-xl">CEO CRISPR BIOTECH</p>
             </div>
-            <p className="absolute top-1/3 bg-[#044841] text-white px-9 py-12 w-96 left-28">
-              In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa
-              for a family emergency and that trip changed her life. She
-              returned committed to leveraging years of experience, for leading
-              global brand including Walmart Corporation to support Africa’s
-              quest for sustainable economic transformation.
-            </p>
+            <div className="flex absolute top-1/3 left-12 space-x-14">
+              <Image
+                src="/vectors/qou.svg"
+                alt="Avatar"
+                width={60}
+                height={72}
+              />
+              <p className=" bg-[#044841] text-white px-9 py-12 w-96 h-80">
+                In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa
+                for a family emergency and that trip changed her life. She
+                returned committed to leveraging years of experience, for
+                leading global brand including Walmart Corporation to support
+                Africa’s quest for sustainable economic transformation.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-      <p className="px-20 text-4xl mt-16 mb-8">Our Clients </p>
+      <p className="px-20 text-4xl mt-48 mb-8">Our Clients </p>
       <CompanyButtons />
       <section className="px-20 grid grid-cols-3 gap-x-20 my-24">
         {values.map((value, valueIndex) => (
