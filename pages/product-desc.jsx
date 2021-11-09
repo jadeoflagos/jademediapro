@@ -96,7 +96,7 @@ const productDesc = () => {
               Estimated to ship in 3 - 7 days within USA
             </span>
           </div>
-          <button className="my-[2.25rem] bg-[#502A7A] flex items-center ">
+          <button className="my-[2.25rem] bg-[#502A7A] flex items-center justify-center text-white ">
             <Image src={cartButton} />
             <span>ADD TO CART</span>
           </button>
