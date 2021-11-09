@@ -8,7 +8,6 @@ import { useRouter } from "next/router";
 const Navbar = ({ bg, textColor, darkLogo }) => {
   const router = useRouter();
   const path = router.pathname;
-  console.log({ path });
   return (
     <nav
       className={`flex items-center justify-between px-20 py-8 sticky top-0 left-0`}

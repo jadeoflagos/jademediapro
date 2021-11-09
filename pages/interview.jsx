@@ -7,6 +7,7 @@ import SocialButtons from "../components/SocialButtons";
 import Pagination from "../components/Pagination";
 
 const Interview = () => {
+  const [currentPage, setCurrentPage] = useState(0);
   return (
     <div>
       <div className="bg-[#502A7A] w-screen min-h-[30rem] pb-11">
