@@ -225,8 +225,8 @@ export default function Home() {
             allowfullscreen
           ></iframe>
           <p>
-            <a href="https://vimeo.com/636370372">Ariwa-Leather-Fashion.mp4</a>{" "}
-            from <a href="https://vimeo.com/user147594847">John Ademiluyi</a> on{" "}
+            <a href="https://vimeo.com/636370372">Ariwa-Leather-Fashion.mp4</a>
+            from <a href="https://vimeo.com/user147594847">John Ademiluyi</a> on
             <a href="https://vimeo.com">Vimeo</a>.
           </p>
         </div>
