@@ -43,7 +43,7 @@ const Services = () => {
           {serviceData.map((service, serviceIndex) => (
             <div key={`service-${serviceIndex}`}>
               <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-                <span className="font-semibold text-lg">{service.title}</span>
+                <span className="font-semibold text-4xl">{service.title}</span>
                 <span
                   className="cursor-pointer"
                   onClick={() => {
@@ -66,8 +66,8 @@ const Services = () => {
               </p>
 
               {activeTab == serviceIndex ? (
-                <p className="pt-6 pb-10">
-                  {serviceData[serviceIndex].details}
+                <p className="pt-6 pb-10 flex justify-end ">
+                  <p className="w-[65%]">{serviceData[serviceIndex].details}</p>
                 </p>
               ) : (
                 ""
@@ -75,14 +75,16 @@ const Services = () => {
             </div>
           ))}
         </div>
-        <div className="w-2/5 ml-24">
-          {" "}
+        <div className="w-2/5 ml-24 ">
           <Image
             src="/images/market.png"
             alt="Avatar"
             width={492}
             height={259}
           />
+          <p className=" bg-[#8A57A3] max-w-max mt-20 px-16 py-2 flex items-center justify-center cursor-pointer text-white uppercase">
+            GET QOUTE
+          </p>{" "}
         </div>
       </section>
       <section className="px-20 mt-7">
