@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Pagination from "../components/Pagination";
 import { products, storeTab } from "../data";
 import Product from "../components/Product";
+import Link from "next/link";
 
 const Store = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -65,31 +66,40 @@ const Store = () => {
         </div>
         <div className=" mt-[6.4rem] mb-32 grid grid-cols-3 gap-[6.375rem]">
           {products.map((product, productIndex) => (
-            <Product
-              key={`product-${productIndex}`}
-              title={product.name}
-              price={product.price}
-              img={product.img}
-              delivery="FREE Delivery"
-            />
+            <Link href="/product-desc" key={`product-${productIndex}`}>
+              <a>
+                <Product
+                  title={product.name}
+                  price={product.price}
+                  img={product.img}
+                  delivery="FREE Delivery"
+                />
+              </a>
+            </Link>
           ))}
           {products.map((product, productIndex) => (
-            <Product
-              key={`product-${productIndex}`}
-              title={product.name}
-              price={product.price}
-              img={product.img}
-              delivery="FREE Delivery"
-            />
+            <Link href="/product-desc" key={`product-${productIndex}`}>
+              <a>
+                <Product
+                  title={product.name}
+                  price={product.price}
+                  img={product.img}
+                  delivery="FREE Delivery"
+                />
+              </a>
+            </Link>
           ))}
           {products.map((product, productIndex) => (
-            <Product
-              key={`product-${productIndex}`}
-              title={product.name}
-              price={product.price}
-              img={product.img}
-              delivery="FREE Delivery"
-            />
+            <Link href="/product-desc" key={`product-${productIndex}`}>
+              <a>
+                <Product
+                  title={product.name}
+                  price={product.price}
+                  img={product.img}
+                  delivery="FREE Delivery"
+                />
+              </a>
+            </Link>
           ))}
         </div>{" "}
       </section>

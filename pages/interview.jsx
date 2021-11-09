@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import InterviewCard from "../components/InterviewCard";
 import SocialButtons from "../components/SocialButtons";
 import Pagination from "../components/Pagination";
+import Link from "next/link";
 
 const Interview = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -42,15 +43,18 @@ const Interview = () => {
       <div className="mt-12 px-20 py-20 ">
         <p className="font-semibold text-6xl mb-8">60 minutes:</p>
         <div className="grid grid-cols-3  gap-8">
-          <InterviewCard />
-          <InterviewCard />
-          <InterviewCard />
-          <InterviewCard />
-          <InterviewCard />
-          <InterviewCard />
-          <InterviewCard />
-          <InterviewCard />
-          <InterviewCard />
+          {Array(9)
+            .fill("")
+            .map((interview, interviewIndex) => (
+              <Link
+                href="/video-playing"
+                key={`interview-60min-no${interviewIndex}`}
+              >
+                <a>
+                  <InterviewCard />
+                </a>
+              </Link>
+            ))}
         </div>
       </div>
       <section className="px-20">

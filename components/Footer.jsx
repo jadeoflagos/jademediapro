@@ -70,7 +70,7 @@ const Footer = () => {
             <Link href="/interview">Interview</Link>
             <Link href="/about">Community</Link>
             <Link href="/about">Collaboration</Link>
-            <Link href="/about">Event</Link>
+            <Link href="/events">Event</Link>
             <Link href="/jobs">Job/Internship</Link>
           </div>
         </div>
