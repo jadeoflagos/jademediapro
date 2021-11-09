@@ -532,3 +532,16 @@ const testimonials = [
 
 
 export const productImages = [pd1, pd2, pd3]
+
+export const blogPostData = [
+  { date: 'Nov 01 2020', id: 1 },
+  { date: 'Oct 31 2021', id: 2 },
+  { date: 'Oct 31 2021', id: 3 },
+  { id: 4 },
+  { id: 5 },
+  { id: 6 },
+  { id: 7 },
+  { id: 8 },
+  { id: 9 },
+
+]
