@@ -34,8 +34,8 @@ const productDesc = () => {
           <Image src={profilePix} />
         </div>
       </nav>
-      <main className="flex-grow grid grid-cols-[1fr,auto] gap-x-[7.875rem]">
-        <div className="product-display w-full flex items-center justify-center gap-x-[3.9rem] bg-[#F4F4F2]">
+      <main className="flex-grow  mt-[4rem] grid grid-cols-[1fr,auto] gap-x-[7.875rem] px-20">
+        <div className="product-display w-full flex items-center justify-center gap-x-[3.9rem] bg-[#F4F4F2] h-[40rem]">
           <div className="flex flex-col justify-center gap-[1.3rem]">
             {productImages.map((image, imageIndex) => (
               <span
@@ -49,8 +49,8 @@ const productDesc = () => {
               </span>
             ))}
           </div>
-          <div className="flex flex-col mt-[4.6rem] ">
-            <Image src={painting} />
+          <div className="flex flex-col mt-[4rem]  ">
+            <Image src={painting} height={500} width={431} />
             <div className="flex items-center justify-center gap-[2.7rem]">
               <p className="flex items-center gap-[0.7rem]">
                 <Image src={show} />
@@ -64,20 +64,21 @@ const productDesc = () => {
           </div>
         </div>
         <div className="desc-text flex flex-col">
-          <Link href="/projects">
+          <Link href="/interview">
             <a className="flex items-center">
               <Image src={backArrow} />
               <span className="ml-[0.625rem]">Back</span>
             </a>
           </Link>
-          <span className="mt-[4.8rem] mb-[0.7rem] text-[3.06rem]">
+          <span className="mt-[2rem] mb-[0.5rem] text-[3.06rem]">
             Wallowing Breeze{" "}
           </span>
           <span>Hettie Richards</span>
-          <div className="flex flex-col mt-[2.12rem] mb-[3.5rem]">
+          <div className="flex flex-col mt-[2.12rem] mb-[2.6rem]">
             <span>Oil on canvas,</span>
             <span>2008</span>
             <span>Gallery wrap canvas</span>
+            <span>canvas</span>
             <span>26 in × 23 in</span>
           </div>
           <p className="max-w-[34rem] pb-2 border-b-2 border-black">
@@ -85,20 +86,20 @@ const productDesc = () => {
             of chaos and serenity. Perfect fit for modern and contemporary
             styled interiors.
           </p>
-          <span className="my-[1.8rem]">$ 620</span>
-          <div>
+          <span className="my-[1.8rem] font-bold">$ 620</span>
+          <div className="flex items-center">
             <Image src={location} />
             <span className="ml-2">Ships from New York, NY, USA</span>
           </div>
-          <div>
+          <div className="flex items-center mt-2">
             <Image src={shippingIcon} />
             <span className="ml-2">
               Estimated to ship in 3 - 7 days within USA
             </span>
           </div>
-          <button className="my-[2.25rem] bg-[#502A7A] flex items-center justify-center text-white ">
+          <button className="my-[2.25rem] border-none outline-none py-1 bg-[#502A7A] flex items-center justify-center text-white ">
             <Image src={cartButton} />
-            <span>ADD TO CART</span>
+            <span className="ml-[2.25rem]">ADD TO CART</span>
           </button>
           <span>Taxes and shipping fees will apply upon checkout</span>
         </div>
