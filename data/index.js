@@ -1,3 +1,7 @@
+import pd1 from '../public/images/pd1.png'
+import pd2 from '../public/images/pd2.png'
+import pd3 from '../public/images/pd3.png'
+
 export const privacyPolicyData = [
   {
     title: "Introduction",
@@ -458,3 +462,6 @@ const testimonials = [
       "In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa for a family emergency and that trip changed her life. She returned committed to leveraging years of experience, for leading global brand including Walmart Corporation to support Africa’s quest for sustainable economic transformation.",
   },
 ];
+
+
+export const productImages = [pd1, pd2, pd3]
