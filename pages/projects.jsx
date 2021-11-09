@@ -40,7 +40,7 @@ const Projects = () => {
           {projectData.map((project, projectIndex) => (
             <div key={`project-${projectIndex}`}>
               <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-                <span className="font-semibold text-lg">{project.title}</span>
+                <span className="font-semibold text-4xl">{project.title}</span>
                 <span
                   className="cursor-pointer"
                   onClick={() => {
@@ -63,8 +63,11 @@ const Projects = () => {
               </p>
 
               {activeTab == projectIndex ? (
-                <p className="pt-6 pb-10">
-                  {projectData[projectIndex].details}
+                <p className="pt-6 pb-10 flex justify-end ">
+                  <p className="w-[65%]">
+                    {" "}
+                    {projectData[projectIndex].details}
+                  </p>
                 </p>
               ) : (
                 ""
