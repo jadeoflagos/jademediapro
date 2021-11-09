@@ -7,6 +7,8 @@ import { useState } from "react";
 import PostCard from "../components/PostCard";
 import ServicesCarousel from "../components/ServicesCarousel";
 import Product from "../components/Product";
+import { eventData } from "../data";
+import Link from "next/link";
 
 export default function Home() {
   const idea = ["Research", "Ideate", "Design", "Implement", "Result"];
@@ -292,8 +294,41 @@ export default function Home() {
         </div>
       </section>
       <section className="grid grid-cols-2 px-20 mb-44">
-        <div>
-          <p>Don’t miss the next live meeting to experience growth</p>
+        <div className="w-full flex flex-col">
+          <p className="text-5xl">
+            Don’t miss the next live meeting to experience growth
+          </p>
+          <div className="grid grid-cols-2 gap-x-9 mt-10">
+            {eventData.slice(0, 2).map((event, eventData) => (
+              <div className="w-full flex flex-col">
+                <div className="flex items-end space-x-5">
+                  <p className="flex flex-col">
+                    <span className="text-xs">{event.month}.</span>
+                    <span className="text-6xl">{event.date}</span>
+                  </p>
+                  <p className="flex flex-col">
+                    <span>{event.venue}</span>
+                    <span>{event.required}</span>
+                  </p>
+                </div>
+                <div className="text-[#046C62] text-3xl mt-10 flex w-full">
+                  {event.title}
+                </div>
+                <div className="flex items-center mt-12 ">
+                  <span className="mx-1 whitespace-nowrap">Get details</span>
+                  <Image
+                    src="/vectors/arrow-left.svg"
+                    alt="Avatar"
+                    width={25}
+                    height={17}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="cursor-pointer py-3 mt-16 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
+            UPCOMING EVENTS
+          </p>
         </div>
         <div className="pl-32 border-l">
           <p className="text-5xl mb-8">
@@ -313,6 +348,11 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <Link href="/jobs">
+            <p className="cursor-pointer py-3 mt-16 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
+              VIEW ALL JOBS{" "}
+            </p>
+          </Link>
         </div>
       </section>
       <Footer />

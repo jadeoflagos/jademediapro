@@ -1,6 +1,6 @@
-import pd1 from '../public/images/pd1.png'
-import pd2 from '../public/images/pd2.png'
-import pd3 from '../public/images/pd3.png'
+import pd1 from "../public/images/pd1.png";
+import pd2 from "../public/images/pd2.png";
+import pd3 from "../public/images/pd3.png";
 
 export const privacyPolicyData = [
   {
@@ -439,16 +439,14 @@ export const openings = [
 ];
 export const eventData = [
   {
-    title:
-      "WEBSITE TRAINING FOR UNDERGRADUATES, YOUTH CORPERS AND BUSINESS OWNERS",
+    title: "Digital Marketing and Internet Business Training",
     venue: "Lagos, LA",
     required: " Registration required",
     month: "Oct",
     date: "08",
   },
   {
-    title:
-      "WEBSITE TRAINING FOR UNDERGRADUATES, YOUTH CORPERS AND BUSINESS OWNERS",
+    title: "Network and learn to hack growth with branding",
     venue: "Lagos, LA",
     required: " Registration required",
     month: "Oct",
@@ -530,18 +528,16 @@ const testimonials = [
   },
 ];
 
-
-export const productImages = [pd1, pd2, pd3]
+export const productImages = [pd1, pd2, pd3];
 
 export const blogPostData = [
-  { date: 'Nov 01 2020', id: 1 },
-  { date: 'Oct 31 2021', id: 2 },
-  { date: 'Oct 31 2021', id: 3 },
+  { date: "Nov 01 2020", id: 1 },
+  { date: "Oct 31 2021", id: 2 },
+  { date: "Oct 31 2021", id: 3 },
   { id: 4 },
   { id: 5 },
   { id: 6 },
   { id: 7 },
   { id: 8 },
   { id: 9 },
-
-]
+];
