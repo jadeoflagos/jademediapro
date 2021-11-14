@@ -17,7 +17,7 @@ const Interview = () => {
         </div>
         <div className="flex items-center justify-between px-20 text-white pt-12 space-x-12">
           <div className="w-7/12">
-            <p className="font-bold text-7xl">
+            <p className="text-6xl font-bold leading-tight">
               Engaging One-on-One discussion with Big Guns
             </p>
             <p className="py-12 text-2xl tracking-wider">

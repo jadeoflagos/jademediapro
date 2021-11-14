@@ -19,7 +19,7 @@ const About = () => {
         </div>
         <div className="flex items-center justify-between px-20 text-white py-8">
           <div className="w-7/12">
-            <p className="text-7xl font-semibold">
+            <p className="text-6xl font-bold leading-tight">
               The leading branding and digital marketing company
             </p>
             <p className="py-12 text-2xl tracking-wider">
@@ -276,9 +276,16 @@ const About = () => {
               looking for creative people that share our company's basic values
               of excellence.
             </div>
-            <p className=" bg-[#502A7A] max-w-max px-20 py-5 flex items-center justify-center cursor-pointer text-white uppercase">
+            <Button
+              variant="contained"
+              style={{
+                backgroundColor: "#502A7A",
+              }}
+              variant="contained"
+              className="w-3/5  py-4 hover:opacity-90"
+            >
               APPLY NOW
-            </p>
+            </Button>
           </div>
           <div className="flex justify-center">
             <Image

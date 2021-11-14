@@ -17,7 +17,7 @@ const Contact = () => {
         </div>
         <div className="flex items-center justify-between px-20 text-white py-2">
           <div className="w-8/12">
-            <p className="text-7xl font-semibold">
+            <p className="text-6xl font-bold leading-tight">
               Ready to START your journey and GROW your Business?{" "}
             </p>
           </div>

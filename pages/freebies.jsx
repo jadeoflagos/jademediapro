@@ -19,9 +19,9 @@ const freebies = () => {
         </div>
         <div className="flex items-center justify-between px-20 text-white bg-[#2C144E] pt-8 ">
           <div className=" w-7/12">
-            <span className="font-bold text-6xl ">
+            <p className="text-6xl font-bold leading-tight">
               Everything you need for growth and development
-            </span>
+            </p>
             <p className=" py-8 text-2xl tracking-wider">
               Jade Media Pro has always been about people while exploring
               projects of all systems and sizes. Here you'll find the individual

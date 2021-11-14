@@ -125,13 +125,13 @@ export default function Home() {
               than it is right now in the coming times whether you are starting
               a new business or you already have an existing business.
             </p>
-            <p className="flex items-center mt-8">
-              <span className="mr-2 font-semibold">
+            <div className=" flex items-center mt-8">
+              <p className="mr-1 text-xl " style={{ fontWeight: "bolder" }}>
                 Find out more about what is Branding and how does it help your
                 Business?
-              </span>
+              </p>
               <Link href="/services">
-                <a href="">
+                <a href="/services">
                   <Image
                     src="/vectors/arrow-right.svg"
                     alt="Avatar"
@@ -140,7 +140,7 @@ export default function Home() {
                   />
                 </a>
               </Link>
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -215,7 +215,7 @@ export default function Home() {
       <div className="px-20">
         <ServicesCarousel />
       </div>
-      <p className="px-20 pt-32 pb-12 text-7xl text-left font-semibold">
+      <p className="px-20 pt-32 pb-12 text-6xl text-left font-semibold">
         Exclusive interviews with industry leading professionals
       </p>
       <section className="flex items-start px-20">
@@ -224,9 +224,9 @@ export default function Home() {
             src="https://player.vimeo.com/video/636370372?h=734c780ecc"
             width="900"
             height="450"
-            frameborder="0"
+            frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
           <p>
             <a href="https://vimeo.com/636370372">Ariwa-Leather-Fashion.mp4</a>
@@ -261,7 +261,7 @@ export default function Home() {
       <section className="px-20 mt-32">
         <p className="text-6xl font-semibold">
           Discover popular and profitable{" "}
-          <span className="border-b">editorials</span>
+          <span className="border-b-2 border-black">editorials</span>
         </p>
       </section>
       <section className="mt-11 grid grid-cols-3 gap-x-8 px-20 ">
@@ -291,19 +291,19 @@ export default function Home() {
             />
           ))}
         </div>
-        <div className="flex items-center space-x-8 mb-24">
+        <div className="flex items-center space-x-8 ">
           <h1 className="text-5xl">Explore our full catalogue</h1>
           <p className="cursor-pointer py-3 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
             VISIT STORE
           </p>
         </div>
       </section>
-      <section className="grid grid-cols-2 px-20 mb-44">
-        <div className="w-full flex flex-col">
-          <p className="text-5xl">
+      <section className="mt-32 grid grid-cols-2 px-20 mb-44">
+        <div className="w-full flex flex-col pr-28">
+          <p className="text-5xl font-semibold">
             Don’t miss the next live meeting to experience growth
           </p>
-          <div className="grid grid-cols-2 gap-x-9 mt-10">
+          <div className="grid grid-cols-2 gap-x-9 mt-10 flex-grow">
             {eventData.slice(0, 2).map((event, eventIndex) => (
               <div className="w-full flex flex-col" key={eventIndex}>
                 <div className="flex items-end space-x-5">
@@ -331,17 +331,20 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p className="cursor-pointer py-3 mt-16 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
+          <p className="cursor-pointer py-3 mt-16 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase hover:opacity-90">
             UPCOMING EVENTS
           </p>
         </div>
-        <div className="pl-32 border-l">
-          <p className="text-5xl mb-8">
+        <div className="pl-28 border-l-2 flex flex-col border-black">
+          <p className="text-5xl mb-8 font-semibold">
             Find the right job to boost your brilliant career
           </p>
-          <div className="space-y-6 ">
+          <div className="space-y-6 flex-grow">
             {openings.map((op, opIndex) => (
-              <div className="bg-[#46BFB2] grid grid-cols-2 py-3 px-4">
+              <div
+                className="bg-[#46BFB2] grid grid-cols-2 py-3 px-4"
+                key={opIndex}
+              >
                 <p className="text-[2rem] w-1/2">{op.position}</p>
                 <div className=" w-1/2 border-l border-black pl-10">
                   <div className="flex flex-col justify-items-stretch">
@@ -354,7 +357,7 @@ export default function Home() {
             ))}
           </div>
           <Link href="/jobs">
-            <p className="cursor-pointer py-3 mt-16 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
+            <p className=" py-3 mt-16 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase hover:opacity-90 cursor-pointer">
               VIEW ALL JOBS
             </p>
           </Link>

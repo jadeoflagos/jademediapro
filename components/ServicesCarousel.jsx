@@ -1,16 +1,25 @@
+import { Button } from "@mui/material";
 import React, { useState, Fragment } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const Card = ({ title, description }) => {
   return (
-    <div className="w-full min-h-[29rem] text-white flex flex-col bg-black py-4 px-6 rounded-sm">
+    <div className="w-full text-white flex flex-col bg-black py-8 px-6 rounded-sm">
       <span className="bg-[#C4C4C4] w-20 h-20 mb-16" />
       <p className="text-3xl">{title}</p>
-      <span className="py-4 flex-grow">{description}</span>
-      <p className="cursor-pointer py-2 px-10 flex justify-center text-black bg-[#0DFFE5] max-w-max ">
+      <span className="flex-grow flex items-end mb-4">{description}</span>
+      <Button
+        variant="contained"
+        style={{
+          backgroundColor: "#0DFFE5",
+          color: "black",
+        }}
+        variant="contained"
+        className="py-4 hover:opacity-90"
+      >
         LEARN MORE
-      </p>
+      </Button>
     </div>
   );
 };
@@ -84,7 +93,7 @@ const ServicesCarousel = () => {
           <img src="/vectors/arrow-rightline.svg" alt="" />
         </div>
       </div>
-      <div className=" mt-12 space-x-8">
+      <div className=" mt-12">
         <Carousel
           ref={handleCarouselClick}
           swipeable={false}

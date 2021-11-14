@@ -35,7 +35,7 @@ const Jobs = () => {
         </div>
         <div className="flex items-center justify-between px-20 ">
           <div className="w-7/12">
-            <p className="font-bold text-7xl">
+            <p className="text-6xl font-bold leading-tight">
               Discover your next career move with our efficiently managed job
               searches
             </p>
@@ -55,6 +55,7 @@ const Jobs = () => {
         <div>
           {tabs.map((tab, tabIndex) => (
             <span
+              key={tabIndex}
               onClick={() => setActiveTab(tabIndex)}
               className={`px-3 border-b cursor-pointer pb-2 ${
                 activeTab == tabIndex

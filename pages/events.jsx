@@ -19,7 +19,7 @@ const Events = () => {
         </div>
         <div className="flex items-center justify-between px-20 text-white py-2">
           <div className="w-8/12">
-            <p className="text-7xl font-semibold">
+            <p className="text-6xl font-bold leading-tight">
               Bringing people of like-mind and goals together
             </p>
             <p className="py-12 text-2xl">

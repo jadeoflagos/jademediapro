@@ -15,7 +15,7 @@ const Projects = () => {
         </div>
         <div className="flex items-center justify-between px-20 text-white">
           <div className="w-7/12">
-            <p className="font-bold text-6xl">
+            <p className="text-6xl font-bold leading-tight">
               We create a fully unique journey for all our clients
             </p>
             <p className="py-12 text-2xl tracking-wider">

@@ -14,7 +14,9 @@ const Navbar = ({ bg, textColor, darkLogo }) => {
       style={{ backgroundColor: bg, color: textColor, fontWeight: "normal" }}
     >
       <Link href="/">
-        <Logo color={darkLogo && "#000"} />
+        <a href="/">
+          <Logo color={darkLogo && "#000"} />
+        </a>
       </Link>
       <div className="flex items-center space-x-10">
         <Link href="/about">
