@@ -64,7 +64,7 @@ const productDesc = () => {
           </div>
         </div>
         <div className="desc-text flex flex-col">
-          <Link href="/interview">
+          <Link href="/store">
             <a className="flex items-center">
               <Image src={backArrow} />
               <span className="ml-[0.625rem]">Back</span>
