@@ -1,7 +1,38 @@
 import pd1 from "../public/images/pd1.png";
 import pd2 from "../public/images/pd2.png";
 import pd3 from "../public/images/pd3.png";
+import BussinessStrategy from "./BussinessStrategy";
 
+//service page begin
+
+export const serviceData = [
+  {
+    title: "Art & Photography",
+    details: "",
+  },
+  {
+    title: "Branding & Design",
+    details: "",
+  },
+  {
+    title: "Business Strategy",
+    details: <BussinessStrategy />,
+  },
+  {
+    title: "Digital Marketing",
+    details: "",
+  },
+  {
+    title: "Motion Design",
+    details: "",
+  },
+  {
+    title: "Web & App Project",
+    details: "",
+  },
+];
+
+//service page end
 export const privacyPolicyData = [
   {
     title: "Introduction",
@@ -230,66 +261,7 @@ export const faqs = [
     ans: "",
   },
 ];
-export const serviceData = [
-  {
-    title: "Art & Photography",
-    details: "",
-  },
-  {
-    title: "Branding & Design",
-    details: "",
-  },
-  {
-    title: "Business Strategy",
-    details: (
-      <div>
-        <p className="p-2 text-3xl border-b-2 border-black">
-          Business Planning
-        </p>
-        <p className="p-2 text-3xl border-b-2 border-black">
-          Analysis & Consultation
-        </p>
-        <p className="p-2 py-4">
-          The 80/20 Rule. You’re probably aware that 80 percent of your income
-          is determined by 20 percent of your customers. If this isn't the case,
-          you're probably missing out on a lot of profitable opportunities.
-          What's really needed is a method to capture leads, convert those leads
-          into small-time customers, and gradually build them towards customers
-          that spend more with you.
-          <br />
-          <br /> Our consultation workshop will help you to understand, analyse,
-          and prioritize your business market supplying a summary of typical
-          strategies and implementation describing how your product or service
-          will be sold, managing your customers' expectations, and how the plan
-          will be put into action together with its milestones to focus on a
-          clear vision and achieve the anticipated growth.
-        </p>
-        <p className="p-2 text-3xl border-b-2 border-black">
-          Business Process Automation
-        </p>
-        <p className="p-2 text-3xl border-b-2 border-black">
-          Growth & Expansion System
-        </p>
-        <p className="p-2 text-3xl border-b-2 border-black">
-          Project Management
-        </p>
-      </div>
-    ),
-    list: [],
-  },
-  {
-    title: "Digital Marketing",
-    details: "",
-  },
-  {
-    title: "Motion Design",
-    details: "",
-  },
-  {
-    title: "Web & App Project",
-    details: "",
-  },
-];
+
 export const projectData = [
   {
     title: "Case Studies",
@@ -541,3 +513,84 @@ export const blogPostData = [
   { id: 8 },
   { id: 9 },
 ];
+
+//About page
+export const wwwh = [
+  {
+    title: "Expand Your Reach",
+    desc:
+      "Implement a mix of strategies to both retain old customers and acquire new ones to produce sustainable growth for your businesses.",
+    img: "reachlogo.png",
+  },
+  {
+    title: "Building  Quality Relationship ",
+    desc:
+      "Remember that your customers are the ones who keep your business running, so getting to know them and caring about them is crucial.",
+    img: "qualitylogo.png",
+  },
+  {
+    title: "Set Goals and Track Them",
+    desc:
+      "When goals are set, it’s very important to track your progress to know if your business grows at all and how quickly it grows. ",
+    img: "goallogo.png",
+  },
+];
+export const culture = [
+  {
+    title: "Proudly African",
+    desc:
+      "We stay true to our roots and embrace our diversity while we engage the global audience.",
+  },
+  {
+    title: "People Oriented",
+    desc:
+      "We value the well-being and contributions of our team as our most important asset.",
+  },
+  {
+    title: "Result Oriented",
+    desc:
+      "We focus our time, energy, assets, and passion on quality results rather than process.",
+  },
+  {
+    title: "Excellence",
+    desc:
+      "We work persistently to deliver excellent services and satisfy our clients with utmost care.v",
+  },
+  {
+    title: "Integrity",
+    desc:
+      "We treat everyone with dignity, honesty, and hold our team and clients in high regard.",
+  },
+  {
+    title: "Communication",
+    desc:
+      "We have an open-door approach when it comes to communicating our functional message, values, and mission.",
+  },
+];
+
+export const values = [
+  {
+    title: "Business",
+    details:
+      "We analyse change, explore vulnerability, and optimize market strengths to accomplish sustainable and healthy development because starting and running a business is not trial and error.",
+  },
+  {
+    title: "Branding",
+    details:
+      "We design powerful identities that inspire and stand the test of time through innovative and compelling visuals that resonate with customers and nurture lasting relationships.",
+  },
+  {
+    title: "Marketing",
+    details:
+      "We help grow your business, stay relevant, and outweigh the competition by creating brand awareness, generating leads, and boosting your sales & revenue.",
+  },
+];
+
+export const opportunities = [
+  "Creative and possess excellent communication skills.",
+  " A team player with the ability to work methodically.",
+  " Self-motivated and result-oriented (and meet deadlines).",
+  "A problem solver with a keen eye for aesthetics and details.",
+  "Excellent analytical abilities and up to date with current digital trends ",
+];
+//end of about page

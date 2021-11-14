@@ -1,10 +1,11 @@
 import { Button, TextField } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
-// import CompanyLogo from "../components/CompanyButtons";
 import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
+import DatePicker from "../components/DatePicker";
+import TimePicker from "../components/TimePicker";
 import { serviceData } from "../data";
 
 const Services = () => {
@@ -38,12 +39,12 @@ const Services = () => {
         </div>
       </div>
       {/* <CompanyButtons /> */}
-      <section className="px-20 py-16 flex items-center">
-        <div className="w-3/5 space-y-6">
+      <section className="px-20 py-16">
+        <div className="w-full space-y-6">
           {serviceData.map((service, serviceIndex) => (
             <div key={`service-${serviceIndex}`}>
-              <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-                <span className="font-semibold text-4xl">{service.title}</span>
+              <p className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-3/5 ">
+                <span className="text-4xl font-semibold">{service.title}</span>
                 <span
                   className="cursor-pointer"
                   onClick={() => {
@@ -66,25 +67,14 @@ const Services = () => {
               </p>
 
               {activeTab == serviceIndex ? (
-                <p className="pt-6 pb-10 flex justify-end ">
-                  <p className="w-[65%]">{serviceData[serviceIndex].details}</p>
+                <p className="pt-6 pb-10 flex justify-end">
+                  <p className="w-[85%]">{serviceData[serviceIndex].details}</p>
                 </p>
               ) : (
                 ""
               )}
             </div>
           ))}
-        </div>
-        <div className="w-2/5 ml-24 ">
-          <Image
-            src="/images/market.png"
-            alt="Avatar"
-            width={492}
-            height={259}
-          />
-          <p className=" bg-[#8A57A3] max-w-max mt-20 px-16 py-2 flex items-center justify-center cursor-pointer text-white uppercase">
-            GET QOUTE
-          </p>{" "}
         </div>
       </section>
       <section className="px-20 mt-7">
@@ -93,7 +83,7 @@ const Services = () => {
             action=""
             className="w-3/5 pr-12 grid grid-cols-2 gap-x-10 gap-y-4"
           >
-            <p className="col-span-2 text-6xl text-[#046C62]">
+            <p className="col-span-2 text-6xl text-[#046C62] font-bold">
               Don’t know where to start, Book a FREE Consultation Now{" "}
             </p>
             <TextField
@@ -107,11 +97,11 @@ const Services = () => {
               variant="standard"
               type="email"
             />
-            <SelectVariants />
-            <SelectVariants />
+            <DatePicker />
+            <TimePicker />
             <TextField
               id="standard-basic"
-              label="What Services  do you  Offer?"
+              label="Message"
               variant="standard"
               className="col-span-2"
             />

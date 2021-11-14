@@ -1,6 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
+import DateNTime from "../components/DateNTime";
 import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
@@ -89,9 +90,20 @@ const Contact = () => {
               type="email"
             />
             <TextField id="standard-basic" label="mobile" variant="standard" />
-            <SelectVariants />
+            <DateNTime />
             <div className="col-span-2">
-              <SelectVariants className="w-full" />
+              <SelectVariants
+                menuitems={[
+                  "Art & Photography",
+                  "Branding & Design",
+                  "Business Strategy",
+                  "Digital Marketing",
+                  "Motion Design",
+                  "Web & App Project",
+                ]}
+                className="w-full"
+                label="Select Services of Interest (Optional)"
+              />
             </div>
             <TextField
               id="standard-basic"
@@ -108,8 +120,11 @@ const Contact = () => {
 
             <div className="col-span-2 mt-16">
               <Button
+                style={{
+                  backgroundColor: "#502A7A",
+                }}
                 variant="contained"
-                className="bg-[#502A7A] w-64 py-4 hover:bg-[#502A7A]"
+                className="w-64 py-4 hover:opacity-90"
               >
                 SUBMIT
               </Button>

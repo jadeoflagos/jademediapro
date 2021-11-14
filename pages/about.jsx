@@ -8,80 +8,9 @@ import Navbar from "../components/Navbar";
 import CompanyButtons from "../components/CompanyButtons";
 import TimePickerComponent from "../components/TimePicker";
 import DatePickerComponent from "../components/DatePicker";
-import { team } from "../data";
+import { culture, opportunities, team, values, wwwh } from "../data";
 
 const About = () => {
-  const wwwh = [
-    {
-      title: "Expand Your Reach",
-      desc:
-        "Implement a mix of strategies to both retain old customers and acquire new ones to produce sustainable growth for your businesses.",
-      img: "reachlogo.png",
-    },
-    {
-      title: "Building  Quality Relationship ",
-      desc:
-        "Remember that your customers are the ones who keep your business running, so getting to know them and caring about them is crucial.",
-      img: "qualitylogo.png",
-    },
-    {
-      title: "Set Goals and Track Them",
-      desc:
-        "When goals are set, it’s very important to track your progress to know if your business grows at all and how quickly it grows. ",
-      img: "goallogo.png",
-    },
-  ];
-  const culture = [
-    {
-      title: "Proudly African",
-      desc:
-        "We stay true to our roots and embrace our diversity while we engage the global audience.",
-    },
-    {
-      title: "People Oriented",
-      desc:
-        "We value the well-being and contributions of our team as our most important asset.",
-    },
-    {
-      title: "Result Oriented",
-      desc:
-        "We focus our time, energy, assets, and passion on quality results rather than process.",
-    },
-    {
-      title: "Excellence",
-      desc:
-        "We work persistently to deliver excellent services and satisfy our clients with utmost care.v",
-    },
-    {
-      title: "Integrity",
-      desc:
-        "We treat everyone with dignity, honesty, and hold our team and clients in high regard.",
-    },
-    {
-      title: "Communication",
-      desc:
-        "We have an open-door approach when it comes to communicating our functional message, values, and mission.",
-    },
-  ];
-
-  const values = [
-    {
-      title: "Business",
-      details:
-        "We analyse change, explore vulnerability, and optimize market strengths to accomplish sustainable and healthy development because starting and running a business is not trial and error.",
-    },
-    {
-      title: "Branding",
-      details:
-        "We design powerful identities that inspire and stand the test of time through innovative and compelling visuals that resonate with customers and nurture lasting relationships.",
-    },
-    {
-      title: "Marketing",
-      details:
-        "We help grow your business, stay relevant, and outweigh the competition by creating brand awareness, generating leads, and boosting your sales & revenue.",
-    },
-  ];
-
   return (
     <div>
       <div className="bg-black w-screen min-h-[30rem]">
@@ -227,7 +156,7 @@ const About = () => {
       </section>
       <section className="px-20 mt-32">
         <p className="mb-10 text-4xl">Volunteering</p>
-        <p className="text-5xl leading-tight">
+        <p className="text-5xl leading-tight font-bold">
           Bridging Africa’s transition from the analog age to the Digital age by
           Training young Professionals and solving Digital challenges at
           individual and corporate levels.
@@ -273,9 +202,9 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="px-20 mt-10">
+      <section className="px-20 mt-10 flex flex-col items-start">
         <p className="text-4xl">The Team</p>
-        <div className="grid grid-cols-3 gap-x-16 mt-6">
+        <div className="w-full flex justify-between mt-6">
           {team.slice(0, 3).map((teammember, memberIndex) => (
             <div
               key={`member-${memberIndex}`}
@@ -295,7 +224,7 @@ const About = () => {
         <p className="my-8 text-5xl font-bold">
           We are a team. We love what we do. Simple.
         </p>
-        <div className="grid grid-cols-3 gap-x-16 mt-6">
+        <div className="w-full flex justify-between mt-6">
           {team.slice(3).map((teammember, memberIndex) => (
             <div
               key={`member-${memberIndex}`}
@@ -315,13 +244,13 @@ const About = () => {
       </section>
       <section className="px-20 mt-20">
         <p className="text-3xl">Career Development</p>
-        <p className="text-6xl max-w-screen-xl my-8">
+        <p className="text-6xl max-w-screen-xl my-8 font-semibold">
           We exist for your Growth and Success. Got what it takes?
           <span className="text-[#046C62]"> Join our Team today</span>
         </p>
         <div className="grid grid-cols-2 gap-x-16">
-          <div>
-            <p className="mb-6">
+          <div className="flex flex-col h-full">
+            <div className="mb-6 flex-grow">
               Professional opportunities for career growth and improvement in
               personal skills and knowledge with great expectations are
               available at Jade Media Pro. Our training and job/internship
@@ -329,15 +258,24 @@ const About = () => {
               development and career advancement. We are dedicated to creating
               and sustaining an environment that fosters creativity which is
               excellent for young professionals. Great opportunities await you
-              in Jade Media Pro if you are: Creative and possess excellent
-              communication skills. A team player with the ability to work
-              methodically. Self-motivated and result-oriented (and meet
-              deadlines). A problem solver with a keen eye for aesthetics and
-              details. Excellent analytical abilities and up to date with
-              current digital trends We seek these qualities and more in young
-              professionals. We're looking for creative people that share our
-              company's basic values of excellence.
-            </p>
+              in Jade Media Pro if you are:
+              <div className="my-2">
+                {opportunities.map((opportunity, opportunityIndex) => (
+                  <p key={opportunityIndex} className="my-1 flex items-center">
+                    <Image
+                      src={`/vectors/caret-right.svg`}
+                      alt="Avatar"
+                      width={24}
+                      height={24}
+                    />
+                    <span>{opportunity}</span>
+                  </p>
+                ))}
+              </div>
+              We seek these qualities and more in young professionals. We're
+              looking for creative people that share our company's basic values
+              of excellence.
+            </div>
             <p className=" bg-[#502A7A] max-w-max px-20 py-5 flex items-center justify-center cursor-pointer text-white uppercase">
               APPLY NOW
             </p>
@@ -355,7 +293,7 @@ const About = () => {
       <section className="px-20 my-20">
         <h3 className="text-4xl">Testimonials</h3>
         <div className="grid grid-cols-2 gap-x-20 my-6">
-          <p className="text-5xl">
+          <p className="text-5xl font-semibold">
             Many people have already seen how working with Jade Media Pro has
             enabled them to rebrand and grow their businesses.
           </p>
@@ -394,9 +332,12 @@ const About = () => {
       <CompanyButtons />
       <section className="px-20 grid grid-cols-3 gap-x-20 my-24">
         {values.map((value, valueIndex) => (
-          <div key={`value-${valueIndex}`} className="bg-[#46BFB2] p-6">
+          <div
+            key={`value-${valueIndex}`}
+            className="bg-[#46BFB2] p-6 h-full flex flex-col"
+          >
             <h3 className="mb-16 text-2xl">{value.title}</h3>
-            <p>{value.details}</p>
+            <p className="flex-grow flex items-end">{value.details}</p>
             <div className="flex items-center mt-10">
               <p className="pr-2">Learn More</p>
               <Image
@@ -411,7 +352,7 @@ const About = () => {
       </section>
       <section className="px-20 mb-16">
         <p className="text-6xl font-bold">Book Your FREE Consultation Now</p>
-        <div className="flex py-4">
+        <div className="flex py-4 space-x-14 items-start">
           <form
             action=""
             className=" w-3/5 grid grid-cols-2 gap-10 place-content-start"
@@ -428,20 +369,23 @@ const About = () => {
               type="email"
             />
             <DatePickerComponent />
-            {/* <SelectVariants label="Select Date" /> */}
             <TimePickerComponent />
-            {/* <SelectVariants label="Select Time" /> */}
             <div className="col-span-2">
-              <textarea
-                className="border-b-2 border-black resize-none w-full focus:outline-none"
-                rows="3"
-                placeholder="Message"
-              ></textarea>
+              <TextField
+                fullWidth
+                id="standard-basic"
+                label="Message"
+                variant="standard"
+              />
             </div>
-            <div className="col-span-2 mt-16">
+            <div className="col-span-2 mt-12">
               <Button
                 variant="contained"
-                className="bg-[#502A7A] w-7/12 py-3 hover:bg-[#502A7A]"
+                style={{
+                  backgroundColor: "#502A7A",
+                }}
+                variant="contained"
+                className="w-3/5  py-4 hover:opacity-90"
               >
                 Book Appointment
               </Button>
@@ -452,7 +396,7 @@ const About = () => {
               src="/vectors/blogger.svg"
               alt="Avatar"
               width={517}
-              height={688}
+              height={488}
             />
           </div>
         </div>

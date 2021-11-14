@@ -64,7 +64,7 @@ export default function Home() {
           <Navbar textColor="white" />
         </div>
         <div className="py-20 max-w-[65%] text-white flex flex-col justify-center  px-20">
-          <p className="font-bold text-8xl">
+          <p className="font-extrabold text-8xl">
             The passion of Idea, Business & Creativity:
           </p>
           <p className="my-10 text-2xl font-normal">
@@ -86,7 +86,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-7/12 px-12">
-          <p className="text-6xl">
+          <p className="text-6xl font-bold">
             Unlock your future by taking advantage of Branding & Digital
             marketing
           </p>
@@ -126,16 +126,20 @@ export default function Home() {
               a new business or you already have an existing business.
             </p>
             <p className="flex items-center mt-8">
-              <span className="mr-2">
+              <span className="mr-2 font-semibold">
                 Find out more about what is Branding and how does it help your
                 Business?
               </span>
-              <Image
-                src="/vectors/arrow-right.svg"
-                alt="Avatar"
-                width={35}
-                height={35}
-              />
+              <Link href="/services">
+                <a href="">
+                  <Image
+                    src="/vectors/arrow-right.svg"
+                    alt="Avatar"
+                    width={35}
+                    height={35}
+                  />
+                </a>
+              </Link>
             </p>
           </div>
         </div>
@@ -204,14 +208,14 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <p className="px-20 pt-20 pb-12 text-6xl text-center">
+      <p className="px-20 pt-20 pb-12 text-6xl text-center font-semibold">
         Put money, attention, and resources where it's most effective to
         generate income
       </p>
       <div className="px-20">
         <ServicesCarousel />
       </div>
-      <p className="px-20 pt-32 pb-12 text-7xl text-center">
+      <p className="px-20 pt-32 pb-12 text-7xl text-left font-semibold">
         Exclusive interviews with industry leading professionals
       </p>
       <section className="flex items-start px-20">
@@ -255,8 +259,9 @@ export default function Home() {
         <InterviewCard />
       </section>
       <section className="px-20 mt-32">
-        <p className="text-6xl">
-          Discover popular and profitable <u>editorials</u>
+        <p className="text-6xl font-semibold">
+          Discover popular and profitable{" "}
+          <span className="border-b">editorials</span>
         </p>
       </section>
       <section className="mt-11 grid grid-cols-3 gap-x-8 px-20 ">
@@ -299,8 +304,8 @@ export default function Home() {
             Don’t miss the next live meeting to experience growth
           </p>
           <div className="grid grid-cols-2 gap-x-9 mt-10">
-            {eventData.slice(0, 2).map((event, eventData) => (
-              <div className="w-full flex flex-col">
+            {eventData.slice(0, 2).map((event, eventIndex) => (
+              <div className="w-full flex flex-col" key={eventIndex}>
                 <div className="flex items-end space-x-5">
                   <p className="flex flex-col">
                     <span className="text-xs">{event.month}.</span>
@@ -350,7 +355,7 @@ export default function Home() {
           </div>
           <Link href="/jobs">
             <p className="cursor-pointer py-3 mt-16 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
-              VIEW ALL JOBS{" "}
+              VIEW ALL JOBS
             </p>
           </Link>
         </div>

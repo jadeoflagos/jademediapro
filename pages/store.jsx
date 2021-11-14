@@ -40,7 +40,7 @@ const Store = () => {
             backgroundPosition: "center",
           }}
         >
-          <p className="text-5xl mb-12">
+          <p className="text-5xl mb-12 font-semibold">
             High-Quality Artistry Framed Just For You
           </p>
           <p className="text-2xl">

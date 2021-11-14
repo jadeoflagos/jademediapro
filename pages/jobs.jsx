@@ -6,6 +6,7 @@ import Pagination from "../components/Pagination";
 import DailyEmailForm from "../components/DailyEmailForm";
 import CheckboxLabels from "../components/Form/CheckBoxLabel";
 import { openings } from "../data";
+import SelectVariants from "../components/Form/Select";
 
 const Jobs = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,6 +22,11 @@ const Jobs = () => {
   ];
   const [activeTab, setActiveTab] = useState(0);
   const lists = ["Location", "Type of Work", "Industries"];
+  const [location, setLocation] = useState("");
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value);
+    console.log(location);
+  };
   return (
     <div>
       <div className="w-screen min-h-[30rem]">
@@ -60,8 +66,8 @@ const Jobs = () => {
             </span>
           ))}
         </div>
-        <section className="mt-12 w-full flex">
-          <div className="w-[70%] pr-20 space-y-6">
+        <section className="mt-12 w-full  grid grid-cols-3 gap-x-48 ">
+          <div className="col-span-2  space-y-6">
             {openings.map((op, opIndex) => (
               <div className="bg-[#46BFB2] items-center grid grid-cols-2 py-3 px-4">
                 <p className="text-[2.5rem] w-1/2">{op.position}</p>
@@ -81,7 +87,7 @@ const Jobs = () => {
               </div>
             ))}
           </div>
-          <aside className="w-[30%]">
+          <aside className="">
             <p>Filters</p>
             <div className="mt-4">
               <CheckboxLabels label="All Offers" />
@@ -89,39 +95,23 @@ const Jobs = () => {
               <CheckboxLabels label="Recommended" />
               <CheckboxLabels label="Most Recent" />
             </div>
-            <div className="mt-4 mb-10">
-              {lists.map((list, listIndex) => (
-                <div key={`list-${listIndex}`}>
-                  <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-                    <span className="font-semibold text-lg">{list}</span>
-                    <span
-                      className="cursor-pointer"
-                      onClick={() => {
-                        activeTab == listIndex
-                          ? setActiveTab(-1)
-                          : setActiveTab(listIndex);
-                      }}
-                    >
-                      <Image
-                        src={`/vectors/${
-                          activeTab == listIndex
-                            ? "caret-down.svg"
-                            : "caretup.svg"
-                        }`}
-                        alt="Avatar"
-                        width={20}
-                        height={10}
-                      />
-                    </span>
-                  </p>
-
-                  {/* {activeTab == listIndex ? (
-                    <p className="pt-6 pb-10">{lists[listIndex].details}</p>
-                  ) : (
-                    ""
-                  )} */}
-                </div>
-              ))}
+            <div className="mt-4 mb-10 space-y-5">
+              <div>
+                <p className="font-bold text-lg">Location</p>
+                <SelectVariants
+                  value={location}
+                  onChange={handleLocationChange}
+                  menuitems={["Abuja", "Ilorin", "Lagos"]}
+                />
+              </div>
+              <div>
+                <p className="font-bold text-lg">Type of Work</p>
+                <SelectVariants menuitems={["Abuja", "Ilorin"]} />
+              </div>
+              <div>
+                <p className="font-bold text-lg">Industries</p>
+                <SelectVariants menuitems={["Abuja", "Ilorin"]} />
+              </div>
             </div>
             <DailyEmailForm />
           </aside>

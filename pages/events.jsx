@@ -38,10 +38,13 @@ const Events = () => {
           </div>
         </div>
       </div>
-      <section className="px-20 grid grid-cols-3 gap-x-8 mt-12">
+      <section className="px-20 grid grid-cols-3 gap-x-48 mt-12">
         <main className="col-span-2 space-y-8">
           {eventData.map((data, dataIndex) => (
-            <div className="flex items-center border-b-2 border-black  space-x-8 py-3 px-4">
+            <div
+              className="flex items-center border-b-2 border-black  space-x-8 py-3 px-4"
+              key={dataIndex}
+            >
               <div className="w-2/3">
                 <p className="text-xl font-semibold">{data.title}</p>
                 <p className="text-lg mt-3">
@@ -70,8 +73,10 @@ const Events = () => {
           ))}
         </main>
         <div className="flex flex-col ">
-          <Calendar />
-          <div className="space-y-8 ml-20">
+          <div className="max-w-max">
+            <Calendar />
+          </div>
+          <div className="space-y-8 ">
             <Tags />
             <DailyEmailForm />
           </div>

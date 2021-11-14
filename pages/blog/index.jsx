@@ -75,7 +75,7 @@ const Blog = () => {
           ))}
         </div>
       </div>
-      <div className="px-20 py-20">
+      <div className="px-20 py-20 mb-20">
         <p className=" pb-12 text-6xl">
           Watch Exclusive interviews with profesionals
         </p>

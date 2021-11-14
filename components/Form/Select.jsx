@@ -4,35 +4,22 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function SelectVariants({ menuitems = [], label }) {
-  const [age, setAge] = React.useState("");
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
-
+export default function SelectVariants({ menuitems = [], value, onChange }) {
   return (
     <div>
-      <FormControl
-        variant="standard"
-        className="w-full"
-        sx={{ m: 1, minWidth: 120 }}
-      >
-        <InputLabel id="demo-simple-select-standard-label">{label}</InputLabel>
+      <FormControl variant="standard" className="w-full" sx={{ minWidth: 120 }}>
         <Select
+          value={value}
           labelId="demo-simple-select-standard-label"
           id="demo-simple-select-standard"
-          value={age}
-          onChange={handleChange}
+          onChange={(e) => onChange(e)}
           label="Age"
         >
           {menuitems.map((menuItem, menuItemIndex) => (
-            <MenuItem value="">{menuItem}</MenuItem>
+            <MenuItem value={menuItem.value} key={menuItemIndex}>
+              {menuItem.name}
+            </MenuItem>
           ))}
-
-          {/* <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem> */}
         </Select>
       </FormControl>
     </div>
