@@ -40,7 +40,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className=" items-center px-20 my-14 grid grid-cols-2 gap-x-8">
+      <div className=" items-center px-20 mt-28 mb-14 grid grid-cols-2 gap-x-8">
         <div>
           <p className="text-5xl mb-10">Our Identity</p>
           <div>
@@ -124,11 +124,11 @@ const About = () => {
           {wwwh.map((w, wIndex) => (
             <div className="flex items-center">
               <div className="w-32 mr-6">
-                <Image
-                  src={`/images/${w.img}`}
-                  alt="Avatar"
-                  width={100}
-                  height={100}
+                
+                <img
+                  className="w-full h-full"
+                  src={`/gifs/${w.gif}.gif`}
+                  alt="wwwh-gif"
                 />
               </div>
               <div>

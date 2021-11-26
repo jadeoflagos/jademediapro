@@ -74,7 +74,7 @@ export default function Home() {
             and marketing strategies to help them stand out in a crowded
             marketplace and make a profit. YES! WE CAN.
           </p>
-          <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max ">
+          <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max hover:opacity-90 ">
             VIEW PROJECTS
           </p>
         </div>
@@ -131,7 +131,7 @@ export default function Home() {
                 Business?
               </p>
               <Link href="/services">
-                <a href="/services">
+                <a href="/services" className="mt-2">
                   <Image
                     src="/vectors/arrow-right.svg"
                     alt="Avatar"
@@ -203,12 +203,12 @@ export default function Home() {
             provide a unifying force to develop your brand values and business
             direction.
           </p>
-          <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max uppercase">
+          <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max uppercase hover:opacity-90">
             Get your Brand process
           </p>
         </div>
       </div>
-      <p className="px-20 pt-20 pb-12 text-6xl text-center font-semibold">
+      <p className="px-20 pt-20 pb-12 text-6xl text-center font-bold">
         Put money, attention, and resources where it's most effective to
         generate income
       </p>
@@ -298,6 +298,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+
       <section className="mt-32 grid grid-cols-2 px-20 mb-44">
         <div className="w-full flex flex-col pr-28">
           <p className="text-5xl font-semibold">

@@ -521,18 +521,23 @@ export const wwwh = [
     desc:
       "Implement a mix of strategies to both retain old customers and acquire new ones to produce sustainable growth for your businesses.",
     img: "reachlogo.png",
+    gif: 'Expand-Your-Reach'
   },
   {
     title: "Building  Quality Relationship ",
     desc:
       "Remember that your customers are the ones who keep your business running, so getting to know them and caring about them is crucial.",
     img: "qualitylogo.png",
+    gif: 'Build-Quality-Rel'
+
   },
   {
     title: "Set Goals and Track Them",
     desc:
       "When goals are set, it’s very important to track your progress to know if your business grows at all and how quickly it grows. ",
     img: "goallogo.png",
+    gif: 'Set-Goals-Track'
+
   },
 ];
 export const culture = [

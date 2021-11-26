@@ -3,10 +3,16 @@ import React, { useState, Fragment } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const Card = ({ title, description }) => {
+const Card = ({ title, description, gif }) => {
   return (
-    <div className="w-full text-white flex flex-col bg-black py-8 px-6 rounded-sm">
-      <span className="bg-[#C4C4C4] w-20 h-20 mb-16" />
+    <div className="w-full text-white  flex flex-col bg-black py-8 px-6 rounded-sm">
+      <span className=" w-20 h-20 mb-16">
+        <img
+          src={`/gifs/${gif}.gif`}
+          alt="service-icon"
+          className="w-full h-full"
+        />
+      </span>
       <p className="text-3xl">{title}</p>
       <span className="flex-grow flex items-end mb-4">{description}</span>
       <Button
@@ -28,28 +34,28 @@ const ServicesCarousel = () => {
   const services = [
     {
       title: "Business Strategy",
-      desc:
-        "We analyse change, explore vulnerability, and optimize market strengths to accomplish sustainable and healthy development because starting and running a business is not trial and error.",
+      desc: "We analyse change, explore vulnerability, and optimize market strengths to accomplish sustainable and healthy development because starting and running a business is not trial and error.",
+      gif: "business-strategy",
     },
     {
       title: "Branding",
-      desc:
-        "We design powerful identities that inspire and stand the test of time through innovative and compelling visuals that resonate with customers and nurture lasting relationships.",
+      desc: "We design powerful identities that inspire and stand the test of time through innovative and compelling visuals that resonate with customers and nurture lasting relationships.",
+      gif: "Branding",
     },
     {
       title: "Digital Marketing",
-      desc:
-        "We help grow your business, stay relevant, and outweigh the competition by creating brand awareness, generating leads, and boosting your sales & revenue.",
+      desc: "We help grow your business, stay relevant, and outweigh the competition by creating brand awareness, generating leads, and boosting your sales & revenue.",
+      gif: "Digital-marketing",
     },
     {
       title: "Motion Design",
-      desc:
-        "We tell visually engaging stories by creating promotional videos and animation unveiling the grasp of what your brand does, and what it stands for.",
+      desc: "We tell visually engaging stories by creating promotional videos and animation unveiling the grasp of what your brand does, and what it stands for.",
+      gif: "Motion-Design",
     },
     {
       title: "Art & Photography",
-      desc:
-        "We break boundaries with our painting, sculpture, drawing, and engraving in a unique and fun way while doing something creative as beautiful work of art.",
+      desc: "We break boundaries with our painting, sculpture, drawing, and engraving in a unique and fun way while doing something creative as beautiful work of art.",
+      gif: "Art-Photography",
     },
   ];
 
@@ -107,13 +113,14 @@ const ServicesCarousel = () => {
           // slidesToSlide={2}
         >
           {services.map((service, serviceIndex) => (
-            <div className="flex" key={`service-${serviceIndex}`}>
+            <div className="flex h-full" key={`service-${serviceIndex}`}>
               <Card
                 key={`service-${serviceIndex}`}
                 title={service.title}
                 description={service.desc}
+                gif={service.gif}
               />
-              <span className="w-4 h-full bg-white"></span>
+              <span className="w-4 h-full bg-white" />
             </div>
           ))}
         </Carousel>
