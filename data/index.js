@@ -599,3 +599,11 @@ export const opportunities = [
   "Excellent analytical abilities and up to date with current digital trends ",
 ];
 //end of about page
+
+export const dropDown = {
+  about: "What we do,Testimonials,Volunteering,Career".split(","),
+  services: "Business strategy,Branding,Graphic Design,Digital Marketing,Motion Design,Art/Photography".split(','),
+  projects: "Case Study,Process,Showreel,Training".split(","),
+  hub: "Blog,interview,Community,Event,Job/intership".split(","),
+  resources: "Store,Freebies".split(",")
+}
