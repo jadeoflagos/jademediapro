@@ -9,6 +9,9 @@ import ServicesCarousel from "../components/ServicesCarousel";
 import Product from "../components/Product";
 import { eventData } from "../data";
 import Link from "next/link";
+import SectionHeader from "../components/organism/SectionHeader";
+import { Header } from "../data/HomePage";
+import EyeBrow from "../components/organism/EyeBrow";
 
 export default function Home() {
   const idea = ["Research", "Ideate", "Design", "Implement", "Result"];
@@ -52,46 +55,58 @@ export default function Home() {
   ];
   return (
     <div>
-      <div
-        className="w-screen min-h-[50rem]"
-        style={{
-          background: `url("/images/homebg.png")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div>
-          <Navbar textColor="white" />
-        </div>
-        <div className="py-20 max-w-[65%] text-white flex flex-col justify-center  px-20">
-          <p className="font-extrabold text-8xl">
-            The passion of Idea, Business & Creativity:
-          </p>
-          <p className="my-10 text-2xl font-normal">
-            We help small and medium-sized businesses grow and achieve their
-            dreams, earn income, and increase their impact in this post-pandemic
-            world by developing innovative as well as sustainable design systems
-            and marketing strategies to help them stand out in a crowded
-            marketplace and make a profit. YES! WE CAN.
-          </p>
-          <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max hover:opacity-90 ">
-            VIEW PROJECTS
-          </p>
-        </div>
-      </div>
-      <div className="w-full py-24 flex items-center px-8">
-        <div className="w-5/12 ">
+      <SectionHeader title={Header.title} subTitle={Header.subTitle}>
+        <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max hover:opacity-90 ">
+          VIEW PROJECTS
+        </p>
+      </SectionHeader>
+      <div className="w-full py-24 flex flex-col lg:flex-row items-center px-8">
+        <div className="lg:w-5/12 w-full lg:order-1 order-2">
           <div className="flex justify-center">
             <Illus />
           </div>
+          <div className="flex flex-col lg:hidden text-xs lg:text-base">
+            <p className="my-8  text-[#666666]">
+              On the other hand, Digital marketing is the practice of creating
+              content to attract more customers and build relationships. It is
+              more than just advertising; it is an essential component for any
+              company to grow its business. Through digital marketing,
+              businesses are able to harness the collective power of people,
+              data, and modern software practices to reimagine their customer
+              experience. The strategies that are most effective in digital
+              marketing with reference to data-driven attribution models, mobile
+              optimization, search engine optimization (SEO), email marketing,
+              social media advertising, and conversion rates. With these
+              strategies in mind and the help of Jade Media Pro, you can expand
+              your business and look ahead to the success of your business more
+              than it is right now in the coming times whether you are starting
+              a new business or you already have an existing business.
+            </p>
+            <div className="  mt-8 flex  items-center">
+              <p className="mr-1 " style={{ fontWeight: "bolder" }}>
+                Find out more about what is Branding and how does it help your
+                Business?
+              </p>
+              <Link href="/services">
+                <a href="/services" className="mt-2">
+                  <Image
+                    src="/vectors/arrow-right.svg"
+                    alt="Avatar"
+                    width={35}
+                    height={35}
+                  />
+                </a>
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="w-7/12 px-12">
-          <p className="text-6xl font-bold">
-            Unlock your future by taking advantage of Branding & Digital
-            marketing
-          </p>
+        <div className="lg:w-7/12 w-full lg:px-12 lg:order-2 order-1">
+          <EyeBrow
+            text="Unlock your future by taking advantage of Branding & Digital
+            marketing"
+          />
           <div>
-            <p className="mt-8">
+            <p className="mt-8 text-xs lg:text-base text-[#666666]">
               Few businesses live the test of time. Many businesses are
               struggling with different strategies and identifying which one
               truly fits. All sorts of brands - personal, entrepreneurial, or
@@ -109,7 +124,7 @@ export default function Home() {
               personality type. These are known as archetypes in the branding
               field.
             </p>
-            <p className="my-8">
+            <p className="my-8 lg:flex hidden text-[#666666]">
               On the other hand, Digital marketing is the practice of creating
               content to attract more customers and build relationships. It is
               more than just advertising; it is an essential component for any
@@ -125,7 +140,7 @@ export default function Home() {
               than it is right now in the coming times whether you are starting
               a new business or you already have an existing business.
             </p>
-            <div className=" flex items-center mt-8">
+            <div className="  mt-8 lg:flex items-center hidden">
               <p className="mr-1 text-xl " style={{ fontWeight: "bolder" }}>
                 Find out more about what is Branding and how does it help your
                 Business?
@@ -144,7 +159,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full py-24 flex items-center px-20 bg-[#502A7A]">
+      {/* <div className="w-full py-24 flex items-center px-20 bg-[#502A7A]">
         <div className="w-4/12 text-white space-y-8">
           {idea.map((i, index) => (
             <div className="flex items-center space-x-10" key={index}>
@@ -207,11 +222,11 @@ export default function Home() {
             Get your Brand process
           </p>
         </div>
-      </div>
-      <p className="px-20 pt-20 pb-12 text-6xl text-center font-bold">
-        Put money, attention, and resources where it's most effective to
-        generate income
-      </p>
+      </div> */}
+      <EyeBrow
+        text="Put money, attention, and resources where it's most effective to
+        generate income"
+      />{" "}
       <div className="px-20">
         <ServicesCarousel />
       </div>
@@ -298,7 +313,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
       <section className="mt-32 grid grid-cols-2 px-20 mb-44">
         <div className="w-full flex flex-col pr-28">
           <p className="text-5xl font-semibold">
