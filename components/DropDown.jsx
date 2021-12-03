@@ -8,18 +8,19 @@ const bgColors = {
   green: "#02332E",
 };
 
-const DropDown = ({ options = [], navBg = "purple" }) => {
+const DropDown = ({ options = [], navBg = "purple", styles = {} }) => {
   const dropDown = useRef(null);
   const [activeOption, setActiveOption] = useState(null);
-  const bg = navBg === "bg-white";
+  // const bg = navBg === "bg-white";
   const textColor = navBg !== "white" ? "text-black" : "text-white";
   const closeDropDown = () => {};
   useClickAway(dropDown, closeDropDown);
 
   return (
     <div
+      style={{ backgroundColor: bgColors[navBg], zIndex: 1000, ...styles }}
       ref={dropDown}
-      className={`drop-down absolute top-5 -left-8  flex flex-col py-[1.35rem] gap-y-[1.5rem] pl-8 pr-8 select-none ${bg} font-semibold text-[1.31rem] rounded-[2px] mt-[0.43rem]`}
+      className={`drop-down absolute  flex flex-col py-[1.35rem] gap-y-[1.5rem] pl-8 pr-8 select-none font-semibold text-[1.31rem] rounded-[2px] mt-[1.3rem]`}
     >
       {options.map((option) => (
         <span

@@ -5,27 +5,53 @@ import styles from "../styles/Home.module.css";
 
 import { useRouter } from "next/router";
 import DropDown from "./DropDown";
+import { dropDown } from "../data";
 
 const Navbar = ({ bg, textColor, darkLogo }) => {
-  const [showDropDown, setShowDropDown] = useState({
+  const dropdownMenus = Object.keys(dropDown);
+  const dropDownDefault = {
     state: false,
     type: "",
-  });
+    styles: {},
+  };
+
+  const [showDropDown, setShowDropDown] = useState(dropDownDefault);
+
+  const toggleDropDown = (e, type) => {
+    if (showDropDown.state && showDropDown.type === type) {
+      setShowDropDown(dropDownDefault);
+      return;
+    }
+
+    setShowDropDown({
+      state: true,
+      type,
+      styles: { top: `${e.clientY}px`, left: `${e.clientX - 50}px` },
+    });
+  };
 
   const router = useRouter();
   const path = router.pathname;
   return (
-    <nav
-      className={`flex items-center justify-between px-20 py-8 sticky top-0 left-0 z-50`}
-      style={{ backgroundColor: bg, color: textColor, fontWeight: "normal" }}
-    >
-      <Link href="/">
-        <a href="/">
-          <Logo color={darkLogo && "#000"} />
-        </a>
-      </Link>
-      <div className="flex items-center space-x-10">
-        {/* <Link href="/about">
+    <>
+      {showDropDown.state && (
+        <DropDown
+          options={dropDown[showDropDown.type]}
+          navBg={bg}
+          styles={showDropDown.styles}
+        />
+      )}
+      <nav
+        className={`flex items-center justify-between px-20 py-8 sticky top-0 left-0 z-50`}
+        style={{ backgroundColor: bg, color: textColor, fontWeight: "normal" }}
+      >
+        <Link href="/">
+          <a href="/">
+            <Logo color={darkLogo && "#000"} />
+          </a>
+        </Link>
+        <div className="flex items-center space-x-10">
+          {/* <Link href="/about">
           <a
             href="/about"
             className={`${path === "/about" ? styles.activeLink : ""}`}
@@ -33,70 +59,26 @@ const Navbar = ({ bg, textColor, darkLogo }) => {
             About
           </a>
         </Link> */}
-        <div className="flex flex-col relative ">
-          <span
-            onClick={() =>
-              setShowDropDown((currentState) => ({
-                state: !currentState.state,
-                type: "about",
-              }))
-            }
-            // href="/about"
-            // className={`${path === "/about" ? styles.activeLink : ""}`}
-          >
-            About
-          </span>
-          {showDropDown.state && showDropDown.type === "about" && (
-            <DropDown
-              options={"What we do,Testimonials,Volunteerings,Career".split(
-                ","
-              )}
-              navBg={bg}
-            />
-          )}
+          {dropdownMenus.map((item) => (
+            <span
+              className="capitalize select-none"
+              onClick={(event) => toggleDropDown(event, item)}
+            >
+              {item}
+            </span>
+          ))}
+
+          <Link href="/contact">
+            <a
+              href="/contact"
+              className={`${path === "/contact" ? styles.activeLink : ""}`}
+            >
+              Contact
+            </a>
+          </Link>
         </div>
-        <Link href="/services">
-          <a
-            href="/services"
-            className={`${path === "/services" ? styles.activeLink : ""}`}
-          >
-            Services
-          </a>
-        </Link>
-        <Link href="/projects">
-          <a
-            href="/projects"
-            className={`${path === "/projects" ? styles.activeLink : ""}`}
-          >
-            Projects
-          </a>
-        </Link>
-        <Link href="/hub">
-          <a
-            href="/hub"
-            className={`${path === "/hub" ? styles.activeLink : ""}`}
-          >
-            Hub
-          </a>
-        </Link>
-        <Link href="/resources">
-          <a
-            href="/resources"
-            className={`${path === "/resources" ? styles.activeLink : ""}`}
-          >
-            Resources
-          </a>
-        </Link>{" "}
-        <Link href="/contact">
-          <a
-            href="/contact"
-            className={`${path === "/contact" ? styles.activeLink : ""}`}
-          >
-            Contact
-          </a>
-        </Link>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
