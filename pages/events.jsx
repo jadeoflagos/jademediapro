@@ -15,7 +15,7 @@ const Events = () => {
     <div>
       <div className="bg-[#044841] w-screen min-h-[30rem]">
         <div>
-          <Navbar textColor="white" />
+          <Navbar dropDownBg="green" textColor="white" />
         </div>
         <div className="flex items-center justify-between px-20 text-white py-2">
           <div className="w-8/12">

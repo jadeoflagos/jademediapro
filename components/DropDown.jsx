@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useClickAway } from "react-use";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const bgColors = {
   purple: "#2C144E",
@@ -8,32 +10,50 @@ const bgColors = {
   green: "#02332E",
 };
 
-const DropDown = ({ options = [], navBg = "purple", styles = {} }) => {
+const DropDown = ({
+  options = [],
+  bg = "black",
+  styles = {},
+  closeDropDown,
+  type
+}) => {
   const dropDown = useRef(null);
   const [activeOption, setActiveOption] = useState(null);
-  // const bg = navBg === "bg-white";
-  const textColor = navBg !== "white" ? "text-black" : "text-white";
-  const closeDropDown = () => {};
-  useClickAway(dropDown, closeDropDown);
+  const textColor = bg !== "white" ? "text-white" : "text-black";
+
+  const router = useRouter();
+  const path = router.pathname;
+
+  useClickAway(dropDown, (e) => {
+    console.log({ e });
+    if (e.target && e.target.className.includes("drop-down")) return;
+    closeDropDown();
+  });
 
   return (
     <div
-      style={{ backgroundColor: bgColors[navBg], zIndex: 1000, ...styles }}
+      style={{ backgroundColor: bgColors[bg], zIndex: 1000, ...styles }}
       ref={dropDown}
-      className={`drop-down absolute  flex flex-col py-[1.35rem] gap-y-[1.5rem] pl-8 pr-8 select-none font-semibold text-[1.31rem] rounded-[2px] mt-[1.3rem]`}
+      className={`drop-down absolute  flex flex-col py-[1.35rem] gap-y-[1.5rem] pl-8 pr-8 select-none font-semibold text-[1.31rem] rounded-[2px] mt-[1.3rem] `}
     >
-      {options.map((option) => (
-        <span
-          key={`drop-down-active-option_${option}`}
-          className={`${textColor} pb-2 border-[1px]  ${
-            activeOption === option
-              ? `${navBg === "white" ? "border-black" : "border-white"}`
-              : "border-transparent"
-          }`}
-        >
-          {option}
-        </span>
-      ))}
+      {options.map((option) => {
+        const routeName = option.toLowerCase();
+        return (
+          <Link href={`/${routeName}`}>
+            <a
+              key={`drop-down-active-option_${option}`}
+              href={`/${option}`}
+              className={`${textColor} pb-2 border-b-[1px]  ${
+                path === `/${routeName}`
+                  ? `${bg === "white" ? "border-b-black" : "border-b-white"}`
+                  : "border-b-transparent"
+              }`}
+            >
+              {option}
+            </a>
+          </Link>
+        );
+      })}
     </div>
   );
 };

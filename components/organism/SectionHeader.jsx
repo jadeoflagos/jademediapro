@@ -4,6 +4,8 @@ import Navbar from "../Navbar";
 const SectionHeader = ({
   headerImage,
   navBarColor,
+  navBarBg,
+  dropDownBg,
   title,
   subTitle,
   children,
@@ -18,7 +20,7 @@ const SectionHeader = ({
       }}
     >
       <div>
-        <Navbar textColor={navBarColor} />
+        <Navbar dropDownBg={dropDownBg} textColor={navBarColor} />
       </div>
       <div className="py-20 lg:max-w-[65%] w-full text-white flex flex-col justify-center px-8 lg:px-20">
         <p className="font-extrabold text-5xl lg:text-8xl">{title}</p>

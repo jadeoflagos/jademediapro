@@ -55,7 +55,12 @@ export default function Home() {
   ];
   return (
     <div>
-      <SectionHeader title={Header.title} subTitle={Header.subTitle}>
+      <SectionHeader
+        navBarColor="white"
+        dropDownBg="black"
+        title={Header.title}
+        subTitle={Header.subTitle}
+      >
         <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max hover:opacity-90 ">
           VIEW PROJECTS
         </p>

@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import DropDown from "./DropDown";
 import { dropDown } from "../data";
 
-const Navbar = ({ bg, textColor, darkLogo }) => {
+const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
   const dropdownMenus = Object.keys(dropDown);
   const dropDownDefault = {
     state: false,
@@ -17,16 +17,21 @@ const Navbar = ({ bg, textColor, darkLogo }) => {
 
   const [showDropDown, setShowDropDown] = useState(dropDownDefault);
 
+  const closeDropDown = () => {
+    setShowDropDown(dropDownDefault);
+  };
+
   const toggleDropDown = (e, type) => {
     if (showDropDown.state && showDropDown.type === type) {
-      setShowDropDown(dropDownDefault);
+      // setShowDropDown(dropDownDefault);
+      closeDropDown();
       return;
     }
 
     setShowDropDown({
       state: true,
       type,
-      styles: { top: `${e.clientY}px`, left: `${e.clientX - 50}px` },
+      styles: { top: `${e.clientY}px`, left: `${e.clientX - 30}px` },
     });
   };
 
@@ -37,13 +42,19 @@ const Navbar = ({ bg, textColor, darkLogo }) => {
       {showDropDown.state && (
         <DropDown
           options={dropDown[showDropDown.type]}
-          navBg={bg}
+          bg={dropDownBg}
           styles={showDropDown.styles}
+          closeDropDown={closeDropDown}
+          type={showDropDown.type}
         />
       )}
       <nav
         className={`flex items-center justify-between px-20 py-8 sticky top-0 left-0 z-50`}
-        style={{ backgroundColor: bg, color: textColor, fontWeight: "normal" }}
+        style={{
+          backgroundColor: bg ? bg : "transparent",
+          color: textColor,
+          fontWeight: "normal",
+        }}
       >
         <Link href="/">
           <a href="/">
@@ -61,7 +72,7 @@ const Navbar = ({ bg, textColor, darkLogo }) => {
         </Link> */}
           {dropdownMenus.map((item) => (
             <span
-              className="capitalize select-none"
+              className="capitalize select-none drop-down"
               onClick={(event) => toggleDropDown(event, item)}
             >
               {item}

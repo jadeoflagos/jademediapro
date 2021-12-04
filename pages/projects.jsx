@@ -11,7 +11,7 @@ const Projects = () => {
     <div>
       <div className="bg-[#2C144E] w-screen min-h-[30rem]">
         <div>
-          <Navbar textColor="white" />
+          <Navbar dropDownBg="purple" textColor="white" />
         </div>
         <div className="flex items-center justify-between px-20 text-white">
           <div className="w-7/12">

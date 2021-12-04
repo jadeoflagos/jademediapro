@@ -23,7 +23,7 @@ const Blog = () => {
     <div>
       <div className="bg-[#502A7A] w-screen min-h-[30rem]">
         <div>
-          <Navbar textColor="white" />
+          <Navbar textColor="white" dropDownBg="purple" />
         </div>
         <div className="flex items-center justify-between px-20 text-white">
           <div className="w-7/12">
