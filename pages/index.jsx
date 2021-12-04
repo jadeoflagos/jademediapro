@@ -55,11 +55,25 @@ export default function Home() {
   ];
   return (
     <div>
-      <SectionHeader title={Header.title} subTitle={Header.subTitle}>
+       <div
+      className="w-screen lg:min-h-[50rem]"
+      style={{
+        background: `url("/images/homebg.png")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div>
+        <Navbar dropDownBg="black" textColor="white" />
+      </div>
+      <div className="py-20 lg:max-w-[65%] w-full text-white flex flex-col justify-center px-8 lg:px-20">
+        <p className="font-extrabold text-5xl lg:text-8xl">{Header.title}</p>
+        <p className="my-10 text-base lg:text-2xl font-normal">{Header.subTitle}</p>
         <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max hover:opacity-90 ">
           VIEW PROJECTS
         </p>
-      </SectionHeader>
+      </div>
+    </div>
       <div className="w-full py-24 flex flex-col lg:flex-row items-center px-8">
         <div className="lg:w-5/12 w-full lg:order-1 order-2">
           <div className="flex justify-center">

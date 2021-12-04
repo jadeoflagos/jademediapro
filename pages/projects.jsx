@@ -4,37 +4,21 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PostCard from "../components/PostCard";
 import { projectData } from "../data";
+import SectionHeader from "../components/organism/SectionHeader";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <div>
-      <div className="bg-[#2C144E] w-screen min-h-[30rem]">
-        <div>
-          <Navbar textColor="white" />
-        </div>
-        <div className="flex items-center justify-between px-20 text-white">
-          <div className="w-7/12">
-            <p className="text-6xl font-bold leading-tight">
-              We create a fully unique journey for all our clients
-            </p>
-            <p className="py-12 text-2xl tracking-wider">
-              Jade Media Pro has always been about people while exploring
+            <SectionHeader
+        bgColor="#2C144E"
+        title="We create a fully unique journey for all our clients"
+        headerImage="projectbg.png"
+        subTitle="Jade Media Pro has always been about people while exploring
               projects of all systems and sizes. Here you'll find the individual
-              stories behind the work.
-            </p>
-          </div>
-          <span className="w-1/12" />
-          <div className="w-4/12 flex items-center justify-center">
-            <Image
-              src="/images/blogbg.png"
-              alt="Avatar"
-              width={494}
-              height={494}
-            />
-          </div>
-        </div>
-      </div>
+              stories behind the work."
+      />
+
       <section className="mt-20 px-20 py-20 ">
         <div className="w-3/5 space-y-6">
           {projectData.map((project, projectIndex) => (

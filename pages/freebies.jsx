@@ -15,7 +15,7 @@ const freebies = () => {
     <div>
       <div className="w-full min-h-[30rem] bg-[#2C144E]">
         <div>
-          <Navbar textColor="white" />
+          <Navbar dropDownBg="purple" textColor="white" />
         </div>
         <div className="flex items-center justify-between px-20 text-white bg-[#2C144E] pt-8 ">
           <div className=" w-7/12">

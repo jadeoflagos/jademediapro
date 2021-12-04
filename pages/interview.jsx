@@ -13,7 +13,7 @@ const Interview = () => {
     <div>
       <div className="bg-[#502A7A] w-screen min-h-[30rem] pb-11">
         <div>
-          <Navbar textColor="white" />
+          <Navbar textColor="white" dropDownBg="purple" />
         </div>
         <div className="flex items-center justify-between px-20 text-white pt-12 space-x-12">
           <div className="w-7/12">

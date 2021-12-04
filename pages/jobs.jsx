@@ -31,7 +31,7 @@ const Jobs = () => {
     <div>
       <div className="w-screen min-h-[30rem]">
         <div>
-          <Navbar darkLogo />
+          <Navbar dropDownBg="white" darkLogo />
         </div>
         <div className="flex items-center justify-between px-20 ">
           <div className="w-7/12">

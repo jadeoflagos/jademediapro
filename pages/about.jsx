@@ -9,36 +9,19 @@ import CompanyButtons from "../components/CompanyButtons";
 import TimePickerComponent from "../components/TimePicker";
 import DatePickerComponent from "../components/DatePicker";
 import { culture, opportunities, team, values, wwwh } from "../data";
+import SectionHeader from "../components/organism/SectionHeader";
 
 const About = () => {
   return (
     <div>
-      <div className="bg-black w-screen min-h-[30rem]">
-        <div>
-          <Navbar textColor="white" />
-        </div>
-        <div className="flex items-center justify-between px-20 text-white py-8">
-          <div className="w-7/12">
-            <p className="text-6xl font-bold leading-tight">
-              The leading branding and digital marketing company
-            </p>
-            <p className="py-12 text-2xl tracking-wider">
-              We implement the most effective design and digital marketing
+      <SectionHeader
+        bgColor="#000000"
+        title="The leading branding and digital marketing company"
+        headerImage="blogbg.png"
+        subTitle="We implement the most effective design and digital marketing
               strategies that drives more traffic to your website by offering a
-              broad spectrum of advantages.
-            </p>
-          </div>
-          <span className="w-1/12" />
-          <div className="w-4/12 flex items-center justify-center">
-            <Image
-              src="/images/aboutbg.png"
-              alt="Avatar"
-              width={494}
-              height={494}
-            />
-          </div>
-        </div>
-      </div>
+              broad spectrum of advantages."
+      />
 
       <div className=" items-center px-20 mt-28 mb-14 grid grid-cols-2 gap-x-8">
         <div>
@@ -124,7 +107,6 @@ const About = () => {
           {wwwh.map((w, wIndex) => (
             <div className="flex items-center">
               <div className="w-32 mr-6">
-                
                 <img
                   className="w-full h-full"
                   src={`/gifs/${w.gif}.gif`}

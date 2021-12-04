@@ -7,38 +7,22 @@ import Navbar from "../components/Navbar";
 import DatePicker from "../components/DatePicker";
 import TimePicker from "../components/TimePicker";
 import { serviceData } from "../data";
+import SectionHeader from "../components/organism/SectionHeader";
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState(-1);
 
   return (
     <div>
-      <div className="bg-[#044841] w-screen min-h-[30rem]">
-        <div>
-          <Navbar textColor="white" />
-        </div>
-        <div className="flex items-center justify-between px-20 text-white py-2">
-          <div className="w-8/12">
-            <p className="text-6xl font-bold leading-tight">
-              We provide professional and value design system
-            </p>
-            <p className="py-12 text-2xl">
-              We create insights on how to make you sell better, we also create
+      <SectionHeader
+        bgColor="#044841"
+        title="We provide professional and value design system"
+        headerImage="servicebg.png"
+        subTitle="We create insights on how to make you sell better, we also create
               magnetic advertisements, memorable brand identities, User friendly
-              websites and practical marketing strategies.
-            </p>
-          </div>
-          <div className="w-4/12 flex items-center justify-center">
-            <Image
-              src="/images/servicebg.png"
-              alt="Avatar"
-              width={494}
-              height={494}
-            />
-          </div>
-        </div>
-      </div>
-      {/* <CompanyButtons /> */}
+              websites and practical marketing strategies."
+      />
+
       <section className="px-20 py-16">
         <div className="w-full space-y-6">
           {serviceData.map((service, serviceIndex) => (

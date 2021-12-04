@@ -4,6 +4,7 @@ import Calendar from "../components/Calendar";
 import DailyEmailForm from "../components/DailyEmailForm";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import SectionHeader from "../components/organism/SectionHeader";
 import Pagination from "../components/Pagination";
 import Tags from "../components/Tags";
 import { eventData } from "../data";
@@ -13,31 +14,15 @@ const Events = () => {
 
   return (
     <div>
-      <div className="bg-[#044841] w-screen min-h-[30rem]">
-        <div>
-          <Navbar textColor="white" />
-        </div>
-        <div className="flex items-center justify-between px-20 text-white py-2">
-          <div className="w-8/12">
-            <p className="text-6xl font-bold leading-tight">
-              Bringing people of like-mind and goals together
-            </p>
-            <p className="py-12 text-2xl">
-              Jade Media Pro has always been about people while exploring
+                  <SectionHeader
+        bgColor="#044841"
+        title="Bringing people of like-mind and goals together"
+        headerImage="eventbg.png"
+        subTitle=" Jade Media Pro has always been about people while exploring
               projects of all systems and sizes. Here you'll find the individual
-              stories behind the work.
-            </p>
-          </div>
-          <div className="w-4/12 flex items-center justify-center">
-            <Image
-              src="/images/eventbg.png"
-              alt="Avatar"
-              width={363}
-              height={644}
-            />
-          </div>
-        </div>
-      </div>
+              stories behind the work."
+      />
+
       <section className="px-20 grid grid-cols-3 gap-x-48 mt-12">
         <main className="col-span-2 space-y-8">
           {eventData.map((data, dataIndex) => (

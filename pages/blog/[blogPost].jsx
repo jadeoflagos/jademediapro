@@ -23,7 +23,7 @@ const BlogPost = ({ blodData = {} }) => {
     <div>
       <div className=" w-screen min-h-[30rem]">
         <div>
-          <Navbar darkLogo />
+          <Navbar darkLogo dropDownBg="white" />
         </div>
         <p className=" px-20 w-7/12 py-12 text-7xl tracking-wider">
           Work from home has taken new turn in the pandemic
