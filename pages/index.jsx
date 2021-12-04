@@ -226,18 +226,18 @@ export default function Home() {
       <EyeBrow
         text="Put money, attention, and resources where it's most effective to
         generate income"
-      />{" "}
+      />
       <div className="px-20">
         <ServicesCarousel />
       </div>
-      <p className="px-20 pt-32 pb-12 text-6xl text-left font-semibold">
-        Exclusive interviews with industry leading professionals
-      </p>
+      <EyeBrow
+        text="Exclusive interviews with industry leading professionals"
+      />
       <section className="flex items-start px-20">
         <div className="w-4/6">
           <iframe
             src="https://player.vimeo.com/video/636370372?h=734c780ecc"
-            width="900"
+            width="100%"
             height="450"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"

@@ -3,6 +3,7 @@ import Navbar from "../Navbar";
 
 const SectionHeader = ({
   headerImage,
+  bgImage,
   navBarColor,
   title,
   subTitle,
@@ -12,7 +13,7 @@ const SectionHeader = ({
     <div
       className="w-screen lg:min-h-[50rem]"
       style={{
-        background: `url("/images/homebg.png")`,
+        background: bgImage? `url("/images/homebg.png")`:"headerColor",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
