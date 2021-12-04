@@ -23,12 +23,12 @@ const Services = () => {
               websites and practical marketing strategies."
       />
 
-      <section className="px-20 py-16">
+      <section className="lg:px-20 px-5 py-16">
         <div className="w-full space-y-6">
           {serviceData.map((service, serviceIndex) => (
             <div key={`service-${serviceIndex}`}>
-              <p className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-3/5 ">
-                <span className="text-4xl font-semibold">{service.title}</span>
+              <p className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-3/5 ">
+                <span className="text-xl lg:text-4xl font-semibold">{service.title}</span>
                 <span
                   className="cursor-pointer"
                   onClick={() => {
