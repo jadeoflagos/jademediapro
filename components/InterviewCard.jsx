@@ -11,7 +11,7 @@ const InterviewCard = () => {
       }}
     >
       <div className="h-4/5"></div>
-      <span className="bg-[#161616] bg-opacity-70 h-1/5 flex items-center justify-center text-2xl">
+      <span className="bg-[#161616] bg-opacity-70 h-1/5 flex items-center justify-center lg:text-2xl">
         with Tola Alabi of TA Consulting
       </span>
     </div>

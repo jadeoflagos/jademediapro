@@ -241,14 +241,14 @@ const About = () => {
           ))}
         </div>
       </section>
-      <section className="px-20 mt-20">
-        <p className="text-3xl">Career Development</p>
-        <p className="text-6xl max-w-screen-xl my-8 font-semibold">
+      <section className="px-5 lg:px-20 mt-20">
+        <p className=" text-base lg:text-3xl">Career Development</p>
+        <p className="text-[2rem] leading-9 lg:text-6xl max-w-screen-xl my-8 font-semibold">
           We exist for your Growth and Success. Got what it takes?
           <span className="text-[#046C62]"> Join our Team today</span>
         </p>
-        <div className="lg:grid grid-cols-2 gap-x-16">
-          <div className="flex flex-col h-full">
+        <div className="flex flex-col lg:flex-row lg:space-x-16">
+          <div className="lg:w-1/2 flex flex-col h-full order-2 lg:order-1">
             <div className="mb-6 flex-grow">
               Professional opportunities for career growth and improvement in
               personal skills and knowledge with great expectations are
@@ -286,7 +286,7 @@ const About = () => {
               APPLY NOW
             </Button>
           </div>
-          <div className="flex justify-center">
+          <div className=" lg:w-1/2 flex justify-center order-1 lg:order-2 py-5 lg:py-0">
             <Image
               src="/images/careerpeople.png"
               alt="Avatar"
@@ -296,14 +296,14 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/*<section className="px-20 my-20">
-        <h3 className="text-4xl">Testimonials</h3>
-        <div className="grid grid-cols-2 gap-x-20 my-6">
-          <p className="text-5xl font-semibold">
+      <section className="px-5 lg:px-20 mt-20 lg:mb-20 mb-64">
+        <h3 className="text-xs lg:text-4xl">Testimonials</h3>
+        <div className="lg:grid grid-cols-2 gap-x-20 my-6">
+          <p className="text-3xl lg:text-5xl font-semibold">
             Many people have already seen how working with Jade Media Pro has
             enabled them to rebrand and grow their businesses.
           </p>
-          <div className="flex items-start relative">
+          <div className="flex items-start relative mt-8 lg:mt-0">
             <div className="">
               <Image
                 src="/images/GOAT.png"
@@ -312,9 +312,9 @@ const About = () => {
                 height={200}
               />
             </div>
-            <div className="ml-10">
-              <p className="font-bold text-3xl mb-1">Rustam raz</p>
-              <p className="text-xl">CEO CRISPR BIOTECH</p>
+            <div className="ml-10 text-xs">
+              <p className="font-bold lg:text-3xl mb-1">Rustam raz</p>
+              <p className="lg:text-xl">CEO CRISPR BIOTECH</p>
             </div>
             <div className="flex absolute top-1/3 left-12 space-x-14">
               <Image
@@ -323,7 +323,7 @@ const About = () => {
                 width={60}
                 height={72}
               />
-              <p className=" bg-[#044841] text-white px-9 py-12 w-96 h-80">
+              <p className="text-xs lg:text-base bg-[#044841] text-white px-4 lg:px-9 py-6 lg:py-12 lg:w-96 h-80 ">
                 In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa
                 for a family emergency and that trip changed her life. She
                 returned committed to leveraging years of experience, for
@@ -334,9 +334,9 @@ const About = () => {
           </div>
         </div>
       </section>
-      <p className="px-20 text-4xl mt-48 mb-8">Our Clients </p>
+      <p className="lg:px-20  px-5 text-base lg:text-4xl mt-48 mb-8">Our Clients </p>
       <CompanyButtons />
-      <section className="px-20 grid grid-cols-3 gap-x-20 my-24">
+      <section className="px-5 lg:px-20 lg:grid grid-cols-3 gap-x-20 space-y-4 lg:space-y-0 my-24">
         {values.map((value, valueIndex) => (
           <div
             key={`value-${valueIndex}`}
@@ -356,12 +356,12 @@ const About = () => {
           </div>
         ))}
       </section>
-      <section className="px-20 mb-16">
-        <p className="text-6xl font-bold">Book Your FREE Consultation Now</p>
-        <div className="flex py-4 space-x-14 items-start">
+     <section className="px-5 lg:px-20 mb-16">
+        <p className="lg:text-6xl text-3xl font-bold">Book Your FREE Consultation Now</p>
+        <div className="flex lg:flex-row flex-col py-4 space-x-14 items-start">
           <form
             action=""
-            className=" w-3/5 grid grid-cols-2 gap-10 place-content-start"
+            className=" lg:w-3/5 grid grid-cols-2 gap-10 place-content-start lg:order-1 order-2"
           >
             <TextField
               id="standard-basic"
@@ -391,13 +391,13 @@ const About = () => {
                   backgroundColor: "#502A7A",
                 }}
                 variant="contained"
-                className="w-3/5  py-4 hover:opacity-90"
+                className="w-3/5 py-4 hover:opacity-90"
               >
                 Book Appointment
               </Button>
             </div>
           </form>
-          <div className="w-2/5 flex items-start">
+          <div className="lg:w-2/5 flex items-start lg:order-2 order-1">
             <Image
               src="/vectors/blogger.svg"
               alt="Avatar"
@@ -407,7 +407,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <Footer /> */}
+      {/* <Footer />  */}
     </div>
   );
 };
