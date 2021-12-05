@@ -10,7 +10,8 @@ import TimePickerComponent from "../components/TimePicker";
 import DatePickerComponent from "../components/DatePicker";
 import { culture, opportunities, team, values, wwwh } from "../data";
 import SectionHeader from "../components/organism/SectionHeader";
-
+import EyeBrow from "../components/organism/EyeBrow";
+import { wwhighlight } from "../data/AboutPage";
 const About = () => {
   return (
     <div>
@@ -24,10 +25,10 @@ const About = () => {
               broad spectrum of advantages."
       />
 
-      <div className=" items-center px-20 mt-28 mb-14 grid grid-cols-2 gap-x-8">
-        <div>
-          <p className="text-5xl mb-10">Our Identity</p>
-          <div>
+      <div className=" items-center lg:px-20 px-5 mt-12 lg:mt-28 mb-14 lg:grid lg:grid-cols-2 lg:gap-x-20">
+        <div className="mb-5 lg:mb-0">
+          <p className="text-lg lg:text-5xl mb-5 lg:mb-10">Our Identity</p>
+          <div className="lg:text-black text-[#666666]">
             <p>
               Our origin lies in 2016 as Jade Grafix operating from a very small
               room. Today we are Africa's most renowned content-creation graphic
@@ -50,20 +51,20 @@ const About = () => {
             </p>
           </div>
         </div>
-        <p className="text-5xl pl-16 pr-8">
-          We are on a Mission to help our clients achieve excellence using
-          sustainable digital strategies
-        </p>
+        <EyeBrow
+          text="We are on a Mission to help our clients achieve excellence using
+          sustainable digital strategies"
+        />
       </div>
       <div
-        className="w-screen h-[25rem]"
+        className="w-screen h-24 lg:h-[25rem]"
         style={{
           background: `url("/images/aboutbg1.png")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       ></div>
-      <section className="bg-[#044841] px-20 py-24 grid grid-cols-2 gap-x-8 text-white">
+      <section className="bg-[#044841] px-5 lg:px-20 py-14 lg:py-24 lg:grid lg:grid-cols-2 lg:gap-x-8 text-white">
         <div>
           <Image
             src="/vectors/w-logo.svg"
@@ -71,42 +72,19 @@ const About = () => {
             width={530}
             height={88}
           />
-          <div className="mt-4">
-            <p className="text-xl font-semibold">What:</p>
-            <p>
-              We bring brands to life through creative solutions, strong brand
-              identity and help market businesses, products, or services achieve
-              their dreams, earn income, and increase their impact.
-            </p>
-          </div>
-          <div className="mt-2">
-            <p className="text-xl font-semibold">Why: </p>
-            <p>
-              We do all the hard work to ensure that we are the preferred
-              facilitator of the world's most successful brands, providing
-              people with accessible solutions to their problems.
-            </p>
-          </div>
-          <div className="mt-2">
-            <p className="text-xl font-semibold">Who:</p>
-            <p>
-              We are here to give you the best solution whether you are a
-              start-up, small- or medium-sized business, and help you grow and
-              achieve your dreams at a very affordable cost and innovative way.
-            </p>
-          </div>
-          <div className="mt-2">
-            <p className="text-xl font-semibold">How: </p>
-            <p>
-              We create effective strategies, powerful identities, seamless
-              interactions, and memorable experiences to connect people to
-              brands and organizations.
-            </p>
-          </div>
+          {wwhighlight.map((dat, datIndex) => (
+            <div className="mt-2 lg:flex lg:flex-col text-xs lg:text-base">
+              <span className="lg:text-xl font-semibold">{dat.heading} </span>
+              <span>{dat.desc}</span>
+            </div>
+          ))}
         </div>
-        <div className="mx-20 flex flex-col justify-between">
+        <div className="lg:mx-20 mt-5 lg:mt-0 flex flex-col space-y-5 lg:space-y-0 justify-between">
           {wwwh.map((w, wIndex) => (
-            <div className="flex items-center" key={`wwwh-${wIndex}`}>
+            <div
+              className="flex lg:items-center items-start"
+              key={`wwwh-${wIndex}`}
+            >
               <div className="w-32 mr-6">
                 <img
                   className="w-full h-full"
@@ -115,8 +93,8 @@ const About = () => {
                 />
               </div>
               <div>
-                <p className="font-bold text-2xl">{w.title} </p>
-                <span>{w.desc}</span>
+                <p className="font-bold text-xs lg:text-2xl py-1">{w.title} </p>
+                <span className="text-xs lg:text-base">{w.desc}</span>
               </div>
             </div>
           ))}
@@ -125,34 +103,38 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section className="mt-24 px-20">
-        <h1 className="text-4xl mb-12">Culture & Values</h1>
-        <div className="grid grid-cols-3 gap-y-10 gap-x-20">
+      <section className="mt-16 lg:mt-24 px-5 lg:px-20">
+        <h1 className="text-sm lg:text-4xl mb-12">Culture & Values</h1>
+        <div className="grid grid-cols-2 gap-x-2 lg:grid-cols-3 gap-y-10 lg:gap-x-20">
           {culture.map((c, cIndex) => (
-            <div key={cIndex} className="py-10 px-14 border-2 border-[#77459B]">
+            <div
+              key={cIndex}
+              className="lg:py-10 py-5 px-5 lg:px-14 text-xs lg:text-xl border-2 border-[#77459B]"
+            >
               <h3>{c.title}</h3>
-              <span className="mt-8 mb-12 w-12 border-b-2 flex border-[#77459B]" />
+              <span className="lg:mt-8 mt-7 lg:mb-12 mb-9 w-12 border-b-2 flex border-[#77459B]" />
               <p>{c.desc}</p>
             </div>
           ))}
         </div>
       </section>
-      <section className="px-20 mt-32">
-        <p className="mb-10 text-4xl">Volunteering</p>
-        <p className="text-5xl leading-tight font-bold">
+      <section className="px-5 lg:px-20 mt-16 lg:mt-32">
+        <p className="mb-10 text-sm lg:text-4xl">Volunteering</p>
+        <EyeBrow text="Bridging Africa’s transition from the analog age to the Digital age by Training young Professionals and solving Digital challenges at individual and corporate levels." />
+        {/* <p className="text-5xl leading-tight font-bold">
           Bridging Africa’s transition from the analog age to the Digital age by
           Training young Professionals and solving Digital challenges at
           individual and corporate levels.
-        </p>
+        </p> */}
       </section>
-      <section className="grid grid-cols-2  px-20 py-20">
+      <section className="lg:grid lg:grid-cols-2 px-5 lg:px-20 lg:py-20 py-4">
         <div>
           <video width="900" height="450" controls>
             <source src="/arcnet.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="mx-20">
-          <p>
+        <div className="lg:mx-20">
+          <p className="text-[#666666] text-xs lg:text-xl mt-4 lg:mt-0">
             In a world of uncontrolled population and widespread poverty, The
             case of individuals being brought up without access to the basic
             standards of living required for proper development is not
@@ -160,34 +142,34 @@ const About = () => {
             human development as such persons account for a great part of the
             population and inevitably the state of affairs of society.
           </p>
-          <div className="flex items-center justify-between my-10">
-            <p className="flex flex-col">
-              <span className="text-[#046C62] text-4xl">$ 1.2M</span>
-              <span className="text-lg">funded</span>
-            </p>
-            <p className="flex flex-col">
-              <span className="text-[#046C62] text-4xl">1.6K</span>
-              <span className="text-lg">volunteers</span>
-            </p>
-            <p className="flex flex-col">
-              <span className="text-[#046C62] text-4xl">5.3K</span>
-              <span className="text-lg">Life’s changed</span>
-            </p>
+          <div className="flex items-center space-x-4 justify-between my-10">
+            {[
+              { text: "$ 1.2M", desc: "funded" },
+              { text: "1.6K", desc: "volunteers" },
+              { text: "5.3K", desc: "Life’s changed" },
+            ].map((item, itemIndex) => (
+              <p className="flex flex-col items-center" key={itemIndex}>
+                <span className="text-[#046C62] text-base lg:text-4xl">
+                  {item.text}
+                </span>
+                <span className="lg:text-lg text-xs">{item.desc}</span>
+              </p>
+            ))}
           </div>
           <div className="flex justify-between items-center">
-            <p className=" bg-[#8A57A3] w-6/12  px-16 py-2 flex items-center justify-center cursor-pointer text-white uppercase">
+            <p className=" bg-[#8A57A3] w-6/12  h-11 lg:h-16 flex items-center justify-center cursor-pointer text-white uppercase text-xs lg:text-base">
               Donate Now
             </p>
             <span className="w-2/12" />
-            <p className="border flex items-center justify-center border-[#8A57A3] px-12 py-2 w-4/12 cursor-pointer">
+            <p className="border flex items-center justify-center border-[#8A57A3] h-11 lg:h-16 w-4/12 cursor-pointer text-xs lg:text-base">
               SHARE
             </p>
           </div>
         </div>
       </section>
-      <section className="px-20 mt-10 flex flex-col items-start">
+      <section className="lg:px-20 px-5 mt-10 flex flex-col items-start">
         <p className="text-4xl">The Team</p>
-        <div className="w-full flex justify-between mt-6">
+        <div className="w-full hidden lg:flex justify-between mt-6">
           {team.slice(0, 3).map((teammember, memberIndex) => (
             <div
               key={`member-${memberIndex}`}
@@ -204,10 +186,27 @@ const About = () => {
             </div>
           ))}
         </div>
-        <p className="my-8 text-5xl font-bold">
-          We are a team. We love what we do. Simple.
+        <div className="w-full lg:hidden grid grid-cols-2 gap-x-12 gap-y-4 mt-6 text-[0.8rem]">
+          {team.slice(0, 4).map((teammember, memberIndex) => (
+            <div
+              key={`member-${memberIndex}`}
+              className="flex flex-col items-center"
+            >
+              <Image
+                src={`/images/${teammember.img}`}
+                alt="Avatar"
+                width={400}
+                height={500}
+              />
+              <p className="mt-2 font-bold ">{teammember.name}</p>
+              <p className="whitespace-nowrap">{teammember.position}</p>
+            </div>
+          ))}
+        </div>
+        <p className="my-8 ">
+          <EyeBrow text="We are a team. We love what we do. Simple." />
         </p>
-        <div className="w-full flex justify-between mt-6">
+        <div className="hidden w-full lg:flex justify-between mt-6">
           {team.slice(3).map((teammember, memberIndex) => (
             <div
               key={`member-${memberIndex}`}
@@ -224,6 +223,23 @@ const About = () => {
             </div>
           ))}
         </div>
+        <div className="w-full lg:hidden grid grid-cols-2 gap-x-12 gap-y-4 mt-6 text-[0.8rem]">
+          {team.slice(0,2).map((teammember, memberIndex) => (
+            <div
+              key={`member-${memberIndex}`}
+              className="flex flex-col items-center"
+            >
+              <Image
+                src={`/images/${teammember.img}`}
+                alt="Avatar"
+                width={400}
+                height={500}
+              />
+              <p className="mt-2 font-bold ">{teammember.name}</p>
+              <p className="whitespace-nowrap">{teammember.position}</p>
+            </div>
+          ))}
+        </div>
       </section>
       <section className="px-20 mt-20">
         <p className="text-3xl">Career Development</p>
@@ -231,7 +247,7 @@ const About = () => {
           We exist for your Growth and Success. Got what it takes?
           <span className="text-[#046C62]"> Join our Team today</span>
         </p>
-        <div className="grid grid-cols-2 gap-x-16">
+        <div className="lg:grid grid-cols-2 gap-x-16">
           <div className="flex flex-col h-full">
             <div className="mb-6 flex-grow">
               Professional opportunities for career growth and improvement in
@@ -280,7 +296,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="px-20 my-20">
+      {/*<section className="px-20 my-20">
         <h3 className="text-4xl">Testimonials</h3>
         <div className="grid grid-cols-2 gap-x-20 my-6">
           <p className="text-5xl font-semibold">
@@ -391,7 +407,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };

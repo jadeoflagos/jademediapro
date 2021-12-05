@@ -55,25 +55,27 @@ export default function Home() {
   ];
   return (
     <div>
-       <div
-      className="w-screen lg:min-h-[50rem]"
-      style={{
-        background: `url("/images/homebg.png")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div>
-        <Navbar dropDownBg="black" textColor="white" />
+      <div
+        className="w-screen lg:min-h-[50rem]"
+        style={{
+          background: `url("/images/homebg.png")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div>
+          {/* <Navbar dropDownBg="black" textColor="white" /> */}
+        </div>
+        <div className="py-20 lg:max-w-[65%] w-full text-white flex flex-col justify-center px-8 lg:px-20">
+          <p className="font-extrabold text-5xl lg:text-8xl">{Header.title}</p>
+          <p className="my-10 text-base lg:text-2xl font-normal">
+            {Header.subTitle}
+          </p>
+          <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max hover:opacity-90 ">
+            VIEW PROJECTS
+          </p>
+        </div>
       </div>
-      <div className="py-20 lg:max-w-[65%] w-full text-white flex flex-col justify-center px-8 lg:px-20">
-        <p className="font-extrabold text-5xl lg:text-8xl">{Header.title}</p>
-        <p className="my-10 text-base lg:text-2xl font-normal">{Header.subTitle}</p>
-        <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max hover:opacity-90 ">
-          VIEW PROJECTS
-        </p>
-      </div>
-    </div>
       <div className="w-full py-24 flex flex-col lg:flex-row items-center px-8">
         <div className="lg:w-5/12 w-full lg:order-1 order-2">
           <div className="flex justify-center">
@@ -173,7 +175,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <div className="w-full py-24 flex items-center px-20 bg-[#502A7A]">
+      <div className="w-full py-24 flex items-center px-20 bg-[#502A7A]">
         <div className="w-4/12 text-white space-y-8">
           {idea.map((i, index) => (
             <div className="flex items-center space-x-10" key={index}>
@@ -236,18 +238,20 @@ export default function Home() {
             Get your Brand process
           </p>
         </div>
-      </div> */}
-      <EyeBrow
-        text="Put money, attention, and resources where it's most effective to
+      </div>
+      <div className="px-20 pt-32">
+        <EyeBrow
+          text="Put money, attention, and resources where it's most effective to
         generate income"
-      />
+        />
+      </div>
       <div className="px-20">
         <ServicesCarousel />
       </div>
-      <EyeBrow
-        text="Exclusive interviews with industry leading professionals"
-      />
-      <section className="flex items-start px-20">
+      <div className="px-20 pt-32">
+        <EyeBrow text="Exclusive interviews with industry leading professionals" />
+      </div>
+      <section className="flex items-start px-20 mt-12">
         <div className="w-4/6">
           <iframe
             src="https://player.vimeo.com/video/636370372?h=734c780ecc"
@@ -308,7 +312,7 @@ export default function Home() {
           desc="Some SEO-related tools such as the Google Keyword Planner and Google Analytics provide quantitative data to help you understand your market, analyze the trends, and know your competitors’ standings. The  search engine management is to helps you identify popular keywords so you can decide how to structure or revise your needed content."
         />
       </section>
-      <section className="mt-40 px-20">
+      <section className="mt-32 px-20">
         <div className=" mb-[4.5rem] grid grid-cols-3 gap-x-20">
           {products.map((product, productIndex) => (
             <Product
