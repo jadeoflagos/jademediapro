@@ -70,10 +70,11 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
             About
           </a>
         </Link> */}
-          {dropdownMenus.map((item) => (
+          {dropdownMenus.map((item, itemIndex) => (
             <span
               className="capitalize select-none drop-down"
               onClick={(event) => toggleDropDown(event, item)}
+              key={`nav-drop-down-${itemIndex}`}
             >
               {item}
             </span>

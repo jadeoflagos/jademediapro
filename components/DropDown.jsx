@@ -2,21 +2,22 @@ import React, { useState, useRef } from "react";
 import { useClickAway } from "react-use";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
-const bgColors = {
-  purple: "#2C144E",
-  black: " #424242",
-  white: "#E8E8E8",
-  green: "#02332E",
-};
+import { handleRoutes, routesNames } from "../utils/helper";
 
 const DropDown = ({
   options = [],
   bg = "black",
   styles = {},
   closeDropDown,
-  type
+  type,
 }) => {
+  const bgColors = {
+    purple: "#2C144E",
+    black: " #424242",
+    white: "#E8E8E8",
+    green: "#02332E",
+  };
+
   const dropDown = useRef(null);
   const [activeOption, setActiveOption] = useState(null);
   const textColor = bg !== "white" ? "text-white" : "text-black";
@@ -34,15 +35,17 @@ const DropDown = ({
     <div
       style={{ backgroundColor: bgColors[bg], zIndex: 1000, ...styles }}
       ref={dropDown}
-      className={`drop-down absolute  flex flex-col py-[1.35rem] gap-y-[1.5rem] pl-8 pr-8 select-none font-semibold text-[1.31rem] rounded-[2px] mt-[1.3rem] `}
+      className={`drop-down absolute shadow-lg  flex flex-col py-[1.35rem] gap-y-[1.5rem] pl-8 pr-8 select-none font-semibold text-[1.31rem] rounded-[2px] mt-[1.3rem] `}
     >
       {options.map((option) => {
         const routeName = option.toLowerCase();
         return (
-          <Link href={`/${routeName}`}>
+          <Link
+            href={handleRoutes(option, type)}
+            key={`drop-down-active-option_${option}`}
+          >
             <a
-              key={`drop-down-active-option_${option}`}
-              href={`/${option}`}
+              href={handleRoutes(option, type)}
               className={`${textColor} pb-2 border-b-[1px]  ${
                 path === `/${routeName}`
                   ? `${bg === "white" ? "border-b-black" : "border-b-white"}`

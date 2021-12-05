@@ -10,8 +10,9 @@ const Projects = () => {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <div>
-            <SectionHeader
+      <SectionHeader
         bgColor="#2C144E"
+        navBarColor="white"
         title="We create a fully unique journey for all our clients"
         headerImage="projectbg.png"
         subTitle="Jade Media Pro has always been about people while exploring

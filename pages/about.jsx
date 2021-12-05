@@ -16,6 +16,7 @@ const About = () => {
     <div>
       <SectionHeader
         bgColor="#000000"
+        navBarColor="white"
         title="The leading branding and digital marketing company"
         headerImage="blogbg.png"
         subTitle="We implement the most effective design and digital marketing
@@ -105,7 +106,7 @@ const About = () => {
         </div>
         <div className="mx-20 flex flex-col justify-between">
           {wwwh.map((w, wIndex) => (
-            <div className="flex items-center">
+            <div className="flex items-center" key={`wwwh-${wIndex}`}>
               <div className="w-32 mr-6">
                 <img
                   className="w-full h-full"
