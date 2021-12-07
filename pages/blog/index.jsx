@@ -103,7 +103,7 @@ const Blog = () => {
           <InterviewCard />
         </div>
       </div>
-      {/* <Footer /> */}
+       <Footer /> 
     </div>
   );
 };

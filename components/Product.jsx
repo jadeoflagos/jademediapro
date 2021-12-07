@@ -18,8 +18,8 @@ const Product = ({ title, img, price, delivery }) => {
 
       <p className="mt-[1rem] mb-[0.5rem] ">{title}</p>
       <div className="flex items-center gap-[0.64rem]">
-        <p className="font-semibold text-[1.5rem]">{price}</p>
-        <span className="bg-[#C4C4C4] rounded-[1rem] py-0.5 font-normal px-8">
+        <p className="font-semibold text-xs lg:text-[1.5rem]">{price}</p>
+        <span className="bg-[#C4C4C4] rounded-[1rem] text-[0.4rem] lg:text-base  py-0.5 font-normal px-2  lg:px-8">
           {delivery}
         </span>
       </div>

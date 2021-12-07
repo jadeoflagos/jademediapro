@@ -23,10 +23,10 @@ const Store = () => {
   return (
     <div>
       <div>
-        <Navbar darkLogo />
+        {/* <Navbar darkLogo /> */}
       </div>
       <div
-        className="w-screen h-[31rem] px-20 "
+        className="w-screen h-[31rem] lg:px-20 px-5"
         style={{
           background: `url("/images/storebg.png")`,
           backgroundSize: "cover",
@@ -34,26 +34,26 @@ const Store = () => {
         }}
       >
         <div
-          className="w-1/3 h-full px-10 flex flex-col justify-center"
+          className="w-1/3 h-full lg:px-10 flex flex-col justify-center"
           style={{
             background: `url("/images/storebg2.png")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <p className="text-5xl mb-12 font-semibold">
+          <p className="text-lg lg:text-5xl mb-12 font-semibold">
             High-Quality Artistry Framed Just For You
           </p>
-          <p className="text-2xl">
+          <p className="text-xs lg:text-2xl">
             Our gallery is made from selected and best quality designs that are
             suitable for your creative space
           </p>
         </div>
       </div>
-      <section className="px-20 py-20">
+      <section className="px-5 lg:px-20 py-20">
         <div className="flex items-center mb-24">
           <span className="font-semibold mr-[0.857rem]">Related</span>
-          <div className="flex items-cente gap-[0.857rem]">
+          <div className="flex items-cente gap-[0.857rem] flex-grow lg:flex-grow-0 overflow-x-auto lg:overflow-x-hidden">
             {storeTab.map((item, itemIndex) => (
               <span
                 key={`store-tab-number${itemIndex}`}
@@ -64,7 +64,7 @@ const Store = () => {
             ))}
           </div>
         </div>
-        <div className=" mt-[6.4rem] mb-32 grid grid-cols-3 gap-[6.375rem]">
+        <div className=" mt-[6.4rem] mb-32 grid grid-cols-2 gap-x-4 lg:grid-cols-3 lg:gap-[6.375rem]">
           {products.map((product, productIndex) => (
             <Link href="/product-desc" key={`product-${productIndex}`}>
               <a>
@@ -103,7 +103,7 @@ const Store = () => {
           ))}
         </div>{" "}
       </section>
-      <section className="px-20">
+      <section className="lg:px-20 px-5">
         <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </section>
 
