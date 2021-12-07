@@ -3,15 +3,16 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import InterviewCard from "../components/InterviewCard";
-import SocialButtons from "../components/SocialButtons";
 import Pagination from "../components/Pagination";
 import Link from "next/link";
+import SecondHeaderTwo from "../components/organism/SecondHeaderTwo";
 
 const Interview = () => {
   const [currentPage, setCurrentPage] = useState(0);
   return (
     <div>
-      <div className="bg-[#502A7A] w-screen min-h-[30rem] pb-11">
+           <SecondHeaderTwo headerImg="interview.png" title="Engaging One-on-One discussion with Big Guns" subTitle="Design begins after we begin to think about how to present an experience most successfully, whether a button we put in can solve a problem." />
+      {/* <div className="bg-[#502A7A] w-screen min-h-[30rem] pb-11">
         <div>
           <Navbar textColor="white" dropDownBg="purple" />
         </div>
@@ -39,10 +40,10 @@ const Interview = () => {
             />
           </div>
         </div>
-      </div>
-      <div className="mt-12 px-20 py-20 ">
-        <p className="font-semibold text-6xl mb-8">60 minutes:</p>
-        <div className="grid grid-cols-3  gap-8">
+      </div> */}
+      <div className="mt-12 px-5 lg:px-20 py-20 ">
+        <p className="font-semibold text-3xl lg:text-6xl mb-8">60 minutes:</p>
+        <div className="grid lg:grid-cols-3  gap-8">
           {Array(9)
             .fill("")
             .map((interview, interviewIndex) => (
@@ -57,7 +58,7 @@ const Interview = () => {
             ))}
         </div>
       </div>
-      <section className="px-20">
+      <section className="px-5 lg:px-20">
         <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </section>
       <Footer />

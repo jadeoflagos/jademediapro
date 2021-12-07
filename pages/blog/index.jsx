@@ -9,6 +9,7 @@ import SocialButtons from "../../components/SocialButtons";
 import { blogPostData } from "../../data";
 import SectionHeader from "../../components/organism/SectionHeader";
 import EyeBrow from "../../components/organism/EyeBrow";
+import SecondHeaderTwo from "../../components/organism/SecondHeaderTwo";
 
 const Blog = () => {
   const tabs = [
@@ -23,34 +24,8 @@ const Blog = () => {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <div>
-      <div className={`w-screen lg:min-h-[30rem] bg-[#502A7A]  `}>
-        <div>{/* <Navbar textColor={navBarColor} /> */}</div>
-        <div className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white">
-          <div className="lg:w-7/12">
-            <p className="font-bold text-5xl lg:text-8xl">Blog Posts</p>
-            <p className="pt-12 lg:pb-12 text-base lg:text-2xl lg:tracking-wider">
-              Experient design thinking and innovative stories
-            </p>
-            <div className="hidden lg:flex">
-              {" "}
-              <SocialButtons />
-            </div>
-          </div>
-          <span className="w-1/12" />
-          <div className="lg:w-4/12 w-full flex items-center justify-center">
-            <Image
-              src={`/images/blogbg.png`}
-              alt="Avatar"
-              width={494}
-              height={494}
-            />
-          </div>
-        </div>
-        <div className="w-full px-5 flex flex-col lg:hidden">
-          <SocialButtons />
-        </div>
-      </div>
-
+     <SecondHeaderTwo headerImg="blogbg.png" title="Blog Posts" subTitle=" Experient design thinking and innovative stories
+" />
       <div className="mt-12 px-5 lg:px-20 py-20">
         <div className="hidden lg:flex">
           {tabs.map((tab, tabIndex) => (
