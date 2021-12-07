@@ -88,7 +88,7 @@ const Blog = () => {
               href="/blog/[blogPost]"
               as={`/blog/${blogData.id}`}
             >
-              <a>
+              <a> 
                 <BlogCard date={blogData.date || undefined} />
               </a>
             </Link>

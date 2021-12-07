@@ -6,7 +6,7 @@ const DailyEmailForm = () => {
   const ariaLabel = { "aria-label": "description" };
 
   return (
-    <div className="bg-[#502A7A] w-80 p-9 text-white">
+    <div className="bg-[#502A7A] w-full lg:w-80 p-9 text-white">
       <Image src="/vectors/send-icon.svg" alt="Avatar" width={53} height={56} />
 
       <p className="text-3xl">Want to keep up-to-date?</p>

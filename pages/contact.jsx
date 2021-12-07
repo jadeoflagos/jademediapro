@@ -5,42 +5,31 @@ import DateNTime from "../components/DateNTime";
 import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
+import SectionHeader from "../components/organism/SectionHeader";
 import { faqs } from "../data";
 const Contact = () => {
   const [activeTab, setActiveTab] = useState(-1);
 
   return (
     <div>
-      <div className="bg-black w-screen min-h-[30rem]">
-        <div>
-          <Navbar textColor="white" />
-        </div>
-        <div className="flex items-center justify-between px-20 text-white py-2">
-          <div className="w-8/12">
-            <p className="text-6xl font-bold leading-tight">
-              Ready to START your journey and GROW your Business?{" "}
-            </p>
-          </div>
-          <div className="w-4/12 flex items-center justify-center">
-            <Image
-              src="/images/contactbg.png"
-              alt="Avatar"
-              width={494}
-              height={494}
-            />
-          </div>
-        </div>
-      </div>
-      <section className="px-20 py-16">
+      <SectionHeader
+        bgColor="#000000"
+        navBarColor="white"
+        title="Ready to START your journey and GROW your Business?
+"
+        headerImage="contactbg.png"
+
+      />
+      <section className="px-5 lg:px-20 py-16">
         <h1 className="text-6xl">FAQs</h1>
-        <p className="mt-6 mb-14">
+        <p className="mt-6 mb-6 lg:mb-14">
           Frequently asked questions about hookah and association
         </p>
-        <div className="w-3/5 space-y-6">
+        <div className="lg:w-3/5 space-y-6">
           {faqs.map((faq, faqIndex) => (
             <div key={`faq-${faqIndex}`}>
               <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-                <span className="font-semibold text-lg">{faq.que}</span>
+                <span className="font-semibold text-xs lg:text-lg">{faq.que}</span>
                 <span
                   className="cursor-pointer"
                   onClick={() => {
@@ -61,7 +50,7 @@ const Contact = () => {
               </p>
 
               {activeTab == faqIndex ? (
-                <p className="pt-6 pb-10"> {faqs[faqIndex].ans}</p>
+                <p className="pt-6 pb-10 text-xs lg:text-base"> {faqs[faqIndex].ans}</p>
               ) : (
                 ""
               )}
@@ -69,15 +58,16 @@ const Contact = () => {
           ))}
         </div>
       </section>
-      <section className="px-20 mt-7">
-        <div className="flex items-center">
-          <form
-            action=""
-            className="w-3/5 pr-12 grid grid-cols-2 gap-x-10 gap-y-4"
-          >
-            <p className="col-span-2 text-6xl">
+      <section className="px-5  lg:px-20 mt-7">
+                    <p className="text-3xl lg:w-3/5 pr-12 lg:text-6xl">
               We can help you with the process. Let's talk.
             </p>
+
+        <div className="flex items-center lg:flex-row flex-col">
+          <form
+            action=""
+            className="lg:w-3/5 pr-12 grid grid-cols-2 gap-x-10 gap-y-4 order-2 lg:order-1"
+          >
             <TextField
               id="standard-basic"
               label="Full name"
@@ -130,15 +120,16 @@ const Contact = () => {
               </Button>
             </div>
           </form>
-          <Image
+          <div className="order-1 lg:order-2">
+          <Image 
             src="/vectors/blogger.svg"
             alt="Avatar"
             width={517}
             height={688}
-          />
+          /></div>
         </div>
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
