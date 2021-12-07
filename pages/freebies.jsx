@@ -7,6 +7,7 @@ import Pagination from "../components/Pagination";
 import Image from "next/image";
 import Product from "../components/Product";
 import Saly19 from "../public/images/Saly-19.png";
+import SectionHeader from "../components/organism/SectionHeader";
 
 const freebies = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -14,7 +15,14 @@ const freebies = () => {
   return (
     <div>
       <div className="w-full min-h-[30rem] bg-[#2C144E]">
-        <div>
+        <SectionHeader
+          title="Everything you need for growth and development"
+          subTitle="Jade Media Pro has always been about people while exploring
+              projects of all systems and sizes. Here you'll find the individual
+              stories behind the work."
+          headerImage=""
+        />
+        {/* <div>
           <Navbar dropDownBg="white" textColor="white" />
         </div>
         <div className="flex items-center justify-between px-20 text-white bg-[#2C144E] pt-8 ">
@@ -32,11 +40,11 @@ const freebies = () => {
           <div className="w-4/12 flex items-center justify-center">
             <Image src={Saly19} height={520} width={520} />
           </div>
-        </div>
-        <div className="py-32 bg-white px-20">
+        </div> */}
+        <div className="py-32 bg-white px-5 lg:px-20">
           <div className="flex items-center mb-24">
             <span className="font-semibold mr-[0.857rem]">Related</span>
-            <div className="flex items-cente gap-[0.857rem]">
+            <div className="flex items-cente gap-[0.857rem] overflow-x-auto">
               {freebiesTab.map((item, itemIndex) => (
                 <span
                   key={`freebies-tab-number${itemIndex}`}
@@ -47,7 +55,7 @@ const freebies = () => {
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-y-[3.1rem] gap-x-[2.75rem]">
+          <div className="grid lg:grid-cols-4 grid-cols-2 gap-y-[3.1rem] gap-x-[2.75rem]">
             {Array(12)
               .fill("")
               .map((item, itemIndex) => (
@@ -76,8 +84,19 @@ const freebies = () => {
             <h3 className="font-semibold text-[3rem]">
               Featured Paintings and Wall Frames{" "}
             </h3>
-            <div className=" mt-[6.4rem] mb-32 grid grid-cols-3 gap-x-[6.375rem]">
+            <div className="hidden mt-[6.4rem] mb-32 lg:grid grid-cols-3 gap-x-[6.375rem]">
               {products.map((product, productIndex) => (
+                <Product
+                  key={`product-${productIndex}`}
+                  title={product.name}
+                  price={product.price}
+                  img={product.img}
+                  delivery="FREE Delivery"
+                />
+              ))}
+            </div>
+            <div className="lg:hidden mt-[6.4rem] mb-32 grid grid-cols-2 gap-x-8">
+              {products.slice(0,2).map((product, productIndex) => (
                 <Product
                   key={`product-${productIndex}`}
                   title={product.name}
