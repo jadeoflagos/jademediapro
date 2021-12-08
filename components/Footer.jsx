@@ -56,7 +56,7 @@ const Footer = () => {
             <div className="flex flex-col space-y-2">
               <Link href="/about">Process</Link>
               <Link href="/about">Showreel</Link>
-              <Link href="/about">Case Study</Link>
+              <Link href="/case-study">Case Study</Link>
               <Link href="/about">Training</Link>
             </div>
           </div>
@@ -309,7 +309,9 @@ const Footer = () => {
             <Image src="/vectors/rss.svg" alt="Avatar" width={17} height={15} />
           </div>
         </div>
-        <p className="pt-16 pb-11 text-xs">© 2021 Jade Media Pro. All rights reserved. </p>
+        <p className="pt-16 pb-11 text-xs">
+          © 2021 Jade Media Pro. All rights reserved.{" "}
+        </p>
         <div className="text-xs">
           <Link href="/terms-and-condition">
             <p className="mr-8 cursor-default">Terms & Conditions</p>

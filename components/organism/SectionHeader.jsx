@@ -13,7 +13,7 @@ const SectionHeader = ({
   return (
     <div className={`w-screen lg:min-h-[30rem] bg-black bg-[${bgColor}] `}>
       <div>
-        {/* <Navbar textColor={navBarColor} /> */}
+        <Navbar textColor={navBarColor} />
       </div>
       <div className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white">
         <div className="lg:w-7/12">
