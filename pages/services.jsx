@@ -15,12 +15,10 @@ const Services = () => {
   return (
     <div>
       <SectionHeader
-        bgColor="#044841"
+        bgColor="##044841"
         title="We provide professional and value design system"
         headerImage="servicebg.png"
-        subTitle="We create insights on how to make you sell better, we also create
-              magnetic advertisements, memorable brand identities, User friendly
-              websites and practical marketing strategies."
+        subTitle="We create magnetic advertisement videos, memorable brand identities, user-friendly websites, and practical marketing strategies. We also create insights on how you can be profitable."
       />
 
       <section className="lg:px-20 px-5 py-16">
@@ -28,7 +26,9 @@ const Services = () => {
           {serviceData.map((service, serviceIndex) => (
             <div key={`service-${serviceIndex}`}>
               <p className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-3/5 ">
-                <span className="text-xl lg:text-4xl font-semibold">{service.title}</span>
+                <span className="text-xl lg:text-4xl font-semibold">
+                  {service.title}
+                </span>
                 <span
                   className="cursor-pointer"
                   onClick={() => {
@@ -61,15 +61,16 @@ const Services = () => {
           ))}
         </div>
       </section>
-      <section className="px-20 mt-7">
-        <div className="flex items-center">
+      <section className="px-5 lg:px-20 mt-7">
+        <p className="lg:w-2/3 text-3xl lg:text-6xl text-[#046C62] font-bold">
+          Don’t know where to start, Book a FREE Consultation Now
+        </p>
+
+        <div className="flex flex-col lg:flex-row items-start ">
           <form
             action=""
-            className="w-3/5 pr-12 grid grid-cols-2 gap-x-10 gap-y-4"
+            className="lg:w-3/5 lg:pr-12 grid grid-cols-2 gap-x-10 gap-y-4 lg:pt-11  order-2 lg:order-1"
           >
-            <p className="col-span-2 text-6xl text-[#046C62] font-bold">
-              Don’t know where to start, Book a FREE Consultation Now{" "}
-            </p>
             <TextField
               id="standard-basic"
               label="Full name"
@@ -89,7 +90,7 @@ const Services = () => {
               variant="standard"
               className="col-span-2"
             />
-            <div className="col-span-2 mt-16">
+            <div className="col-span-2 mt-16 mb-10 lg:mb-0 ">
               <Button
                 variant="contained"
                 className="bg-[#502A7A] w-64 py-4 hover:bg-[#502A7A]"
@@ -98,12 +99,14 @@ const Services = () => {
               </Button>
             </div>
           </form>
-          <Image
-            src="/vectors/blogger.svg"
-            alt="Avatar"
-            width={517}
-            height={688}
-          />
+          <div className="order-1 lg:order-2">
+            <Image
+              src="/vectors/blogger.svg"
+              alt="Avatar"
+              width={517}
+              height={588}
+            />
+          </div>
         </div>
       </section>
       <Footer />
