@@ -607,3 +607,102 @@ export const dropDown = {
   hub: "Blog,interview,Community,Events,Job/intership".split(","),
   resources: "Store,Freebies".split(",")
 }
+
+// case-study
+
+export const caseStudyScopes = "Business model,Workshops,Brand strategy,Brand identity,Website".split(",")
+
+export const challengeAnalysis = {
+  challenge: ["In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa for a family emergency and that trip changed her life. She returned committed to leveraging years of experience, network and unique trade skills working for leading global brand including Walmart Corporation to support Africa’s quest for sustainable economic transformation.", "In Africa’s case, people wonder what good can come out of the continent that has an history laden with war and famine and our response is to come join us and see.... The new and emerging Africa is filled with hard working men and women, young and old focused on positioning themselves for a greater future."],
+  analysis: ["In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa for a family emergency and that trip changed her life. She returned committed to leveraging years of experience, network and unique trade skills working for leading global brand including Walmart Corporation to support Africa’s quest for sustainable economic transformation.", "In Africa’s case, people wonder what good can come out of the continent that has an history laden with war and famine and our response is to come join us and see.... The new and emerging Africa is filled with hard working men and women, young and old focused on positioning themselves for a greater future."],
+  img: "/images/challenge-analysis.png"
+}
+
+export const caseStudyCards = [
+  {
+    title: "Strategy",
+    contents: ["In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa for a family emergency and that trip changed her life. She returned committed to leveraging years of experience, network and unique trade skills working for leading global brand including Walmart Corporation to support Africa’s quest for sustainable economic transformation.", "In Africa’s case, people wonder what good can come out of the continent that has an history laden with war and famine and our response is to come join us and see.... The new and emerging Africa is filled with hard working men and women, young and old focused on positioning themselves for a greater future."],
+    images: [{ img: '/images/strategy.png', width: 1028, height: 420 }]
+  }
+]
+
+export const collaborators = [
+  {
+    type: 'CLIENT',
+    name: 'SPJA'
+  },
+  {
+    type: 'CLIENT CEO',
+    name: "Mark Manasala"
+  },
+  {
+    type: 'CREATIVES',
+    name: "Yohanes Fadillah (Project Manager), Dino Martin (Brand Manager), Meg Tsuruda (Branding Coordinator), Jon Baumgardner (Director of Entertainment)"
+
+  },
+  {
+    type: "PRODUCTION COMPANY",
+    name: "Blind"
+  }
+]
+
+export const roles = [
+  {
+    type: "EXECUTIVE CREATIVE DIRECTOR",
+    name: "John Ademiluyi"
+  },
+  {
+    type: "CREATIVE DIRECTOR",
+    name: "Matthew Encina"
+  },
+  {
+    type: "EXECUTIVE PRODUCER",
+    name: "Scott Rothstein"
+  },
+  {
+    type: "ART DIRECTOR",
+    name: "Jaime Van Wart"
+  },
+  {
+    type: "SENIOR DESIGNER",
+    name: "Sang Chung"
+  },
+  {
+    type: "PROJECT MANAGER",
+    name: "Daisy Zarazua"
+  }
+]
+
+export const similarProjects = [
+  {
+    text: "Ariwa Project",
+    bg: "/images/ariwa-project.png"
+  },
+  {
+    text: "Awotele Project",
+    bg: "/images/awotele-project.png"
+  },
+  {
+    text: "Gloryland Schools Project",
+    bg: "/images/gloryland-project.png"
+  },
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// case -study end
