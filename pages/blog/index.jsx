@@ -31,7 +31,7 @@ const Blog = () => {
           {tabs.map((tab, tabIndex) => (
             <span
               onClick={() => setActiveTab(tabIndex)}
-              className={`px-3 border-b cursor-pointer pb-2 ${
+              className={`px-3 border-b cursor-pointer pb-2 text-xs lg:text-base ${
                 activeTab == tabIndex
                   ? "text-[#77459B] border-[#77459B]"
                   : "border-transparent"

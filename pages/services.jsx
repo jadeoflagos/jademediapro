@@ -15,7 +15,7 @@ const Services = () => {
   return (
     <div>
       <SectionHeader
-        bgColor="##044841"
+        bgColor="#044841"
         title="We provide professional and value design system"
         headerImage="servicebg.png"
         subTitle="We create magnetic advertisement videos, memorable brand identities, user-friendly websites, and practical marketing strategies. We also create insights on how you can be profitable."
