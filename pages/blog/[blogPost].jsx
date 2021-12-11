@@ -23,7 +23,7 @@ const BlogPost = ({ blodData = {} }) => {
     <div>
       <div className=" w-screen ">
         <div>{/* <Navbar darkLogo dropDownBg="white" /> */}</div>
-        <p className="px-5 lg:px-20 w-full lg:w-7/12 py-12 text-4xl lg:text-7xl tracking-wider">
+        <p className="px-5 lg:px-20 w-full lg:w-7/12 py-12 text-3xl lg:text-7xl lg:tracking-wider">
           Work from home has taken new turn in the pandemic
         </p>
       </div>
@@ -33,7 +33,7 @@ const BlogPost = ({ blodData = {} }) => {
           <div className="lg:hidden">
             <Tags />
           </div>
-          <div className="mt-28 text-[#666666] text-xs lg:text-base">
+          <div className="mt-16 lg:mt-28 text-[#666666] text-xs lg:text-base">
             <Image
               src="/images/computer.png"
               alt="avatar"
@@ -41,7 +41,7 @@ const BlogPost = ({ blodData = {} }) => {
               width={1000}
             />
 
-            <p className="my-7 lg:my-14">
+            <p className="my-3 lg:my-14">
               Our mission is to close the word gap so that students can achieve
               at higher levels. When learners are equipped with the building
               blocks of language, they have greater access to education,
@@ -54,7 +54,7 @@ const BlogPost = ({ blodData = {} }) => {
               definitions to teach for depth of knowledge and enduring
               understanding.{" "}
             </p>
-            <p className="my-14">
+            <p className="my-3 lg:my-14">
               Founded in 2008, Vocabulary.com was built by a multidisciplinary
               team of educators, lexicographers, data scientists, and
               developers. Together, they recognized the need for an effective
@@ -72,10 +72,10 @@ const BlogPost = ({ blodData = {} }) => {
               go above and beyond basic definitions to teach for depth of
               knowledge and enduring understanding.
             </p>
-            <h2 className="text-base lg:text-5xl font-bold my-16 text-black">
+            <h2 className="text-base lg:text-5xl font-bold mt-6 lg:my-16 text-black">
               The Secondary definition
             </h2>
-            <p className="my-14">
+            <p className="my-3 lg:my-14">
               Our mission is to close the word gap so that students can achieve
               at higher levels. When learners are equipped with the building
               blocks of language, they have greater access to education,
@@ -88,7 +88,7 @@ const BlogPost = ({ blodData = {} }) => {
               definitions to teach for depth of knowledge and enduring
               understanding.{" "}
             </p>
-            <p className="my-14">
+            <p className="my-3 lg:my-14">
               Founded in 2008, Vocabulary.com was built by a multidisciplinary
               team of educators, lexicographers, data scientists, and
               developers. Together, they recognized the need for an effective
@@ -113,7 +113,7 @@ const BlogPost = ({ blodData = {} }) => {
         </div>
       </section>
 
-      <section className="px-5 lg:px-20 my-12 w-full lg:grid lg:grid-cols-3 lg:gap-x-20 gap-y-5 space-y-5 lg:space-y-0">
+      <section className="px-5 lg:px-20 my-12 w-full lg:grid lg:grid-cols-3 lg:gap-x-20 gap-y-5 lg:space-y-0">
         <h3 className="col-span-3 mb-8 text-3xl lg:text-5xl font-bold">
           Similar articles recommended
         </h3>

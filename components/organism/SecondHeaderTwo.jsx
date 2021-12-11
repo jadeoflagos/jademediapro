@@ -4,14 +4,14 @@ import Image from "next/image";
 
 const SecondHeaderTwo = ({title, subTitle, headerImg}) => {
   return (
-    <div className={`w-screen lg:min-h-[30rem] bg-[#502A7A] `}>
+    <div className={`w-screen lg:min-h-[30rem] bg-[#502A7A] pb-9 `}>
       <div>{/* <Navbar textColor={navBarColor} /> */}</div>
       <div className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white">
         <div className="lg:w-7/12">
           <p className="font-bold text-4xl lg:text-8xl">{title}</p>
           <p className="pt-12 lg:pb-12 text-base lg:text-2xl lg:tracking-wider">
 {subTitle}          </p>
-          <div className="hidden lg:flex">
+          <div className="hidden lg:flex ">
             {" "}
             <SocialButtons />
           </div>
@@ -26,7 +26,7 @@ const SecondHeaderTwo = ({title, subTitle, headerImg}) => {
           />
         </div>
       </div>
-      <div className="w-full px-5 flex flex-col lg:hidden">
+      <div className="w-full px-5 flex flex-col pt-11 lg:hidden">
         <SocialButtons />
       </div>
     </div>

@@ -17,30 +17,9 @@ const freebies = () => {
       <div className="w-full min-h-[30rem] bg-[#2C144E]">
         <SectionHeader
           title="Everything you need for growth and development"
-          subTitle="Jade Media Pro has always been about people while exploring
-              projects of all systems and sizes. Here you'll find the individual
-              stories behind the work."
+          subTitle="Free daily high-quality design resources hand-picked for creatives, designers and developers, ranging from fonts, mockups, graphics, templates & more from amazing artists. "
           headerImage=""
         />
-        {/* <div>
-          <Navbar dropDownBg="white" textColor="white" />
-        </div>
-        <div className="flex items-center justify-between px-20 text-white bg-[#2C144E] pt-8 ">
-          <div className=" w-7/12">
-            <p className="text-6xl font-bold leading-tight">
-              Everything you need for growth and development
-            </p>
-            <p className=" py-8 text-2xl tracking-wider">
-              Jade Media Pro has always been about people while exploring
-              projects of all systems and sizes. Here you'll find the individual
-              stories behind the work.
-            </p>
-          </div>
-          <span className="w-1/12" />
-          <div className="w-4/12 flex items-center justify-center">
-            <Image src={Saly19} height={520} width={520} />
-          </div>
-        </div> */}
         <div className="py-32 bg-white px-5 lg:px-20">
           <div className="flex items-center mb-24">
             <span className="font-semibold mr-[0.857rem]">Related</span>
@@ -48,7 +27,7 @@ const freebies = () => {
               {freebiesTab.map((item, itemIndex) => (
                 <span
                   key={`freebies-tab-number${itemIndex}`}
-                  className=" rounded-[6.18rem] py-3 px-10  bg-[#EDEDF0] "
+                  className=" rounded-[6.18rem] py-2 px-5 lg:py-3 lg:px-10  bg-[#EDEDF0] text-[0.6rem] lg:text-base whitespace-nowrap"
                 >
                   {item}
                 </span>
