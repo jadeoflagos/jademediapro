@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import DropDown from "./DropDown";
 import { dropDown } from "../data";
+import MenuIcon from "./vectors/MenuIcon";
 
 const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
   const dropdownMenus = Object.keys(dropDown);
@@ -23,7 +24,6 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
 
   const toggleDropDown = (e, type) => {
     if (showDropDown.state && showDropDown.type === type) {
-      // setShowDropDown(dropDownDefault);
       closeDropDown();
       return;
     }
@@ -49,10 +49,10 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
         />
       )}
       <nav
-        className={`flex items-center justify-between px-20 py-8 sticky top-0 left-0 z-50`}
+        className={`flex items-center justify-between px-5 lg:px-20 py-8 sticky top-0 left-0 z-50`}
         style={{
           backgroundColor: bg ? bg : "transparent",
-          color: textColor,
+          color: textColor ?? "white",
           fontWeight: "normal",
         }}
       >
@@ -61,7 +61,7 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
             <Logo color={darkLogo && "#000"} />
           </a>
         </Link>
-        <div className="flex items-center space-x-10">
+        <div className="hidden lg:flex items-center space-x-10">
           {/* <Link href="/about">
           <a
             href="/about"
@@ -88,6 +88,9 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
               Contact
             </a>
           </Link>
+        </div>
+        <div className="lg:hidden">
+          <MenuIcon fillColor={dropDownBg === "black" ? "#fff" : "#000"} />
         </div>
       </nav>
     </>

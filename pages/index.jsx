@@ -64,7 +64,7 @@ export default function Home() {
         }}
       >
         <div>
-          {/* <Navbar dropDownBg="black" textColor="white" /> */}
+          <Navbar dropDownBg="black" textColor="white" />
         </div>
         <div className="py-20 lg:max-w-[65%] w-full text-white flex flex-col justify-center px-8 lg:px-20">
           <p className="font-extrabold text-5xl lg:text-8xl">{Header.title}</p>

@@ -1,16 +1,20 @@
 import React from "react";
 import SocialButtons from "../SocialButtons";
 import Image from "next/image";
+import Navbar from "../Navbar";
 
-const SecondHeaderTwo = ({title, subTitle, headerImg}) => {
+const SecondHeaderTwo = ({ title, subTitle, headerImg, navBarColor }) => {
   return (
     <div className={`w-screen lg:min-h-[30rem] bg-[#502A7A] `}>
-      <div>{/* <Navbar textColor={navBarColor} /> */}</div>
+      <div>
+        <Navbar />
+      </div>
       <div className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white">
         <div className="lg:w-7/12">
           <p className="font-bold text-4xl lg:text-8xl">{title}</p>
           <p className="pt-12 lg:pb-12 text-base lg:text-2xl lg:tracking-wider">
-{subTitle}          </p>
+            {subTitle}{" "}
+          </p>
           <div className="hidden lg:flex">
             {" "}
             <SocialButtons />

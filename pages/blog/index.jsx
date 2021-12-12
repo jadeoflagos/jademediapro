@@ -24,8 +24,12 @@ const Blog = () => {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <div>
-     <SecondHeaderTwo headerImg="blogbg.png" title="Blog Posts" subTitle=" Experient design thinking and innovative stories
-" />
+      <SecondHeaderTwo
+        headerImg="blogbg.png"
+        title="Blog Posts"
+        subTitle=" Experient design thinking and innovative stories
+"
+      />
       <div className="mt-12 px-5 lg:px-20 py-20">
         <div className="hidden lg:flex">
           {tabs.map((tab, tabIndex) => (
@@ -42,7 +46,7 @@ const Blog = () => {
           ))}
         </div>
         <div className="lg:hidden flex">
-          {tabs.splice(0,4).map((tab, tabIndex) => (
+          {tabs.splice(0, 4).map((tab, tabIndex) => (
             <span
               onClick={() => setActiveTab(tabIndex)}
               className={`px-3 border-b cursor-pointer pb-2 ${
@@ -63,7 +67,7 @@ const Blog = () => {
               href="/blog/[blogPost]"
               as={`/blog/${blogData.id}`}
             >
-              <a> 
+              <a>
                 <BlogCard date={blogData.date || undefined} />
               </a>
             </Link>
@@ -78,7 +82,7 @@ const Blog = () => {
           <InterviewCard />
         </div>
       </div>
-       <Footer /> 
+      <Footer />
     </div>
   );
 };
