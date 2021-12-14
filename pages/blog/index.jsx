@@ -30,12 +30,12 @@ const Blog = () => {
         subTitle=" Experient design thinking and innovative stories
 "
       />
-      <div className="mt-12 px-5 lg:px-20 py-20">
+      <div className="lg:mt-12 px-5 lg:px-20 lg:py-20 py-10">
         <div className="hidden lg:flex">
           {tabs.map((tab, tabIndex) => (
             <span
               onClick={() => setActiveTab(tabIndex)}
-              className={`px-3 border-b cursor-pointer pb-2 ${
+              className={`px-10 border-b cursor-pointer pb-2 text-xs lg:text-base ${
                 activeTab == tabIndex
                   ? "text-[#77459B] border-[#77459B]"
                   : "border-transparent"
@@ -49,7 +49,7 @@ const Blog = () => {
           {tabs.splice(0, 4).map((tab, tabIndex) => (
             <span
               onClick={() => setActiveTab(tabIndex)}
-              className={`px-3 border-b cursor-pointer pb-2 ${
+              className={`px-2 border-b cursor-pointer text-xs whitespace-nowrap pb-2 ${
                 activeTab == tabIndex
                   ? "text-[#77459B] border-[#77459B]"
                   : "border-transparent"
@@ -74,7 +74,7 @@ const Blog = () => {
           ))}
         </div>
       </div>
-      <div className="px-5 lg:px-20 py-20 mb-20">
+      <div className="px-5 lg:px-20 py-20  lg:mb-20">
         <EyeBrow text="Watch Exclusive interviews with profesionals" />
         <div className=" mt-12 grid lg:grid-cols-3 gap-x-8 gap-y-6 lg:gap-y-0 ">
           <InterviewCard />

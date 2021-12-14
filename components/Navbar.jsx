@@ -49,7 +49,7 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
         />
       )}
       <nav
-        className={`flex items-center justify-between px-5 lg:px-20 py-8 sticky top-0 left-0 z-50`}
+        className={`flex items-center justify-between px-5 lg:px-20 py-8 sticky top-0 left-0 z-50 mb-[4.875rem] lg:mb-0 `}
         style={{
           backgroundColor: bg ? bg : "transparent",
           color: textColor ?? "white",

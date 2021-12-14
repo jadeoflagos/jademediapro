@@ -26,7 +26,7 @@ const Store = () => {
         {/* <Navbar darkLogo /> */}
       </div>
       <div
-        className="w-screen h-[31rem] lg:px-20 px-5"
+        className="w-screen lg:min-h-[31rem] min-h-40 lg:px-20 px-10"
         style={{
           background: `url("/images/storebg.png")`,
           backgroundSize: "cover",
@@ -34,14 +34,14 @@ const Store = () => {
         }}
       >
         <div
-          className="w-1/3 h-full lg:px-10 flex flex-col justify-center"
+          className="lg:w-1/3 w-2/3 h-full lg:px-10 px-3 flex flex-col justify-center"
           style={{
             background: `url("/images/storebg2.png")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <p className="text-lg lg:text-5xl mb-12 font-semibold">
+          <p className="text-lg lg:text-5xl mb-2 lg:mb-12 font-semibold">
             High-Quality Artistry Framed Just For You
           </p>
           <p className="text-xs lg:text-2xl">
@@ -104,7 +104,7 @@ const Store = () => {
         </div>{" "}
       </section>
       <section className="lg:px-20 px-5">
-        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        {/* <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} /> */}
       </section>
 
       <Footer />

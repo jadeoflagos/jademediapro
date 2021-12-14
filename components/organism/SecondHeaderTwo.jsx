@@ -5,9 +5,9 @@ import Navbar from "../Navbar";
 
 const SecondHeaderTwo = ({ title, subTitle, headerImg, navBarColor }) => {
   return (
-    <div className={`w-screen lg:min-h-[30rem] bg-[#502A7A] `}>
+    <div className={`w-screen lg:min-h-[30rem] bg-[#502A7A] pb-9 `}>
       <div>
-        <Navbar />
+        <Navbar textColor={navBarColor} />
       </div>
       <div className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white">
         <div className="lg:w-7/12">
@@ -15,7 +15,7 @@ const SecondHeaderTwo = ({ title, subTitle, headerImg, navBarColor }) => {
           <p className="pt-12 lg:pb-12 text-base lg:text-2xl lg:tracking-wider">
             {subTitle}{" "}
           </p>
-          <div className="hidden lg:flex">
+          <div className="hidden lg:flex ">
             {" "}
             <SocialButtons />
           </div>
@@ -30,7 +30,7 @@ const SecondHeaderTwo = ({ title, subTitle, headerImg, navBarColor }) => {
           />
         </div>
       </div>
-      <div className="w-full px-5 flex flex-col lg:hidden">
+      <div className="w-full px-5 flex flex-col pt-11 lg:hidden">
         <SocialButtons />
       </div>
     </div>

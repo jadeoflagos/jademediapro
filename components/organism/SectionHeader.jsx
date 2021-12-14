@@ -10,7 +10,10 @@ const SectionHeader = ({
   subTitle,
 }) => {
   return (
-    <div className={`w-screen lg:min-h-[30rem] bg-black bg-[${bgColor}] `}>
+    <div
+      className={`w-screen lg:min-h-[30rem]`}
+      style={{ background: bgColor }}
+    >
       <div>
         <Navbar textColor={navBarColor} />
       </div>

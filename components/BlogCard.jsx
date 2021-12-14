@@ -22,24 +22,24 @@ export default function BlogCard({
         image="/images/computer.png"
         alt="green iguana"
       />
-      <CardContent>
+      <CardContent className="px-0">
         <Typography
           gutterBottom
           variant="h8"
           component="div"
-          className="text-sm"
+          className="text-[0.6rem] lg:text-sm "
         >
           {date}
         </Typography>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" className="text-sm lg:text-xl lg:py-0   py-2 lg:pb-5">
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" className="text-[#666666] text-sm lg:text-xl">
           {desc}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Read More</Button>
+      <CardActions className="px-0">
+        <Button size="small" className="text-black text-[0.6rem] lg:text-base">Read More</Button>
         <IconButton aria-label="add to favorites">
           <ArrowIcon />
         </IconButton>
