@@ -66,7 +66,7 @@ export default function Home() {
         <div>
           <Navbar dropDownBg="black" textColor="white" />
         </div>
-        <div className="py-20 lg:max-w-[65%] w-full text-white flex flex-col justify-center px-8 lg:px-20">
+        <div className="py-20 lg:max-w-[65%]  text-white flex flex-col justify-center px-8 lg:px-20">
           <p className="font-extrabold text-5xl lg:text-8xl">{Header.title}</p>
           <p className="my-10 text-base lg:text-2xl font-normal">
             {Header.subTitle}
@@ -76,11 +76,10 @@ export default function Home() {
           </p>
         </div>
       </div>
+
       <div className="w-full py-24 flex flex-col lg:flex-row items-center px-8">
         <div className="lg:w-5/12 w-full lg:order-1 order-2">
-          <div className="flex justify-center">
-            <Illus />
-          </div>
+          <div className="flex justify-center">{/* <Illus /> */}</div>
           <div className="flex flex-col lg:hidden text-xs lg:text-base">
             <p className="my-8  text-[#666666]">
               On the other hand, Digital marketing is the practice of creating
@@ -175,19 +174,22 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full py-24 flex items-center px-20 bg-[#502A7A]">
-        <div className="w-4/12 text-white space-y-8">
+      <div className="w-full py-24 flex flex-col lg:flex-row items-center lg:px-20 bg-[#502A7A]">
+        {/* <div className="lg:w-4/12 w-full flex flex-row  items-center lg:items-start lg:flex-col text-white space-y-8 ">
           {idea.map((i, index) => (
-            <div className="flex items-center space-x-10" key={index}>
+            <div
+              className="flex flex-col   lg:flex-row items-center space-x-10"
+              key={index}
+            >
               <span
-                className={` ${
+                className={` order-2 lg:order-1 ${
                   activeIdea == index
                     ? "w-4 h-4 border p-2"
                     : " w-2 h-2 bg-opacity-50"
                 }  rounded-full bg-white `}
               />
               <p
-                className={`border-b ${
+                className={`border-b order-1 lg:order-2 ${
                   activeIdea == index
                     ? "text-7xl font-bold border-white"
                     : "text-xl font-light border-transparent"
@@ -197,13 +199,13 @@ export default function Home() {
               </p>
             </div>
           ))}
-        </div>
-        <div className="w-8/12 px-12 text-white">
-          <p className="text-5xl font-bold">
+        </div> */}
+        <div className="lg:w-8/12 w-screen px-[1.375rem] lg:px-12 text-white">
+          <p className="lg:text-5xl text-3xl font-bold">
             Our five foundational process to create your strategic brand’s
             success
           </p>
-          <div className="grid grid-cols-2 gap-x-6 mt-10">
+          <div className="hidden grid-cols-2 gap-x-6 mt-10">
             <Image
               src="/images/market.png"
               alt="Avatar"
@@ -239,24 +241,24 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="px-20 pt-32">
+      <div className="px-[1.375rem] lg:px-20 pt-32">
         <EyeBrow
           text="Put money, attention, and resources where it's most effective to
         generate income"
         />
       </div>
-      <div className="px-20">
+      <div className="pl-[1.375rem] lg:px-20">
         <ServicesCarousel />
       </div>
-      <div className="px-20 pt-32">
+      <div className="px-[1.375rem] lg:px-20 pt-32">
         <EyeBrow text="Exclusive interviews with industry leading professionals" />
       </div>
-      <section className="flex items-start px-20 mt-12">
-        <div className="w-4/6">
+      <section className="flex flex-col lg:flex-row items-start px-[1.375rem] lg:px-20 mt-12">
+        <div className="w-full lg:w-4/6">
           <iframe
             src="https://player.vimeo.com/video/636370372?h=734c780ecc"
             width="100%"
-            height="450"
+            height="100%"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
@@ -267,7 +269,7 @@ export default function Home() {
             <a href="https://vimeo.com">Vimeo</a>.
           </p>
         </div>
-        <div className="w-2/6 flex flex-col justify-start ">
+        <div className="lg:w-2/6 flex flex-col justify-start ">
           <p className="text-[#046C62] mb-8 text-4xl">
             60 minutes with Adaeze of <u>CAV Digital</u>
           </p>
@@ -286,18 +288,18 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="px-20 pt-12 mb-20 grid grid-cols-3 gap-x-8">
+      <section className="px-[1.375rem] lg:px-20 pt-[1rem] lg:pt-12 mb-20 grid grid-cols-1 lg:grid-cols-3 lg:gap-x-8 gap-y-6 lg:gap-y-0">
         <InterviewCard />
         <InterviewCard />
         <InterviewCard />
       </section>
-      <section className="px-20 mt-32">
-        <p className="text-6xl font-semibold">
+      <section className="px-[1.375rem] lg:px-20 mt-20 lg:mt-32">
+        <p className=" text-4xl lg:text-6xl  font-semibold">
           Discover popular and profitable{" "}
           <span className="border-b-2 border-black">editorials</span>
         </p>
       </section>
-      <section className="mt-11 grid grid-cols-3 gap-x-8 px-20 ">
+      <section className="mt-11 grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-y-0 lg:gap-x-8 px-[1.375rem] lg:px-20 ">
         <PostCard
           date="October 21, 2021"
           title="15 SEO Best Practices: Website Architecture"
@@ -312,8 +314,8 @@ export default function Home() {
           desc="Some SEO-related tools such as the Google Keyword Planner and Google Analytics provide quantitative data to help you understand your market, analyze the trends, and know your competitors’ standings. The  search engine management is to helps you identify popular keywords so you can decide how to structure or revise your needed content."
         />
       </section>
-      <section className="mt-32 px-20">
-        <div className=" mb-[4.5rem] grid grid-cols-3 gap-x-20">
+      <section className="mt-32 px-[1.375rem] lg:px-20">
+        <div className=" mb-[4.5rem] grid grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-8">
           {products.map((product, productIndex) => (
             <Product
               key={`product-${productIndex}`}
@@ -324,19 +326,19 @@ export default function Home() {
             />
           ))}
         </div>
-        <div className="flex items-center space-x-8 ">
-          <h1 className="text-5xl">Explore our full catalogue</h1>
-          <p className="cursor-pointer py-3 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8 ">
+          <h1 className="text-2xl lg:text-5xl">Explore our full catalogue</h1>
+          <p className="cursor-pointer mt-[0.68rem] lg:mt-0 py-3 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
             VISIT STORE
           </p>
         </div>
       </section>
-      <section className="mt-32 grid grid-cols-2 px-20 mb-44">
-        <div className="w-full flex flex-col pr-28">
-          <p className="text-5xl font-semibold">
+      <section className="lg:mt-32 mt-16 grid  grid-cols-1 lg:grid-cols-2 px-[1.375rem] lg:px-20 mb-44">
+        <div className="w-full flex flex-col lg:pr-28">
+          <p className="lg:text-5xl text-2xl  font-semibold">
             Don’t miss the next live meeting to experience growth
           </p>
-          <div className="grid grid-cols-2 gap-x-9 mt-10 flex-grow">
+          <div className="grid grid-cols-2 lg:gap-x-9 mt-10 flex-grow">
             {eventData.slice(0, 2).map((event, eventIndex) => (
               <div className="w-full flex flex-col" key={eventIndex}>
                 <div className="flex items-end space-x-5">
@@ -344,12 +346,12 @@ export default function Home() {
                     <span className="text-xs">{event.month}.</span>
                     <span className="text-6xl">{event.date}</span>
                   </p>
-                  <p className="flex flex-col">
+                  <p className="flex flex-col text-[0.625rem] lg:text-base">
                     <span>{event.venue}</span>
                     <span>{event.required}</span>
                   </p>
                 </div>
-                <div className="text-[#046C62] text-3xl mt-10 flex w-full">
+                <div className="text-[#046C62] text-[1.5rem] lg:text-3xl mt-10 flex w-full">
                   {event.title}
                 </div>
                 <div className="flex items-center mt-12 ">
@@ -368,8 +370,8 @@ export default function Home() {
             UPCOMING EVENTS
           </p>
         </div>
-        <div className="pl-28 border-l-2 flex flex-col border-black">
-          <p className="text-5xl mb-8 font-semibold">
+        <div className="lg:pl-28 lg:border-l-2 flex flex-col border-black">
+          <p className="lg:text-5xl text-3xl mb-8 mt-16 lg:mt-0 font-semibold">
             Find the right job to boost your brilliant career
           </p>
           <div className="space-y-6 flex-grow">
@@ -378,9 +380,11 @@ export default function Home() {
                 className="bg-[#46BFB2] grid grid-cols-2 py-3 px-4"
                 key={opIndex}
               >
-                <p className="text-[2rem] w-1/2">{op.position}</p>
-                <div className=" w-1/2 border-l border-black pl-10">
-                  <div className="flex flex-col justify-items-stretch">
+                <p className="lg:text-[2rem] text-[1.5rem] w-1/2">
+                  {op.position}
+                </p>
+                <div className=" lg:w-1/2 border-l flex lg:flex-none text-[0.625rem] lg:text-base border-black pl-10">
+                  <div className="flex flex-grow  flex-col justify-center lg:justify-items-stretch">
                     <p>{op.location}</p>
                     <p>{op.type}</p>
                     <p>{op.company}</p>

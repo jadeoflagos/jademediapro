@@ -3,8 +3,8 @@ import * as React from "react";
 function Logo(props) {
   return (
     <svg
-      width={props.width ? props.width : 123}
-      height={props.height ? props.height : 46}
+      width="7.68rem"
+      height="2.87rem"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}

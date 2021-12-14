@@ -29,7 +29,7 @@ export default function PostCard({
             gutterBottom
             variant="h5"
             component="div"
-            className=" w-9/12"
+            className=" w-9/12 text-[0.9rem] lg:text-base"
           >
             {title}
           </Typography>
@@ -37,7 +37,7 @@ export default function PostCard({
             gutterBottom
             variant="h8"
             component="div"
-            className="text-sm w-9/12"
+            className="text-[0.6rem] lg:text-sm w-9/12 "
           >
             {date}
           </Typography>

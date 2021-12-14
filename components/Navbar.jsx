@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "./vectors/Logo";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import { useRouter } from "next/router";
@@ -58,18 +59,24 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
       >
         <Link href="/">
           <a href="/">
-            <Logo color={darkLogo && "#000"} />
+            <div className="flex flex-col w-[3.6rem] h-[1.3rem] lg:w-[7.6rem] lg:h-[2.8rem]">
+              {!darkLogo ? (
+                <Image
+                  src="/vectors/white-brand-logo.svg"
+                  width={123}
+                  height={46}
+                />
+              ) : (
+                <Image
+                  src="/vectors/black-brand-logo.svg"
+                  width={123}
+                  height={46}
+                />
+              )}
+            </div>
           </a>
         </Link>
         <div className="hidden lg:flex items-center space-x-10">
-          {/* <Link href="/about">
-          <a
-            href="/about"
-            className={`${path === "/about" ? styles.activeLink : ""}`}
-          >
-            About
-          </a>
-        </Link> */}
           {dropdownMenus.map((item, itemIndex) => (
             <span
               className="capitalize select-none drop-down"
@@ -90,7 +97,11 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
           </Link>
         </div>
         <div className="lg:hidden">
-          <MenuIcon fillColor={dropDownBg === "black" ? "#fff" : "#000"} />
+          <MenuIcon
+            fillcolor={
+              !dropDownBg ? "#fff" : dropDownBg === "black" ? "#fff" : "#000"
+            }
+          />
         </div>
       </nav>
     </>
