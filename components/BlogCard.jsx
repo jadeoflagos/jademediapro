@@ -38,9 +38,9 @@ export default function BlogCard({
           {desc}
         </Typography>
       </CardContent>
-      <CardActions className="px-0">
+      <CardActions className="px-0 space-x-0">
         <Button size="small" className="text-black text-[0.6rem] lg:text-base">Read More</Button>
-        <IconButton aria-label="add to favorites">
+        <IconButton aria-label="add to favorites" className="p-0 m-0">
           <ArrowIcon />
         </IconButton>
       </CardActions>

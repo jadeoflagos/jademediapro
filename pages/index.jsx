@@ -315,7 +315,7 @@ export default function Home() {
         />
       </section>
       <section className="mt-32 px-[1.375rem] lg:px-20">
-        <div className=" mb-[4.5rem] grid grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-8">
+        <div className=" mb-[4.5rem] grid grid-cols-2 lg:grid-cols-3 lg:gap-x-20 gap-x-11 gap-y-8">
           {products.map((product, productIndex) => (
             <Product
               key={`product-${productIndex}`}
@@ -335,13 +335,13 @@ export default function Home() {
       </section>
       <section className="lg:mt-32 mt-16 grid  grid-cols-1 lg:grid-cols-2 px-[1.375rem] lg:px-20 mb-44">
         <div className="w-full flex flex-col lg:pr-28">
-          <p className="lg:text-5xl text-2xl  font-semibold">
+          <p className="lg:text-5xl text-3xl  font-semibold">
             Don’t miss the next live meeting to experience growth
           </p>
-          <div className="grid grid-cols-2 lg:gap-x-9 mt-10 flex-grow">
+          <div className="w-full grid grid-cols-2 gap-x-12  mt-10 flex-grow">
             {eventData.slice(0, 2).map((event, eventIndex) => (
               <div className="w-full flex flex-col" key={eventIndex}>
-                <div className="flex items-end space-x-5">
+                <div className="flex items-end space-x-1 lg:space-x-5">
                   <p className="flex flex-col">
                     <span className="text-xs">{event.month}.</span>
                     <span className="text-6xl">{event.date}</span>
@@ -351,7 +351,7 @@ export default function Home() {
                     <span>{event.required}</span>
                   </p>
                 </div>
-                <div className="text-[#046C62] text-[1.5rem] lg:text-3xl mt-10 flex w-full">
+                <div className="text-[#046C62] text-[1.5rem] lg:text-3xl mt-10 flex w-full flex-grow">
                   {event.title}
                 </div>
                 <div className="flex items-center mt-12 ">

@@ -10,7 +10,7 @@ import { blogPostData } from "../../data";
 import SectionHeader from "../../components/organism/SectionHeader";
 import EyeBrow from "../../components/organism/EyeBrow";
 import SecondHeaderTwo from "../../components/organism/SecondHeaderTwo";
-
+import Pagination from "../../components/Pagination"
 const Blog = () => {
   const tabs = [
     "All",
@@ -35,11 +35,10 @@ const Blog = () => {
           {tabs.map((tab, tabIndex) => (
             <span
               onClick={() => setActiveTab(tabIndex)}
-              className={`px-10 border-b cursor-pointer pb-2 text-xs lg:text-base ${
-                activeTab == tabIndex
+              className={`px-10 border-b cursor-pointer pb-2 text-xs lg:text-base ${activeTab == tabIndex
                   ? "text-[#77459B] border-[#77459B]"
                   : "border-transparent"
-              }`}
+                }`}
             >
               {tab}
             </span>
@@ -49,11 +48,10 @@ const Blog = () => {
           {tabs.splice(0, 4).map((tab, tabIndex) => (
             <span
               onClick={() => setActiveTab(tabIndex)}
-              className={`px-2 border-b cursor-pointer text-xs whitespace-nowrap pb-2 ${
-                activeTab == tabIndex
+              className={`px-2 border-b cursor-pointer text-xs whitespace-nowrap pb-2 ${activeTab == tabIndex
                   ? "text-[#77459B] border-[#77459B]"
                   : "border-transparent"
-              }`}
+                }`}
             >
               {tab}
             </span>
@@ -74,6 +72,8 @@ const Blog = () => {
           ))}
         </div>
       </div>
+      <div className="px-5 lg:px-20 py-20 ">
+        <Pagination /></div>
       <div className="px-5 lg:px-20 py-20  lg:mb-20">
         <EyeBrow text="Watch Exclusive interviews with profesionals" />
         <div className=" mt-12 grid lg:grid-cols-3 gap-x-8 gap-y-6 lg:gap-y-0 ">

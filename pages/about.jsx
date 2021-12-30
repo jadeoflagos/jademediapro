@@ -6,12 +6,12 @@ import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
 import CompanyButtons from "../components/CompanyButtons";
-import TimePickerComponent from "../components/TimePicker";
-import DatePickerComponent from "../components/DatePicker";
+import { MobileTimePickerComponent, TimePickerComponent } from "../components/TimePicker";
 import { culture, opportunities, team, values, wwwh } from "../data";
 import SectionHeader from "../components/organism/SectionHeader";
 import EyeBrow from "../components/organism/EyeBrow";
 import { wwhighlight } from "../data/AboutPage";
+import { DatePickerComponent, MobileDatePickerComponent } from "../components/DatePicker";
 const About = () => {
   return (
     <div>
@@ -19,7 +19,7 @@ const About = () => {
         bgColor="#000000"
         navBarColor="white"
         title="The leading branding and digital marketing company"
-        headerImage="blogbg.png"
+        headerImage="aboutbg.png"
         subTitle="We implement the most effective design and digital marketing
               strategies that drives more traffic to your website by offering a
               broad spectrum of advantages."
@@ -142,7 +142,7 @@ const About = () => {
             human development as such persons account for a great part of the
             population and inevitably the state of affairs of society.
           </p>
-          <div className="flex items-center space-x-4 justify-between my-10">
+          <div className="flex items-center space-x-4 justify-between my-10 px-3 lg:px-0">
             {[
               { text: "$ 1.2M", desc: "funded" },
               { text: "1.6K", desc: "volunteers" },
@@ -157,7 +157,7 @@ const About = () => {
             ))}
           </div>
           <div className="flex justify-between items-center">
-            <p className=" bg-[#8A57A3] w-6/12  h-11 lg:h-16 flex items-center justify-center cursor-pointer text-white uppercase text-xs lg:text-base">
+            <p className=" bg-[#502A7A] w-6/12  h-11 lg:h-16 flex items-center justify-center cursor-pointer text-white uppercase text-xs lg:text-base">
               Donate Now
             </p>
             <span className="w-2/12" />
@@ -224,7 +224,7 @@ const About = () => {
           ))}
         </div>
         <div className="w-full lg:hidden grid grid-cols-2 gap-x-12 gap-y-4 mt-6 text-[0.8rem]">
-          {team.slice(0,2).map((teammember, memberIndex) => (
+          {team.slice(0, 2).map((teammember, memberIndex) => (
             <div
               key={`member-${memberIndex}`}
               className="flex flex-col items-center"
@@ -260,13 +260,14 @@ const About = () => {
               in Jade Media Pro if you are:
               <div className="my-2">
                 {opportunities.map((opportunity, opportunityIndex) => (
-                  <p key={opportunityIndex} className="my-1 flex items-center">
-                    <Image
-                      src={`/vectors/caret-right.svg`}
-                      alt="Avatar"
-                      width={24}
-                      height={24}
-                    />
+                  <p key={opportunityIndex} className="my-1 flex items-start">
+                    <p className="mt-0.5 lg:mt-0">
+                      <Image
+                        src={`/vectors/caret-right.svg`}
+                        alt="Avatar"
+                        width={24}
+                        height={24}
+                      /></p>
                     <span>{opportunity}</span>
                   </p>
                 ))}
@@ -323,7 +324,7 @@ const About = () => {
                 width={60}
                 height={72}
               />
-              <p className="text-xs lg:text-base bg-[#044841] text-white px-4 lg:px-9 py-6 lg:py-12 lg:w-96 h-80 ">
+              <p className="text-xs lg:text-base bg-[#044841] text-white px-4 lg:px-9 py-6 lg:py-12 lg:w-96 h-auto ">
                 In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa
                 for a family emergency and that trip changed her life. She
                 returned committed to leveraging years of experience, for
@@ -356,7 +357,7 @@ const About = () => {
           </div>
         ))}
       </section>
-     <section className="px-5 lg:px-20 mb-16">
+      <section className="px-5 lg:px-20 mb-16">
         <p className="lg:text-6xl text-3xl font-bold">Book Your FREE Consultation Now</p>
         <div className="flex lg:flex-row flex-col py-4 space-x-14 items-start">
           <form
@@ -374,8 +375,18 @@ const About = () => {
               variant="standard"
               type="email"
             />
-            <DatePickerComponent />
+            <div className="lg:hidden">
+              <MobileTimePickerComponent />
+            </div>
+            <div className="hidden lg:flex">
+              <DatePickerComponent />
+            </div>
+            <div className="hidden lg:flex">
             <TimePickerComponent />
+            </div>
+            <div className="lg:hidden">
+              <MobileDatePickerComponent />
+            </div>
             <div className="col-span-2">
               <TextField
                 fullWidth
@@ -391,7 +402,7 @@ const About = () => {
                   backgroundColor: "#502A7A",
                 }}
                 variant="contained"
-                className="w-3/5 py-4 hover:opacity-90"
+                className="lg:w-3/5 w-auto py-4 hover:opacity-90"
               >
                 Book Appointment
               </Button>
@@ -407,7 +418,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <Footer /> 
+      <Footer />
     </div>
   );
 };

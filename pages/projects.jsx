@@ -20,13 +20,13 @@ const Projects = () => {
               stories behind the work."
       />
 
-      <section className="mt-20 px-20 py-20 ">
-        <div className="w-3/5 space-y-6">
+      <section className="mt-20 lg:px-20 px-5 py-20 ">
+        <div className="lg:w-3/5 w-full space-y-6">
           {projectData.map((project, projectIndex) => (
             <div key={`project-${projectIndex}`}>
-              <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-                <span className="font-semibold text-4xl">{project.title}</span>
-                <span
+              <div className="flex justify-between items-center border-b border-black px-4 py-2 ">
+                <span className="font-semibold lg:text-4xl text-xl">{project.title}</span>
+                <p
                   className="cursor-pointer"
                   onClick={() => {
                     activeTab == projectIndex
@@ -44,13 +44,12 @@ const Projects = () => {
                     width={20}
                     height={10}
                   />
-                </span>
-              </p>
+                </p>
+              </div>
 
               {activeTab == projectIndex ? (
                 <p className="pt-6 pb-10 flex justify-end ">
-                  <p className="w-[65%]">
-                    {" "}
+                  <p className="w-10/12 lg:w-[65%] ">
                     {projectData[projectIndex].details}
                   </p>
                 </p>
@@ -61,7 +60,7 @@ const Projects = () => {
           ))}
         </div>
       </section>
-      <section className="mt-11 mb-28 grid grid-cols-3 gap-x-8 px-20 ">
+      <section className="mt-11 mb-28 lg:grid lg:grid-cols-3 gap-x-8 px-5 lg:px-20 ">
         <p className="col-span-3 text-4xl font-semibold mb-6">
           Read related posts
         </p>
