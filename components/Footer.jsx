@@ -265,7 +265,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-14">
-          <Logo />
+          <div className="flex flex-col w-[3.6rem] h-[1.3rem] lg:w-[7.6rem] lg:h-[2.8rem]">
+            <Image
+              src="/vectors/white-brand-logo.svg"
+              width={123}
+              height={46}
+            />
+          </div>
         </div>
         <div className="py-8 text-xs space-y-4 ">
           <p className="border-b max-w-max">(123) 456-7890</p>

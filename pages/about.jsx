@@ -6,12 +6,18 @@ import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
 import CompanyButtons from "../components/CompanyButtons";
-import { MobileTimePickerComponent, TimePickerComponent } from "../components/TimePicker";
+import {
+  MobileTimePickerComponent,
+  TimePickerComponent,
+} from "../components/TimePicker";
 import { culture, opportunities, team, values, wwwh } from "../data";
 import SectionHeader from "../components/organism/SectionHeader";
 import EyeBrow from "../components/organism/EyeBrow";
 import { wwhighlight } from "../data/AboutPage";
-import { DatePickerComponent, MobileDatePickerComponent } from "../components/DatePicker";
+import {
+  DatePickerComponent,
+  MobileDatePickerComponent,
+} from "../components/DatePicker";
 const About = () => {
   return (
     <div>
@@ -267,7 +273,8 @@ const About = () => {
                         alt="Avatar"
                         width={24}
                         height={24}
-                      /></p>
+                      />
+                    </p>
                     <span>{opportunity}</span>
                   </p>
                 ))}
@@ -335,7 +342,9 @@ const About = () => {
           </div>
         </div>
       </section>
-      <p className="lg:px-20  px-5 text-base lg:text-4xl mt-48 mb-8">Our Clients </p>
+      <p className="lg:px-20  px-5 text-base lg:text-4xl mt-48 mb-8">
+        Our Clients{" "}
+      </p>
       <CompanyButtons />
       <section className="px-5 lg:px-20 lg:grid grid-cols-3 gap-x-20 space-y-4 lg:space-y-0 my-24">
         {values.map((value, valueIndex) => (
@@ -358,7 +367,9 @@ const About = () => {
         ))}
       </section>
       <section className="px-5 lg:px-20 mb-16">
-        <p className="lg:text-6xl text-3xl font-bold">Book Your FREE Consultation Now</p>
+        <p className="lg:text-6xl text-3xl font-bold">
+          Book Your FREE Consultation Now
+        </p>
         <div className="flex lg:flex-row flex-col py-4 space-x-14 items-start">
           <form
             action=""
@@ -382,7 +393,7 @@ const About = () => {
               <DatePickerComponent />
             </div>
             <div className="hidden lg:flex">
-            <TimePickerComponent />
+              <TimePickerComponent />
             </div>
             <div className="lg:hidden">
               <MobileDatePickerComponent />
