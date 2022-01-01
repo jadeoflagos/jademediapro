@@ -6,7 +6,7 @@ import TimePicker from "@mui/lab/TimePicker";
 import MobileTimePicker from "@mui/lab/MobileTimePicker";
 import DesktopTimePicker from "@mui/lab/DesktopTimePicker";
 
-export default function TimePickerComponent() {
+export function TimePickerComponent() {
   const [value, setValue] = React.useState(null);
 
   return (

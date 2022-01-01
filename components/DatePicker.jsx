@@ -7,7 +7,7 @@ import MobileDatePicker from "@mui/lab/MobileDatePicker";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import Stack from "@mui/material/Stack";
 
-export default function DatePickerComponent() {
+export  function DatePickerComponent() {
   const [value, setValue] = React.useState(null);
 
   return (
