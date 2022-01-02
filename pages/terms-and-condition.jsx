@@ -6,7 +6,12 @@ import Footer from "../components/Footer";
 
 import styles from "../styles/Home.module.css";
 
-import { termsAndConditionData, termsAndConditionTOC } from "../data";
+import {
+  termsAndConditionData,
+  termsAndConditionMobileData,
+  termsAndConditionTOC,
+} from "../data";
+import { TermsConditionsMobile } from "../components/organism/TOCComponents";
 
 const TermsAndCondition = () => {
   return (
@@ -32,6 +37,11 @@ const TermsAndCondition = () => {
           GENERAL TERMS AND CONDITIONS FOR SERVICES
         </h2>
         <TableOfContent items={termsAndConditionTOC} />
+        <TermsConditionsMobile data={termsAndConditionMobileData} />
+        <p className="text-[#666666] mt-8">
+          These terms of use were created using termly's terms and conditions
+          generator.
+        </p>
       </div>
       <div className={`bg-white hidden lg:block ${styles.privacyContent}`}>
         <Sections
