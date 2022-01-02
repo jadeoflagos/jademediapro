@@ -1,10 +1,15 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { PrivacyPolicyMobile } from "../components/organism/TOCComponents";
 import PrivacyPolicyIntro from "../components/PrivacyPolicyIntro";
 import Sections from "../components/Sections";
 import TableOfContent from "../components/TableOfContent";
-import { privacyPolicyData, privacyPolicyTOC } from "../data";
+import {
+  privacyPolicyData,
+  privacyPolicyMobileData,
+  privacyPolicyTOC,
+} from "../data";
 import styles from "../styles/Home.module.css";
 
 const PrivacyPolicy = () => {
@@ -29,6 +34,7 @@ const PrivacyPolicy = () => {
       <div className="lg:hidden px-[1.83rem] my-[5.33rem]">
         <PrivacyPolicyIntro />
         <TableOfContent items={privacyPolicyTOC} />
+        <PrivacyPolicyMobile data={privacyPolicyMobileData} />
       </div>
       <div className={`bg-white hidden lg:block ${styles.privacyContent}`}>
         <Sections pageTitle="privacy-policy" data={privacyPolicyData} />
