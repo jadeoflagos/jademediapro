@@ -688,21 +688,12 @@ export const similarProjects = [
   },
 ]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // case -study end
+
+//Table of contents
+
+export const termsAndConditionTOC = 'Agreement to terms,Intellectual property rights,User representations,User registration,Prohibited activities,User generated contributions,Contribution license,Guidelines for reviews,Submissions,Third-party website and content,Advertisers,Site management,Privacy policy,Copyright infringements,Term and termination,Modifications and interruptions,Governing law,Dispute resolution,Corrections,Disclaimer,Limitations of liability,Indemnification,User data,Electronic communications transactions and signatures,California users and residents, Miscellaneous,Contact us'.split(',')
+
+export const privacyPolicyTOC = 'What information do we collect?,How do we use your information?,Will your information be shared with anyone?,Who will your information be shared with?,Do we use cookies and other tracking technologies?,How do we handle your social logins?,What is our stance on third-party websites,How long do we keep your information?,How do we keep your information safe?,What are your privacy rights?,Controls for do-not-track features?,Do California residents have specific privacy rights?,Do we make updates to this notice?,How can you contact us about this notice?,How can you review?, update or delete the data we collect from you?'.split(',')
+
+//Table of Content end
