@@ -36,7 +36,7 @@ const About = () => {
               creating strategic solutions for brand development, communication,
               and business marketing. Jade Media Pro is a business services
               company that connects Africa to the world through design,
-              products, market strategy, consulting, and training.{" "}
+              products, market strategy, consulting, and training.
             </p>
             <p className="my-2">
               The new and emerging Africa is filled with hard-working young and
@@ -73,7 +73,7 @@ const About = () => {
             height={88}
           />
           {wwhighlight.map((dat, datIndex) => (
-            <div className="mt-2 lg:flex lg:flex-col text-xs lg:text-base">
+            <div className="mt-2 lg:flex lg:flex-col text-xs lg:text-base" key={`data-${datIndex}`}>
               <span className="lg:text-xl font-semibold">{dat.heading} </span>
               <span>{dat.desc}</span>
             </div>
@@ -203,9 +203,9 @@ const About = () => {
             </div>
           ))}
         </div>
-        <p className="my-8 ">
+        <div className="my-8 ">
           <EyeBrow text="We are a team. We love what we do. Simple." />
-        </p>
+        </div>
         <div className="hidden w-full lg:flex justify-between mt-6">
           {team.slice(3).map((teammember, memberIndex) => (
             <div
@@ -260,16 +260,16 @@ const About = () => {
               in Jade Media Pro if you are:
               <div className="my-2">
                 {opportunities.map((opportunity, opportunityIndex) => (
-                  <p key={opportunityIndex} className="my-1 flex items-start">
-                    <p className="mt-0.5 lg:mt-0">
+                  <div key={opportunityIndex} className="my-1 flex items-start">
+                    <div className="mt-0.5 lg:mt-0">
                       <Image
                         src={`/vectors/caret-right.svg`}
                         alt="Avatar"
                         width={24}
                         height={24}
-                      /></p>
+                      /></div>
                     <span>{opportunity}</span>
-                  </p>
+                  </div>
                 ))}
               </div>
               We seek these qualities and more in young professionals. We're
