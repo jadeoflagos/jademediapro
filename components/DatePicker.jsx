@@ -26,20 +26,19 @@ export  function DatePickerComponent() {
   );
 }
 
-export  function MobileDatePickerComponent() {
+export function MobileDatePickerComponent() {
   const [value, setValue] = React.useState(null);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <MobileDatePicker
-          label="Select Date"
-          value={value}
-          onChange={(newValue) => {
-            setValue(newValue);
-          }}
-          renderInput={(params) => <TextField {...params} />}
-        />
-
+        label="Select Date"
+        value={value}
+        onChange={(newValue) => {
+          setValue(newValue);
+        }}
+        renderInput={(params) => <TextField {...params} />}
+      />
     </LocalizationProvider>
   );
 }

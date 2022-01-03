@@ -180,7 +180,9 @@ const Footer = () => {
       </footer>
       <footer className="bg-[#070707] lg:hidden px-5 py-6 text-white">
         <div className="flex justify-between mb-2 items-start">
-          <p className="text-3xl ">Stay connected to infinite support</p>
+          <p className="text-[2.7rem] mt-[1.25rem] max-w-[24.16rem]">
+            Stay connected to infinite support
+          </p>
           <Image
             src="/vectors/arrow-up.svg"
             alt="Avatar"
@@ -189,10 +191,10 @@ const Footer = () => {
             onClick={scrollToTop}
           />
         </div>
-        <p className="cursor-pointer py-3 px-12 flex justify-center mt-12  bg-[#0DFFE5] max-w-max text-black mx-auto">
+        <p className="cursor-pointer py-3 px-12 flex mt-12  bg-[#0DFFE5] max-w-[24.16rem] text-black justify-center">
           JOIN OUR NEWSLETTER
         </p>
-        <div className="space-y-9 mt-16">
+        <div className=" grid grid-cols-2 gap-y-9 mt-20">
           <div className="flex flex-col">
             <Link href="/about">
               <a href="" className="mb-4 text-2xl">
@@ -264,14 +266,20 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-14">
-          <Logo />
+        <div className="mt-14 mb-6">
+          <div className="flex flex-col w-[7.8rem] h-[3rem]">
+            <Image
+              src="/vectors/white-brand-logo.svg"
+              width={123}
+              height={46}
+            />
+          </div>
         </div>
         <div className="py-8 text-xs space-y-4 ">
           <p className="border-b max-w-max">(123) 456-7890</p>
           <p className="border-b max-w-max">solutions@jademediapro.agency</p>
         </div>
-        <div>
+        <div className="mt-10">
           <p>Connect with us on our platforms:</p>
           <div className="flex items-center justify-between mt-3">
             <Image src="/vectors/fb.svg" alt="Avatar" width={17} height={15} />
@@ -309,15 +317,15 @@ const Footer = () => {
             <Image src="/vectors/rss.svg" alt="Avatar" width={17} height={15} />
           </div>
         </div>
-        <p className="pt-16 pb-11 text-xs">
+        <p className="mt-32 mb-[3.5rem] text-xs">
           © 2021 Jade Media Pro. All rights reserved.{" "}
         </p>
         <div className="text-xs">
           <Link href="/terms-and-condition">
-            <p className="mr-8 cursor-default">Terms & Conditions</p>
+            <p className="mr-8 cursor-default ">Terms & Conditions</p>
           </Link>
           <Link href="/privacy-policy">
-            <p className="cursor-default">Privacy Policy</p>
+            <p className="cursor-default mt-4 lg:mt-0">Privacy Policy</p>
           </Link>
         </div>
       </footer>

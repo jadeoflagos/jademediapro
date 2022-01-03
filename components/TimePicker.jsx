@@ -40,9 +40,8 @@ export function MobileTimePickerComponent() {
           setValue(newValue);
         }}
         renderInput={(params) => <TextField {...params} />}
-      />;
+      />
+      ;
     </LocalizationProvider>
   );
 }
-
-

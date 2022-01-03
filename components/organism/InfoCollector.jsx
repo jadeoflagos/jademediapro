@@ -1,8 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { Button, TextField } from "@mui/material";
-import TimePickerComponent from "../TimePicker";
-import DatePickerComponent from "../DatePicker";
+import {
+  Button,
+  TextField,
+  
+} from "@mui/material";
+import { TimePickerComponent } from "../TimePicker";
+import { DatePickerComponent } from "../DatePicker";
 
 const InfoCollector = ({ title = "", buttonText = "Button" }) => {
   return (

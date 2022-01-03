@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
-import DatePicker from "../components/DatePicker";
-import TimePicker from "../components/TimePicker";
+import { DatePickerComponent } from "../components/DatePicker";
+import { TimePickerComponent } from "../components/TimePicker";
 import { serviceData } from "../data";
 import SectionHeader from "../components/organism/SectionHeader";
 
@@ -82,8 +82,8 @@ const Services = () => {
               variant="standard"
               type="email"
             />
-            <DatePicker />
-            <TimePicker />
+            <DatePickerComponent />
+            <TimePickerComponent />
             <TextField
               id="standard-basic"
               label="Message"

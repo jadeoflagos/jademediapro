@@ -121,7 +121,7 @@ export default function Home() {
             marketing"
           />
           <div>
-            <p className="mt-8 text-xs lg:text-base text-[#666666]">
+            <p className="mt-8  text-base text-[#666666]">
               Few businesses live the test of time. Many businesses are
               struggling with different strategies and identifying which one
               truly fits. All sorts of brands - personal, entrepreneurial, or
@@ -205,19 +205,23 @@ export default function Home() {
             Our five foundational process to create your strategic brand’s
             success
           </p>
-          <div className="hidden grid-cols-2 gap-x-6 mt-10">
+          <div className="flex items-center gap-x-6 mt-10">
             <Image
-              src="/images/market.png"
+              src="/images/ideate-left.png"
               alt="Avatar"
-              width={492}
+              width={485}
               height={259}
+              alt="ideate1-img"
             />{" "}
-            <Image
-              src="/images/grantchart.png"
-              alt="Avatar"
-              width={492}
-              height={259}
-            />
+            <span className="hidden lg:inline">
+              <Image
+                src="/images/ideate-right.png"
+                alt="Avatar"
+                width={485}
+                height={259}
+                alt="ideate2-img"
+              />
+            </span>
           </div>
           <p className="py-8">
             After we’ve examined all potential causes of the problem and have
@@ -236,6 +240,15 @@ export default function Home() {
             provide a unifying force to develop your brand values and business
             direction.
           </p>
+          <span className="block lg:hidden mb-[1.667rem]">
+            <Image
+              src="/images/ideate-right.png"
+              alt="Avatar"
+              width={485}
+              height={259}
+              alt="ideate2-img"
+            />
+          </span>
           <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max uppercase hover:opacity-90">
             Get your Brand process
           </p>
@@ -256,6 +269,7 @@ export default function Home() {
       <section className="flex flex-col lg:flex-row items-start px-[1.375rem] lg:px-20 mt-12">
         <div className="w-full lg:w-4/6">
           <iframe
+            className="lg:hidden"
             src="https://player.vimeo.com/video/636370372?h=734c780ecc"
             width="100%"
             height="100%"
@@ -263,14 +277,24 @@ export default function Home() {
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
           ></iframe>
-          <p>
+          <iframe
+            className="hidden lg:block"
+            src="https://player.vimeo.com/video/636370372?h=734c780ecc"
+            width="900"
+            height="450"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+
+          {/* <p>
             <a href="https://vimeo.com/636370372">Ariwa-Leather-Fashion.mp4</a>
             from <a href="https://vimeo.com/user147594847">John Ademiluyi</a> on
             <a href="https://vimeo.com">Vimeo</a>.
-          </p>
+          </p> */}
         </div>
         <div className="lg:w-2/6 flex flex-col justify-start ">
-          <p className="text-[#046C62] mb-8 text-4xl">
+          <p className="text-[#046C62] mb-8 text-[2rem] leading-tight lg:leading-normal lg:text-4xl mt-7 lg:mt-0">
             60 minutes with Adaeze of <u>CAV Digital</u>
           </p>
           <p>
