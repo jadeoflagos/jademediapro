@@ -6,11 +6,13 @@ import SelectVariants from "../components/Form/Select";
 import Navbar from "../components/Navbar";
 import { DatePickerComponent } from "../components/DatePicker";
 import { TimePickerComponent } from "../components/TimePicker";
-import { serviceData } from "../data";
+import { serviceData } from "../data/ServicePage";
 import SectionHeader from "../components/organism/SectionHeader";
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState(-1);
+  const [activeSubTab, setActiveSubTab] = useState(0);
+
 
   return (
     <div>
@@ -25,7 +27,7 @@ const Services = () => {
         <div className="w-full space-y-6">
           {serviceData.map((service, serviceIndex) => (
             <div key={`service-${serviceIndex}`}>
-              <p className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-3/5 ">
+              <div className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-[70%] ">
                 <span className="text-xl lg:text-4xl font-semibold">
                   {service.title}
                 </span>
@@ -38,22 +40,34 @@ const Services = () => {
                   }}
                 >
                   <Image
-                    src={`/vectors/${
-                      activeTab == serviceIndex
-                        ? "caret-down.svg"
-                        : "caretup.svg"
-                    }`}
+                    src={`/vectors/${activeTab == serviceIndex
+                      ? "caret-down.svg"
+                      : "caretup.svg"
+                      }`}
                     alt="Avatar"
                     width={20}
                     height={10}
                   />
                 </span>
-              </p>
+              </div>
 
               {activeTab == serviceIndex ? (
-                <p className="pt-6 pb-10 flex justify-end">
-                  <p className="w-[85%]">{serviceData[serviceIndex].details}</p>
-                </p>
+                <div className="pt-6 pb-10">
+                  <div className="w-full">{serviceData[serviceIndex].details.map((item, itemIndex) => <div key={itemIndex}>
+                    <div className="flex items-center w-full lg:w-[70%]">
+                      <p className="flex-grow" />
+                      <p className="w-full lg:w-1/2 py-2 px-3 text-3xl border-b-2 border-black cursor-pointer " onClick={() => {
+                        activeSubTab == itemIndex
+                          ? setActiveSubTab(-1)
+                          : setActiveSubTab(itemIndex);
+                      }}>{item.title}</p>
+                    </div>
+                    {activeSubTab == itemIndex && <div className=" w-full flex items-center mt-12 text-[#666666]">                      <p className="w-[35%] hidden lg:flex" />
+                    <div className="lg:w-[35%] w-9/12">{item.description}</div></div>}
+
+                  </div>)}
+                  </div>
+                </div>
               ) : (
                 ""
               )}

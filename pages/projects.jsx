@@ -7,7 +7,9 @@ import { projectData } from "../data/ProjectPage";
 import SectionHeader from "../components/organism/SectionHeader";
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(-1);
+  const [activeSubTab, setActiveSubTab] = useState(0);
+
   return (
     <div>
       <SectionHeader
@@ -20,7 +22,7 @@ const Projects = () => {
               stories behind the work."
       />
 
-       <section className="mt-20 lg:px-20 px-5 py-20 ">
+      <section className="mt-20 lg:px-20 px-5 py-20 ">
         <div className="lg:w-3/5 w-full space-y-6">
           {projectData.map((project, projectIndex) => (
             <div key={`project-${projectIndex}`}>
@@ -35,11 +37,10 @@ const Projects = () => {
                   }}
                 >
                   <Image
-                    src={`/vectors/${
-                      activeTab == projectIndex
+                    src={`/vectors/${activeTab == projectIndex
                         ? "caret-down.svg"
                         : "caretup.svg"
-                    }`}
+                      }`}
                     alt="Avatar"
                     width={20}
                     height={10}
@@ -50,7 +51,16 @@ const Projects = () => {
               {activeTab == projectIndex ? (
                 <div className="pt-6 pb-10 flex justify-end ">
                   <div className="w-10/12 lg:w-[65%] lg:text-base text-xs text-[#666666] ">
-                    {projectData[projectIndex].details}
+                    {projectData[projectIndex].details.map((item, itemIndex) => <div key={itemIndex}>
+                      <p className="py-2 px-3 text-3xl border-b-2 border-black cursor-pointer" onClick={() => {
+                    activeSubTab == itemIndex
+                      ? setActiveSubTab(-1)
+                      : setActiveSubTab(itemIndex);
+                  }}>{item.title}</p>
+
+                    {activeSubTab==itemIndex && <div className="mt-12">{ item.description }</div>}
+
+                  </div>)}
                   </div>
                 </div>
               ) : (
@@ -60,7 +70,7 @@ const Projects = () => {
           ))}
         </div>
       </section>
-    <section className="mt-11 mb-28 lg:grid lg:grid-cols-3 gap-x-8 px-5 lg:px-20 ">
+      <section className="mt-11 mb-28 lg:grid lg:grid-cols-3 gap-x-8 px-5 lg:px-20 ">
         <p className="col-span-3 text-4xl font-semibold mb-6">
           Read related posts
         </p>
@@ -80,7 +90,7 @@ const Projects = () => {
           title="A Guide to Google SEO Algorithm Updates"
           desc="Some SEO-related tools such as the Google Keyword Planner and Google Analytics provide quantitative data to help you understand your market, analyze the trends, and know your competitors’ standings. The  search engine management is to helps you identify popular keywords so you can decide how to structure or revise your needed content."
         />
-      </section>  
+      </section>
 
       <Footer />
     </div>

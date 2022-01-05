@@ -5,32 +5,6 @@ import BussinessStrategy from "./BussinessStrategy";
 
 //service page begin
 
-export const serviceData = [
-  {
-    title: "Art & Photography",
-    details: "",
-  },
-  {
-    title: "Branding & Design",
-    details: "",
-  },
-  {
-    title: "Business Strategy",
-    details: <BussinessStrategy />,
-  },
-  {
-    title: "Digital Marketing",
-    details: "",
-  },
-  {
-    title: "Motion Design",
-    details: "",
-  },
-  {
-    title: "Web & App Project",
-    details: "",
-  },
-];
 
 //service page end
 export const privacyPolicyData = [
