@@ -56,21 +56,23 @@ export function DefaultTOCLayout({
 export function ModifiedTOCLayout({
   title,
   paragraphs = [],
-  options = {},
+  options = [],
   additionalData = [],
   index,
   contactInfo = null,
+  lastLi,
+  beforeListText,
 }) {
   return (
     <div className="text-[#666666]">
-      <h3 className="font-semibold text-[1.083rem]">
+      <h3 className="font-semibold  text-[1.083rem]">
         {index + 1}. {title}
       </h3>
       <div className="flex flex-col">
         {paragraphs.map((p, pIndex) => {
           return (
             <Fragment key={`paragraph-index${pIndex}`}>
-              <div className="mt-4">
+              <div className="mt-2">
                 <span
                   className={`text-[#77459B] font-semibold ${
                     p.boldText ? "block mb-3" : ""
@@ -95,24 +97,41 @@ export function ModifiedTOCLayout({
           );
         })}
       </div>
-      {Object.keys(options).length !== 0 && (
-        <div className="mt-3">
-          {options.title && <span>{options.title}</span>}
-          {options.lists.length && (
+      {beforeListText && (
+        <p className="text-[#77459B]  font-semibold mt-3">{beforeListText}</p>
+      )}
+
+      {options.map((option, optionIndex) => (
+        <div className="mt-3" key={optionIndex}>
+          {option.title && <span>{option.title}</span>}
+          {option.lists.length && (
             <ul className="ml-3 list-inside list-disc">
-              {options.lists.map((list, listIndex) => (
-                <li className="mt-2" key={`list-index${listIndex}`}>
-                  {list}
-                </li>
-              ))}
+              {option.lists.map((list, listIndex) => {
+                const isString = typeof list === "string";
+                return (
+                  <li className="mt-2" key={`list-index${listIndex}`}>
+                    {isString ? (
+                      <span>{list}</span>
+                    ) : (
+                      <>
+                        <span className="text-[#77459B] ml-0 font-semibold">
+                          {list.colouredText ?? ""}
+                        </span>
+                        <span> {list.text ?? ""}</span>
+                      </>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           )}
         </div>
-      )}
+      ))}
+
       {additionalData.map((data, dataIndex) => (
         <div key={dataIndex} className="flex flex-col mt-4">
           <span className="text-[#77459B] font-semibold">
-            {data.colouredText}
+            {data.colouredText ?? ""}
           </span>
           <div className="mt-3">
             {data.boldText && (
@@ -122,8 +141,13 @@ export function ModifiedTOCLayout({
           </div>
         </div>
       ))}
+      {lastLi && (
+        <ol className="ml-3 mt-3 list-inside list-disc">
+          <li>{lastLi}</li>
+        </ol>
+      )}
       {contactInfo !== null && (
-        <div className="flex flex-col gap-y-3 mt-4 text-[#098B81]">
+        <div className="flex flex-col gap-y-3 mt-4 ]">
           {Object.keys(contactInfo).map((key) => (
             <span key={key}>
               {key === "phone" && "Phone:"}
