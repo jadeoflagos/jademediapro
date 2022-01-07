@@ -35,6 +35,10 @@ const PrivacyPolicy = () => {
         <PrivacyPolicyIntro />
         <TableOfContent items={privacyPolicyTOC} />
         <PrivacyPolicyMobile data={privacyPolicyMobileData} />
+        <p className="text-[#666666] mt-8">
+          This privacy policy was created using Termly's Privacy Policy
+          Generator.
+        </p>
       </div>
       <div className={`bg-white hidden lg:block ${styles.privacyContent}`}>
         <Sections pageTitle="privacy-policy" data={privacyPolicyData} />

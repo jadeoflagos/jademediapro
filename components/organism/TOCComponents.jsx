@@ -13,7 +13,7 @@ export function TermsConditionsMobile({ data = [] }) {
 
 export function PrivacyPolicyMobile({ data = [] }) {
   return (
-    <div>
+    <div className=" flex flex-col my-4 gap-y-8">
       {data.map((item, itemIndex) => (
         <ModifiedTOCLayout key={item.title} index={itemIndex} {...item} />
       ))}

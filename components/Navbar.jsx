@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Logo from "./vectors/Logo";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -8,6 +7,7 @@ import { useRouter } from "next/router";
 import DropDown from "./DropDown";
 import { dropDown } from "../data";
 import MenuIcon from "./vectors/MenuIcon";
+import MobileMenu from "./organism/MobileMenu";
 
 const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
   const dropdownMenus = Object.keys(dropDown);
@@ -15,6 +15,12 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
     state: false,
     type: "",
     styles: {},
+  };
+
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const closeMobileMenu = () => {
+    setOpenMenu(false);
   };
 
   const [showDropDown, setShowDropDown] = useState(dropDownDefault);
@@ -96,13 +102,20 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
             </a>
           </Link>
         </div>
-        <div className="lg:hidden">
+        <div className="lg:hidden" onClick={() => setOpenMenu(true)}>
           <MenuIcon
             fillcolor={
               !dropDownBg ? "#fff" : dropDownBg === "black" ? "#fff" : "#000"
             }
           />
         </div>
+        {openMenu && (
+          <div
+            className={`lg:hidden absolute w-full top-0 left-0 ${styles.mobileMenu} `}
+          >
+            <MobileMenu closeMenu={closeMobileMenu} />
+          </div>
+        )}
       </nav>
     </>
   );
