@@ -1,12 +1,8 @@
 import pd1 from "../public/images/pd1.png";
 import pd2 from "../public/images/pd2.png";
 import pd3 from "../public/images/pd3.png";
-import BussinessStrategy from "./BussinessStrategy";
-
-//service page begin
 
 
-//service page end
 export const privacyPolicyData = [
   {
     title: "Introduction",
