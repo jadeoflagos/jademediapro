@@ -195,42 +195,6 @@ export const products = [
     img: "winebottle.png",
   },
 ];
-export const faqs = [
-  {
-    que: "Is enjoying hookah the same as smoking cigarettes?",
-    ans: `                No. All tobacco products have risks but comparing hookah to
-                cigarettes is erroneous and misleading. Hookah is heated at a
-                temperature that is four times cooler than a burning cigarette
-                and creates an aerosol that is 75% water (60%) and glycerol
-                (15%). By contrast, cigarette smoke is 75% tar, carbon monoxide,
-                and nicotine . Most people enjoy hookah in moderation, far less
-                often than typical smokers light up a cigarette. In the United
-                States, for example, 90% of people who enjoy hookah do so no
-                more than once per month. In comparison, the average American
-                cigarette smoker will smoke 14 cigarettes per day. Hookah takes
-                time to prepare and cannot be transported easily or used “on the
-                go.” Hookah is a unique cultural and social experience, whose
-                history, ingredients, and use make it incomparable to other
-                tobacco products characterized by high frequency use.
-`,
-  },
-  {
-    que: "Does the water bowl act to purify the hookah aerosol? ?",
-    ans: `                No. All tobacco products have risks but comparing hookah to
-                cigarettes is erroneous and misleading. Hookah is heated at a
-                temperature that is four times cooler than a burning cigarette
-                and creates an aerosol that is 75% water (60%) and glycerol
-                (15%). By contrast, cigarette smoke is 75% tar, carbon monoxide,
-                and nicotine . Most people enjoy hookah in moderation, far less
-                often than typical smokers light up a cigarette. In the United
-                States, for example, 90% of people who enjoy hookah do so no`,
-  },
-  {
-    que:
-      "Is a one-hour hookah session the same as smoking 100 or 200 cigarettes ?",
-    ans: "",
-  },
-];
 
 
 export const openings = [

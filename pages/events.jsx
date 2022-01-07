@@ -23,14 +23,14 @@ const Events = () => {
               stories behind the work."
       />
 
-      <section className="px-5 lg:px-20 grid lg:grid-cols-3 lg:gap-x-48 mt-12">
+      <section className="px-5 lg:px-20 grid lg:grid-cols-3 lg:gap-x-48 mt-12 lg:mb-12">
         <main className="col-span-2 space-y-4 lg:space-y-8 order-2 lg:order-1">
           {eventData.map((data, dataIndex) => (
             <div
-              className="flex items-center border-b-2 border-black space-x-8 py-3 px-4"
+              className="flex items-center border-b-2 border-black lg:space-x-8 py-3 px-4"
               key={dataIndex}
             >
-              <div className="w-2/3">
+              <div className="lg:w-2/3">
                 <p className="text-[0.8rem] lg:text-xl font-semibold">
                   {data.title}
                 </p>
@@ -41,7 +41,7 @@ const Events = () => {
                   </span>
                 </p>
               </div>
-              <div className="w-1/3 flex lg:flex-row flex-col items-end place-self-stretch justify-between">
+              <div className="lg:w-1/3 flex lg:flex-row flex-col items-end place-self-stretch justify-between">
                 <div className="">
                   <p className="lg:text-lg text-xs">{data.month}</p>
                   <p className="text-4xl lg:text-7xl">{data.date}</p>
@@ -60,6 +60,12 @@ const Events = () => {
               </div>
             </div>
           ))}
+          <section className="px-5 lg:block hidden">
+            <Pagination
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
+          </section>
         </main>
         <div className="flex flex-col order-1 lg:order-2 ">
           <div className="max-w-max">
@@ -71,10 +77,10 @@ const Events = () => {
           </div>
         </div>
       </section>
-      <section className="px-5 lg:px-20">
+      <section className="px-5 my-10 lg:hidden">
         <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </section>
-      <div className="px-5 lg:hidden block ">
+      <div className="px-5 my-16 lg:my-0 lg:hidden block ">
         <DailyEmailForm />
       </div>
       <Footer />

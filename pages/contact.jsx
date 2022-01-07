@@ -4,9 +4,8 @@ import React, { useState } from "react";
 import DateNTime from "../components/DateNTime";
 import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
-import Navbar from "../components/Navbar";
 import SectionHeader from "../components/organism/SectionHeader";
-import { faqs } from "../data";
+import { faqs } from "../data/Faq";
 const Contact = () => {
   const [activeTab, setActiveTab] = useState(-1);
 
@@ -28,10 +27,10 @@ const Contact = () => {
         <div className="lg:w-3/5 space-y-6">
           {faqs.map((faq, faqIndex) => (
             <div key={`faq-${faqIndex}`}>
-              <p className="flex justify-between items-center border-b border-black px-4 py-2 ">
-                <span className="font-semibold text-xs lg:text-lg">{faq.que}</span>
-                <span
-                  className="cursor-pointer"
+              <div className="flex  gap-x-7 items-end border-b border-black px-4 py-2 ">
+                <span className="font-semibold text-xs lg:text-lg flex-grow">{faq.que}</span>
+                <div
+                  className="cursor-pointer h-full w-12 flex justify-end "
                   onClick={() => {
                     activeTab == faqIndex
                       ? setActiveTab(-1)
@@ -46,8 +45,8 @@ const Contact = () => {
                     width={20}
                     height={10}
                   />
-                </span>
-              </p>
+                </div>
+              </div>
 
               {activeTab == faqIndex ? (
                 <p className="pt-6 pb-10 text-xs lg:text-base"> {faqs[faqIndex].ans}</p>
@@ -66,7 +65,7 @@ const Contact = () => {
         <div className="flex items-center lg:flex-row flex-col">
           <form
             action=""
-            className="lg:w-3/5 pr-12 grid grid-cols-2 gap-x-10 gap-y-4 order-2 lg:order-1"
+            className="lg:w-3/5 pr-12 grid grid-cols-2 gap-x-10 gap-y-4 order-2 lg:order-1 mb-9 lg:mb-0"
           >
             <TextField
               id="standard-basic"
@@ -129,7 +128,7 @@ const Contact = () => {
           /></div>
         </div>
       </section>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
