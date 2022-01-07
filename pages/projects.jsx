@@ -21,13 +21,14 @@ const Projects = () => {
               projects of all systems and sizes. Here you'll find the individual
               stories behind the work."
       />
-
       <section className="mt-20 lg:px-20 px-5 py-20 ">
-        <div className="lg:w-3/5 w-full space-y-6">
+        <div className="w-full space-y-6">
           {projectData.map((project, projectIndex) => (
             <div key={`project-${projectIndex}`}>
-              <div className="flex justify-between items-center border-b border-black px-4 py-2 ">
-                <span className="font-semibold lg:text-4xl text-xl">{project.title}</span>
+              <div className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-[60%] ">
+                <span className="font-semibold lg:text-4xl text-xl">
+                  {project.title}
+                </span>
                 <div
                   className="cursor-pointer"
                   onClick={() => {
@@ -37,10 +38,11 @@ const Projects = () => {
                   }}
                 >
                   <Image
-                    src={`/vectors/${activeTab == projectIndex
+                    src={`/vectors/${
+                      activeTab == projectIndex
                         ? "caret-down.svg"
                         : "caretup.svg"
-                      }`}
+                    }`}
                     alt="Avatar"
                     width={20}
                     height={10}
@@ -49,18 +51,35 @@ const Projects = () => {
               </div>
 
               {activeTab == projectIndex ? (
-                <div className="pt-6 pb-10 flex justify-end ">
-                  <div className="w-10/12 lg:w-[65%] lg:text-base text-xs text-[#666666] ">
-                    {projectData[projectIndex].details.map((item, itemIndex) => <div key={itemIndex}>
-                      <p className="py-2 px-3 text-3xl border-b-2 border-black cursor-pointer" onClick={() => {
-                    activeSubTab == itemIndex
-                      ? setActiveSubTab(-1)
-                      : setActiveSubTab(itemIndex);
-                  }}>{item.title}</p>
-
-                    {activeSubTab==itemIndex && <div className="mt-12">{ item.description }</div>}
-
-                  </div>)}
+                <div className="pt-6 pb-10 ">
+                  <div className="w-full">
+                    {projectData[projectIndex].details.map(
+                      (item, itemIndex) => (
+                        <div key={itemIndex}>
+                          <div className="flex items-center w-full">
+                            <p className="w-[30%]" />
+                            <p
+                              className="w-full lg:w-[30%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer "
+                              onClick={() => {
+                                activeSubTab == itemIndex
+                                  ? setActiveSubTab(-1)
+                                  : setActiveSubTab(itemIndex);
+                              }}
+                            >
+                              {item.title}
+                            </p>
+                          </div>
+                          {activeSubTab == itemIndex && (
+                            <div className=" w-full flex items-center mt-12 text-[#666666]">
+                            <p className="w-[30%]" />
+                            <div className="lg:w-[70%] w-9/12">
+                              {item.description}
+                            </div>
+                          </div>
+                        )}
+                        </div>
+                      )
+                    )}
                   </div>
                 </div>
               ) : (
