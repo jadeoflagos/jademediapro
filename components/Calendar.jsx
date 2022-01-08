@@ -12,7 +12,7 @@ export default function StaticDatePickerDemo() {
       <StaticDatePicker
 
         displayStaticWrapperAs="desktop"
-        openTo="year"
+        openTo="day"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);

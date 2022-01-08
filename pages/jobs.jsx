@@ -7,6 +7,7 @@ import DailyEmailForm from "../components/DailyEmailForm";
 import CheckboxLabels from "../components/Form/CheckBoxLabel";
 import { openings } from "../data";
 import SelectVariants from "../components/Form/Select";
+import SectionHeader from "../components/organism/SectionHeader";
 
 const Jobs = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,35 +30,20 @@ const Jobs = () => {
   };
   return (
     <div>
-      <div className="w-screen min-h-[30rem]">
+      <SectionHeader darkLogo  bgColor="white"
+        navBarColor="black" headerColor="black"
+        title="Discover your next career move with our efficiently managed job
+        searches
+"
+        headerImage="jobbg.png"
+ />
+      <div className="px-5 lg:px-20 py-16">
         <div>
-          <Navbar dropDownBg="white" darkLogo />
-        </div>
-        <div className="flex items-center justify-between px-20 ">
-          <div className="w-7/12">
-            <p className="text-6xl font-bold leading-tight">
-              Discover your next career move with our efficiently managed job
-              searches
-            </p>
-          </div>
-          <span className="w-1/12" />
-          <div className="w-4/12 flex items-center justify-center">
-            <Image
-              src="/images/Saly-15.png"
-              alt="Avatar"
-              width={363}
-              height={644}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="px-20 pb-20">
-        <div>
-          {tabs.map((tab, tabIndex) => (
+          {tabs.slice(3).map((tab, tabIndex) => (
             <span
               key={tabIndex}
               onClick={() => setActiveTab(tabIndex)}
-              className={`px-3 border-b cursor-pointer pb-2 ${
+              className={`px-3 border-b cursor-pointer lg:text-base text-xs pb-2 ${
                 activeTab == tabIndex
                   ? "text-[#77459B] border-[#77459B]"
                   : "border-transparent"
@@ -67,12 +53,12 @@ const Jobs = () => {
             </span>
           ))}
         </div>
-        <section className="mt-12 w-full  grid grid-cols-3 gap-x-48 ">
-          <div className="col-span-2  space-y-6">
+        <section className="mt-12 w-full  grid lg:grid-cols-3 lg:gap-x-48 ">
+          <div className="col-span-2  space-y-6 lg:order-1 order-2">
             {openings.map((op, opIndex) => (
-              <div className="bg-[#46BFB2] items-center grid grid-cols-2 py-3 px-4">
-                <p className="text-[2.5rem] w-1/2">{op.position}</p>
-                <div className="border-l border-black flex items-end justify-between pl-10">
+              <div key={opIndex} className="bg-[#46BFB2] items-center grid grid-cols-2 py-3 px-4">
+                <p className="text-2xl lg:text-[2.5rem] w-1/2">{op.position}</p>
+                <div className="border-l border-black flex items-end justify-between pl-7 lg:pl-10">
                   <div className="flex flex-col justify-items-stretch">
                     <p>{op.location}</p>
                     <p>{op.type}</p>
@@ -88,7 +74,7 @@ const Jobs = () => {
               </div>
             ))}
           </div>
-          <aside className="">
+          <aside className="order-1 lg:order-2">
             <p>Filters</p>
             <div className="mt-4">
               <CheckboxLabels label="All Offers" />
@@ -114,13 +100,17 @@ const Jobs = () => {
                 <SelectVariants menuitems={["Abuja", "Ilorin"]} />
               </div>
             </div>
-            <DailyEmailForm />
+            <div className="hidden lg:block">            <DailyEmailForm />
+</div>
           </aside>
         </section>
       </div>
       <section className="px-20">
         <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+
       </section>
+            <div className="lg:hidden block my-10 mx-5">            <DailyEmailForm />
+</div>
 
       <Footer />
     </div>

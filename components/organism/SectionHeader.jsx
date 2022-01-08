@@ -8,6 +8,8 @@ const SectionHeader = ({
   navBarColor,
   title,
   subTitle,
+  darkLogo,
+  headerColor
 }) => {
   return (
     <div
@@ -15,9 +17,11 @@ const SectionHeader = ({
       style={{ background: bgColor }}
     >
       <div>
-        <Navbar textColor={navBarColor} />
+        <Navbar textColor={navBarColor} darkLogo={darkLogo} />
       </div>
-      <div className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white">
+      <div className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white"         style={{
+          color: headerColor ?? "white",
+      }}>
         <div className="lg:w-7/12 w-full">
           <p className="font-bold  text-3xl lg:text-7xl leading-tight">
             {title}
