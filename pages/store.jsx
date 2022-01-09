@@ -23,7 +23,7 @@ const Store = () => {
   return (
     <div>
       <div>
-        {/* <Navbar darkLogo /> */}
+        <Navbar darkLogo />
       </div>
       <div
         className="w-screen lg:min-h-[31rem] min-h-40 lg:px-20 px-10"
