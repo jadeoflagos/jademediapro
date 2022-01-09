@@ -13,8 +13,8 @@ const freebies = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   return (
-    <div>
-      <div className="w-full min-h-[30rem] bg-[#2C144E]">
+    <div className="overflow-auto">
+      <div className="overflow-auto w-full min-h-[30rem] bg-[#2C144E]">
         <SectionHeader
           title="Everything you need for growth and development"
           subTitle="Free daily high-quality design resources hand-picked for creatives, designers and developers, ranging from fonts, mockups, graphics, templates & more from amazing artists. "
@@ -75,7 +75,7 @@ const freebies = () => {
               ))}
             </div>
             <div className="lg:hidden mt-[6.4rem] mb-32 grid grid-cols-2 gap-x-8">
-              {products.slice(0,2).map((product, productIndex) => (
+              {products.slice(0, 2).map((product, productIndex) => (
                 <Product
                   key={`product-${productIndex}`}
                   title={product.name}

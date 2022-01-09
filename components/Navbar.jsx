@@ -82,7 +82,11 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
             </div>
           </a>
         </Link>
-        <div className="hidden lg:flex items-center space-x-10">
+        <div
+          className={`hidden lg:flex items-center space-x-10 ${
+            darkLogo ? "text-black" : "text-white"
+          }`}
+        >
           {dropdownMenus.map((item, itemIndex) => (
             <span
               className="capitalize select-none drop-down"
@@ -103,15 +107,12 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
           </Link>
         </div>
         <div className="lg:hidden" onClick={() => setOpenMenu(true)}>
-          <MenuIcon
-            fillcolor={
-              !dropDownBg ? "#fff" : dropDownBg === "black" ? "#fff" : "#000"
-            }
-          />
+          <MenuIcon fillcolor={!darkLogo ? "#fff" : "#000"} />
         </div>
         {openMenu && (
           <div
-            className={`lg:hidden absolute w-full top-0 left-0 ${styles.mobileMenu} `}
+            className={`lg:hidden absolute w-full top-0 left-0 overflow-auto
+             ${styles.mobileMenu} `}
           >
             <MobileMenu closeMenu={closeMobileMenu} />
           </div>

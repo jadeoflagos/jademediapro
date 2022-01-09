@@ -12,6 +12,8 @@ import Link from "next/link";
 import SectionHeader from "../components/organism/SectionHeader";
 import { Header } from "../data/HomePage";
 import EyeBrow from "../components/organism/EyeBrow";
+import styles from "../styles/Home.module.css";
+import MobileMenu from "../components/organism/MobileMenu";
 
 export default function Home() {
   const idea = ["Research", "Ideate", "Design", "Implement", "Result"];
@@ -56,7 +58,7 @@ export default function Home() {
   return (
     <div>
       <div
-        className="w-screen lg:min-h-[50rem]"
+        className="w-screen  lg:min-h-[50rem]"
         style={{
           background: `url("/images/homebg.png")`,
           backgroundSize: "cover",
