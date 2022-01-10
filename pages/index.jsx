@@ -215,7 +215,7 @@ export default function Home() {
           </p>
           <div className="flex items-center gap-x-6 mt-10">
             <Image
-              src="/images/ideate-left.png"
+              src="/images/ideate-Left.png"
               width={485}
               height={259}
               alt="ideate1-img"
