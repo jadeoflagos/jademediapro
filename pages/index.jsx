@@ -13,7 +13,8 @@ import SectionHeader from "../components/organism/SectionHeader";
 import { Header } from "../data/HomePage";
 import EyeBrow from "../components/organism/EyeBrow";
 import styles from "../styles/Home.module.css";
-import MobileMenu from "../components/organism/MobileMenu";
+
+import unlockFuture from "../public/images/layer.png";
 
 export default function Home() {
   const idea = ["Research", "Ideate", "Design", "Implement", "Result"];
@@ -69,7 +70,7 @@ export default function Home() {
           <Navbar dropDownBg="black" textColor="white" />
         </div>
         <div className="py-20 lg:max-w-[65%]  text-white flex flex-col justify-center px-8 lg:px-20">
-          <p className="font-extrabold text-5xl lg:text-8xl">{Header.title}</p>
+          <p className="font-black text-5xl lg:text-[7rem]">{Header.title}</p>
           <p className="my-10 text-base lg:text-2xl font-normal">
             {Header.subTitle}
           </p>
@@ -81,8 +82,13 @@ export default function Home() {
 
       <div className="w-full py-24 flex flex-col lg:flex-row items-center px-8">
         <div className="lg:w-5/12 w-full lg:order-1 order-2">
-          <div className="flex justify-center">{/* <Illus /> */}</div>
-          <div className="flex flex-col lg:hidden text-xs lg:text-base">
+          <div className="hidden lg:flex lg:justify-center">
+            <Illus />
+          </div>
+          <div className="lg:hidden my-8">
+            <Image src={unlockFuture} alt="unlock-future" />
+          </div>
+          <div className="flex flex-col lg:hidden text-base">
             <p className="my-8  text-[#666666]">
               On the other hand, Digital marketing is the practice of creating
               content to attract more customers and build relationships. It is
@@ -100,7 +106,7 @@ export default function Home() {
               a new business or you already have an existing business.
             </p>
             <div className="  mt-8 flex  items-center">
-              <p className="mr-1 " style={{ fontWeight: "bolder" }}>
+              <p className="mr-1" style={{ fontWeight: "bolder" }}>
                 Find out more about what is Branding and how does it help your
                 Business?
               </p>
