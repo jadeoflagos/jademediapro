@@ -210,7 +210,6 @@ export default function Home() {
           <div className="flex items-center gap-x-6 mt-10">
             <Image
               src="/images/ideate-left.png"
-              alt="Avatar"
               width={485}
               height={259}
               alt="ideate1-img"
@@ -218,7 +217,6 @@ export default function Home() {
             <span className="hidden lg:inline">
               <Image
                 src="/images/ideate-right.png"
-                alt="Avatar"
                 width={485}
                 height={259}
                 alt="ideate2-img"
