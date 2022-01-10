@@ -214,12 +214,12 @@ export default function Home() {
             success
           </p>
           <div className="flex items-center gap-x-6 mt-10">
-            {/* <Image
-              src="/images/ideate-Left.png"
+            <Image
+              src="/images/ideate-left.png"
               width={485}
               height={259}
               alt="ideate1-img"
-            />{" "} */}
+            />{" "}
             <span className="hidden lg:inline">
               <Image
                 src="/images/ideate-right.png"
