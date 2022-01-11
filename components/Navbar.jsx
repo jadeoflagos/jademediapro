@@ -67,17 +67,9 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
           <a href="/">
             <div className="flex flex-col w-[3.6rem] h-[1.3rem] lg:w-[7.6rem] lg:h-[2.8rem]">
               {!darkLogo ? (
-                <Image
-                  src="/vectors/white-brand-logo.svg"
-                  width={123}
-                  height={46}
-                />
+                <Image src="/vectors/jade-logo.svg" width={315} height={82} />
               ) : (
-                <Image
-                  src="/vectors/black-brand-logo.svg"
-                  width={123}
-                  height={46}
-                />
+                <Image src="/vectors/jade-logo.svg" width={315} height={82} />
               )}
             </div>
           </a>
