@@ -183,7 +183,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full py-24 flex flex-col lg:flex-row items-center lg:px-20 bg-[#502A7A]">
-        {/* <div className="lg:w-4/12 w-full flex flex-row  items-center lg:items-start lg:flex-col text-white space-y-8 ">
+        <div className="lg:w-4/12 w-full flex flex-row  items-center lg:items-start lg:flex-col text-white space-y-8 ">
           {idea.map((i, index) => (
             <div
               className="flex flex-col   lg:flex-row items-center space-x-10"
@@ -207,7 +207,7 @@ export default function Home() {
               </p>
             </div>
           ))}
-        </div> */}
+        </div>
         <div className="lg:w-8/12 w-screen px-[1.375rem] lg:px-12 text-white">
           <p className="lg:text-5xl text-3xl font-bold">
             Our five foundational process to create your strategic brand’s
