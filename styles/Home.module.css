@@ -144,3 +144,6 @@
 .mobileMenu {
   z-index: 2000;
 }
+.ideaMobile::-webkit-scrollbar {
+  display: none;
+}

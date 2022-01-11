@@ -183,11 +183,12 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full py-24 flex flex-col lg:flex-row items-center lg:px-20 bg-[#502A7A]">
-        <div className="lg:w-4/12 w-full flex flex-row  items-center lg:items-start lg:flex-col text-white space-y-8 ">
+        <div className="hidden lg:w-4/12 w-full lg:flex flex-row  items-center lg:items-start lg:flex-col text-white space-y-8 ">
           {idea.map((i, index) => (
             <div
-              className="flex flex-col   lg:flex-row items-center space-x-10"
+              className="flex flex-col cursor-pointer lg:flex-row items-center space-x-10"
               key={index}
+              onClick={() => setActiveIdea(index)}
             >
               <span
                 className={` order-2 lg:order-1 ${
@@ -208,11 +209,39 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="lg:w-8/12 w-screen px-[1.375rem] lg:px-12 text-white">
-          <p className="lg:text-5xl text-3xl font-bold">
+        <div className=" lg:w-8/12 w-screen px-[1.375rem] lg:px-12 text-white">
+          <p className="text-[2.67rem] lg:text-5xl font-bold ">
             Our five foundational process to create your strategic brand’s
             success
           </p>
+          <div
+            className={`${styles.ideaMobile}  w-full my-4 flex flex-row items-center text-white space-x-8 lg:hidden overflow-x-auto`}
+          >
+            {idea.map((i, index) => (
+              <div
+                onClick={() => setActiveIdea(index)}
+                className="flex cursor-pointer text-[1.08rem] flex-col items-center "
+                key={index}
+              >
+                <p
+                  className={`border-b ${
+                    activeIdea == index
+                      ? "text-[2.67rem] font-bold border-white"
+                      : " font-light border-transparent"
+                  }  `}
+                >
+                  {i}
+                </p>
+                <span
+                  className={` ${
+                    activeIdea == index
+                      ? "w-[0.66rem] h-[0.66rem] border p-2 "
+                      : " w-[0.3rem] h-[0.3rem] bg-opacity-50"
+                  }  rounded-full bg-white `}
+                />
+              </div>
+            ))}
+          </div>
           <div className="flex items-center gap-x-6 mt-10">
             <Image
               src="/images/ideate-left.png"
