@@ -8,6 +8,7 @@ import DropDown from "./DropDown";
 import { dropDown } from "../data";
 import MenuIcon from "./vectors/MenuIcon";
 import MobileMenu from "./organism/MobileMenu";
+import JadeLogo from "../public/vectors/jade-logo1.png";
 
 const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
   const dropdownMenus = Object.keys(dropDown);
@@ -67,9 +68,13 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
           <a href="/">
             <div className="flex flex-col w-[3.6rem] h-[1.3rem] lg:w-[7.6rem] lg:h-[2.8rem]">
               {!darkLogo ? (
-                <Image src="/vectors/jade-logo.svg" width={315} height={82} />
+                <Image
+                  src="/vectors/jade-logo-white.svg"
+                  width={504}
+                  height={174}
+                />
               ) : (
-                <Image src="/vectors/jade-logo.svg" width={315} height={82} />
+                <Image src="/vectors/jade-logo.svg" width={504} height={174} />
               )}
             </div>
           </a>
