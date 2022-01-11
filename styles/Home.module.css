@@ -147,3 +147,7 @@
 .ideaMobile::-webkit-scrollbar {
   display: none;
 }
+
+.headerFamily {
+  font-family: "Poppins Bold";
+}

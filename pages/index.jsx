@@ -70,7 +70,11 @@ export default function Home() {
           <Navbar dropDownBg="black" textColor="white" />
         </div>
         <div className="py-20 lg:max-w-[65%]  text-white flex flex-col justify-center px-8 lg:px-20">
-          <p className="font-black text-5xl lg:text-[7rem]">{Header.title}</p>
+          <p
+            className={`${styles.headerFamily} font-black text-5xl lg:text-[7rem]`}
+          >
+            {Header.title}
+          </p>
           <p className="my-10 text-base lg:text-2xl font-normal">
             {Header.subTitle}
           </p>
