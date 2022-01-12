@@ -8,7 +8,6 @@ import DropDown from "./DropDown";
 import { dropDown } from "../data";
 import MenuIcon from "./vectors/MenuIcon";
 import MobileMenu from "./organism/MobileMenu";
-import JadeLogo from "../public/vectors/jade-logo1.png";
 
 const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
   const dropdownMenus = Object.keys(dropDown);

@@ -103,7 +103,7 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <Logo />
+          <Image src="/vectors/jade-logo-footer.svg" width={357} height={64} />
         </div>
         <div className="text-white mt-10 grid grid-cols-2 items-end">
           <div className="flex items-center">
@@ -269,7 +269,7 @@ const Footer = () => {
         <div className="mt-14 mb-6">
           <div className="flex flex-col w-[7.8rem] h-[3rem]">
             <Image
-              src="/vectors/white-brand-logo.svg"
+              src="/vectors/jade-logo-footer.svg"
               width={123}
               height={46}
             />
