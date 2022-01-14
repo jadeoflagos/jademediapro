@@ -26,7 +26,7 @@ const Store = () => {
         <Navbar darkLogo />
       </div>
       <div
-        className="w-screen lg:min-h-[31rem] min-h-40 lg:px-20 px-10"
+        className="w-screen lg:h-[31rem] h-40 lg:px-20 px-10"
         style={{
           background: `url("/images/storebg.png")`,
           backgroundSize: "cover",
@@ -50,6 +50,9 @@ const Store = () => {
           </p>
         </div>
       </div>
+      <section className="lg:hidden ">
+
+      </section>
       <section className="px-5 lg:px-20 py-20">
         <div className="flex items-center mb-24">
           <span className="font-semibold mr-[0.857rem]">Related</span>
@@ -57,7 +60,7 @@ const Store = () => {
             {storeTab.map((item, itemIndex) => (
               <span
                 key={`store-tab-number${itemIndex}`}
-                className=" rounded-[6.18rem] py-3 px-10  bg-[#EDEDF0] "
+                className="text-[0.625rem] lg:text-base rounded-[6.18rem] py-3 lg:px-10 px-4  bg-[#EDEDF0] whitespace-nowrap"
               >
                 {item}
               </span>
