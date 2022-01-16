@@ -41,10 +41,11 @@ export const serviceData = [
   {
     title: "Branding & Design",
     details: [
-      { title: "Awotele Project", description: "" },
-      { title: "Ariwa Project", description: "" },
-      { title: "Gloryland Schools Project", description: "" },
-      { title: "Marketing Process", description: "" },
+      { title: "Brand strategy", description: "" },
+      { title: "Logo and Brand identity", description: "" },
+      { title: "Products branding and packaging", description: "" },
+      { title: "Brand collateral/stationery design", description: "" },
+
     ],
   },
   {

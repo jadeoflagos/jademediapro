@@ -15,6 +15,7 @@ import EyeBrow from "../components/organism/EyeBrow";
 import styles from "../styles/Home.module.css";
 
 import unlockFuture from "../public/images/layer.png";
+import Heading from "../components/organism/Heading";
 
 export default function Home() {
   const idea = ["Research", "Ideate", "Design", "Implement", "Result"];
@@ -85,7 +86,7 @@ export default function Home() {
       </div>
 
       <div className="w-full py-24 flex flex-col lg:flex-row items-center px-8">
-        <div className="lg:w-5/12 w-full lg:order-1 order-2">
+        <div className="lg:w-4/12 w-full lg:order-1 order-2">
           <div className="hidden lg:flex lg:justify-center">
             <Illus />
           </div>
@@ -127,11 +128,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="lg:w-7/12 w-full lg:px-12 lg:order-2 order-1">
-          <EyeBrow
-            text="Unlock your future by taking advantage of Branding & Digital
-            marketing"
-          />
+        <div className="lg:w-8/12 w-full lg:px-12 lg:order-2 order-1">
+          <p className="text-3xl lg:text-7xl font-bold lg:leading-12  ">
+            Unlock your future by taking advantage of <a href="" className="border-b border-black " style={{paddingBottom:"-1rem"}}>Branding</a>  & <a href="" className="border-b border-black " style={{paddingBottom:"-1rem"}}>Digital marketing</a> 
+            
+          </p>
           <div>
             <p className="mt-8  text-base text-[#666666]">
               Few businesses live the test of time. Many businesses are
@@ -294,7 +295,7 @@ export default function Home() {
         </div>
       </div>
       <div className="px-[1.375rem] lg:px-20 pt-32">
-        <EyeBrow
+        <Heading
           text="Put money, attention, and resources where it's most effective to
         generate income"
         />
@@ -303,7 +304,7 @@ export default function Home() {
         <ServicesCarousel />
       </div>
       <div className="px-[1.375rem] lg:px-20 pt-32">
-        <EyeBrow text="Exclusive interviews with industry leading professionals" />
+        <Heading text="Exclusive interviews with industry leading professionals" />
       </div>
       <section className="flex flex-col lg:flex-row items-start px-[1.375rem] lg:px-20 mt-12">
         <div className="w-full lg:w-4/6">
@@ -333,7 +334,7 @@ export default function Home() {
           </p> */}
         </div>
         <div className="lg:w-2/6 flex flex-col justify-start ">
-          <p className="text-[#046C62] mb-8 text-[2rem] leading-tight lg:leading-normal lg:text-4xl mt-7 lg:mt-0">
+          <p className="text-[#046C62] mb-8 text-[2rem] leading-tight lg:leading-[3.375rem] lg:text-[3.06rem] mt-7 lg:mt-0">
             60 minutes with Adaeze of <u>CAV Digital</u>
           </p>
           <p>
