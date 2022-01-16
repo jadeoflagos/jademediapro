@@ -69,7 +69,7 @@ const Services = () => {
                             </p>
                           </div>
                           {activeSubTab == itemIndex && (
-                            <div className=" w-full flex items-center mt-12 text-[#666666]">
+                            <div className=" w-full flex items-center mt-12">
                               <p className="w-[35%]" />
                               <div className="lg:w-[35%] w-9/12">
                                 {item.description}
