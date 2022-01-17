@@ -24,18 +24,18 @@ const Services = () => {
         <div className="w-full space-y-6">
           {serviceData.map((service, serviceIndex) => (
             <div key={`service-${serviceIndex}`}>
-              <div className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-[70%] ">
+              <div
+                className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-[70%] cursor-pointer "
+                onClick={() => {
+                  activeTab == serviceIndex
+                    ? setActiveTab(-1)
+                    : setActiveTab(serviceIndex);
+                }}
+              >
                 <span className="text-xl lg:text-4xl font-semibold">
                   {service.title}
                 </span>
-                <span
-                  className="cursor-pointer"
-                  onClick={() => {
-                    activeTab == serviceIndex
-                      ? setActiveTab(-1)
-                      : setActiveTab(serviceIndex);
-                  }}
-                >
+                <span className="">
                   <Image
                     src={`/vectors/${
                       activeTab == serviceIndex

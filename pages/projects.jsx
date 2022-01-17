@@ -17,9 +17,7 @@ const Projects = () => {
         navBarColor="white"
         title="We create a fully unique journey for all our clients"
         headerImage="projectbg.png"
-        subTitle="Jade Media Pro has always been about people while exploring
-              projects of all systems and sizes. Here you'll find the individual
-              stories behind the work."
+        subTitle="Jade Media Pro has always been about people, and we've worked hard over the years to ensure that our clients are fully satisfied. Here are some unique stories behind the works we’ve undertaken."
       />
       <section className="mt-20 lg:px-20 px-5 py-20 ">
         <div className="w-full space-y-6">
@@ -57,9 +55,9 @@ const Projects = () => {
                       (item, itemIndex) => (
                         <div key={itemIndex}>
                           <div className="flex items-center w-full">
-                            <p className="w-[30%]" />
+                            <p className="w-[20%]" />
                             <p
-                              className="w-full lg:w-[30%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer "
+                              className="w-full lg:w-[40%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer "
                               onClick={() => {
                                 activeSubTab == itemIndex
                                   ? setActiveSubTab(-1)
@@ -71,8 +69,8 @@ const Projects = () => {
                           </div>
                           {activeSubTab == itemIndex && (
                             <div className=" w-full flex items-center mt-12 text-[#666666]">
-                            <p className="w-[30%]" />
-                            <div className="lg:w-[70%] w-9/12">
+                            <p className="w-[20%]" />
+                            <div className="lg:w-[80%] flex-grow w-9/12 lg:text-[1.3rem]  ">
                               {item.description}
                             </div>
                           </div>

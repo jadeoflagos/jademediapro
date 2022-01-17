@@ -358,9 +358,8 @@ export default function Home() {
         <InterviewCard />
       </section>
       <section className="px-[1.375rem] lg:px-20 mt-20 lg:mt-32">
-        <p className=" text-4xl lg:text-6xl  font-semibold">
-          Discover popular and profitable{" "}
-          <span className="border-b-2 border-black">editorials</span>
+        <p className=" text-4xl lg:text-7xl leading-12 font-semibold">
+          Discover popular and profitable <a className="border-b-2 border-black">editorials</a>
         </p>
       </section>
       <section className="mt-11 grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-y-0 lg:gap-x-8 px-[1.375rem] lg:px-20 ">
@@ -391,7 +390,7 @@ export default function Home() {
           ))}
         </div>
         <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8 ">
-          <h1 className="text-2xl lg:text-5xl">Explore our full catalogue</h1>
+          <EyeBrow text=" Explore our full catalogue"/>
           <p className="cursor-pointer mt-[0.68rem] lg:mt-0 py-3 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
             VISIT STORE
           </p>

@@ -33,10 +33,17 @@ const ProjectManagement = [
   "Project failures are not only expensive but can have very negative consequences for the reputation of the company and the project team. About 60-80% of project failures can be attributed directly to poor requirements gathering, communications breakdown, analysis, and management. Even big brands make mistakes and, unfortunately for them, those big project failures often end up in the headlines and threaten their very existence.",
   "We can help to ensure you get the most from your business investments using best practice project management. We have a professional, knowledgeable technology assurance team, with experience in strategic planning, product optimization, process automation, financial advisory, and business modelling to solve project problems, seize opportunities, deliver results and drive success in line with your business objectives maximizing gains, increasing efficiency and automation, and reducing costs to remain competitive, agile, innovative and responsive.",
 ];
+
+// Branding & Design
+
 export const serviceData = [
   {
     title: "Art & Photography",
-    details: [],
+    details: [
+      { title: "Painting", description: "" },
+      { title: "Digital art", description: "" },
+      { title: "Photography", description: "" },
+    ],
   },
   {
     title: "Branding & Design",
@@ -45,7 +52,9 @@ export const serviceData = [
       { title: "Logo and Brand identity", description: "" },
       { title: "Products branding and packaging", description: "" },
       { title: "Brand collateral/stationery design", description: "" },
-
+      { title: "Company Profile & Editorial design", description: "" },
+      { title: "Environmental & Retail Graphics", description: "" },
+      { title: "Infographic and Illustration Graphics", description: "" },
     ],
   },
   {
@@ -121,14 +130,33 @@ export const serviceData = [
   },
   {
     title: "Digital Marketing",
-    details: [],
+    details: [
+      { title: "Multicultural content marketing", description: "" },
+      { title: "Social media management/marketing", description: "" },
+      { title: "Search engine optimization", description: "" },
+      { title: "Advertising campaigns", description: "" },
+      { title: "Lead generation", description: "" },
+      { title: "Data analytics", description: "" },
+    ],
   },
   {
     title: "Motion Design",
-    details: [],
+    details: [
+      { title: "Whiteboard Animation Video", description: "" },
+      { title: "Corporate Promotional Video ", description: "" },
+      { title: "2D/3D Animation Video", description: "" },
+      { title: "Production/Filming", description: "" },
+      { title: "Post production", description: "" },
+    ],
   },
   {
     title: "Web & App Project",
-    details: [],
+    details: [
+      { title: "UI/UX design", description: "" },
+      { title: "Website development", description: "" },
+      { title: "Mobile application development", description: "" },
+      { title: "Software development", description: "" },
+      { title: "E-commerce management", description: "" },
+    ],
   },
 ];

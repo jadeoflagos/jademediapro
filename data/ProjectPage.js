@@ -402,7 +402,7 @@ export const projectData = [
         title: "Web/App Dev. Process",
         description: (
           <div>
-            <p className="w-full lg:w-5/12">
+            <p className="w-full lg:w-[60%] ">
               At Jade Media Pro, with 5 years of experience in product (website,
               mobile app, and software) development, we break down the project
               life cycle into a step-by-step approach for design and development
@@ -417,9 +417,9 @@ export const projectData = [
                     {item.header}
                   </p>
 
-                  <div className="flex lg:flex-row flex-col  items-center">
-                    <p className="w-full lg:w-5/12">{item.description}</p>
-                    <div className="flex-grow flex justify-center">
+                  <div className="flex lg:flex-row flex-col items-center mt-4">
+                    <p className="w-full lg:w-7/12 ">{item.description}</p>
+                    <div className="flex-grow lg:w-5/12   flex justify-center">
                       {item.img && (
                         <Image
                           src={`/images/${item.img}`}
