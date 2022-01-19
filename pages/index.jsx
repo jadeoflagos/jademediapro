@@ -15,6 +15,7 @@ import styles from "../styles/Home.module.css";
 
 import unlockFuture from "../public/images/layer.png";
 import Heading from "../components/organism/Heading";
+import Button from "../components/Button";
 
 export default function Home() {
   const idea = ["Research", "Ideate", "Design", "Implement", "Result"];
@@ -78,9 +79,9 @@ export default function Home() {
           <p className="my-10 text-base lg:text-2xl font-normal">
             {Header.subTitle}
           </p>
-          <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max hover:opacity-90 ">
-            VIEW PROJECTS
-          </p>
+          <div className="w-[19rem]">
+            <Button label="VIEW PROJECTS" greenBtn />
+          </div>
         </div>
       </div>
 
@@ -302,9 +303,9 @@ export default function Home() {
               alt="ideate2-img"
             />
           </span>
-          <p className="cursor-pointer py-3 px-12 flex justify-center text-black bg-[#0DFFE5] max-w-max uppercase hover:opacity-90">
-            Get your Brand process
-          </p>
+          <div className="w-[25.9rem]">
+            <Button label="Get your Brand process" greenBtn />
+          </div>
         </div>
       </div>
       <div className="px-[1.375rem] lg:px-20 pt-32">
@@ -364,9 +365,9 @@ export default function Home() {
             <p> We partner with brands to take communication.</p>
           </div>
           <p className="flex flex-grow" />
-          <p className=" cursor-pointer py-3 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
-            watch more
-          </p>
+          <div className="w-[17.3rem]">
+            <Button label=" watch more" />
+          </div>
         </div>
       </section>
       <section className="px-[1.375rem] lg:px-20 pt-[1rem] lg:pt-12 mb-20 grid grid-cols-1 lg:grid-cols-3 lg:gap-x-8 gap-y-6 lg:gap-y-0">
@@ -409,15 +410,15 @@ export default function Home() {
         </div>
         <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8 ">
           <EyeBrow text=" Explore our full catalogue" />
-          <p className="cursor-pointer mt-[0.68rem] lg:mt-0 py-3 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
-            VISIT STORE
-          </p>
+          <div className="w-[15.6rem]">
+            <Button label="VISIT STORE" />
+          </div>
         </div>
       </section>
       <section className="lg:mt-32 mt-16 grid  grid-cols-1 lg:grid-cols-2 px-[1.375rem] lg:px-20 mb-44">
         <div className="w-full flex flex-col lg:pr-28">
           <EyeBrow text="Don’t miss the next live meeting to experience growth" />
-          <div className="w-full grid grid-cols-2 gap-x-12  mt-10 flex-grow">
+          <div className="w-full grid grid-cols-2 gap-x-12  mt-10 ">
             {eventData.slice(0, 2).map((event, eventIndex) => (
               <div className="w-full flex flex-col" key={eventIndex}>
                 <div className="flex items-end space-x-1 lg:space-x-5">
@@ -433,7 +434,7 @@ export default function Home() {
                 <div className="text-[#046C62] text-[1.5rem] lg:text-[3rem] lg:leading-[3.375rem] mt-10 flex w-full flex-grow">
                   {event.title}
                 </div>
-                <div className="flex items-center mt-12 ">
+                <div className="flex items-center mt-4 ">
                   <span className="mx-1 whitespace-nowrap">Get details</span>
                   <Image
                     src="/vectors/arrow-left.svg"
@@ -445,13 +446,14 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p className="cursor-pointer py-3 mt-16 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase hover:opacity-90">
-            UPCOMING EVENTS
-          </p>
+          <span className="flex-grow" />
+          <div className="w-[20.5rem]">
+            <Button label="UPCOMING EVENTS" />
+          </div>
         </div>
         <div className="lg:pl-28 lg:border-l-2 flex flex-col border-black">
           <EyeBrow text="Find the right job to boost your brilliant career" />
-          <div className="space-y-6 flex-grow">
+          <div className="space-y-6 flex-grow mt-20">
             {openings.map((op, opIndex) => (
               <div
                 className="bg-[#46BFB2] grid grid-cols-2 py-3 px-4"
@@ -471,9 +473,9 @@ export default function Home() {
             ))}
           </div>
           <Link href="/jobs">
-            <p className=" py-3 mt-16 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase hover:opacity-90 cursor-pointer">
-              VIEW ALL JOBS
-            </p>
+            <div className="mt-16 w-[20.5rem]">
+              <Button label="VIEW ALL JOBS" />
+            </div>
           </Link>
         </div>
       </section>

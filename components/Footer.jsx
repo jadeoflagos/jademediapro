@@ -3,6 +3,7 @@ import Image from "next/image";
 import Logo from "./vectors/Logo";
 import Link from "next/link";
 import { scrollToTop } from "../utils/helper";
+import Button from "./Button";
 
 const Footer = () => {
   return (
@@ -17,7 +18,10 @@ const Footer = () => {
             onClick={scrollToTop}
           />
         </div>
-        <div className="grid grid-cols-6 text-white">
+        <div
+          className="grid text-white"
+          style={{ gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 25rem" }}
+        >
           <div className="flex flex-col">
             <Link href="/about">
               <a href="" className="mb-4 text-2xl">
@@ -89,21 +93,22 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <p className="text-4xl">
-              Stay
-              <br /> connected <br />
-              to infinite
-              <br /> support
-            </p>
+            <p className="text-7xl">Stay connected to infinite support</p>{" "}
+            <div className="w-full mt-14">
+              <Button label="JOIN OUR NEWSLETTER" greenBtn />
+            </div>
           </div>
         </div>
-        <div className="flex justify-end">
-          <p className="cursor-pointer py-3 px-12 flex justify-center mt-12  bg-[#0DFFE5] max-w-max ">
-            JOIN OUR NEWSLETTER
-          </p>
-        </div>
         <div>
-          <Image src="/vectors/jade-logo-footer.svg" width={357} height={64} />
+          <Link href="/">
+            <a href="/">
+              <Image
+                src="/vectors/jade-logo-white.svg"
+                width={201}
+                height={36}
+              />
+            </a>
+          </Link>
         </div>
         <div className="text-white mt-10 grid grid-cols-2 items-end">
           <div className="flex items-center">
@@ -116,53 +121,47 @@ const Footer = () => {
             <p>Connect with us on our platforms:</p>
             <div className="flex items-center justify-between mt-3">
               <Image
-                src="/vectors/fb.svg"
+                src="/gifs/footer-icon-facebook.gif"
                 alt="Avatar"
                 width={50}
                 height={50}
               />
               <Image
-                src="/vectors/twitter.svg"
+                src="/gifs/footer-icon-twitter.gif"
                 alt="Avatar"
                 width={50}
                 height={50}
               />
               <Image
-                src="/vectors/linkdin.svg"
+                src="/gifs/footer-icon-linkedin.gif"
                 alt="Avatar"
                 width={50}
                 height={50}
               />
               <Image
-                src="/vectors/youtube.svg"
+                src="/gifs/footer-icon-youtube.gif"
                 alt="Avatar"
                 width={50}
                 height={50}
               />{" "}
               <Image
-                src="/vectors/ig.svg"
+                src="/gifs/footer-icon-instagram.gif"
                 alt="Avatar"
                 width={50}
                 height={50}
               />
               <Image
-                src="/vectors/googleplus.svg"
+                src="/gifs/footer-icon-vimeo.gif"
                 alt="Avatar"
                 width={50}
                 height={50}
               />
               <Image
-                src="/vectors/pintrest.svg"
+                src="/gifs/footer-icon-pintrest.gif"
                 alt="Avatar"
                 width={50}
                 height={50}
               />{" "}
-              <Image
-                src="/vectors/rss.svg"
-                alt="Avatar"
-                width={50}
-                height={50}
-              />
             </div>
           </div>
         </div>
@@ -284,7 +283,7 @@ const Footer = () => {
           <div className="flex items-center justify-between mt-3">
             <Image src="/vectors/fb.svg" alt="Avatar" width={17} height={15} />
             <Image
-              src="/vectors/twitter.svg"
+              src="/gifs/footer-icon-twitter.gif"
               alt="Avatar"
               width={17}
               height={15}
