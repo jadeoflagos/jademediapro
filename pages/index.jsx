@@ -9,7 +9,6 @@ import ServicesCarousel from "../components/ServicesCarousel";
 import Product from "../components/Product";
 import { eventData } from "../data";
 import Link from "next/link";
-import SectionHeader from "../components/organism/SectionHeader";
 import { Header } from "../data/HomePage";
 import EyeBrow from "../components/organism/EyeBrow";
 import styles from "../styles/Home.module.css";
@@ -130,8 +129,22 @@ export default function Home() {
         </div>
         <div className="lg:w-8/12 w-full lg:px-12 lg:order-2 order-1">
           <p className="text-3xl lg:text-7xl font-bold lg:leading-12  ">
-            Unlock your future by taking advantage of <a href="" className="border-b border-black " style={{paddingBottom:"-1rem"}}>Branding</a>  & <a href="" className="border-b border-black " style={{paddingBottom:"-1rem"}}>Digital marketing</a> 
-            
+            Unlock your future by taking advantage of{" "}
+            <a
+              href=""
+              className="border-b border-black "
+              style={{ paddingBottom: "-1rem" }}
+            >
+              Branding
+            </a>{" "}
+            &{" "}
+            <a
+              href=""
+              className="border-b border-black "
+              style={{ paddingBottom: "-1rem" }}
+            >
+              Digital marketing
+            </a>
           </p>
           <div>
             <p className="mt-8  text-base text-[#666666]">
@@ -306,7 +319,7 @@ export default function Home() {
       <div className="px-[1.375rem] lg:px-20 pt-32">
         <Heading text="Exclusive interviews with industry leading professionals" />
       </div>
-      <section className="flex flex-col lg:flex-row items-start px-[1.375rem] lg:px-20 mt-12">
+      <section className="flex flex-col lg:flex-row items-stretch px-[1.375rem] lg:px-20 mt-12">
         <div className="w-full lg:w-4/6">
           <iframe
             className="lg:hidden"
@@ -333,21 +346,25 @@ export default function Home() {
             <a href="https://vimeo.com">Vimeo</a>.
           </p> */}
         </div>
-        <div className="lg:w-2/6 flex flex-col justify-start ">
-          <p className="text-[#046C62] mb-8 text-[2rem] leading-tight lg:leading-[3.375rem] lg:text-[3.06rem] mt-7 lg:mt-0">
-            60 minutes with Adaeze of <u>CAV Digital</u>
-          </p>
-          <p>
-            We start by defining a clear image of exactly who you serve and
-            precisely how they think. Why? Because you can’t help people unless
-            you know them – their hopes, their fears, their problems, and their
-            pitfalls. What converts a total stranger into a die-hard fan of your
-            brand? A constant pull of value and inspiration. At this stage, we
-            map out your customer’s journey so you’ll be able to meet them at
-            their point of need before one of your competitors does.
-          </p>
-          <p> We partner with brands to take communication.</p>
-          <p className="mt-10 cursor-pointer py-3 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
+        <div className="lg:w-2/6 items-stretch flex flex-col">
+          <div>
+            <p className="text-[#046C62] mb-8 text-[2rem] leading-tight lg:leading-[3.375rem] lg:text-[3.06rem] mt-7 lg:mt-0">
+              60 minutes with Adaeze of <u>CAV Digital</u>
+            </p>
+            <p>
+              We start by defining a clear image of exactly who you serve and
+              precisely how they think. Why? Because you can’t help people
+              unless you know them – their hopes, their fears, their problems,
+              and their pitfalls. What converts a total stranger into a die-hard
+              fan of your brand? A constant pull of value and inspiration. At
+              this stage, we map out your customer’s journey so you’ll be able
+              to meet them at their point of need before one of your competitors
+              does.
+            </p>
+            <p> We partner with brands to take communication.</p>
+          </div>
+          <p className="flex flex-grow" />
+          <p className=" cursor-pointer py-3 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
             watch more
           </p>
         </div>
@@ -359,7 +376,8 @@ export default function Home() {
       </section>
       <section className="px-[1.375rem] lg:px-20 mt-20 lg:mt-32">
         <p className=" text-4xl lg:text-7xl leading-12 font-semibold">
-          Discover popular and profitable <a className="border-b-2 border-black">editorials</a>
+          Discover popular and profitable{" "}
+          <a className="border-b-2 border-black">editorials</a>
         </p>
       </section>
       <section className="mt-11 grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-y-0 lg:gap-x-8 px-[1.375rem] lg:px-20 ">
@@ -390,7 +408,7 @@ export default function Home() {
           ))}
         </div>
         <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8 ">
-          <EyeBrow text=" Explore our full catalogue"/>
+          <EyeBrow text=" Explore our full catalogue" />
           <p className="cursor-pointer mt-[0.68rem] lg:mt-0 py-3 px-12 flex justify-center text-white bg-[#502A7A] max-w-max uppercase">
             VISIT STORE
           </p>
@@ -398,9 +416,7 @@ export default function Home() {
       </section>
       <section className="lg:mt-32 mt-16 grid  grid-cols-1 lg:grid-cols-2 px-[1.375rem] lg:px-20 mb-44">
         <div className="w-full flex flex-col lg:pr-28">
-          <p className="lg:text-5xl text-3xl  font-semibold">
-            Don’t miss the next live meeting to experience growth
-          </p>
+          <EyeBrow text="Don’t miss the next live meeting to experience growth" />
           <div className="w-full grid grid-cols-2 gap-x-12  mt-10 flex-grow">
             {eventData.slice(0, 2).map((event, eventIndex) => (
               <div className="w-full flex flex-col" key={eventIndex}>
@@ -414,7 +430,7 @@ export default function Home() {
                     <span>{event.required}</span>
                   </p>
                 </div>
-                <div className="text-[#046C62] text-[1.5rem] lg:text-3xl mt-10 flex w-full flex-grow">
+                <div className="text-[#046C62] text-[1.5rem] lg:text-[3rem] lg:leading-[3.375rem] mt-10 flex w-full flex-grow">
                   {event.title}
                 </div>
                 <div className="flex items-center mt-12 ">
@@ -434,9 +450,7 @@ export default function Home() {
           </p>
         </div>
         <div className="lg:pl-28 lg:border-l-2 flex flex-col border-black">
-          <p className="lg:text-5xl text-3xl mb-8 mt-16 lg:mt-0 font-semibold">
-            Find the right job to boost your brilliant career
-          </p>
+          <EyeBrow text="Find the right job to boost your brilliant career" />
           <div className="space-y-6 flex-grow">
             {openings.map((op, opIndex) => (
               <div

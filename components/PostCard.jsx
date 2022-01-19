@@ -15,7 +15,7 @@ export default function PostCard({
   img,
 }) {
   return (
-    <Card className="border-none shadow-none">
+    <Card className="border-none shadow-none post-card">
       <div
         className="h-72 w-full relative"
         style={{
@@ -24,12 +24,12 @@ export default function PostCard({
           backgroundPosition: "center",
         }}
       >
-        <div className="z-20 absolute bottom-0 right-0 left-0 text-white  px-4 bg-[#161616B2] py-2">
+        <div className="post-title z-20 absolute bottom-0 right-0 left-0   px-4 py-2">
           <Typography
             gutterBottom
             variant="h5"
             component="div"
-            className=" w-9/12 text-[0.9rem] lg:text-base"
+            className=" w-9/12 text-[0.9rem] lg:text-[1.75rem]"
           >
             {title}
           </Typography>
@@ -37,7 +37,7 @@ export default function PostCard({
             gutterBottom
             variant="h8"
             component="div"
-            className="text-[0.6rem] lg:text-sm w-9/12 "
+            className="text-[0.6rem] lg:text-base w-9/12 "
           >
             {date}
           </Typography>
