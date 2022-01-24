@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
 import DateNTime from "../components/DateNTime";
@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import SelectVariants from "../components/Form/Select";
 import SectionHeader from "../components/organism/SectionHeader";
 import { faqs } from "../data/Faq";
+import Button from "../components/Button";
+
 const Contact = () => {
   const [activeTab, setActiveTab] = useState(-1);
 
@@ -17,7 +19,6 @@ const Contact = () => {
         title="Ready to START your journey and GROW your Business?
 "
         headerImage="contactbg.png"
-
       />
       <section className="px-5 lg:px-20 py-16">
         <h1 className="text-6xl">FAQs</h1>
@@ -28,7 +29,9 @@ const Contact = () => {
           {faqs.map((faq, faqIndex) => (
             <div key={`faq-${faqIndex}`}>
               <div className="flex  gap-x-7 items-end border-b border-black px-4 py-2 ">
-                <span className="font-semibold text-xs lg:text-lg flex-grow">{faq.que}</span>
+                <span className="font-semibold text-xs lg:text-lg flex-grow">
+                  {faq.que}
+                </span>
                 <div
                   className="cursor-pointer h-full w-12 flex justify-end "
                   onClick={() => {
@@ -49,7 +52,10 @@ const Contact = () => {
               </div>
 
               {activeTab == faqIndex ? (
-                <p className="pt-6 pb-10 text-xs lg:text-base"> {faqs[faqIndex].ans}</p>
+                <p className="pt-6 pb-10 text-xs lg:text-base">
+                  {" "}
+                  {faqs[faqIndex].ans}
+                </p>
               ) : (
                 ""
               )}
@@ -58,9 +64,9 @@ const Contact = () => {
         </div>
       </section>
       <section className="px-5  lg:px-20 mt-7">
-                    <p className="text-3xl lg:w-3/5 pr-12 lg:text-6xl">
-              We can help you with the process. Let's talk.
-            </p>
+        <p className="text-3xl lg:w-3/5 pr-12 lg:text-6xl">
+          We can help you with the process. Let's talk.
+        </p>
 
         <div className="flex items-center lg:flex-row flex-col">
           <form
@@ -108,24 +114,19 @@ const Contact = () => {
             />
 
             <div className="col-span-2 mt-16">
-              <Button
-                style={{
-                  backgroundColor: "#502A7A",
-                }}
-                variant="contained"
-                className="w-64 py-4 hover:opacity-90"
-              >
-                SUBMIT
-              </Button>
+              <div className="w-64">
+                <Button label="SUBMIT" />
+              </div>
             </div>
           </form>
           <div className="order-1 lg:order-2">
-          <Image 
-            src="/vectors/blogger.svg"
-            alt="Avatar"
-            width={517}
-            height={688}
-          /></div>
+            <Image
+              src="/vectors/blogger.svg"
+              alt="Avatar"
+              width={517}
+              height={688}
+            />
+          </div>
         </div>
       </section>
       <Footer />

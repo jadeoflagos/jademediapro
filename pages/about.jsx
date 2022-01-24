@@ -1,10 +1,7 @@
-import { Button, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-// import CompanyButtons from "../components/CompanyButtons";
 import Footer from "../components/Footer";
-import SelectVariants from "../components/Form/Select";
-import Navbar from "../components/Navbar";
 import CompanyButtons from "../components/CompanyButtons";
 import {
   MobileTimePickerComponent,
@@ -18,6 +15,7 @@ import {
   DatePickerComponent,
   MobileDatePickerComponent,
 } from "../components/DatePicker";
+import Button from "../components/Button";
 const About = () => {
   return (
     <div>
@@ -163,13 +161,15 @@ const About = () => {
             ))}
           </div>
           <div className="flex justify-between items-center">
-            <p className=" bg-[#502A7A] w-6/12  h-11 lg:h-16 flex items-center justify-center cursor-pointer text-white uppercase text-xs lg:text-base">
-              Donate Now
-            </p>
+
+            <div className="  w-6/12 ">
+              <Button label=" Donate Now" />
+             
+            </div>
             <span className="w-2/12" />
-            <p className="border flex items-center justify-center border-[#8A57A3] h-11 lg:h-16 w-4/12 cursor-pointer text-xs lg:text-base">
-              SHARE
-            </p>
+            <div className="w-4/12">
+            <Button outline label="SHARE" /></div>
+           
           </div>
         </div>
       </section>
@@ -282,16 +282,9 @@ const About = () => {
               looking for creative people that share our company's basic values
               of excellence.
             </div>
-            <Button
-              variant="contained"
-              style={{
-                backgroundColor: "#502A7A",
-              }}
-              variant="contained"
-              className="w-3/5  py-4 hover:opacity-90"
-            >
-              APPLY NOW
-            </Button>
+            <div className="w-64"><Button label="APPLY NOW"  /></div>
+            
+              
           </div>
           <div className=" lg:w-1/2 flex justify-center order-1 lg:order-2 py-5 lg:py-0">
             <Image
@@ -406,16 +399,11 @@ const About = () => {
               />
             </div>
             <div className="col-span-2 mt-12">
-              <Button
-                variant="contained"
-                style={{
-                  backgroundColor: "#502A7A",
-                }}
-                variant="contained"
-                className="lg:w-3/5 w-auto py-4 hover:opacity-90"
-              >
-                Book Appointment
-              </Button>
+              <div className="lg:w-3/5 w-auto">
+              <Button label="Book Appointment"/>
+
+              </div>
+
             </div>
           </form>
           <div className="lg:w-2/5 flex items-start lg:order-2 order-1">

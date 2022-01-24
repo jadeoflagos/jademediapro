@@ -1,7 +1,6 @@
-import { Button, Input } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-
+import Button from "./Button";
 const DailyEmailForm = () => {
   const ariaLabel = { "aria-label": "description" };
 
@@ -18,17 +17,9 @@ const DailyEmailForm = () => {
         />
         <div className=" flex justify-between">
           <span />
-          <Button
-            variant="contained"
-            style={{
-              backgroundColor: "#0DFFE5",
-              color: "black",
-            }}
-            variant="contained"
-            className="hover:opacity-90 whitespace-nowrap  w-1/2"
-          >
-            SUBMIT
-          </Button>
+          <div className="w-1/2">
+            <Button label="SUBMIT" greenBtn />
+          </div>
         </div>
       </form>
     </div>
