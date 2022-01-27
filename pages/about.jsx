@@ -29,7 +29,7 @@ const About = () => {
               broad spectrum of advantages."
       />
 
-      <div className=" items-center lg:px-20 px-5 mt-12 lg:mt-28 mb-14 lg:grid lg:grid-cols-2 lg:gap-x-20">
+      <div className=" items-center lg:px-20 px-5 mt-12 lg:mt-28 mb-14 lg:grid lg:grid-cols-2 lg:gap-x-44">
         <div className="mb-5 lg:mb-0">
           <p className="text-lg lg:text-5xl mb-5 lg:mb-10">Our Identity</p>
           <div className="lg:text-black text-[#666666]">
@@ -77,7 +77,10 @@ const About = () => {
             height={88}
           />
           {wwhighlight.map((dat, datIndex) => (
-            <div className="mt-2 lg:flex lg:flex-col text-xs lg:text-base" key={`data-${datIndex}`}>
+            <div
+              className="mt-2 lg:flex lg:flex-col text-xs lg:text-base"
+              key={`data-${datIndex}`}
+            >
               <span className="lg:text-xl font-semibold">{dat.heading} </span>
               <span>{dat.desc}</span>
             </div>
@@ -124,7 +127,11 @@ const About = () => {
       </section>
       <section className="px-5 lg:px-20 mt-16 lg:mt-32">
         <p className="mb-10 text-sm lg:text-4xl">Volunteering</p>
-        <EyeBrow text="Bridging Africa’s transition from the analog age to the Digital age by Training young Professionals and solving Digital challenges at individual and corporate levels." />
+        <p className="text-[2.8rem] leading-[3.375rem] font-semibold">
+          Bridging Africa’s transition from the analog age to the Digital age by
+          Training young Professionals and solving Digital challenges at
+          individual and corporate levels."
+        </p>
         {/* <p className="text-5xl leading-tight font-bold">
           Bridging Africa’s transition from the analog age to the Digital age by
           Training young Professionals and solving Digital challenges at
@@ -161,15 +168,13 @@ const About = () => {
             ))}
           </div>
           <div className="flex justify-between items-center">
-
             <div className="  w-6/12 ">
               <Button label=" Donate Now" />
-             
             </div>
             <span className="w-2/12" />
             <div className="w-4/12">
-            <Button outline label="SHARE" /></div>
-           
+              <Button outline label="SHARE" />
+            </div>
           </div>
         </div>
       </section>
@@ -273,7 +278,8 @@ const About = () => {
                         alt="Avatar"
                         width={24}
                         height={24}
-                      /></div>
+                      />
+                    </div>
                     <span>{opportunity}</span>
                   </div>
                 ))}
@@ -282,9 +288,9 @@ const About = () => {
               looking for creative people that share our company's basic values
               of excellence.
             </div>
-            <div className="w-64"><Button label="APPLY NOW"  /></div>
-            
-              
+            <div className="w-64">
+              <Button label="APPLY NOW" />
+            </div>
           </div>
           <div className=" lg:w-1/2 flex justify-center order-1 lg:order-2 py-5 lg:py-0">
             <Image
@@ -400,10 +406,8 @@ const About = () => {
             </div>
             <div className="col-span-2 mt-12">
               <div className="lg:w-3/5 w-auto">
-              <Button label="Book Appointment"/>
-
+                <Button label="Book Appointment" />
               </div>
-
             </div>
           </form>
           <div className="lg:w-2/5 flex items-start lg:order-2 order-1">
