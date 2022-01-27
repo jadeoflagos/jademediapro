@@ -205,21 +205,23 @@ export default function Home() {
         <div className="hidden lg:w-4/12 w-full lg:flex flex-row  items-center lg:items-start lg:flex-col text-white space-y-8 ">
           {idea.map((i, index) => (
             <div
-              className="flex flex-col cursor-pointer lg:flex-row items-center space-x-10"
+              className={`flex flex-col cursor-pointer lg:flex-row items-center space-x-10 ${
+                activeIdea !== index ? " hover:scale-150" : ""
+              }`}
               key={index}
               onClick={() => setActiveIdea(index)}
             >
               <span
                 className={` order-2 lg:order-1 ${
                   activeIdea == index
-                    ? "w-4 h-4 border p-2"
+                    ? "w-3 h-3 border p-2"
                     : " w-2 h-2 bg-opacity-50"
                 }  rounded-full bg-white `}
               />
               <p
                 className={`border-b order-1 lg:order-2 ${
                   activeIdea == index
-                    ? "text-7xl font-bold border-white"
+                    ? "text-[3.1875rem]"
                     : "text-xl font-light border-transparent"
                 }  `}
               >

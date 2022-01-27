@@ -2,9 +2,7 @@ import React from "react";
 
 const Heading = ({ text }) => {
   return (
-    <p
-      className="text-3xl lg:text-[6.5rem] font-semibold lg:leading-13 "
-    >
+    <p className="text-3xl lg:text-[4.27rem] font-semibold lg:leading-[5.3rem] ">
       {text}
     </p>
   );
