@@ -1,5 +1,6 @@
 import React from "react";
 import LikeIcon from "./vectors/LikeIcon";
+import SmallLikeIcon from "./vectors/SmallLikeIcon";
 const Product = ({ title, img, price, delivery }) => {
   return (
     <div>
@@ -11,8 +12,11 @@ const Product = ({ title, img, price, delivery }) => {
           backgroundPosition: "center",
         }}
       >
-        <span className="w-3 h-3 lg:h-16 lg:w-16 flex items-center justify-center rounded-full bg-white ">
+        <span className="h-16 w-16 hidden lg:flex items-center justify-center rounded-full bg-white ">
           <LikeIcon />
+        </span>
+        <span className="h-[1.8rem] w-[1.8rem] flex  lg:hidden items-center justify-center rounded-full bg-white ">
+          <SmallLikeIcon />
         </span>
       </div>
 

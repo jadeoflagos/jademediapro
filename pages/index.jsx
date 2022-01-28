@@ -70,9 +70,9 @@ export default function Home() {
         <div>
           <Navbar dropDownBg="black" textColor="white" />
         </div>
-        <div className="py-20 lg:max-w-[65%]  text-white flex flex-col justify-center px-8 lg:px-20">
+        <div className="py-20 lg:max-w-[63rem]  text-white flex flex-col justify-center px-8 lg:px-20">
           <p
-            className={`${styles.headerFamily} font-black text-5xl lg:text-[7rem]`}
+            className={`${styles.headerFamily} font-black text-5xl lg:text-[8.5rem]`}
           >
             {Header.title}
           </p>
@@ -265,14 +265,14 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-x-6 mt-10">
             <Image
-              src="/images/ideate-left.png"
+              src={`/images/ideas/${idea[activeIdea]}-Left.png`}
               width={485}
               height={259}
               alt="ideate1-img"
             />{" "}
             <span className="hidden lg:inline">
               <Image
-                src="/images/ideate-right.png"
+                src={`/images/ideas/${idea[activeIdea]}-right.png`}
                 width={485}
                 height={259}
                 alt="ideate2-img"
@@ -298,7 +298,7 @@ export default function Home() {
           </p>
           <span className="block lg:hidden mb-[1.667rem]">
             <Image
-              src="/images/ideate-right.png"
+              src={`/images/ideas/${idea[activeIdea]}-right.png`}
               alt="Avatar"
               width={485}
               height={259}
