@@ -1,4 +1,4 @@
-import { TextField } from "@mui/material";
+import { TextareaAutosize, TextField } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import Footer from "../components/Footer";
@@ -29,9 +29,11 @@ const About = () => {
               broad spectrum of advantages."
       />
 
-      <div className=" items-center lg:px-20 px-5 mt-12 lg:mt-28 mb-14 lg:grid lg:grid-cols-2 lg:gap-x-44">
+      <div className="items-center lg:px-20 px-5 mt-12 lg:mt-28 mb-14 lg:grid lg:grid-cols-2 lg:gap-x-44">
         <div className="mb-5 lg:mb-0">
-          <p className="text-lg lg:text-5xl mb-5 lg:mb-10">Our Identity</p>
+          <p className="text-lg lg:text-[2.18rem] mb-5 lg:mb-10">
+            Our Identity
+          </p>
           <div className="lg:text-black text-[#666666]">
             <p>
               Our origin lies in 2016 as Jade Grafix operating from a very small
@@ -341,7 +343,7 @@ const About = () => {
         </div>
       </section>
       <p className="lg:px-20  px-5 text-base lg:text-4xl mt-48 mb-8">
-        Our Clients{" "}
+        Our Clients
       </p>
       <CompanyButtons />
       <section className="px-5 lg:px-20 lg:grid grid-cols-3 gap-x-20 space-y-4 lg:space-y-0 my-24">
@@ -397,12 +399,12 @@ const About = () => {
               <MobileDatePickerComponent />
             </div>
             <div className="col-span-2">
-              <TextField
-                fullWidth
-                id="standard-basic"
-                label="Message"
-                variant="standard"
-              />
+              <textarea
+                name=""
+                id=""
+                className="border-b border-gray-500 focus:outline-none w-full resize-none"
+                placeholder="Message"
+              ></textarea>
             </div>
             <div className="col-span-2 mt-12">
               <div className="lg:w-3/5 w-auto">
