@@ -7,18 +7,17 @@ import { useState } from "react";
 import PostCard from "../components/PostCard";
 import ServicesCarousel from "../components/ServicesCarousel";
 import Product from "../components/Product";
-import { eventData } from "../data";
+import { eventData, ideaData } from "../data";
 import Link from "next/link";
 import { Header } from "../data/HomePage";
 import EyeBrow from "../components/organism/EyeBrow";
 import styles from "../styles/Home.module.css";
 
-import unlockFuture from "../public/images/layer.png";
+import unlockFuture from "../public/gifs/Unlock Your Future.gif";
 import Heading from "../components/organism/Heading";
 import Button from "../components/Button";
 
 export default function Home() {
-  const idea = ["Research", "Ideate", "Design", "Implement", "Result"];
   const [activeIdea, setActiveIdea] = useState(1);
   const openings = [
     {
@@ -72,7 +71,7 @@ export default function Home() {
         </div>
         <div className="py-20 lg:max-w-[63rem]  text-white flex flex-col justify-center px-8 lg:px-20">
           <p
-            className={`${styles.headerFamily} font-black text-5xl lg:text-[8.5rem]`}
+            className={`${styles.headerFamily} font-bold text-5xl lg:text-[8.5rem]`}
           >
             {Header.title}
           </p>
@@ -88,7 +87,7 @@ export default function Home() {
       <div className="w-full py-24 flex flex-col lg:flex-row items-center px-8">
         <div className="lg:w-4/12 w-full lg:order-1 order-2">
           <div className="hidden lg:flex lg:justify-center">
-            <Illus />
+            <Image src={unlockFuture} alt="unlock-future" />
           </div>
           <div className="lg:hidden my-8">
             <Image src={unlockFuture} alt="unlock-future" />
@@ -129,10 +128,10 @@ export default function Home() {
           </div>
         </div>
         <div className="lg:w-8/12 w-full lg:px-12 lg:order-2 order-1">
-          <p className="text-3xl lg:text-7xl font-bold lg:leading-12  ">
+          <p className="text-3xl lg:text-7xl font-semibold lg:leading-12  ">
             Unlock your future by taking advantage of{" "}
             <a
-              href=""
+              href="/projects"
               className="border-b border-black "
               style={{ paddingBottom: "-1rem" }}
             >
@@ -140,7 +139,7 @@ export default function Home() {
             </a>{" "}
             &{" "}
             <a
-              href=""
+              href="/projects"
               className="border-b border-black "
               style={{ paddingBottom: "-1rem" }}
             >
@@ -201,9 +200,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full py-24 flex flex-col lg:flex-row items-center lg:px-20 bg-[#502A7A]">
-        <div className="hidden lg:w-4/12 w-full lg:flex flex-row  items-center lg:items-start lg:flex-col text-white space-y-8 ">
-          {idea.map((i, index) => (
+      <div className="w-full py-24 flex flex-col lg:flex-row items-center lg:px-8  bg-[#502A7A]">
+        <div className="hidden lg:w-4/12 lg:pl-12 w-full lg:flex flex-row  items-center lg:items-start lg:flex-col text-white space-y-8 ">
+          {ideaData.map((i, index) => (
             <div
               className={`flex flex-col cursor-pointer lg:flex-row items-center space-x-10 ${
                 activeIdea !== index ? " hover:scale-150" : ""
@@ -225,20 +224,20 @@ export default function Home() {
                     : "text-xl font-light border-transparent"
                 }  `}
               >
-                {i}
+                {i.title}
               </p>
             </div>
           ))}
         </div>
         <div className=" lg:w-8/12 w-screen px-[1.375rem] lg:px-12 text-white">
-          <p className="text-[2.67rem] lg:text-5xl font-bold ">
+          <p className="text-[2.67rem] lg:max-w-[64.25rem] lg:text-7xl font-semibold  leading-12">
             Our five foundational process to create your strategic brand’s
             success
           </p>
           <div
             className={`${styles.ideaMobile}  w-full my-4 flex flex-row items-center text-white space-x-8 lg:hidden overflow-x-auto`}
           >
-            {idea.map((i, index) => (
+            {ideaData.map((i, index) => (
               <div
                 onClick={() => setActiveIdea(index)}
                 className="flex cursor-pointer text-[1.08rem] flex-col items-center "
@@ -247,11 +246,11 @@ export default function Home() {
                 <p
                   className={`border-b ${
                     activeIdea == index
-                      ? "text-[2.67rem] font-bold border-white"
+                      ? "text-7xl font-bold border-white"
                       : " font-light border-transparent"
                   }  `}
                 >
-                  {i}
+                  {i.title}
                 </p>
                 <span
                   className={` ${
@@ -265,52 +264,36 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-x-6 mt-10">
             <Image
-              src={`/images/ideas/${idea[activeIdea]}-Left.png`}
+              src={`/images/ideas/${ideaData[activeIdea].title}-Left.png`}
               width={485}
               height={259}
               alt="ideate1-img"
             />{" "}
-            <span className="hidden lg:inline">
+            <span className="hidden lg:flex items-center">
               <Image
-                src={`/images/ideas/${idea[activeIdea]}-right.png`}
+                src={`/images/ideas/${ideaData[activeIdea].title}-right.png`}
                 width={485}
                 height={259}
                 alt="ideate2-img"
               />
             </span>
           </div>
-          <p className="py-8">
-            After we’ve examined all potential causes of the problem and have
-            used those questions to boil down exactly what you’re trying to
-            solve, it’s time to focus and consolidate values, business
-            aspirations, vision for the future and then align an effective
-            solution with your vision. Also, we put ourselves in your buyer’s
-            position by creating a narrative about them using statistics and
-            research data about your target audience like; ‘Where do they
-            shop?’, ‘What do they do for fun?’, ‘Which social media channels do
-            they use?’. Knowing these will help us optimize your branding and
-            marketing decisions. This process phase entails brainstorming
-            numerous ideas in a team discussion, selecting the best idea(s),
-            working to develop a plan to implement the idea, and finally putting
-            the idea into practice to set the tone of your communication, and
-            provide a unifying force to develop your brand values and business
-            direction.
-          </p>
+          <p className="py-8">{ideaData[activeIdea].content}</p>
           <span className="block lg:hidden mb-[1.667rem]">
             <Image
-              src={`/images/ideas/${idea[activeIdea]}-right.png`}
+              src={`/images/ideas/${ideaData[activeIdea].title}-right.png`}
               alt="Avatar"
               width={485}
               height={259}
               alt="ideate2-img"
             />
           </span>
-          <div className="w-[25.9rem]">
+          <div className="w-[25.93rem]">
             <Button label="Get your Brand process" greenBtn />
           </div>
         </div>
       </div>
-      <div className="px-[1.375rem] lg:px-20 pt-32">
+      <div className="px-[1.375rem] max-w-[101rem] lg:px-20 pt-32">
         <Heading
           text="Put money, attention, and resources where it's most effective to
         generate income"
@@ -322,8 +305,8 @@ export default function Home() {
       <div className="px-[1.375rem] lg:px-20 pt-32">
         <Heading text="Exclusive interviews with industry leading professionals" />
       </div>
-      <section className="flex flex-col lg:flex-row items-stretch px-[1.375rem] lg:px-20 mt-12">
-        <div className="w-full lg:w-4/6">
+      <section className="flex flex-col lg:flex-row items-stretch px-[1.375rem] lg:pl-[1.4rem] mt-12">
+        <div className="mr-[5.5rem]">
           <iframe
             className="lg:hidden"
             src="https://player.vimeo.com/video/636370372?h=734c780ecc"
@@ -420,7 +403,7 @@ export default function Home() {
       <section className="lg:mt-32 mt-16 grid  grid-cols-1 lg:grid-cols-2 px-[1.375rem] lg:px-20 mb-44">
         <div className="w-full flex flex-col lg:pr-28">
           <EyeBrow text="Don’t miss the next live meeting to experience growth" />
-          <div className="w-full grid grid-cols-2 gap-x-12  mt-10 ">
+          <div className="w-full grid grid-cols-2 gap-x-12  mt-20 ">
             {eventData.slice(0, 2).map((event, eventIndex) => (
               <div className="w-full flex flex-col" key={eventIndex}>
                 <div className="flex items-end space-x-1 lg:space-x-5">
