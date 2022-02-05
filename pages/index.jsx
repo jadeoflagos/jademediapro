@@ -69,13 +69,13 @@ export default function Home() {
         <div>
           <Navbar dropDownBg="black" textColor="white" />
         </div>
-        <div className="py-20 lg:max-w-[63rem]  text-white flex flex-col justify-center px-8 lg:px-[6.45rem]">
+        <div className="py-20 lg:max-w-[56%]  text-white flex flex-col justify-center px-8 lg:px-20">
           <p
             className={`${styles.headerFamily} font-bold text-5xl lg:text-[6rem]`}
           >
             {Header.title}
           </p>
-          <p className="my-10 text-base lg:text-[1.33rem] lg:max-w-[45.31rem] font-normal">
+          <p className="my-10 text-base lg:text-[1.33rem] font-normal">
             {Header.subTitle}
           </p>
           <div className="w-[13.61rem]">
