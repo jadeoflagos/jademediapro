@@ -29,12 +29,12 @@ const About = () => {
               broad spectrum of advantages."
       />
 
-      <div className="items-center lg:px-20 px-5 mt-12 lg:mt-28 mb-14 lg:grid lg:grid-cols-2 lg:gap-x-44">
-        <div className="mb-5 lg:mb-0">
-          <p className="text-lg lg:text-[2.18rem] mb-5 lg:mb-10">
-            Our Identity
-          </p>
-          <div className="lg:text-black text-[#666666]">
+      <div className="items-center lg:px-20 px-5 mt-12 lg:mt-28 mb-14   ">
+        <p className="text-lg lg:text-[2.18rem] mb-5 lg:mb-10 col-span-2">
+          Our Identity
+        </p>
+        <div className="lg:flex lg:space-x-[4.8rem] justify-items-stretch items-stretch ">
+          <div className="lg:text-black text-[#666666] lg:w-[54%]">
             <p>
               Our origin lies in 2016 as Jade Grafix operating from a very small
               room. Today we are Africa's most renowned content-creation graphic
@@ -56,16 +56,18 @@ const About = () => {
               impactful experiences for our clients.
             </p>
           </div>
-        </div>
-        <EyeBrow
-          text="We are on a Mission to help our clients achieve excellence using
+          <div className="flex self-stretch lg:w-[46%]">
+            <EyeBrow
+              text="We are on a Mission to help our clients achieve excellence using
           sustainable digital strategies"
-        />
+            />
+          </div>
+        </div>
       </div>
       <div
         className="w-screen h-24 lg:h-[25rem]"
         style={{
-          background: `url("/images/aboutbg1.png")`,
+          background: `url("/images/about-ouridentity.jpeg")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -296,7 +298,7 @@ const About = () => {
           </div>
           <div className=" lg:w-1/2 flex justify-center order-1 lg:order-2 py-5 lg:py-0">
             <Image
-              src="/images/careerpeople.png"
+              src="/images/About-CareerDevelopment-image.jpeg"
               alt="Avatar"
               width={650}
               height={500}
