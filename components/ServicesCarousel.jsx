@@ -13,13 +13,16 @@ const Card = ({ title, description, gif }) => {
           className="w-full h-full"
         />
       </span>
-      <p className="text-3xl">{title}</p>
-      <span className="flex-grow flex items-end mb-4">{description}</span>
+      <p className="text-2xl mb-[0.38rem] font-semibold">{title}</p>
+      <span className="text-[0.94rem] items-end mb-4">{description}</span>
+      <span className="flex-grow" />
       <Button
         variant="contained"
         style={{
           backgroundColor: "#0DFFE5",
           color: "black",
+          width: "9.46rem",
+          fontSize: "0.94rem",
         }}
         variant="contained"
         className="py-4 hover:opacity-90"
@@ -102,15 +105,12 @@ const ServicesCarousel = () => {
       <div className=" mt-12">
         <Carousel
           ref={handleCarouselClick}
-          swipeable={false}
-          draggable={false}
           responsive={responsive}
           customTransition="all .5"
           transitionDuration={500}
           itemClass="margin-right"
           showDots={false}
           arrows={false}
-          // slidesToSlide={2}
         >
           {services.map((service, serviceIndex) => (
             <div className="flex h-full" key={`service-${serviceIndex}`}>

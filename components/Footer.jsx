@@ -93,7 +93,9 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <p className="text-7xl">Stay connected to infinite support</p>{" "}
+            <p className="text-[3.2rem] max-w-[17.92rem] leading-[3.5rem]">
+              Stay connected to infinite support
+            </p>{" "}
             <div className="w-full mt-14">
               <Button label="JOIN OUR NEWSLETTER" greenBtn />
             </div>
@@ -112,10 +114,8 @@ const Footer = () => {
         </div>
         <div className="text-white mt-10 grid grid-cols-2 items-end">
           <div className="flex items-center">
-            <span className="border-b">(123) 456-7890</span>
-            <span className="border-b ml-9">
-              solutions@jademediapro.agency{" "}
-            </span>
+            <span className="border-b">(+234) 902 771 0233</span>
+            <span className="border-b ml-9">solutions@jademediapro.com </span>
           </div>
           <div>
             <p>Connect with us on our platforms:</p>
@@ -275,8 +275,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="py-8 text-xs space-y-4 ">
-          <p className="border-b max-w-max">(123) 456-7890</p>
-          <p className="border-b max-w-max">solutions@jademediapro.agency</p>
+          <p className="border-b max-w-max">(+234) 902 771 0233</p>
+          <p className="border-b max-w-max">solutions@jademediapro.com</p>
         </div>
         <div className="mt-10">
           <p>Connect with us on our platforms:</p>

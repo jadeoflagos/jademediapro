@@ -17,7 +17,7 @@ export default function PostCard({
   return (
     <Card className="border-none shadow-none post-card">
       <div
-        className="h-72 w-full relative"
+        className="h-56 w-full relative"
         style={{
           background: `url("/images/computer.png")`,
           backgroundSize: "cover",
@@ -29,7 +29,7 @@ export default function PostCard({
             gutterBottom
             variant="h5"
             component="div"
-            className=" w-9/12 text-[0.9rem] lg:text-[1.75rem]"
+            className=" w-9/12 text-[0.9rem] lg:text-[1.24rem]"
           >
             {title}
           </Typography>
@@ -37,7 +37,7 @@ export default function PostCard({
             gutterBottom
             variant="h8"
             component="div"
-            className="text-[0.6rem] lg:text-base w-9/12 "
+            className="text-[0.6rem] lg:text-[0.7rem] w-9/12 "
           >
             {date}
           </Typography>
@@ -50,7 +50,11 @@ export default function PostCard({
         alt="green iguana"
       /> */}
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          className="text-[0.9rem]"
+        >
           {desc}
         </Typography>
       </CardContent>

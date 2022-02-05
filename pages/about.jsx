@@ -34,7 +34,7 @@ const About = () => {
           Our Identity
         </p>
         <div className="lg:flex lg:space-x-[4.8rem] justify-items-stretch items-stretch ">
-          <div className="lg:text-black text-[#666666] lg:w-[54%]">
+          <div className="lg:text-black text-[#666666] text-[0.9rem] lg:w-[54%]">
             <p>
               Our origin lies in 2016 as Jade Grafix operating from a very small
               room. Today we are Africa's most renowned content-creation graphic
@@ -142,22 +142,39 @@ const About = () => {
           individual and corporate levels.
         </p> */}
       </section>
-      <section className="lg:grid lg:grid-cols-2 px-5 lg:px-20 lg:py-20 py-4">
+      <section className="lg:grid lg:grid-cols-[36rem,1fr] lg:gap-x-[3.875rem] px-5 lg:px-20 lg:py-20 py-4">
         <div>
-          <video width="900" height="450" controls>
-            <source src="/arcnet.mp4" type="video/mp4" />
-          </video>
+          <iframe
+            className="lg:hidden"
+            src="https://player.vimeo.com/video/672077617?h=d303fb69fb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+          <iframe
+            src="https://player.vimeo.com/video/672077617?h=d303fb69fb&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            width="571"
+            height="321"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Parnership-video.mp4"
+          ></iframe>
         </div>
-        <div className="lg:mx-20">
-          <p className="text-[#666666] text-xs lg:text-xl mt-4 lg:mt-0">
-            In a world of uncontrolled population and widespread poverty, The
-            case of individuals being brought up without access to the basic
-            standards of living required for proper development is not
-            far-fetched. This problem would, without doubt, lead to stunting of
-            human development as such persons account for a great part of the
-            population and inevitably the state of affairs of society.
+        <div className="w-full lg:flex lg:flex-col">
+          <p className="text-[#666666] text-xs lg:text-[0.9rem] lg:leading-5 mt-4 lg:mt-0">
+            Individuals being raised without access to the fundamental
+            conditions of living essential for normal development is not a
+            far-fetched scenario in a world of uncontrolled population, social
+            unrest, and widespread poverty. This is why, as ardent believers in
+            each individual as the building block of any society, we have chosen
+            to take it upon ourselves to ensure that everyone has unhindered
+            access to high-quality living and enhance the overall quality of
+            global development.
           </p>
-          <div className="flex items-center space-x-4 justify-between my-10 px-3 lg:px-0">
+          <div className="flex items-center space-x-4 justify-between flex-grow px-3 lg:px-0">
             {[
               { text: "$ 1.2M", desc: "funded" },
               { text: "1.6K", desc: "volunteers" },
@@ -184,7 +201,7 @@ const About = () => {
       </section>
       <section className="lg:px-20 px-5 mt-10 flex flex-col items-start">
         <p className="text-4xl">The Team</p>
-        <div className="w-full hidden lg:flex justify-between mt-6">
+        <div className="w-full hidden lg:flex justify-between mt-6 gap-x-[3.6rem]">
           {team.slice(0, 3).map((teammember, memberIndex) => (
             <div
               key={`member-${memberIndex}`}
@@ -221,7 +238,7 @@ const About = () => {
         <div className="my-8 ">
           <EyeBrow text="We are a team. We love what we do. Simple." />
         </div>
-        <div className="hidden w-full lg:flex justify-between mt-6">
+        <div className="hidden w-full lg:flex justify-between gap-x-[3.6rem] mt-6">
           {team.slice(3).map((teammember, memberIndex) => (
             <div
               key={`member-${memberIndex}`}
@@ -262,7 +279,7 @@ const About = () => {
           We exist for your Growth and Success. Got what it takes?
           <span className="text-[#046C62]"> Join our Team today</span>
         </p>
-        <div className="flex flex-col lg:flex-row lg:space-x-16">
+        <div className="flex flex-col lg:flex-row lg:space-x-[6.6rem]">
           <div className="lg:w-1/2 flex flex-col h-full order-2 lg:order-1">
             <div className="mb-6 flex-grow">
               Professional opportunities for career growth and improvement in
@@ -308,8 +325,8 @@ const About = () => {
       </section>
       <section className="px-5 lg:px-20 mt-20 lg:mb-20 mb-64">
         <h3 className="text-xs lg:text-4xl">Testimonials</h3>
-        <div className="lg:grid grid-cols-2 gap-x-20 my-6">
-          <p className="text-3xl lg:text-5xl font-semibold">
+        <div className="lg:grid grid-cols-2 gap-x-[6.6rem] my-6">
+          <p className="text-3xl lg:text-[2.8rem] font-semibold lg:leading-[3.375rem] lg:pr-10">
             Many people have already seen how working with Jade Media Pro has
             enabled them to rebrand and grow their businesses.
           </p>
