@@ -43,8 +43,13 @@ export default function PostCard({
           </Typography>
         </div>
       </div>
-
-      <div className="mt-6">
+      {/* <CardMedia
+        component="img"
+        height="140"
+        image="/images/computer.png"
+        alt="green iguana"
+      /> */}
+      <CardContent>
         <Typography
           variant="body2"
           color="text.secondary"
@@ -52,13 +57,15 @@ export default function PostCard({
         >
           {desc}
         </Typography>
-      </div>
-      <Button size="small" className="text-black">
-        Read More
-      </Button>
-      <IconButton aria-label="add to favorites">
-        <ArrowIcon />
-      </IconButton>
+      </CardContent>
+      <CardActions>
+        <Button size="small" className="text-black">
+          Read More
+        </Button>
+        <IconButton aria-label="add to favorites">
+          <ArrowIcon />
+        </IconButton>
+      </CardActions>
     </Card>
   );
 }
