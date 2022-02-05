@@ -93,7 +93,9 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <p className="text-7xl">Stay connected to infinite support</p>{" "}
+            <p className="text-[3.2rem] max-w-[17.92rem] leading-[3.5rem]">
+              Stay connected to infinite support
+            </p>{" "}
             <div className="w-full mt-14">
               <Button label="JOIN OUR NEWSLETTER" greenBtn />
             </div>

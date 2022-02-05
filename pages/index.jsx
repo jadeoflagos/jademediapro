@@ -69,16 +69,16 @@ export default function Home() {
         <div>
           <Navbar dropDownBg="black" textColor="white" />
         </div>
-        <div className="py-20 lg:max-w-[63rem]  text-white flex flex-col justify-center px-8 lg:px-20">
+        <div className="py-20 lg:max-w-[63rem]  text-white flex flex-col justify-center px-8 lg:px-[6.45rem]">
           <p
-            className={`${styles.headerFamily} font-bold text-5xl lg:text-[8.5rem]`}
+            className={`${styles.headerFamily} font-bold text-5xl lg:text-[6rem]`}
           >
             {Header.title}
           </p>
-          <p className="my-10 text-base lg:text-2xl font-normal">
+          <p className="my-10 text-base lg:text-[1.33rem] lg:max-w-[45.31rem] font-normal">
             {Header.subTitle}
           </p>
-          <div className="w-[19rem]">
+          <div className="w-[13.61rem]">
             <Button label="VIEW PROJECTS" greenBtn />
           </div>
         </div>
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
         </div>
         <div className="lg:w-8/12 w-full lg:px-12 lg:order-2 order-1">
-          <p className="text-3xl lg:text-7xl font-semibold lg:leading-12  ">
+          <p className="text-3xl lg:text-5xl font-semibold lg:leading-[3.9rem]  ">
             Unlock your future by taking advantage of{" "}
             <a
               href="/projects"
@@ -146,8 +146,8 @@ export default function Home() {
               Digital marketing
             </a>
           </p>
-          <div>
-            <p className="mt-8  text-base text-[#666666]">
+          <div className="text-[0.94rem]">
+            <p className="mt-8   text-[#666666]">
               Few businesses live the test of time. Many businesses are
               struggling with different strategies and identifying which one
               truly fits. All sorts of brands - personal, entrepreneurial, or
@@ -182,7 +182,10 @@ export default function Home() {
               a new business or you already have an existing business.
             </p>
             <div className="  mt-8 lg:flex items-center hidden">
-              <p className="mr-1 text-xl " style={{ fontWeight: "bolder" }}>
+              <p
+                className="mr-1 text-[0.94rem] "
+                style={{ fontWeight: "bolder" }}
+              >
                 Find out more about what is Branding and how does it help your
                 Business?
               </p>
@@ -230,7 +233,7 @@ export default function Home() {
           ))}
         </div>
         <div className=" lg:w-8/12 w-screen px-[1.375rem] lg:px-12 text-white">
-          <p className="text-[2.67rem] lg:max-w-[64.25rem] lg:text-7xl font-semibold  leading-12">
+          <p className="text-[2.67rem] lg:max-w-[64.25rem] lg:text-[3.2rem] font-semibold  leading-[3.9rem]">
             Our five foundational process to create your strategic brand’s
             success
           </p>
@@ -240,13 +243,13 @@ export default function Home() {
             {ideaData.map((i, index) => (
               <div
                 onClick={() => setActiveIdea(index)}
-                className="flex cursor-pointer text-[1.08rem] flex-col items-center "
+                className="flex cursor-pointer text-[0.94rem] flex-col items-center font-normal"
                 key={index}
               >
                 <p
                   className={`border-b ${
                     activeIdea == index
-                      ? "text-7xl font-bold border-white"
+                      ? "text-[3.2rem] font-bold border-white"
                       : " font-light border-transparent"
                   }  `}
                 >
@@ -278,7 +281,7 @@ export default function Home() {
               />
             </span>
           </div>
-          <p className="py-8">{ideaData[activeIdea].content}</p>
+          <p className="py-8 text-[0.94rem]">{ideaData[activeIdea].content}</p>
           <span className="block lg:hidden mb-[1.667rem]">
             <Image
               src={`/images/ideas/${ideaData[activeIdea].title}-right.png`}
@@ -288,7 +291,7 @@ export default function Home() {
               alt="ideate2-img"
             />
           </span>
-          <div className="w-[25.93rem]">
+          <div className="w-[18.68rem]">
             <Button label="Get your Brand process" greenBtn />
           </div>
         </div>
@@ -319,8 +322,9 @@ export default function Home() {
           <iframe
             className="hidden lg:block"
             src="https://player.vimeo.com/video/636370372?h=734c780ecc"
-            width="900"
-            height="450"
+            width="718.74"
+            height="100%"
+            style={{ marginLeft: "3rem" }}
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
@@ -334,23 +338,25 @@ export default function Home() {
         </div>
         <div className="lg:w-2/6 items-stretch flex flex-col">
           <div>
-            <p className="text-[#046C62] mb-8 text-[2rem] leading-tight lg:leading-[3.375rem] lg:text-[3.06rem] mt-7 lg:mt-0">
+            <p className="text-[#046C62] mb-8 text-[2rem] leading-tight lg:leading-[2.4rem] lg:text-[2.18rem] mt-7 lg:mt-0">
               60 minutes with Adaeze of <u>CAV Digital</u>
             </p>
-            <p>
-              We start by defining a clear image of exactly who you serve and
-              precisely how they think. Why? Because you can’t help people
-              unless you know them – their hopes, their fears, their problems,
-              and their pitfalls. What converts a total stranger into a die-hard
-              fan of your brand? A constant pull of value and inspiration. At
-              this stage, we map out your customer’s journey so you’ll be able
-              to meet them at their point of need before one of your competitors
-              does.
-            </p>
-            <p> We partner with brands to take communication.</p>
+            <div className="text-[0.94rem] mt-6 mb-[2.36rem]">
+              <p>
+                We start by defining a clear image of exactly who you serve and
+                precisely how they think. Why? Because you can’t help people
+                unless you know them – their hopes, their fears, their problems,
+                and their pitfalls. What converts a total stranger into a
+                die-hard fan of your brand? A constant pull of value and
+                inspiration. At this stage, we map out your customer’s journey
+                so you’ll be able to meet them at their point of need before one
+                of your competitors does.
+              </p>
+              <p> We partner with brands to take communication.</p>
+            </div>
           </div>
           <p className="flex flex-grow" />
-          <div className="w-[17.3rem]">
+          <div className="w-[12.36rem]">
             <Button label=" watch more" />
           </div>
         </div>
@@ -361,7 +367,7 @@ export default function Home() {
         <InterviewCard />
       </section>
       <section className="px-[1.375rem] lg:px-20 mt-20 lg:mt-32">
-        <p className=" text-4xl lg:text-7xl leading-12 font-semibold">
+        <p className=" text-4xl lg:text-[3.2rem] leading-12 font-semibold">
           Discover popular and profitable{" "}
           <a className="border-b-2 border-black">editorials</a>
         </p>
@@ -416,7 +422,7 @@ export default function Home() {
                     <span>{event.required}</span>
                   </p>
                 </div>
-                <div className="text-[#046C62] text-[1.5rem] lg:text-[3rem] lg:leading-[3.375rem] mt-10 flex w-full flex-grow">
+                <div className="text-[#046C62] text-[1.5rem] lg:text-[2.18rem] mt-10 flex w-full flex-grow lg:leading-[2.4rem]">
                   {event.title}
                 </div>
                 <div className="flex items-center mt-4 ">
@@ -432,7 +438,7 @@ export default function Home() {
             ))}
           </div>
           <span className="flex-grow" />
-          <div className="w-[20.5rem]">
+          <div className="w-[14.56rem] mt-8">
             <Button label="UPCOMING EVENTS" />
           </div>
         </div>
@@ -458,7 +464,7 @@ export default function Home() {
             ))}
           </div>
           <Link href="/jobs">
-            <div className="mt-16 w-[20.5rem]">
+            <div className="mt-16 w-[14.56rem]">
               <Button label="VIEW ALL JOBS" />
             </div>
           </Link>

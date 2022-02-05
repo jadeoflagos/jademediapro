@@ -493,11 +493,11 @@ export const opportunities = [
 //end of about page
 
 export const dropDown = {
-  about: "What we do,Testimonials,Volunteering,Career".split(","),
   services: "Business strategy,Branding,Graphic Design,Digital Marketing,Motion Design,Art/Photography".split(','),
   projects: "Case Study,Process,Showreel,Training".split(","),
   hub: "Blog,interview,Community,Events,Job/intership".split(","),
-  resources: "Store,Freebies".split(",")
+  resources: "Store,Freebies".split(","),
+  about: "What we do,Testimonials,Volunteering,Career".split(","),
 }
 
 // case-study

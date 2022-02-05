@@ -85,7 +85,7 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
         >
           {dropdownMenus.map((item, itemIndex) => (
             <span
-              className="capitalize select-none drop-down"
+              className="capitalize text-[1.125rem] select-none drop-down"
               onClick={(event) => toggleDropDown(event, item)}
               key={`nav-drop-down-${itemIndex}`}
             >
@@ -96,7 +96,9 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
           <Link href="/contact">
             <a
               href="/contact"
-              className={`${path === "/contact" ? styles.activeLink : ""}`}
+              className={`${
+                path === "/contact" ? styles.activeLink : ""
+              } text-[1.125rem]`}
             >
               Contact
             </a>
