@@ -16,6 +16,7 @@ import styles from "../styles/Home.module.css";
 import unlockFuture from "../public/gifs/Unlock Your Future.gif";
 import Heading from "../components/organism/Heading";
 import Button from "../components/Button";
+import ProcessesSlider from "../components/ProcessesSlider";
 
 export default function Home() {
   const [activeIdea, setActiveIdea] = useState(1);
@@ -267,32 +268,8 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="flex items-center gap-x-6 mt-10">
-            <Image
-              src={`/images/ideas/${ideaData[activeIdea].title}-Left.png`}
-              width={485}
-              height={259}
-              alt="ideate1-img"
-            />{" "}
-            <span className="hidden lg:flex items-center">
-              <Image
-                src={`/images/ideas/${ideaData[activeIdea].title}-right.png`}
-                width={485}
-                height={259}
-                alt="ideate2-img"
-              />
-            </span>
-          </div>
-          <p className="py-8 text-[0.94rem]">{ideaData[activeIdea].content}</p>
-          <span className="block lg:hidden mb-[1.667rem]">
-            <Image
-              src={`/images/ideas/${ideaData[activeIdea].title}-right.png`}
-              alt="Avatar"
-              width={485}
-              height={259}
-              alt="ideate2-img"
-            />
-          </span>
+
+          <ProcessesSlider slideToShow={activeIdea} />
           <div className="w-[18.68rem]">
             <Button label="Get your Brand process" greenBtn />
           </div>
