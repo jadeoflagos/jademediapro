@@ -21,7 +21,7 @@ const Contact = () => {
         headerImage="contactbg.png"
       />
       <section className="px-5 lg:px-20 py-16">
-        <h1 className="text-6xl">FAQs</h1>
+        <h1 className="text-[3.2rem] leading-[3.5rem] font-bold">FAQs</h1>
         <p className="mt-6 mb-6 lg:mb-14">
           Frequently asked questions about hookah and association
         </p>
@@ -63,12 +63,12 @@ const Contact = () => {
           ))}
         </div>
       </section>
-      <section className="px-5  lg:px-20 mt-7">
-        <p className="text-3xl lg:w-3/5 pr-12 lg:text-6xl">
+      <section className="px-5  lg:px-20 my-7 lg:mt-36 lg:mb-64">
+        <p className="text-3xl lg:w-3/5 pr-12 lg:mb-[4.8rem] lg:text-6xl font-bold">
           We can help you with the process. Let's talk.
         </p>
 
-        <div className="flex items-center lg:flex-row flex-col">
+        <div className="flex items-start lg:flex-row flex-col">
           <form
             action=""
             className="lg:w-3/5 pr-12 grid grid-cols-2 gap-x-10 gap-y-4 order-2 lg:order-1 mb-9 lg:mb-0"
@@ -123,8 +123,8 @@ const Contact = () => {
             <Image
               src="/vectors/blogger.svg"
               alt="Avatar"
-              width={517}
-              height={688}
+              width={489}
+              height={367}
             />
           </div>
         </div>

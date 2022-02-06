@@ -33,7 +33,7 @@ const Interview = () => {
             ))}
         </div>
       </div>
-      <section className="px-5 lg:px-20">
+      <section className="px-5 lg:px-20 pb-44">
         <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </section>
       <Footer />

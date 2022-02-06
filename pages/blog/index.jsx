@@ -10,7 +10,7 @@ import { blogPostData } from "../../data";
 import SectionHeader from "../../components/organism/SectionHeader";
 import EyeBrow from "../../components/organism/EyeBrow";
 import SecondHeaderTwo from "../../components/organism/SecondHeaderTwo";
-import Pagination from "../../components/Pagination"
+import Pagination from "../../components/Pagination";
 const Blog = () => {
   const tabs = [
     "All",
@@ -24,21 +24,48 @@ const Blog = () => {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <div>
-      <SecondHeaderTwo
-        headerImg="blogbg.png"
-        title="Blog Posts"
-        subTitle=" Experient design thinking and innovative stories
-"
-      />
+      <section className={`w-screen  bg-[#502A7A] pb-9 `}>
+        <div>
+          <Navbar />
+        </div>
+        <div className="flex flex-col lg:flex-row lg:pt-16 lg:pb-12 lg:items-center justify-between px-5 lg:px-20 text-white">
+          <div className="lg:w-7/12">
+            <p className="font-bold text-4xl lg:text-8xl leading-[3.875rem]">
+              Blog Posts
+            </p>
+            <p className="pt-12 lg:pb-12 text-base lg:text-2xl lg:tracking-wider">
+              Experient design thinking and innovative stories
+            </p>
+            <div className="hidden lg:flex ">
+              <SocialButtons />
+            </div>
+          </div>
+          <span className="w-1/12" />
+          <div className="lg:w-4/12 w-full flex items-center justify-center">
+            <Image
+              src={`/images/blogbg.png`}
+              alt="Avatar"
+              width={494}
+              height={494}
+            />
+          </div>
+        </div>
+        <div className="w-full px-5 flex flex-col pt-11 lg:hidden">
+          <SocialButtons />
+        </div>
+      </section>
+
       <div className="lg:mt-12 px-5 lg:px-20 lg:py-20 py-10">
         <div className="hidden lg:flex">
           {tabs.map((tab, tabIndex) => (
             <span
+              key={tabIndex}
               onClick={() => setActiveTab(tabIndex)}
-              className={`px-10 border-b cursor-pointer pb-2 text-xs lg:text-base ${activeTab == tabIndex
+              className={`px-10 border-b cursor-pointer pb-2 text-xs lg:text-base ${
+                activeTab == tabIndex
                   ? "text-[#77459B] border-[#77459B]"
                   : "border-transparent"
-                }`}
+              }`}
             >
               {tab}
             </span>
@@ -47,11 +74,13 @@ const Blog = () => {
         <div className="lg:hidden flex">
           {tabs.splice(0, 4).map((tab, tabIndex) => (
             <span
+              key={tabIndex}
               onClick={() => setActiveTab(tabIndex)}
-              className={`px-2 border-b cursor-pointer text-xs whitespace-nowrap pb-2 ${activeTab == tabIndex
+              className={`px-2 border-b cursor-pointer text-xs whitespace-nowrap pb-2 ${
+                activeTab == tabIndex
                   ? "text-[#77459B] border-[#77459B]"
                   : "border-transparent"
-                }`}
+              }`}
             >
               {tab}
             </span>
@@ -73,7 +102,8 @@ const Blog = () => {
         </div>
       </div>
       <div className="px-5 lg:px-20 py-20 ">
-        <Pagination /></div>
+        <Pagination />
+      </div>
       <div className="px-5 lg:px-20 py-20  lg:mb-20">
         <EyeBrow text="Watch Exclusive interviews with profesionals" />
         <div className=" mt-12 grid lg:grid-cols-3 gap-x-8 gap-y-6 lg:gap-y-0 ">

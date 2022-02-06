@@ -128,7 +128,7 @@ const Footer = () => {
                   height={50}
                 />
               </a>
-              <a target="_blank" href="">
+              <a target="_blank" href="https://twitter.com/jademediapro">
                 <Image
                   src="/gifs/footer-icon-twitter.gif"
                   alt="Avatar"
@@ -144,7 +144,7 @@ const Footer = () => {
                   height={50}
                 />
               </a>
-              <a target="_blank" href="">
+              <a target="_blank" href="https://youtube.com/jademediapro">
                 <Image
                   src="/gifs/footer-icon-youtube.gif"
                   alt="Avatar"
@@ -152,7 +152,7 @@ const Footer = () => {
                   height={50}
                 />{" "}
               </a>
-              <a target="_blank" href="">
+              <a target="_blank" href="https://instagram.com/jademediapro">
                 {" "}
                 <Image
                   src="/gifs/footer-icon-instagram.gif"
@@ -161,7 +161,7 @@ const Footer = () => {
                   height={50}
                 />
               </a>
-              <a target="_blank" href="www.vimeo.com/jademediapro">
+              <a target="_blank" href="https://vimeo.com/jademediapro">
                 <Image
                   src="/gifs/footer-icon-vimeo.gif"
                   alt="Avatar"
@@ -305,7 +305,7 @@ const Footer = () => {
                 height={15}
               />
             </a>
-            <a href="" target="_blank">
+            <a href="https://twitter.com/jademediapro" target="_blank">
               <Image
                 src="/gifs/footer-icon-twitter.gif"
                 alt="Avatar"
@@ -321,7 +321,7 @@ const Footer = () => {
                 height={15}
               />
             </a>
-            <a href="" target="_blank">
+            <a href="www.youtube.com/jademediapro" target="_blank">
               <Image
                 src="/vectors/youtube.svg"
                 alt="Avatar"

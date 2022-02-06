@@ -4,13 +4,12 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import StaticDatePicker from "@mui/lab/StaticDatePicker";
 
-export default function StaticDatePickerDemo() {
+export default function Calendar() {
   const [value, setValue] = React.useState(new Date());
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticDatePicker
-        className="color-indigo-500"
         displayStaticWrapperAs="desktop"
         openTo="day"
         value={value}

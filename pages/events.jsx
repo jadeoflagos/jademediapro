@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import Calendar from "../components/Calendar";
+import Calendarr from "../components/Calendar";
 import DailyEmailForm from "../components/DailyEmailForm";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -69,7 +69,7 @@ const Events = () => {
         </main>
         <div className="flex flex-col order-1 lg:order-2 ">
           <div className="max-w-max">
-            <Calendar />
+            <Calendarr />
           </div>
           <div className="space-y-8 hidden lg:block  mb-28">
             <Tags />
