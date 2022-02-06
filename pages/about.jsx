@@ -16,6 +16,7 @@ import {
   MobileDatePickerComponent,
 } from "../components/DatePicker";
 import Button from "../components/Button";
+import ReviewSlider from "../components/ReviewSlider";
 const About = () => {
   return (
     <div>
@@ -147,8 +148,8 @@ const About = () => {
           <iframe
             className="lg:hidden"
             src="https://player.vimeo.com/video/672077617?h=d303fb69fb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            width="100%"
-            height="100%"
+            height="194.92px"
+            width="300px"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
@@ -156,6 +157,7 @@ const About = () => {
           <iframe
             src="https://player.vimeo.com/video/672077617?h=d303fb69fb&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
             width="571"
+            className="lg:block hidden"
             height="321"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
@@ -330,34 +332,8 @@ const About = () => {
             Many people have already seen how working with Jade Media Pro has
             enabled them to rebrand and grow their businesses.
           </p>
-          <div className="flex items-start relative mt-8 lg:mt-0">
-            <div className="">
-              <Image
-                src="/images/GOAT.png"
-                alt="Avatar"
-                width={200}
-                height={200}
-              />
-            </div>
-            <div className="ml-10 text-xs">
-              <p className="font-bold lg:text-3xl mb-1">Rustam raz</p>
-              <p className="lg:text-xl">CEO CRISPR BIOTECH</p>
-            </div>
-            <div className="flex absolute top-1/3 left-12 space-x-14">
-              <Image
-                src="/vectors/qou.svg"
-                alt="Avatar"
-                width={60}
-                height={72}
-              />
-              <p className="text-xs lg:text-base bg-[#044841] text-white px-4 lg:px-9 py-6 lg:py-12 lg:w-96 h-auto ">
-                In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa
-                for a family emergency and that trip changed her life. She
-                returned committed to leveraging years of experience, for
-                leading global brand including Walmart Corporation to support
-                Africa’s quest for sustainable economic transformation.
-              </p>
-            </div>
+          <div>
+            <ReviewSlider />
           </div>
         </div>
       </section>
