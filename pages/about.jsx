@@ -319,8 +319,9 @@ const About = () => {
             <Image
               src="/images/About-CareerDevelopment-image.jpeg"
               alt="Avatar"
-              width={650}
-              height={500}
+              width={524.34}
+              height={428.3}
+              className=""
             />
           </div>
         </div>
