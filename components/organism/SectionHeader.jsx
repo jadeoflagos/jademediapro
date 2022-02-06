@@ -29,7 +29,7 @@ const SectionHeader = ({
           <p className="font-semibold  text-3xl lg:text-[3.2rem] leading-[3.875rem]">
             {title}
           </p>
-          <p className="lg:flex pt-6 lg:pt-12 lg:pb-12 text-base lg:text-[1.33rem] lg:tracking-wider leading-[1.8rem]">
+          <p className="lg:flex pt-6 lg:pt-12 lg:pb-12 text-base font-normal lg:text-[1.33rem] lg:tracking-wider leading-[1.8rem]">
             {subTitle}
           </p>
         </div>
