@@ -69,17 +69,19 @@ export default function Home() {
         <div>
           <Navbar dropDownBg="black" textColor="white" />
         </div>
-        <div className="py-20 lg:max-w-[56%]  text-white flex flex-col justify-center px-8 lg:px-20">
-          <p
-            className={`${styles.headerFamily} font-bold text-5xl lg:text-[6rem]`}
-          >
-            {Header.title}
-          </p>
-          <p className="my-10 text-base lg:text-[1.33rem] font-normal">
-            {Header.subTitle}
-          </p>
-          <div className="w-[13.61rem]">
-            <Button label="VIEW PROJECTS" greenBtn />
+        <div className="py-20  text-white  px-8 w-full lg:px-[6.44rem] lg:grid grid-cols-12">
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            <p
+              className={`${styles.headerFamily}  font-bold text-5xl lg:text-[6.5rem] leading-[6.13rem]`}
+            >
+              {Header.title}
+            </p>
+            <p className="my-10 text-base lg:text-[1.25rem] leading-[1.86rem] font-normal">
+              {Header.subTitle}
+            </p>
+            <div className="w-[13.61rem]">
+              <Button label="VIEW PROJECTS" greenBtn />
+            </div>
           </div>
         </div>
       </div>
