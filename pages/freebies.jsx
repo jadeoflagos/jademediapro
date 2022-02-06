@@ -34,7 +34,7 @@ const freebies = () => {
               ))}
             </div>
           </div>
-          <div className="grid lg:grid-cols-4 grid-cols-2 gap-y-[3.1rem] gap-x-[2.75rem]">
+          <div className="grid lg:grid-cols-4 grid-cols-2 gap-y-[3.1rem] gap-x-[2.75rem] mb-20">
             {Array(12)
               .fill("")
               .map((item, itemIndex) => (
@@ -59,11 +59,11 @@ const freebies = () => {
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
           />
-          <div className="mt-8 flex flex-col">
+          <div className="mt-[8.5rem] flex flex-col">
             <h3 className="font-semibold text-[3rem]">
               Featured Paintings and Wall Frames{" "}
             </h3>
-            <div className="hidden mt-[6.4rem] mb-32 lg:grid grid-cols-3 gap-x-[6.375rem]">
+            <div className="hidden mt-[4.5rem] mb-32 lg:grid grid-cols-3 gap-x-[6.375rem]">
               {products.map((product, productIndex) => (
                 <Product
                   key={`product-${productIndex}`}
