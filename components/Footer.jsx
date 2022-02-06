@@ -120,48 +120,64 @@ const Footer = () => {
           <div>
             <p>Connect with us on our platforms:</p>
             <div className="flex items-center justify-between mt-3">
-              <Image
-                src="/gifs/footer-icon-facebook.gif"
-                alt="Avatar"
-                width={50}
-                height={50}
-              />
-              <Image
-                src="/gifs/footer-icon-twitter.gif"
-                alt="Avatar"
-                width={50}
-                height={50}
-              />
-              <Image
-                src="/gifs/footer-icon-linkedin.gif"
-                alt="Avatar"
-                width={50}
-                height={50}
-              />
-              <Image
-                src="/gifs/footer-icon-youtube.gif"
-                alt="Avatar"
-                width={50}
-                height={50}
-              />{" "}
-              <Image
-                src="/gifs/footer-icon-instagram.gif"
-                alt="Avatar"
-                width={50}
-                height={50}
-              />
-              <Image
-                src="/gifs/footer-icon-vimeo.gif"
-                alt="Avatar"
-                width={50}
-                height={50}
-              />
-              <Image
-                src="/gifs/footer-icon-pintrest.gif"
-                alt="Avatar"
-                width={50}
-                height={50}
-              />{" "}
+              <a target="_blank" href="">
+                <Image
+                  src="/gifs/footer-icon-facebook.gif"
+                  alt="Avatar"
+                  width={50}
+                  height={50}
+                />
+              </a>
+              <a target="_blank" href="">
+                <Image
+                  src="/gifs/footer-icon-twitter.gif"
+                  alt="Avatar"
+                  width={50}
+                  height={50}
+                />
+              </a>
+              <a target="_blank" href="">
+                <Image
+                  src="/gifs/footer-icon-linkedin.gif"
+                  alt="Avatar"
+                  width={50}
+                  height={50}
+                />
+              </a>
+              <a target="_blank" href="">
+                <Image
+                  src="/gifs/footer-icon-youtube.gif"
+                  alt="Avatar"
+                  width={50}
+                  height={50}
+                />{" "}
+              </a>
+              <a target="_blank" href="">
+                {" "}
+                <Image
+                  src="/gifs/footer-icon-instagram.gif"
+                  alt="Avatar"
+                  width={50}
+                  height={50}
+                />
+              </a>
+              <a target="_blank" href="www.vimeo.com/jademediapro">
+                <Image
+                  src="/gifs/footer-icon-vimeo.gif"
+                  alt="Avatar"
+                  width={50}
+                  height={50}
+                />
+              </a>
+              <a target="_blank" href="">
+                {" "}
+                <Image
+                  src="/gifs/footer-icon-pintrest.gif"
+                  alt="Avatar"
+                  width={50}
+                  height={50}
+                />{" "}
+              </a>
             </div>
           </div>
         </div>
@@ -281,39 +297,70 @@ const Footer = () => {
         <div className="mt-10">
           <p>Connect with us on our platforms:</p>
           <div className="flex items-center justify-between mt-3">
-            <Image src="/vectors/fb.svg" alt="Avatar" width={17} height={15} />
-            <Image
-              src="/gifs/footer-icon-twitter.gif"
-              alt="Avatar"
-              width={17}
-              height={15}
-            />
-            <Image
-              src="/vectors/linkdin.svg"
-              alt="Avatar"
-              width={17}
-              height={15}
-            />
-            <Image
-              src="/vectors/youtube.svg"
-              alt="Avatar"
-              width={17}
-              height={15}
-            />{" "}
-            <Image src="/vectors/ig.svg" alt="Avatar" width={17} height={15} />
-            <Image
-              src="/vectors/googleplus.svg"
-              alt="Avatar"
-              width={17}
-              height={15}
-            />
-            <Image
-              src="/vectors/pintrest.svg"
-              alt="Avatar"
-              width={17}
-              height={15}
-            />{" "}
-            <Image src="/vectors/rss.svg" alt="Avatar" width={17} height={15} />
+            <a href="" target="_blank">
+              <Image
+                src="/vectors/fb.svg"
+                alt="Avatar"
+                width={17}
+                height={15}
+              />
+            </a>
+            <a href="" target="_blank">
+              <Image
+                src="/gifs/footer-icon-twitter.gif"
+                alt="Avatar"
+                width={17}
+                height={15}
+              />
+            </a>
+            <a href="" target="_blank">
+              <Image
+                src="/vectors/linkdin.svg"
+                alt="Avatar"
+                width={17}
+                height={15}
+              />
+            </a>
+            <a href="" target="_blank">
+              <Image
+                src="/vectors/youtube.svg"
+                alt="Avatar"
+                width={17}
+                height={15}
+              />{" "}
+            </a>
+            <a href="" target="_blank">
+              <Image
+                src="/vectors/ig.svg"
+                alt="Avatar"
+                width={17}
+                height={15}
+              />
+            </a>
+            <a href="" target="_blank">
+              <Image
+                src="/vectors/googleplus.svg"
+                alt="Avatar"
+                width={17}
+                height={15}
+              />
+            </a>
+            <a href="" target="_blank">
+              <Image
+                src="/vectors/pintrest.svg"
+                alt="Avatar"
+                width={17}
+                height={15}
+              />
+            </a>
+            <a href="" target="_blank">
+              <Image
+                src="/vectors/rss.svg"
+                alt="Avatar"
+                width={17}
+                height={15}
+              />
+            </a>
           </div>
         </div>
         <p className="mt-32 mb-[3.5rem] text-xs">
