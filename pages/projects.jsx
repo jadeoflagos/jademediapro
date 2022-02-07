@@ -13,10 +13,12 @@ const Projects = () => {
   return (
     <div>
       <SectionHeader
+        imageWidth="400"
+        imageHeight="400"
         bgColor="#2C144E"
         navBarColor="white"
         title="We create a fully unique journey for all our clients"
-        headerImage="projectbg.png"
+        headerImage="Projects-header.png"
         subTitle="Jade Media Pro has always been about people, and we've worked hard over the years to ensure that our clients are fully satisfied. Here are some unique stories behind the works we’ve undertaken."
       />
       <section className="mt-20 lg:px-20 px-5 py-20 ">
@@ -69,12 +71,12 @@ const Projects = () => {
                           </div>
                           {activeSubTab == itemIndex && (
                             <div className=" w-full flex items-center mt-12 text-[#666666]">
-                            <p className="w-[20%]" />
-                            <div className="lg:w-[80%] flex-grow w-9/12 lg:text-[1.3rem]  ">
-                              {item.description}
+                              <p className="w-[20%]" />
+                              <div className="lg:w-[80%] flex-grow w-9/12 lg:text-[1.3rem]  ">
+                                {item.description}
+                              </div>
                             </div>
-                          </div>
-                        )}
+                          )}
                         </div>
                       )
                     )}

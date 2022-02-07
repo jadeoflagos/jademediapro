@@ -43,10 +43,10 @@ const Blog = () => {
           <span className="w-1/12" />
           <div className="lg:w-4/12 w-full flex items-center justify-center">
             <Image
-              src={`/images/blogbg.png`}
+              src={`/images/Blog-header.png`}
               alt="Avatar"
-              width={494}
-              height={494}
+              width={316.27}
+              height={350.74}
             />
           </div>
         </div>

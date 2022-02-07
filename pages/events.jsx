@@ -15,6 +15,8 @@ const Events = () => {
   return (
     <div>
       <SectionHeader
+        imageHeight="325.98"
+        imageWidth="183.74"
         bgColor="#044841"
         title="Bringing people of like-mind and goals together"
         headerImage="eventbg.png"

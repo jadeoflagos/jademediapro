@@ -14,11 +14,14 @@ const Contact = () => {
   return (
     <div>
       <SectionHeader
+        titleTextSize="5rem"
         bgColor="#000000"
         navBarColor="white"
         title="Ready to START your journey and GROW your Business?
 "
-        headerImage="contactbg.png"
+        headerImage="Contact-header.png"
+        imageHeight="450"
+        imageWidth="450"
       />
       <section className="px-5 lg:px-20 py-16">
         <h1 className="text-[3.2rem] leading-[3.5rem] font-bold">FAQs</h1>

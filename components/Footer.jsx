@@ -169,10 +169,9 @@ const Footer = () => {
                   height={50}
                 />
               </a>
-              <a target="_blank" href="">
-                {" "}
+              <a target="_blank" href="https://pinterest.com/jademediaproo">
                 <Image
-                  src="/gifs/footer-icon-pintrest.gif"
+                  src="/gifs/footer-icon-pinterest.gif"
                   alt="Avatar"
                   width={50}
                   height={50}
@@ -345,9 +344,9 @@ const Footer = () => {
                 height={15}
               />
             </a>
-            <a href="" target="_blank">
+            <a href="https://pinterest.com/jademediaproo" target="_blank">
               <Image
-                src="/vectors/pintrest.svg"
+                src="/gifs/footer-icon-pinterest.gif"
                 alt="Avatar"
                 width={17}
                 height={15}

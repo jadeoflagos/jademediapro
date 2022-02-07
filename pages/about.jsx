@@ -21,10 +21,12 @@ const About = () => {
   return (
     <div>
       <SectionHeader
+        imageWidth="415.79"
+        imageHeight="415.79"
         bgColor="#000000"
         navBarColor="white"
         title="The leading branding and digital marketing company"
-        headerImage="aboutbg.png"
+        headerImage="About-header.png"
         subTitle="We implement the most effective design and digital marketing
               strategies that drives more traffic to your website by offering a
               broad spectrum of advantages."
