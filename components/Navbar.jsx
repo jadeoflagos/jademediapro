@@ -56,7 +56,7 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
         />
       )}
       <nav
-        className={`flex items-center text-2xl justify-between px-5 lg:px-[6.44rem] py-8 sticky top-0 left-0 z-50  lg:mb-0 `}
+        className={`flex items-center text-2xl justify-between px-5 lg:px-20 py-8 sticky top-0 left-0 z-50  lg:mb-0 `}
         style={{
           backgroundColor: bg ? bg : "transparent",
           color: textColor ?? "white",
@@ -85,7 +85,11 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
         >
           {dropdownMenus.map((item, itemIndex) => (
             <span
-              className="capitalize text-[1.125rem] select-none drop-down"
+              className={`capitalize text-[1.125rem] select-none drop-down ${
+                path === `/${item}`
+                  ? styles.activeLink
+                  : "font-normal text-white/80 "
+              }`}
               onClick={(event) => toggleDropDown(event, item)}
               key={`nav-drop-down-${itemIndex}`}
             >
@@ -97,7 +101,9 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
             <a
               href="/contact"
               className={`${
-                path === "/contact" ? styles.activeLink : ""
+                path === "/contact"
+                  ? styles.activeLink
+                  : "font-normal text-white/80 "
               } text-[1.125rem]`}
             >
               Contact

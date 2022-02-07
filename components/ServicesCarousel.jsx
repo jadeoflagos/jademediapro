@@ -23,9 +23,10 @@ const Card = ({ title, description, gif }) => {
           color: "black",
           width: "9.46rem",
           fontSize: "0.94rem",
+          borderRadius: " 1.42325px",
         }}
         variant="contained"
-        className="py-4 hover:opacity-90"
+        className="py-[0.75rem] font-semibold hover:opacity-90"
       >
         LEARN MORE
       </Button>

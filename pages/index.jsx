@@ -19,7 +19,7 @@ import Button from "../components/Button";
 import ProcessesSlider from "../components/ProcessesSlider";
 
 export default function Home() {
-  const [activeIdea, setActiveIdea] = useState(1);
+  const [activeIdea, setActiveIdea] = useState(0);
   const openings = [
     {
       position: "Project Manager",
@@ -70,7 +70,7 @@ export default function Home() {
         <div>
           <Navbar dropDownBg="black" textColor="white" />
         </div>
-        <div className="py-20  text-white  px-8 w-full lg:px-[6.44rem] lg:grid grid-cols-12">
+        <div className="py-20  text-white  px-8 w-full lg:px-20 lg:grid grid-cols-12">
           <div className="lg:col-span-7 flex flex-col justify-center">
             <p
               className={`${styles.headerFamily}  font-bold text-5xl lg:text-[6.5rem] leading-[6.13rem]`}
@@ -112,19 +112,25 @@ export default function Home() {
               than it is right now in the coming times whether you are starting
               a new business or you already have an existing business.
             </p>
-            <div className="  mt-8 flex  items-center">
-              <p className="mr-1" style={{ fontWeight: "bolder" }}>
-                Find out more about what is Branding and how does it help your
-                Business?
-              </p>
+            <div className="mt-8 flex items-center ">
               <Link href="/services">
-                <a href="/services" className="mt-2">
-                  <Image
-                    src="/vectors/arrow-right.svg"
-                    alt="Avatar"
-                    width={35}
-                    height={35}
-                  />
+                <a
+                  href="/services"
+                  className="mr-1"
+                  style={{ fontWeight: "bolder" }}
+                >
+                  <span>
+                    Find out more about what is Branding and how does it help
+                    your Business?
+                  </span>
+                  <span className="mt-2">
+                    <Image
+                      src="/vectors/arrow-right.svg"
+                      alt="Avatar"
+                      width={35}
+                      height={35}
+                    />
+                  </span>
                 </a>
               </Link>
             </div>
@@ -185,21 +191,22 @@ export default function Home() {
               a new business or you already have an existing business.
             </p>
             <div className="  mt-8 lg:flex items-center hidden">
-              <p
-                className="mr-1 text-[0.94rem] "
-                style={{ fontWeight: "bolder" }}
-              >
-                Find out more about what is Branding and how does it help your
-                Business?
-              </p>
               <Link href="/services">
-                <a href="/services" className="mt-2">
-                  <Image
-                    src="/vectors/arrow-right.svg"
-                    alt="Avatar"
-                    width={35}
-                    height={35}
-                  />
+                <a
+                  href="/services"
+                  className="mr-1 text-[0.94rem]  flex items-center"
+                  style={{ fontWeight: "bolder" }}
+                >
+                  Find out more about what is Branding and how does it help your
+                  Business?
+                  <span className="mt-2">
+                    <Image
+                      src="/vectors/arrow-right.svg"
+                      alt="Avatar"
+                      width={35}
+                      height={35}
+                    />
+                  </span>
                 </a>
               </Link>
             </div>
@@ -275,11 +282,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="px-[1.375rem] max-w-[101rem] lg:px-20 pt-32">
-        <Heading
-          text="Put money, attention, and resources where it's most effective to
-        generate income"
-        />
+      <div className="px-[1.375rem]  lg:px-20 pt-32">
+        <p className="text-3xl lg:text-[4.27rem] font-semibold lg:leading-[5.3rem]">
+          Put money, attention, and resources where it's most effective to
+          generate income
+        </p>
       </div>
       <div className="pl-[1.375rem] lg:px-20">
         <ServicesCarousel />
@@ -287,8 +294,8 @@ export default function Home() {
       <div className="px-[1.375rem] lg:px-20 pt-32">
         <Heading text="Exclusive interviews with industry leading professionals" />
       </div>
-      <section className="flex flex-col lg:flex-row items-stretch px-[1.375rem] lg:pl-[1.4rem] mt-12">
-        <div className="mr-[5.5rem]">
+      <section className="flex flex-col lg:flex-row items-stretch px-[1.375rem] lg:pl-20 mt-12">
+        <div className="mr-[2.5rem] ">
           <iframe
             className="lg:hidden"
             src="https://player.vimeo.com/video/636370372?h=734c780ecc"
@@ -303,7 +310,6 @@ export default function Home() {
             src="https://player.vimeo.com/video/636370372?h=734c780ecc"
             width="718.74"
             height="100%"
-            style={{ marginLeft: "3rem" }}
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen

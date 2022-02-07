@@ -46,10 +46,8 @@ const DropDown = ({
           >
             <a
               href={handleRoutes(option, type)}
-              className={`${textColor} pb-2 border-b-[1px]  ${
-                path === `/${routeName}`
-                  ? `${bg === "white" ? "border-b-black" : "border-b-white"}`
-                  : "border-b-transparent"
+              className={`${textColor} pb-2 border-b-[1px] border-b-transparent ${
+                bg === "white" ? "hover:border-b-black" : "hover:border-b-white"
               }`}
             >
               {option}
