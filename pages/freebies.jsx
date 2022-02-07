@@ -36,18 +36,18 @@ const freebies = () => {
               ))}
             </div>
           </div>
-          <div className="grid lg:grid-cols-4 grid-cols-2 gap-y-[3.1rem] gap-x-[2.75rem] mb-20">
+          <div className="grid lg:grid-cols-[repeat(auto-fit,minmax(16.6rem,1fr))] grid-cols-2 gap-y-[3.1rem] gap-x-[1.9rem] mb-20">
             {Array(12)
               .fill("")
               .map((item, itemIndex) => (
                 <div
                   key={`freebies-list-cat${itemIndex}`}
-                  className="flex flex-col items-center justify-center bg-[#E8E8E8] shadow-[1px,5px,10px,rgba(196, 189, 227, 0.25)] rounded-[4px] py-10 "
+                  className="flex flex-col items-center justify-center bg-[#E8E8E8] shadow-[1px,5px,10px,rgba(196, 189, 227, 0.25)] rounded-[4px] py-10 px-[2.3rem]"
                 >
                   <Image
                     src="/images/freebies1.png"
-                    width={270.21}
-                    height={270.21}
+                    width={192}
+                    height={192}
                     alt="freebies-icon"
                   />
                   <div className="mt-8 flex flex-col items-center justify-center">

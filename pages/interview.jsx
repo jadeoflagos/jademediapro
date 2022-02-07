@@ -12,7 +12,7 @@ const Interview = () => {
   return (
     <div>
       <SecondHeaderTwo
-        headerImg="interview-header.png"
+        headerImg="Interview-header.png"
         title="Engaging One-on-One discussion with Big Guns"
         subTitle="We have awesome chat with industry leading professionals from various fields discussing exverything about their experience, business oreintation, and actionable insights  on how to grow."
       />
