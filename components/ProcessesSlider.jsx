@@ -56,6 +56,7 @@ function ProcessesSlider({ slideToShow }) {
         <Fragment key={ideaIndex}>
           <div className="flex items-center gap-x-6 mt-10">
             <Image
+              priority
               src={`/images/ideas/${i.title}-Left.png`}
               width={485}
               height={259}
@@ -63,6 +64,7 @@ function ProcessesSlider({ slideToShow }) {
             />{" "}
             <span className="hidden lg:flex items-center">
               <Image
+                priority
                 src={`/images/ideas/${i.title}-right.png`}
                 width={485}
                 height={259}
@@ -73,6 +75,7 @@ function ProcessesSlider({ slideToShow }) {
           <p className="py-8 text-[0.94rem]">{i.content}</p>
           <span className="block lg:hidden mb-[1.667rem]">
             <Image
+              priority
               src={`/images/ideas/${i.title}-right.png`}
               alt="Avatar"
               width={485}

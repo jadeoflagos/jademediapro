@@ -139,7 +139,7 @@
 }
 
 .activeLink {
-  @apply font-bold;
+  @apply font-black;
 }
 .mobileMenu {
   z-index: 2000;
