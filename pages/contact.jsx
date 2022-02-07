@@ -7,22 +7,41 @@ import SelectVariants from "../components/Form/Select";
 import SectionHeader from "../components/organism/SectionHeader";
 import { faqs } from "../data/Faq";
 import Button from "../components/Button";
+import Navbar from "../components/Navbar";
 
 const Contact = () => {
   const [activeTab, setActiveTab] = useState(-1);
 
   return (
     <div>
-      <SectionHeader
-        titleTextSize="5rem"
-        bgColor="#000000"
-        navBarColor="white"
-        title="Ready to START your journey and GROW your Business?
-"
-        headerImage="Contact-header.png"
-        imageHeight="450"
-        imageWidth="450"
-      />
+      <section
+        className={`w-screen lg:min-h-[30rem] pb-24`}
+        style={{ background: "#000000" }}
+      >
+        <div>
+          <Navbar textColor="white" />
+        </div>
+        <div
+          className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white lg:pt-16"
+          style={{
+            color: "white",
+          }}
+        >
+          <div className="lg:w-8/12 w-full">
+            <p className="font-semibold  text-3xl lg:text-[4.8rem] leading-[5.28rem]">
+              Ready to START your journey and GROW your Business?
+            </p>
+          </div>
+          <div className="lg:w-4/12 w-full flex items-center justify-center">
+            <Image
+              src={`/images/Contact-header.png`}
+              alt="Avatar"
+              width={450}
+              height={450}
+            />
+          </div>
+        </div>
+      </section>
       <section className="px-5 lg:px-20 py-16">
         <h1 className="text-[3.2rem] leading-[3.5rem] font-bold">FAQs</h1>
         <p className="mt-6 mb-6 lg:mb-14">
