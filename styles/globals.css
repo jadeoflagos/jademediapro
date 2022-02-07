@@ -48,4 +48,12 @@ a {
   color: white;
 }
 
+button.MuiButtonBase-root.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-195y93z-MuiButtonBase-root-MuiPickersDay-root {
+  background-color: #502a7a;
+  border-radius: 0px;
+}
+button.MuiButtonBase-root.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-wed0tz {
+  background-color: #502a7a;
+  border-radius: 0px;
+}
 @tailwind utilities;

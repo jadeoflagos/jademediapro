@@ -5,18 +5,19 @@ import Navbar from "../Navbar";
 
 const SecondHeaderTwo = ({ title, subTitle, headerImg, navBarColor }) => {
   return (
-    <div className={`w-screen lg:min-h-[30rem] bg-[#502A7A] pb-9 `}>
+    <div className={`w-screen  bg-[#502A7A] pb-9 `}>
       <div>
         <Navbar textColor={navBarColor} />
       </div>
-      <div className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white">
+      <div className="flex flex-col lg:flex-row lg:pt-16 lg:pb-12 lg:items-center justify-between px-5 lg:px-20 text-white">
         <div className="lg:w-7/12">
-          <p className="font-bold text-4xl lg:text-8xl">{title}</p>
+          <p className="font-bold text-4xl lg:text-[3.2rem] leading-[3.875rem]">
+            {title}
+          </p>
           <p className="pt-12 lg:pb-12 text-base lg:text-2xl lg:tracking-wider">
             {subTitle}{" "}
           </p>
           <div className="hidden lg:flex ">
-            {" "}
             <SocialButtons />
           </div>
         </div>

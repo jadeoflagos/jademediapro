@@ -33,10 +33,10 @@ const ReviewSlider = () => {
       ssr={true}
       infinite={true}
       autoPlay={true}
-      autoPlaySpeed={2000}
+      autoPlaySpeed={5000}
       keyBoardControl={true}
-      customTransition="transform 350ms ease-in-out"
-      transitionDuration={700}
+      customTransition="transform 300ms ease-in-out"
+      transitionDuration={500}
       containerClass="carousel-container"
       deviceType={deviceType}
       arrows={false}

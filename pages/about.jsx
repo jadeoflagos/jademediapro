@@ -132,18 +132,13 @@ const About = () => {
       </section>
       <section className="px-5 lg:px-20 mt-16 lg:mt-32">
         <p className="mb-10 text-sm lg:text-4xl">Volunteering</p>
-        <p className="text-[2.8rem] leading-[3.375rem] font-semibold">
-          Bridging Africa’s transition from the analog age to the Digital age by
-          Training young Professionals and solving Digital challenges at
-          individual and corporate levels."
-        </p>
-        {/* <p className="text-5xl leading-tight font-bold">
+        <p className="text-[2.8rem] lg:leading-[3.375rem] font-semibold">
           Bridging Africa’s transition from the analog age to the Digital age by
           Training young Professionals and solving Digital challenges at
           individual and corporate levels.
-        </p> */}
+        </p>
       </section>
-      <section className="lg:grid lg:grid-cols-[36rem,1fr] lg:gap-x-[3.875rem] px-5 lg:px-20 lg:py-20 py-4">
+      <section className="lg:grid lg:grid-cols-2 lg:gap-x-[3.875rem] px-5 lg:px-20 lg:py-20 py-4">
         <div>
           <iframe
             className="lg:hidden"
@@ -156,7 +151,7 @@ const About = () => {
           ></iframe>
           <iframe
             src="https://player.vimeo.com/video/672077617?h=d303fb69fb&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            width="571"
+            width="100%"
             className="lg:block hidden"
             height="321"
             frameborder="0"
@@ -319,8 +314,9 @@ const About = () => {
             <Image
               src="/images/About-CareerDevelopment-image.jpeg"
               alt="Avatar"
-              width={650}
-              height={500}
+              width={524.34}
+              height={428.3}
+              className=""
             />
           </div>
         </div>
