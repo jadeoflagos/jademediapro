@@ -25,8 +25,10 @@ const PrivacyPolicy = () => {
             <span>Policy</span>
           </div>
           <img
-            className="mt-12 lg:mt-0"
-            src="/images/privacy-policy.png"
+            className="mt-12 lg:mt-0 lg:mr-28"
+            height={320.16}
+            width={320.16}
+            src="/images/PrivacyPolicy-header.png"
             alt="privacy-policy-icon"
           />
         </div>

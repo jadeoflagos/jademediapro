@@ -3,14 +3,21 @@ import SocialButtons from "../SocialButtons";
 import Image from "next/image";
 import Navbar from "../Navbar";
 
-const SecondHeaderTwo = ({ title, subTitle, headerImg, navBarColor }) => {
+const SecondHeaderTwo = ({
+  title,
+  subTitle,
+  headerImg,
+  navBarColor,
+  imageWidth = "456",
+  imageHeight = "456",
+}) => {
   return (
-    <div className={`w-screen  bg-[#502A7A] pb-9 `}>
+    <div className={`w-screen  bg-[#502A7A] `}>
       <div>
         <Navbar textColor={navBarColor} />
       </div>
-      <div className="flex flex-col lg:flex-row lg:pt-16 lg:pb-12 lg:items-center justify-between px-5 lg:px-20 text-white">
-        <div className="lg:w-7/12">
+      <div className="flex flex-col lg:flex-row lg:pt-32  lg:items-stretch justify-between px-5 lg:px-20 text-white">
+        <div className="lg:w-7/12 lg:pb-[3.375rem]">
           <p className="font-bold text-4xl lg:text-[3.2rem] leading-[3.875rem]">
             {title}
           </p>
@@ -22,12 +29,12 @@ const SecondHeaderTwo = ({ title, subTitle, headerImg, navBarColor }) => {
           </div>
         </div>
         <span className="w-1/12" />
-        <div className="lg:w-4/12 w-full flex items-center justify-center">
+        <div className="lg:w-4/12 w-full flex items-end justify-center">
           <Image
             src={`/images/${headerImg}`}
             alt="Avatar"
-            width={494}
-            height={494}
+            width={imageWidth}
+            height={imageHeight}
           />
         </div>
       </div>

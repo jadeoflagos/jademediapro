@@ -26,8 +26,10 @@ const TermsAndCondition = () => {
             <span>Conditions</span>
           </div>
           <img
-            className="mt-12 lg:mt-0"
-            src="/images/terms-and-conditions.png"
+            className="mt-12 lg:mt-0 lg:mr-28"
+            height={320.16}
+            width={320.16}
+            src="/images/Terms&Conditions-header.png"
             alt="terms-and-condition-icon"
           />
         </div>

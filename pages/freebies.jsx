@@ -16,9 +16,11 @@ const freebies = () => {
     <div className="overflow-auto">
       <div className="overflow-auto w-full min-h-[30rem] bg-[#2C144E]">
         <SectionHeader
+          imageHeight="453"
+          imageWidth="453"
           title="Everything you need for growth and development"
           subTitle="Free daily high-quality design resources hand-picked for creatives, designers and developers, ranging from fonts, mockups, graphics, templates & more from amazing artists. "
-          headerImage=""
+          headerImage="Freebies-header.png"
         />
         <div className="py-32 bg-white px-5 lg:px-20">
           <div className="flex items-center mb-24">

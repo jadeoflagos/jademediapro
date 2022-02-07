@@ -30,13 +30,18 @@ const Jobs = () => {
   };
   return (
     <div>
-      <SectionHeader darkLogo  bgColor="white"
-        navBarColor="black" headerColor="black"
+      <SectionHeader
+        imageWidth="258.26"
+        imageHeight="458.18"
+        darkLogo
+        bgColor="white"
+        navBarColor="black"
+        headerColor="black"
         title="Discover your next career move with our efficiently managed job
         searches
 "
         headerImage="jobbg.png"
- />
+      />
       <div className="px-5 lg:px-20 py-16">
         <div>
           {tabs.slice(3).map((tab, tabIndex) => (
@@ -56,7 +61,10 @@ const Jobs = () => {
         <section className="mt-12 w-full  grid lg:grid-cols-3 lg:gap-x-48 ">
           <div className="col-span-2  space-y-6 lg:order-1 order-2">
             {openings.map((op, opIndex) => (
-              <div key={opIndex} className="bg-[#46BFB2] items-center grid grid-cols-2 py-3 px-4">
+              <div
+                key={opIndex}
+                className="bg-[#46BFB2] items-center grid grid-cols-2 py-3 px-4"
+              >
                 <p className="text-2xl lg:text-[2.5rem] w-1/2">{op.position}</p>
                 <div className="border-l border-black flex items-end justify-between pl-7 lg:pl-10">
                   <div className="flex flex-col justify-items-stretch">
@@ -100,17 +108,20 @@ const Jobs = () => {
                 <SelectVariants menuitems={["Abuja", "Ilorin"]} />
               </div>
             </div>
-            <div className="hidden lg:block">            <DailyEmailForm />
-</div>
+            <div className="hidden lg:block">
+              {" "}
+              <DailyEmailForm />
+            </div>
           </aside>
         </section>
       </div>
       <section className="px-20">
         <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
-
       </section>
-            <div className="lg:hidden block my-10 mx-5">            <DailyEmailForm />
-</div>
+      <div className="lg:hidden block my-10 mx-5">
+        {" "}
+        <DailyEmailForm />
+      </div>
 
       <Footer />
     </div>
