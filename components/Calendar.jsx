@@ -10,6 +10,7 @@ export default function Calendar() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticDatePicker
+        className="px-0"
         displayStaticWrapperAs="desktop"
         openTo="day"
         value={value}

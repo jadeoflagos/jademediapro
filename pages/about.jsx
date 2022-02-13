@@ -339,7 +339,12 @@ const About = () => {
         Our Clients
       </p>
       <CompanyButtons />
-      <section className="px-5 lg:px-20 lg:grid grid-cols-3 gap-x-20 space-y-4 lg:space-y-0 my-24">
+      <section
+        className="px-5 lg:px-20 lg:grid gap-20 space-y-4  lg:space-y-0 my-24"
+        style={{
+          gridTemplateColumns: "repeat(auto-fill, minmax(20.625rem, 1fr))",
+        }}
+      >
         {values.map((value, valueIndex) => (
           <div
             key={`value-${valueIndex}`}

@@ -22,12 +22,12 @@ const SectionHeader = ({
         <Navbar textColor={navBarColor} darkLogo={darkLogo} />
       </div>
       <div
-        className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white lg:pt-16"
+        className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white "
         style={{
           color: headerColor ?? "white",
         }}
       >
-        <div className="lg:w-7/12 w-full">
+        <div className="lg:w-7/12 w-full lg:pt-28">
           <p className="font-semibold  text-3xl lg:text-[3.2rem] leading-[3.875rem]">
             {title}
           </p>

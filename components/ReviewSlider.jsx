@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
 import React, { useState } from "react";
+import { Testimonies } from "../data/Testimonials";
 
 const ReviewSlider = () => {
   const responsive = {
@@ -43,41 +44,33 @@ const ReviewSlider = () => {
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
     >
-      {Array(7)
-        .fill("")
-        .map((service, serviceIndex) => (
-          <div className="relative h-[27.6rem]" key={`service-${serviceIndex}`}>
-            <div className="flex items-start  mt-8 lg:mt-0">
-              <div className="">
-                <Image
-                  src="/images/GOAT.png"
-                  alt="Avatar"
-                  width={200}
-                  height={200}
-                />
-              </div>
-              <div className="ml-10 text-xs">
-                <p className="font-bold lg:text-3xl mb-1">Rustam raz</p>
-                <p className="lg:text-xl">CEO CRISPR BIOTECH</p>
-              </div>
-            </div>
-            <div className="flex absolute top-1/3 bottom-0 right-0 left-12 space-x-14">
+      {Testimonies.map((testimony, testimonyIndex) => (
+        <div
+          className="relative min-h-[27.6rem]"
+          key={`testimony-${testimonyIndex}`}
+        >
+          <div className="flex items-start  mt-8 lg:mt-0">
+            <div className="">
               <Image
-                src="/vectors/qou.svg"
+                src={`/images/${testimony.img}`}
                 alt="Avatar"
-                width={60}
-                height={72}
+                width={200}
+                height={200}
               />
-              <p className="text-xs lg:text-base bg-[#044841] text-white px-4 lg:px-9 py-6 lg:py-12 lg:w-96 h-auto ">
-                In 2015 our founder & CEO, Toyin Umesiri, made a trip to Africa
-                for a family emergency and that trip changed her life. She
-                returned committed to leveraging years of experience, for
-                leading global brand including Walmart Corporation to support
-                Africa’s quest for sustainable economic transformation.
-              </p>
+            </div>
+            <div className="ml-10 text-xs">
+              <p className="font-bold lg:text-3xl mb-1">{testimony.name}</p>
+              <p className="lg:text-xl">{testimony.position}</p>
             </div>
           </div>
-        ))}
+          <div className="flex absolute top-1/3 bottom-0 right-0 left-12 space-x-14">
+            <Image src="/vectors/qou.svg" alt="Avatar" width={60} height={72} />
+            <p className="text-xs lg:text-base bg-[#044841] text-white px-4 lg:px-9 py-6 lg:py-12 lg:w-96 h-auto ">
+              {testimony.review}
+            </p>
+          </div>
+        </div>
+      ))}
     </Carousel>
   );
 };

@@ -28,7 +28,7 @@ const Tags = () => {
       <p className="mb-4 font-bold">Tags</p>
       <div className="space-y-4 hidden lg:block">
         {tags.splice(0, 11).map((tag, tagIndex) => (
-          <p key={tagIndex} className="text-[0.68rem]">
+          <p key={tagIndex} className="text-base ">
             {tag}
           </p>
         ))}

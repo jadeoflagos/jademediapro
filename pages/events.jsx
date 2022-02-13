@@ -15,15 +15,15 @@ const Events = () => {
   return (
     <div>
       <SectionHeader
-        imageHeight="325.98"
-        imageWidth="183.74"
+        imageHeight="490"
+        imageWidth="275.89"
         bgColor="#044841"
         title="Bringing people of like-mind and goals together"
-        headerImage="eventbg.png"
+        headerImage="Event-header.png"
         subTitle="We connect professionals, businesses, and people to have  seamless experience every stage of an online or in-person event. Get detailed information about ticket sales, events, and more."
       />
 
-      <section className="px-5 lg:px-20 grid lg:grid-cols-3 lg:gap-x-48 mt-12 lg:mb-12">
+      <section className="px-5 lg:px-20 grid lg:grid-cols-3 lg:gap-x-32 mt-12 lg:mb-12">
         <main className="col-span-2 space-y-4 lg:space-y-8 order-2 lg:order-1">
           <div className="mb-20">
             {eventData.map((data, dataIndex) => (
@@ -69,8 +69,8 @@ const Events = () => {
             />
           </section>
         </main>
-        <div className="flex flex-col order-1 lg:order-2 ">
-          <div className="max-w-max">
+        <div className="flex flex-col items-start order-1 lg:order-2 ">
+          <div className="max-w-max -ml-6">
             <Calendarr />
           </div>
           <div className="space-y-8 hidden lg:block  mb-28">

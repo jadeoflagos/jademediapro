@@ -9,7 +9,6 @@ import SocialButtons from "../../components/SocialButtons";
 import { blogPostData } from "../../data";
 import SectionHeader from "../../components/organism/SectionHeader";
 import EyeBrow from "../../components/organism/EyeBrow";
-import SecondHeaderTwo from "../../components/organism/SecondHeaderTwo";
 import Pagination from "../../components/Pagination";
 const Blog = () => {
   const tabs = [
