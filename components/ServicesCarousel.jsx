@@ -61,6 +61,11 @@ const ServicesCarousel = () => {
       desc: "We break boundaries with our painting, sculpture, drawing, and engraving in a unique and fun way while doing something creative as beautiful work of art.",
       gif: "Art-Photography",
     },
+    {
+      title: "Website & Application Development",
+      desc: "We creatively design and develop websites and products that are purpose-built, designed for speed, vastly responsive, and deliver a great experience to your users.",
+      gif: "Web-App-Project",
+    },
   ];
 
   const [carouselEL, setCarouselEL] = useState({});

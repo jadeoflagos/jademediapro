@@ -4,16 +4,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { handleRoutes, routesNames } from "../utils/helper";
 
-const DropDown = ({
-  options = [],
-  bg = "black",
-  styles = {},
-  closeDropDown,
-  type,
-}) => {
+const DropDown = ({ options = [], bg = "black", closeDropDown, type }) => {
   const bgColors = {
     purple: "#2C144E",
-    black: " #424242",
+    black: "rgba(66, 66, 66, 0.5)",
     white: "#E8E8E8",
     green: "#02332E",
   };
@@ -33,9 +27,9 @@ const DropDown = ({
 
   return (
     <div
-      style={{ backgroundColor: bgColors[bg], zIndex: 1000, ...styles }}
+      style={{ backgroundColor: bgColors[bg], zIndex: 1000 }}
       ref={dropDown}
-      className={`drop-down absolute shadow-lg  flex flex-col py-[1.35rem] gap-y-[1.5rem] pl-8 pr-8 select-none font-semibold text-[1.31rem] rounded-[2px] mt-[1.3rem] `}
+      className={`drop-down absolute shadow-lg  flex flex-col py-[1.35rem] gap-y-[1.5rem] pl-8 pr-8 select-none font-semibold text-[1.31rem] rounded-[2px] `}
     >
       {options.map((option) => {
         const routeName = option.toLowerCase();
@@ -46,7 +40,7 @@ const DropDown = ({
           >
             <a
               href={handleRoutes(option, type)}
-              className={`${textColor} pb-2 border-b-[1px] border-b-transparent ${
+              className={`${textColor} pb-2 border-b-[1px] w-max  border-b-transparent ${
                 bg === "white" ? "hover:border-b-black" : "hover:border-b-white"
               }`}
             >

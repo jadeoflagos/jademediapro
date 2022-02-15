@@ -112,7 +112,7 @@ const About = () => {
               </div>
             </div>
           ))}
-          <p className="border border-[#8A57A3] px-12 py-2 max-w-max mt-8 cursor-pointer">
+          <p className="border border-[#8A57A3] hover:bg-[#0DFFE5] hover:border-transparent px-12 py-2 max-w-max mt-8 cursor-pointer lg:mx-20">
             BECOME A PARTNER
           </p>
         </div>

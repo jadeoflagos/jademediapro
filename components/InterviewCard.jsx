@@ -7,7 +7,7 @@ const InterviewCard = () => {
       style={{
         background: `url("/images/interview1.png")`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top",
       }}
     >
       <div className="h-4/5"></div>

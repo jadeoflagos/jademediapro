@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -14,7 +14,6 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
   const dropDownDefault = {
     state: false,
     type: "",
-    styles: {},
   };
 
   const [openMenu, setOpenMenu] = useState(false);
@@ -38,91 +37,91 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
     setShowDropDown({
       state: true,
       type,
-      styles: { top: `${e.clientY}px`, left: `${e.clientX - 30}px` },
     });
   };
 
   const router = useRouter();
   const path = router.pathname;
   return (
-    <>
-      {showDropDown.state && (
-        <DropDown
-          options={dropDown[showDropDown.type]}
-          bg={dropDownBg}
-          styles={showDropDown.styles}
-          closeDropDown={closeDropDown}
-          type={showDropDown.type}
-        />
-      )}
-      <nav
-        className={`flex items-center text-2xl justify-between px-5 lg:px-20 py-8 sticky top-0 left-0 z-50  lg:mb-0 `}
-        style={{
-          backgroundColor: bg ? bg : "transparent",
-          color: textColor ?? "white",
-          fontWeight: "normal",
-        }}
+    <nav
+      className={`flex items-center text-2xl justify-between px-5 lg:px-20 py-8 sticky top-0 left-0 z-50  lg:mb-0 `}
+      style={{
+        backgroundColor: bg ? bg : "transparent",
+        color: textColor ?? "white",
+        fontWeight: "normal",
+      }}
+    >
+      <Link href="/">
+        <a href="/">
+          <div className="flex flex-col w-[3.6rem] h-[1.3rem] lg:w-[7.6rem] lg:h-[2.8rem]">
+            {!darkLogo ? (
+              <Image
+                src="/vectors/jade-logo-white.svg"
+                width={504}
+                height={174}
+              />
+            ) : (
+              <Image src="/vectors/jade-logo.svg" width={504} height={174} />
+            )}
+          </div>
+        </a>
+      </Link>
+      <div
+        className={`hidden lg:flex items-center space-x-10 ${
+          darkLogo ? "text-black" : "text-white"
+        }`}
       >
-        <Link href="/">
-          <a href="/">
-            <div className="flex flex-col w-[3.6rem] h-[1.3rem] lg:w-[7.6rem] lg:h-[2.8rem]">
-              {!darkLogo ? (
-                <Image
-                  src="/vectors/jade-logo-white.svg"
-                  width={504}
-                  height={174}
-                />
-              ) : (
-                <Image src="/vectors/jade-logo.svg" width={504} height={174} />
-              )}
-            </div>
-          </a>
-        </Link>
-        <div
-          className={`hidden lg:flex items-center space-x-10 ${
-            darkLogo ? "text-black" : "text-white"
-          }`}
-        >
-          {dropdownMenus.map((item, itemIndex) => (
+        {dropdownMenus.map((item, itemIndex) => (
+          <div
+            className="relative"
+            onClick={(event) => toggleDropDown(event, item)}
+            key={`nav-drop-down-${itemIndex}`}
+          >
             <span
               className={`capitalize text-[1.125rem] select-none drop-down ${
                 path === `/${item}`
                   ? styles.activeLink
                   : "font-normal text-white/80 "
               }`}
-              onClick={(event) => toggleDropDown(event, item)}
-              key={`nav-drop-down-${itemIndex}`}
             >
               {item}
             </span>
-          ))}
-
-          <Link href="/contact">
-            <a
-              href="/contact"
-              className={`${
-                path === "/contact"
-                  ? styles.activeLink
-                  : "font-normal text-white/80 "
-              } text-[1.125rem]`}
-            >
-              Contact
-            </a>
-          </Link>
-        </div>
-        <div className="lg:hidden" onClick={() => setOpenMenu(true)}>
-          <MenuIcon fillcolor={!darkLogo ? "#fff" : "#000"} />
-        </div>
-        {openMenu && (
-          <div
-            className={`lg:hidden absolute w-full top-0 left-0 overflow-auto
-             ${styles.mobileMenu} `}
-          >
-            <MobileMenu closeMenu={closeMobileMenu} />
+            {showDropDown.state && showDropDown.type === item && (
+              <DropDown
+                options={dropDown[showDropDown.type]}
+                bg={dropDownBg}
+                closeDropDown={closeDropDown}
+                type={showDropDown.type}
+              />
+            )}
           </div>
-        )}
-      </nav>
-    </>
+        ))}
+
+        <Link href="/contact">
+          <a
+            href="/contact"
+            className={`${
+              path === "/contact"
+                ? styles.activeLink
+                : "font-normal text-white/80 "
+            } text-[1.125rem]`}
+          >
+            Contact
+          </a>
+        </Link>
+      </div>
+      <div className="lg:hidden" onClick={() => setOpenMenu(true)}>
+        <MenuIcon fillcolor={!darkLogo ? "#fff" : "#000"} />
+      </div>
+      {openMenu && (
+        <div
+          className={`lg:hidden absolute w-full top-0 left-0 overflow-auto
+             ${styles.mobileMenu} `}
+        >
+          <MobileMenu closeMenu={closeMobileMenu} />
+        </div>
+      )}
+    </nav>
   );
 };
 

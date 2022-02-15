@@ -294,11 +294,11 @@ export default function Home() {
       <div className="px-[1.375rem] lg:px-20 pt-32">
         <Heading text="Exclusive interviews with industry leading professionals" />
       </div>
-      <section className="flex flex-col lg:flex-row items-stretch px-[1.375rem] lg:pl-20 mt-12">
+      <section className="flex flex-col lg:flex-row items-stretch px-[1.375rem] md:pl-20 2xl:pl-14 mt-12 ">
         <div className="mr-[2.5rem] ">
           <iframe
             className="lg:hidden"
-            src="https://player.vimeo.com/video/636370372?h=734c780ecc"
+            src="https://player.vimeo.com/video/668966622?h=72c3312ed7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
             width="100%"
             height="100%"
             frameBorder="0"
@@ -307,7 +307,7 @@ export default function Home() {
           ></iframe>
           <iframe
             className="hidden lg:block"
-            src="https://player.vimeo.com/video/636370372?h=734c780ecc"
+            src="https://player.vimeo.com/video/668966622?h=72c3312ed7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
             width="718.74"
             height="100%"
             frameBorder="0"
@@ -414,7 +414,7 @@ export default function Home() {
                   <span className="mx-1 whitespace-nowrap">Get details</span>
                   <Image
                     src="/vectors/arrow-left.svg"
-                    alt="Avatar"
+                    alt="arrow"
                     width={25}
                     height={17}
                   />
@@ -438,11 +438,19 @@ export default function Home() {
                 <p className="lg:text-[2rem] text-[1.5rem] w-1/2">
                   {op.position}
                 </p>
-                <div className=" lg:w-1/2 border-l flex lg:flex-none text-[0.625rem] lg:text-base border-black pl-10">
+                <div className="  border-l flex lg:flex-none text-[0.625rem] lg:text-base border-black pl-10">
                   <div className="flex flex-grow  flex-col justify-center lg:justify-items-stretch">
                     <p>{op.location}</p>
                     <p>{op.type}</p>
                     <p>{op.company}</p>
+                  </div>
+                  <div className="flex flex-grow justify-end items-end mb-4">
+                    <Image
+                      src="/vectors/arrow-left.svg"
+                      alt="job-arrow"
+                      width={25}
+                      height={17}
+                    />
                   </div>
                 </div>
               </div>
