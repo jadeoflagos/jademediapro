@@ -1,9 +1,11 @@
 import { Button } from "@mui/material";
+import { useRouter } from "next/router";
 import React, { useState, Fragment } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const Card = ({ title, description, gif }) => {
+  const router = useRouter();
   return (
     <div className="w-full text-white  flex flex-col bg-black py-8 px-6 rounded-sm">
       <span className=" w-20 h-20 mb-16">
@@ -27,6 +29,7 @@ const Card = ({ title, description, gif }) => {
         }}
         variant="contained"
         className="py-[0.75rem] font-semibold hover:opacity-90"
+        onClick={() => router.push("/services")}
       >
         LEARN MORE
       </Button>

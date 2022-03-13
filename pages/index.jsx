@@ -17,8 +17,10 @@ import unlockFuture from "../public/gifs/Unlock Your Future.gif";
 import Heading from "../components/organism/Heading";
 import Button from "../components/Button";
 import ProcessesSlider from "../components/ProcessesSlider";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
   const [activeIdea, setActiveIdea] = useState(0);
   const openings = [
     {
@@ -73,7 +75,7 @@ export default function Home() {
         <div className="py-20  text-white  px-8 w-full lg:px-20 lg:grid grid-cols-12">
           <div className="lg:col-span-7 flex flex-col justify-center">
             <p
-              className={`${styles.headerFamily}  font-bold text-5xl lg:text-[6.5rem] leading-[6.13rem]`}
+              className={`${styles.headerFamily}  font-bold text-5xl lg:text-[6.5rem] leading-3 md:leading-[6.5rem]`}
             >
               {Header.title}
             </p>
@@ -81,7 +83,11 @@ export default function Home() {
               {Header.subTitle}
             </p>
             <div className="w-[13.61rem]">
-              <Button label="VIEW PROJECTS" greenBtn />
+              <Button
+                label="VIEW PROJECTS"
+                greenBtn
+                onClick={() => router.push("/projects")}
+              />
             </div>
           </div>
         </div>
@@ -278,7 +284,11 @@ export default function Home() {
 
           <ProcessesSlider slideToShow={activeIdea} />
           <div className="w-[18.68rem]">
-            <Button label="Get your Brand process" greenBtn />
+            <Button
+              onClick={() => router.push("/projects")}
+              label="Get your Brand process"
+              greenBtn
+            />
           </div>
         </div>
       </div>
@@ -342,7 +352,10 @@ export default function Home() {
           </div>
           <p className="flex flex-grow" />
           <div className="w-[12.36rem]">
-            <Button label=" watch more" />
+            <Button
+              label=" watch more"
+              onClick={() => router.push("/interview")}
+            />
           </div>
         </div>
       </section>
@@ -354,7 +367,13 @@ export default function Home() {
       <section className="px-[1.375rem] lg:px-20 mt-20 lg:mt-32">
         <p className=" text-4xl lg:text-[3.2rem] leading-12 font-semibold">
           Discover popular and profitable{" "}
-          <a className="border-b-2 border-black">editorials</a>
+          <a
+            href="/blog"
+            className="border-b border-black "
+            style={{ paddingBottom: "-1rem" }}
+          >
+            editorials
+          </a>
         </p>
       </section>
       <section className="mt-11 grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-y-0 lg:gap-x-8 px-[1.375rem] lg:px-20 ">
@@ -364,10 +383,12 @@ export default function Home() {
           desc="One SEO component called off-site SEO ensures that users of external pages or of social media can find your website. Being optimized for SEO increases the site’s potential to draw customers from other platforms other than the search engine. It also gives you insights on such as location, technologies used, product preferences, etc. "
         />
         <PostCard
+          date="October 21, 2021"
           title="A Guide to Google SEO Algorithm Updates"
           desc="Some SEO-related tools such as the Google Keyword Planner and Google Analytics provide quantitative data to help you understand your market, analyze the trends, and know your competitors’ standings. The  search engine management is to helps you identify popular keywords so you can decide how to structure or revise your needed content."
         />
         <PostCard
+          date="October 21, 2021"
           title="A Guide to Google SEO Algorithm Updates"
           desc="Some SEO-related tools such as the Google Keyword Planner and Google Analytics provide quantitative data to help you understand your market, analyze the trends, and know your competitors’ standings. The  search engine management is to helps you identify popular keywords so you can decide how to structure or revise your needed content."
         />
@@ -387,7 +408,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8 ">
           <EyeBrow text=" Explore our full catalogue" />
           <div className="w-[15.6rem]">
-            <Button label="VISIT STORE" />
+            <Button label="VISIT STORE" onClick={() => router.push("/store")} />
           </div>
         </div>
       </section>
@@ -424,7 +445,10 @@ export default function Home() {
           </div>
           <span className="flex-grow" />
           <div className="w-[14.56rem] mt-8">
-            <Button label="UPCOMING EVENTS" />
+            <Button
+              label="UPCOMING EVENTS"
+              onClick={() => router.push("/events")}
+            />
           </div>
         </div>
         <div className="lg:pl-28 lg:border-l-2 flex flex-col border-black">
@@ -458,7 +482,10 @@ export default function Home() {
           </div>
           <Link href="/jobs">
             <div className="mt-16 w-[14.56rem]">
-              <Button label="VIEW ALL JOBS" />
+              <Button
+                label="VIEW ALL JOBS"
+                onClick={() => router.push("/jobs")}
+              />
             </div>
           </Link>
         </div>

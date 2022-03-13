@@ -26,6 +26,15 @@ a {
 * {
   box-sizing: border-box;
 }
+.like {
+  width: 0;
+  height: 0;
+}
+.product:hover .like {
+  width: 4rem;
+  height: 4rem;
+  transition: all 0.2s ease-in-out;
+}
 .interview-detail {
   background: transparent;
   color: transparent;
