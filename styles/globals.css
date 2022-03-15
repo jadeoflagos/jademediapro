@@ -35,6 +35,10 @@ a {
   height: 4rem;
   transition: all 0.2s ease-in-out;
 }
+.getDetails:hover img {
+  width: 4rem;
+  transition: width 0.3s ease-in-out;
+}
 .interview-detail {
   background: transparent;
   color: transparent;
@@ -57,19 +61,19 @@ a {
   color: white;
 }
 
-button.MuiButtonBase-root.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-195y93z-MuiButtonBase-root-MuiPickersDay-root {
-  background-color: #502a7a;
-  border-radius: 0px;
+button.MuiButtonBase-root {
+  border-radius: 0px !important;
 }
-button.MuiButtonBase-root.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-wed0tz {
-  background-color: #502a7a;
-  border-radius: 0px;
+.arrow {
+  @apply flex items-center cursor-pointer max-w-max;
 }
-button.MuiButtonBase-root.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root {
-  background-color: #502a7a;
-  border-radius: 0px;
+.arrow svg {
+  width: 20px;
+  height: 20px;
+  transition: width 1s ease;
+  overflow: visible;
 }
-button.MuiButtonBase-root.MuiPickersDay-root.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-195y93z-MuiButtonBase-root-MuiPickersDay-root {
-  border-radius: 0px;
+div.arrow:hover svg.arr {
+  width: 40px;
 }
 @tailwind utilities;

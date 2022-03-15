@@ -18,6 +18,7 @@ import Heading from "../components/organism/Heading";
 import Button from "../components/Button";
 import ProcessesSlider from "../components/ProcessesSlider";
 import { useRouter } from "next/router";
+import LearnMoreArrow from "../components/LearnMoreArrow";
 
 export default function Home() {
   const router = useRouter();
@@ -428,18 +429,10 @@ export default function Home() {
                     <span>{event.required}</span>
                   </p>
                 </div>
-                <div className="text-[#046C62] text-[1.5rem] lg:text-[2.18rem] mt-10 flex w-full flex-grow lg:leading-[2.4rem]">
+                <div className="text-[#046C62] text-[1.5rem] lg:text-[2.18rem] my-10 flex w-full flex-grow lg:leading-[2.4rem]">
                   {event.title}
                 </div>
-                <div className="flex items-center mt-4 ">
-                  <span className="mx-1 whitespace-nowrap">Get details</span>
-                  <Image
-                    src="/vectors/arrow-left.svg"
-                    alt="arrow"
-                    width={25}
-                    height={17}
-                  />
-                </div>
+                <LearnMoreArrow text="Get details" />
               </div>
             ))}
           </div>
@@ -456,7 +449,7 @@ export default function Home() {
           <div className="space-y-6 flex-grow mt-20">
             {openings.map((op, opIndex) => (
               <div
-                className="bg-[#46BFB2] grid grid-cols-2 py-3 px-4"
+                className="bg-[#46BFB2] hover:bg-[#098B81] cursor-pointer grid grid-cols-2 py-3 px-4"
                 key={opIndex}
               >
                 <p className="lg:text-[2rem] text-[1.5rem] w-1/2">
@@ -469,10 +462,10 @@ export default function Home() {
                     <p>{op.company}</p>
                   </div>
                   <div className="flex flex-grow justify-end items-end mb-4">
-                    <Image
+                    <img
                       src="/vectors/arrow-left.svg"
                       alt="job-arrow"
-                      width={25}
+                      width={2}
                       height={17}
                     />
                   </div>

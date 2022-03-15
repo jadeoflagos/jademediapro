@@ -144,7 +144,10 @@ const Footer = () => {
                   height={50}
                 />
               </a>
-              <a target="_blank" href="https://youtube.com/jademediapro">
+              <a
+                target="_blank"
+                href="https://www.youtube.com/channel/UCDOx6O4BefWkwAD3PK3JFNg"
+              >
                 <Image
                   src="/gifs/footer-icon-youtube.gif"
                   alt="Avatar"
@@ -184,10 +187,14 @@ const Footer = () => {
           <p>© 2021 Jade Media Pro. All rights reserved. </p>
           <div className="flex items-center justify-end">
             <Link href="/terms-and-condition">
-              <p className="mr-8 cursor-default">Terms & Conditions</p>
+              <a className="mr-8 hover:opacity-60 cursor-pointer  ">
+                Terms & Conditions
+              </a>
             </Link>
             <Link href="/privacy-policy">
-              <p className="cursor-default">Privacy Policy</p>
+              <a className="cursor-pointer mt-4 lg:mt-0 hover:opacity-60">
+                Privacy Policy
+              </a>
             </Link>
           </div>
         </div>
@@ -320,7 +327,10 @@ const Footer = () => {
                 height={15}
               />
             </a>
-            <a href="www.youtube.com/jademediapro" target="_blank">
+            <a
+              href="https://www.youtube.com/channel/UCDOx6O4BefWkwAD3PK3JFNg"
+              target="_blank"
+            >
               <Image
                 src="/vectors/youtube.svg"
                 alt="Avatar"
@@ -367,10 +377,14 @@ const Footer = () => {
         </p>
         <div className="text-xs">
           <Link href="/terms-and-condition">
-            <p className="mr-8 cursor-default ">Terms & Conditions</p>
+            <a className="mr-8 hover:opacity-20 cursor-pointer  ">
+              Terms & Conditions
+            </a>
           </Link>
           <Link href="/privacy-policy">
-            <p className="cursor-default mt-4 lg:mt-0">Privacy Policy</p>
+            <a className="cursor-pointer mt-4 lg:mt-0 hover:opacity-20">
+              Privacy Policy
+            </a>
           </Link>
         </div>
       </footer>

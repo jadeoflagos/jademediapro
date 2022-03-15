@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Calendarr from "../components/Calendar";
 import DailyEmailForm from "../components/DailyEmailForm";
 import Footer from "../components/Footer";
+import LearnMoreArrow from "../components/LearnMoreArrow";
 import Navbar from "../components/Navbar";
 import SectionHeader from "../components/organism/SectionHeader";
 import Pagination from "../components/Pagination";
@@ -47,17 +48,9 @@ const Events = () => {
                     <p className="lg:text-lg text-xs">{data.month}</p>
                     <p className="text-4xl lg:text-7xl">{data.date}</p>
                   </div>
-                  <div className="flex items-center ">
-                    <span className="mx-1 whitespace-nowrap lg:text-base text-xs">
-                      Get details
-                    </span>
-                    <Image
-                      src="/vectors/arrow-left.svg"
-                      alt="Avatar"
-                      width={25}
-                      height={17}
-                    />
-                  </div>
+                  <span className="w-36">
+                    <LearnMoreArrow text="Get details" />
+                  </span>
                 </div>
               </div>
             ))}

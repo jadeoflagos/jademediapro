@@ -17,7 +17,12 @@ import {
 } from "../components/DatePicker";
 import Button from "../components/Button";
 import ReviewSlider from "../components/ReviewSlider";
+import { useRouter } from "next/router";
+import LearnMoreArrow from "../components/LearnMoreArrow";
+import CompanySlider from "../components/CompanySlider";
+
 const About = () => {
+  const router = useRouter();
   return (
     <div>
       <SectionHeader
@@ -36,8 +41,8 @@ const About = () => {
         <p className="text-lg lg:text-[2.18rem] mb-5 lg:mb-10 col-span-2">
           Our Identity
         </p>
-        <div className="lg:flex lg:space-x-[4.8rem] justify-items-stretch items-stretch ">
-          <div className="lg:text-black text-[#666666] text-[0.9rem] lg:w-[54%]">
+        <div className="lg:flex lg:space-x-[4.8rem] justify-items-stretch items-center ">
+          <div className="lg:text-black text-[#666666]  flex flex-col self-stretch  lg:w-[54%] text-[1rem]">
             <p>
               Our origin lies in 2016 as Jade Grafix operating from a very small
               room. Today we are Africa's most renowned content-creation graphic
@@ -47,7 +52,7 @@ const About = () => {
               company that connects Africa to the world through design,
               products, market strategy, consulting, and training.
             </p>
-            <p className="my-2">
+            <p className="mt-2">
               The new and emerging Africa is filled with hard-working young and
               old focused on positioning themselves for a greater future. Jade
               Media Pro champions these efforts and invites others to join us on
@@ -112,7 +117,10 @@ const About = () => {
               </div>
             </div>
           ))}
-          <p className="border border-[#8A57A3] hover:bg-[#0DFFE5] hover:border-transparent px-12 py-2 max-w-max mt-8 cursor-pointer lg:mx-20">
+          <p
+            className="border border-[#8A57A3] hover:bg-[#0DFFE5] hover:border-transparent px-12 py-2 max-w-max mt-8 cursor-pointer lg:mx-20"
+            onClick={() => router.push("/contact")}
+          >
             BECOME A PARTNER
           </p>
         </div>
@@ -125,7 +133,7 @@ const About = () => {
               key={cIndex}
               className="lg:py-10 py-5 px-5 lg:px-14 text-xs lg:text-xl border-2 border-[#77459B]"
             >
-              <h3>{c.title}</h3>
+              <h3 className="font-semibold">{c.title}</h3>
               <span className="lg:mt-8 mt-7 lg:mb-12 mb-9 w-12 border-b-2 flex border-[#77459B]" />
               <p>{c.desc}</p>
             </div>
@@ -189,7 +197,13 @@ const About = () => {
           </div>
           <div className="flex justify-between items-center">
             <div className="  w-6/12 ">
-              <Button label=" Donate Now" />
+              <a
+                href="http://www.oladepotimilehinfoundation.org"
+                target="_blank"
+              >
+                {" "}
+                <Button label=" Donate Now" />
+              </a>
             </div>
             <span className="w-2/12" />
             <div className="w-4/12">
@@ -272,14 +286,14 @@ const About = () => {
           ))}
         </div>
       </section>
-      <section className="px-5 lg:px-20 mt-20">
+      <section className="px-5 lg:px-20 mt-20 ">
         <p className=" text-base lg:text-3xl">Career Development</p>
         <p className="text-[2rem] leading-9 lg:text-6xl max-w-screen-xl my-8 font-semibold">
           We exist for your Growth and Success. Got what it takes?
           <span className="text-[#046C62]"> Join our Team today</span>
         </p>
-        <div className="flex flex-col lg:flex-row lg:space-x-[6.6rem]">
-          <div className="lg:w-1/2 flex flex-col h-full order-2 lg:order-1">
+        <div className="grid lg:grid-cols-2 lg:gap-[6.6rem] ">
+          <div className="lg:w-full flex flex-col h-full order-2 lg:order-1">
             <div className="mb-6 flex-grow">
               Professional opportunities for career growth and improvement in
               personal skills and knowledge with great expectations are
@@ -309,21 +323,22 @@ const About = () => {
               of excellence.
             </div>
             <div className="w-64">
-              <Button label="APPLY NOW" />
+              <Button
+                label="APPLY NOW"
+                onClick={() => router.push("/contact")}
+              />
             </div>
           </div>
-          <div className=" lg:w-1/2 flex justify-center order-1 lg:order-2 py-5 lg:py-0">
-            <Image
+          <div className=" lg:w-full  order-1 lg:order-2 py-5 lg:py-0 ">
+            <img
               src="/images/About-CareerDevelopment-image.jpeg"
               alt="Avatar"
-              width={524.34}
-              height={428.3}
-              className=""
+              className="object-contain w-full h-full"
             />
           </div>
         </div>
       </section>
-      <section className="px-5 lg:px-20 mt-20 lg:mb-20 mb-64">
+      <section className="px-5 lg:px-20 mt-32 lg:mb-20 mb-64">
         <h3 className="text-xs lg:text-4xl">Testimonials</h3>
         <div className="lg:grid grid-cols-2 gap-x-[6.6rem] my-6">
           <p className="text-3xl lg:text-[2.8rem] font-semibold lg:leading-[3.375rem] lg:pr-10">
@@ -351,16 +366,10 @@ const About = () => {
             className="bg-[#46BFB2] p-6 h-full flex flex-col"
           >
             <h3 className="mb-16 text-2xl">{value.title}</h3>
-            <p className="flex-grow flex items-end">{value.details}</p>
-            <div className="flex items-center mt-10">
-              <p className="pr-2">Learn More</p>
-              <Image
-                src="/vectors/arrow-left.svg"
-                alt="Avatar"
-                width={25}
-                height={17}
-              />
-            </div>
+            <p className="flex-grow flex items-end mb-10">{value.details}</p>
+            <a href="/services">
+              <LearnMoreArrow />
+            </a>
           </div>
         ))}
       </section>
@@ -411,12 +420,7 @@ const About = () => {
             </div>
           </form>
           <div className="lg:w-2/5 flex items-start lg:order-2 order-1">
-            <Image
-              src="/vectors/blogger.svg"
-              alt="Avatar"
-              width={517}
-              height={488}
-            />
+            <img src="/gifs/contact.gif" alt="Avatar" />
           </div>
         </div>
       </section>

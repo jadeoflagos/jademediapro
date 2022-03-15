@@ -29,7 +29,7 @@ const Blog = () => {
         </div>
         <div className="flex flex-col lg:flex-row lg:pt-16 lg:pb-12 lg:items-center justify-between px-5 lg:px-20 text-white">
           <div className="lg:w-7/12">
-            <p className="font-bold text-4xl lg:text-8xl leading-[3.875rem]">
+            <p className="font-extrabold text-4xl lg:text-8xl leading-[3.875rem]">
               Blog Posts
             </p>
             <p className="pt-12 lg:pb-12 text-base lg:text-2xl lg:tracking-wider">
