@@ -377,12 +377,12 @@ const Footer = () => {
         </p>
         <div className="text-xs">
           <Link href="/terms-and-condition">
-            <a className="mr-8 hover:opacity-20 cursor-pointer  ">
+            <a className="mr-8 hover:opacity-60 cursor-pointer  ">
               Terms & Conditions
             </a>
           </Link>
           <Link href="/privacy-policy">
-            <a className="cursor-pointer mt-4 lg:mt-0 hover:opacity-20">
+            <a className="cursor-pointer mt-4 lg:mt-0 hover:opacity-60">
               Privacy Policy
             </a>
           </Link>

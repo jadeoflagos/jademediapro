@@ -35,7 +35,7 @@ const Jobs = () => {
         imageHeight="458.18"
         darkLogo
         bgColor="white"
-        navBarColor="black"
+        navBarColor="#000"
         headerColor="black"
         title="Discover your next career move with our efficiently managed job
         searches
@@ -63,9 +63,11 @@ const Jobs = () => {
             {openings.map((op, opIndex) => (
               <div
                 key={opIndex}
-                className="bg-[#46BFB2] items-center grid grid-cols-2 py-3 px-4"
+                className="bg-[#46BFB2] items-center grid grid-cols-2 py-3 px-4 hover:bg-[#098B81] cursor-pointer"
               >
-                <p className="text-2xl lg:text-[2.5rem] w-1/2">{op.position}</p>
+                <p className="text-2xl lg:text-[2.18rem] w-1/2 leading-[2.8rem]">
+                  {op.position}
+                </p>
                 <div className="border-l border-black flex items-end justify-between pl-7 lg:pl-10">
                   <div className="flex flex-col justify-items-stretch">
                     <p>{op.location}</p>
