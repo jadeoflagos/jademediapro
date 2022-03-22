@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import ArrowIcon from "./vectors/ArrowIcon";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
+import LearnMoreArrow from "./LearnMoreArrow";
 
 export default function PostCard({
   date,
@@ -59,12 +60,7 @@ export default function PostCard({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" className="text-black">
-          Read More
-        </Button>
-        <IconButton aria-label="add to favorites">
-          <ArrowIcon />
-        </IconButton>
+        <LearnMoreArrow text="Read more" />
       </CardActions>
     </Card>
   );

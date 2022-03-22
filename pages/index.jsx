@@ -131,13 +131,12 @@ export default function Home() {
                   className="mr-1"
                   style={{ fontWeight: "bolder" }}
                 >
-                  <span>
-                    Find out more about what is Branding and how does it help
-                    your Business?
-                  </span>
-                  <span className="mt-2">
-                    <LearnMoreArrow />
-                  </span>
+                  {/* <span className="mt-2">
+                    <LearnMoreArrow
+                      text="Find out more about what is Branding and how does it help
+                    your Business?"
+                    />
+                  </span> */}
                 </a>
               </Link>
             </div>
@@ -316,7 +315,7 @@ export default function Home() {
       </div>
       <section className="flex flex-col md:flex-row md:gap-x-16 items-stretch px-[1.375rem] md:pl-20 2xl:pl-14 mt-12 h-[26rem] ">
         <div className="md:w-3/5 h-full w-full relative">
-          <div
+          {/* <div
             style={{
               padding: "56.25% 0 0 0",
               position: "relative",
@@ -340,7 +339,7 @@ export default function Home() {
                 height: "100%",
               }}
             ></iframe>
-          </div>
+          </div> */}
         </div>
         <div className="md:w-2/5 items-stretch flex flex-col">
           <div>
@@ -465,20 +464,17 @@ export default function Home() {
                 <p className="lg:text-[2rem] text-[1.5rem] w-1/2">
                   {op.position}
                 </p>
-                <div className="  border-l flex lg:flex-none text-[0.625rem] lg:text-base border-black pl-10">
+                <div className=" border-l flex  text-[0.625rem] lg:text-base border-black pl-10">
                   <div className="flex flex-grow  flex-col justify-center lg:justify-items-stretch">
                     <p>{op.location}</p>
                     <p>{op.type}</p>
                     <p>{op.company}</p>
                   </div>
-                  <div className="flex flex-grow justify-end items-end mb-4">
-                    <img
-                      src="/vectors/arrow-left.svg"
-                      alt="job-arrow"
-                      width={2}
-                      height={17}
-                    />
-                  </div>
+                  <img
+                    src="/vectors/arrow-left.svg"
+                    alt="job-arrow"
+                    className="w-5 h-4 self-end "
+                  />
                 </div>
               </div>
             ))}

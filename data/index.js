@@ -16,7 +16,7 @@ export const ideaData = [
   {
     title: "Design",
     content:
-      "This is a very important phase as a series of well-defined activities are designed to develop a value system and communication framework for your business, resulting in a coherent brand identity and digital marketing strategy. Without design, we wouldn’t be able to deliver the strategy. The design phase is where brand values are transformed into real solutions like a unique and meaningful visual brand identity. As part of this process, the design’s main role is to formulate the visual identity but it often goes beyond that. develop the ideal marketing mix for your target audience and the type of product or service you offer to put all the pieces together so that everything we do contributes to the success of your business and beats out your competitors. This phase helps us clarify your goals and identify where you see your business in the future, which ultimately strengthens your strategy.",
+      "This is a very important phase as a series of well-defined activities are designed to develop a value system and communication framework for your business, resulting in a coherent brand identity and digital marketing strategy. Without design, we wouldn’t be able to deliver the strategy. The design phase is where brand values are transformed into real solutions like a unique and meaningful visual brand identity.  As part of this process, the design’s main role is to formulate the visual identity but it often goes beyond that. We proceed to develop the ideal marketing mix for your target audience and the type of product or service you offer to put all the pieces together so that everything we do contributes to the success of your business and beats out your competitors. This phase helps us clarify your goals and identify where you see your business in the future, which ultimately strengthens your strategy.",
   },
   {
     title: "Implement",
@@ -459,7 +459,7 @@ export const culture = [
   },
   {
     title: "Excellence",
-    desc: "We work persistently to deliver excellent services and satisfy our clients with utmost care",
+    desc: "We work persistently to deliver excellent services and satisfy our clients with utmost care.",
   },
   {
     title: "Integrity",

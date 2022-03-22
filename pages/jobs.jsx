@@ -111,13 +111,12 @@ const Jobs = () => {
               </div>
             </div>
             <div className="hidden lg:block">
-              {" "}
               <DailyEmailForm />
             </div>
           </aside>
         </section>
       </div>
-      <section className="px-20">
+      <section className="px-20 pb-16">
         <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </section>
       <div className="lg:hidden block my-10 mx-5">

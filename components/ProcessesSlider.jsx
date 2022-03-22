@@ -57,11 +57,11 @@ function ProcessesSlider({ slideToShow }) {
           <div className="flex items-center gap-x-6 mt-10">
             <Image
               priority
-              src={`/images/ideas/${i.title}-Left.png`}
+              src={`/vectors/${i.title}-Left.svg`}
               width={485}
               height={259}
               alt="ideate1-img"
-            />{" "}
+            />
             <span className="hidden lg:flex items-center">
               <Image
                 priority

@@ -85,7 +85,7 @@ const Contact = () => {
           ))}
         </div>
       </section>
-      <section className="px-5  lg:px-20 my-7 lg:mt-36 lg:mb-64">
+      <section id="contactus" className="px-5  lg:px-20 my-7 lg:mt-36 lg:mb-64">
         <p className="text-3xl lg:w-3/5 pr-12 lg:mb-[4.8rem] lg:text-6xl font-bold">
           We can help you with the process. Let's talk.
         </p>
