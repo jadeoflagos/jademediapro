@@ -114,8 +114,16 @@ const Footer = () => {
         </div>
         <div className="text-white mt-10 grid grid-cols-2 items-end">
           <div className="flex items-center">
-            <span className="border-b">(+234) 902 771 0233</span>
-            <span className="border-b ml-9">solutions@jademediapro.com </span>
+            <a href="tel:+2349027710233" className="border-b ">
+              (+234) 902 771 0233
+            </a>{" "}
+            <a
+              href="mailto:solutions@jademediapro.com"
+              target="_blank"
+              className="border-b ml-9"
+            >
+              solutions@jademediapro.com{" "}
+            </a>
           </div>
           <div>
             <p>Connect with us on our platforms:</p>
@@ -297,8 +305,16 @@ const Footer = () => {
           </div>
         </div>
         <div className="py-8 text-xs space-y-4 ">
-          <p className="border-b max-w-max">(+234) 902 771 0233</p>
-          <p className="border-b max-w-max">solutions@jademediapro.com</p>
+          <a href="tel:+2349027710233" className="border-b max-w-max">
+            (+234) 902 771 0233
+          </a>
+          <a
+            href="mailto:solutions@jademediapro.com"
+            target="_blank"
+            className="border-b max-w-max"
+          >
+            solutions@jademediapro.com{" "}
+          </a>{" "}
         </div>
         <div className="mt-10">
           <p>Connect with us on our platforms:</p>

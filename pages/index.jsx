@@ -84,11 +84,16 @@ export default function Home() {
               {Header.subTitle}
             </p>
             <div className="w-[13.61rem]">
-              <Button
-                label="VIEW PROJECTS"
-                greenBtn
-                onClick={() => router.push("/projects")}
-              />
+              <Link
+                href={{
+                  pathname: "/projects",
+                  query: { id: 0 },
+                }}
+              >
+                <a className="flex items-center">
+                  <Button label="VIEW PROJECTS" greenBtn />
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -131,12 +136,7 @@ export default function Home() {
                     your Business?
                   </span>
                   <span className="mt-2">
-                    <Image
-                      src="/vectors/arrow-right.svg"
-                      alt="Avatar"
-                      width={35}
-                      height={35}
-                    />
+                    <LearnMoreArrow />
                   </span>
                 </a>
               </Link>
@@ -146,21 +146,33 @@ export default function Home() {
         <div className="lg:w-8/12 w-full lg:px-12 lg:order-2 order-1">
           <p className="text-3xl lg:text-5xl font-semibold lg:leading-[3.9rem]  ">
             Unlock your future by taking advantage of{" "}
-            <a
-              href="/projects"
-              className="border-b border-black "
-              style={{ paddingBottom: "-1rem" }}
+            <Link
+              href={{
+                pathname: "/services",
+                query: { id: 1 },
+              }}
             >
-              Branding
-            </a>{" "}
+              <a
+                className="border-b border-black "
+                style={{ paddingBottom: "-1rem" }}
+              >
+                Branding
+              </a>
+            </Link>{" "}
             &{" "}
-            <a
-              href="/projects"
-              className="border-b border-black "
-              style={{ paddingBottom: "-1rem" }}
+            <Link
+              href={{
+                pathname: "/services",
+                query: { id: 3 },
+              }}
             >
-              Digital marketing
-            </a>
+              <a
+                className="border-b border-black "
+                style={{ paddingBottom: "-1rem" }}
+              >
+                Digital marketing
+              </a>
+            </Link>
           </p>
           <div className="text-[0.94rem]">
             <p className="mt-8   text-[#666666]">
@@ -204,16 +216,10 @@ export default function Home() {
                   className="mr-1 text-[0.94rem]  flex items-center"
                   style={{ fontWeight: "bolder" }}
                 >
-                  Find out more about what is Branding and how does it help your
-                  Business?
-                  <span className="mt-2">
-                    <Image
-                      src="/vectors/arrow-right.svg"
-                      alt="Avatar"
-                      width={35}
-                      height={35}
-                    />
-                  </span>
+                  <LearnMoreArrow
+                    text=" Find out more about what is Branding and how does it help your
+                  Business?"
+                  />
                 </a>
               </Link>
             </div>
@@ -285,11 +291,14 @@ export default function Home() {
 
           <ProcessesSlider slideToShow={activeIdea} />
           <div className="w-[18.68rem]">
-            <Button
-              onClick={() => router.push("/projects")}
-              label="Get your Brand process"
-              greenBtn
-            />
+            <Link
+              href={{
+                pathname: "/projects",
+                query: { id: 1 },
+              }}
+            >
+              <Button label="Get your Brand process" greenBtn />
+            </Link>
           </div>
         </div>
       </div>
@@ -305,34 +314,35 @@ export default function Home() {
       <div className="px-[1.375rem] lg:px-20 pt-32">
         <Heading text="Exclusive interviews with industry leading professionals" />
       </div>
-      <section className="flex flex-col lg:flex-row items-stretch px-[1.375rem] md:pl-20 2xl:pl-14 mt-12 ">
-        <div className="mr-[2.5rem] ">
-          <iframe
-            className="lg:hidden"
-            src="https://player.vimeo.com/video/668966622?h=72c3312ed7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <iframe
-            className="hidden lg:block"
-            src="https://player.vimeo.com/video/668966622?h=72c3312ed7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            width="718.74"
-            height="100%"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-
-          {/* <p>
-            <a href="https://vimeo.com/636370372">Ariwa-Leather-Fashion.mp4</a>
-            from <a href="https://vimeo.com/user147594847">John Ademiluyi</a> on
-            <a href="https://vimeo.com">Vimeo</a>.
-          </p> */}
+      <section className="flex flex-col md:flex-row md:gap-x-16 items-stretch px-[1.375rem] md:pl-20 2xl:pl-14 mt-12 h-[26rem] ">
+        <div className="md:w-3/5 h-full w-full relative">
+          <div
+            style={{
+              padding: "56.25% 0 0 0",
+              position: "relative",
+              height: "100%",
+              width: "100%",
+            }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/668966622?h=72c3312ed7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              title="Interview-Coming-Soon-Trailer.mp4"
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                right: "0",
+                bottom: "0",
+                width: "100%",
+                height: "100%",
+              }}
+            ></iframe>
+          </div>
         </div>
-        <div className="lg:w-2/6 items-stretch flex flex-col">
+        <div className="md:w-2/5 items-stretch flex flex-col">
           <div>
             <p className="text-[#046C62] mb-8 text-[2rem] leading-tight lg:leading-[2.4rem] lg:text-[2.18rem] mt-7 lg:mt-0">
               60 minutes with Adaeze of <u>CAV Digital</u>

@@ -6,10 +6,17 @@ import { DatePickerComponent } from "../components/DatePicker";
 import { TimePickerComponent } from "../components/TimePicker";
 import { serviceData } from "../data/ServicePage";
 import SectionHeader from "../components/organism/SectionHeader";
-
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 const Services = () => {
   const [activeTab, setActiveTab] = useState(-1);
   const [activeSubTab, setActiveSubTab] = useState(0);
+
+  const { query } = useRouter();
+  const id = query.id;
+  useEffect(() => {
+    setActiveTab(id);
+  }, [id]);
 
   return (
     <div>

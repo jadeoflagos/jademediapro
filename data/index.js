@@ -476,16 +476,19 @@ export const values = [
     title: "Business",
     details:
       "We analyse change, explore vulnerability, and optimize market strengths to accomplish sustainable and healthy development because starting and running a business is not trial and error.",
+    link: 2,
   },
   {
     title: "Branding",
     details:
       "We design powerful identities that inspire and stand the test of time through innovative and compelling visuals that resonate with customers and nurture lasting relationships.",
+    link: 1,
   },
   {
     title: "Marketing",
     details:
       "We help grow your business, stay relevant, and outweigh the competition by creating brand awareness, generating leads, and boosting your sales & revenue.",
+    link: 3,
   },
 ];
 

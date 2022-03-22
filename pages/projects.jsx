@@ -1,14 +1,21 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PostCard from "../components/PostCard";
 import { projectData } from "../data/ProjectPage";
 import SectionHeader from "../components/organism/SectionHeader";
+import { useRouter } from "next/router";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(-1);
   const [activeSubTab, setActiveSubTab] = useState(0);
+
+  const { query } = useRouter();
+  const id = query.id;
+  useEffect(() => {
+    setActiveTab(id);
+  }, [id]);
 
   return (
     <div>

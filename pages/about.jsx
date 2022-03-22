@@ -20,6 +20,7 @@ import ReviewSlider from "../components/ReviewSlider";
 import { useRouter } from "next/router";
 import LearnMoreArrow from "../components/LearnMoreArrow";
 import CompanySlider from "../components/CompanySlider";
+import Link from "next/link";
 
 const About = () => {
   const router = useRouter();
@@ -367,9 +368,16 @@ const About = () => {
           >
             <h3 className="mb-16 text-2xl">{value.title}</h3>
             <p className="flex-grow flex items-end mb-10">{value.details}</p>
-            <a href="/services">
-              <LearnMoreArrow />
-            </a>
+            <Link
+              href={{
+                pathname: "/services",
+                query: { id: value.link },
+              }}
+            >
+              <a className="flex items-center">
+                <LearnMoreArrow />
+              </a>
+            </Link>
           </div>
         ))}
       </section>
@@ -420,7 +428,7 @@ const About = () => {
             </div>
           </form>
           <div className="lg:w-2/5 flex items-start lg:order-2 order-1">
-            <img src="/gifs/contact.gif" alt="Avatar" />
+            <img src="/gifs/Contact.gif" alt="Avatar" />
           </div>
         </div>
       </section>
