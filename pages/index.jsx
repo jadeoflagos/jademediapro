@@ -315,31 +315,22 @@ export default function Home() {
       </div>
       <section className="flex flex-col md:flex-row md:gap-x-16 items-stretch px-[1.375rem] md:pl-20 2xl:pl-14 mt-12 h-[26rem] ">
         <div className="md:w-3/5 h-full w-full relative">
-          {/* <div
+          <iframe
+            src="https://player.vimeo.com/video/668966622?h=72c3312ed7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Interview-Coming-Soon-Trailer.mp4"
             style={{
-              padding: "56.25% 0 0 0",
-              position: "relative",
-              height: "100%",
+              position: "absolute",
+              top: "0",
+              left: "0",
+              right: "0",
+              bottom: "0",
               width: "100%",
+              height: "100%",
             }}
-          >
-            <iframe
-              src="https://player.vimeo.com/video/668966622?h=72c3312ed7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
-              title="Interview-Coming-Soon-Trailer.mp4"
-              style={{
-                position: "absolute",
-                top: "0",
-                left: "0",
-                right: "0",
-                bottom: "0",
-                width: "100%",
-                height: "100%",
-              }}
-            ></iframe>
-          </div> */}
+          ></iframe>
         </div>
         <div className="md:w-2/5 items-stretch flex flex-col">
           <div>

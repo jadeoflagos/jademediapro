@@ -192,7 +192,7 @@ const About = () => {
               unhindered access to high-quality living and enhance the overall
               quality of global development.
             </p>
-            <div className="flex items-center space-x-4 justify-between flex-grow px-3 lg:px-0">
+            <div className="place-items-center grid grid-cols-3 gap-x-4 flex-grow px-3 lg:px-0">
               {[
                 { text: "$ 1.2M", desc: "funded" },
                 { text: "1.6K", desc: "volunteers" },
@@ -456,7 +456,7 @@ const About = () => {
       </div>
       {OpenShareModal && (
         <div className="flex items-center justify-center fixed h-screen w-screen inset-0 bg-black bg-opacity-30 z-[60]">
-          <SocialShare modalRef={ref} />
+          <SocialShare modalRef={ref} close={setOpenShareModal} />
         </div>
       )}
     </>
