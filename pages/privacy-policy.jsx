@@ -11,7 +11,6 @@ import {
   privacyPolicyTOC,
 } from "../data/privacyPolicy";
 
-
 import styles from "../styles/Home.module.css";
 
 const PrivacyPolicy = () => {
