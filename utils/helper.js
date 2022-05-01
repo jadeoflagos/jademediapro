@@ -60,7 +60,7 @@ export const handleRoutes = (option, type) => {
         }
     }
     if (type === 'about') {
-        const hashLink = spaceTesting ? optionLowerCase.replaceAll(' ', '-') : optionLowerCase
+        const hashLink = spaceTesting ? optionLowerCase.replace(/\s/g, '-') : optionLowerCase
 
         return `/${type}#${hashLink}`
     }
