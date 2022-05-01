@@ -9,7 +9,9 @@ import {
   privacyPolicyData,
   privacyPolicyMobileData,
   privacyPolicyTOC,
-} from "../data";
+} from "../data/privacyPolicy";
+
+
 import styles from "../styles/Home.module.css";
 
 const PrivacyPolicy = () => {
