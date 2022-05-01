@@ -63,7 +63,7 @@ export default function Home() {
   return (
     <div>
       <div
-        className="w-screen  lg:min-h-[50rem]"
+        className="w-screen  lg:min-h-[50rem] "
         style={{
           background: `url("/images/homebg.png")`,
           backgroundSize: "cover",

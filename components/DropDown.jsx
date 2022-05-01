@@ -3,13 +3,13 @@ import { useClickAway } from "react-use";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { handleRoutes, routesNames } from "../utils/helper";
-
+import styles from "../styles/Home.module.css";
 const DropDown = ({ options = [], bg = "black", closeDropDown, type }) => {
   const bgColors = {
-    purple: "#2C144E",
+    purple: "rgba(44, 20, 78, 0.5)",
     black: "rgba(66, 66, 66, 0.5)",
-    white: "#E8E8E8",
-    green: "#02332E",
+    white: "rgba(232, 232, 232, 0.5)",
+    green: "rgba(2, 51, 46, 0.5)",
   };
 
   const dropDown = useRef(null);
@@ -40,8 +40,8 @@ const DropDown = ({ options = [], bg = "black", closeDropDown, type }) => {
           >
             <a
               href={handleRoutes(option, type)}
-              className={`${textColor} pb-2 border-b-[1px] w-max  border-b-transparent ${
-                bg === "white" ? "hover:border-b-black" : "hover:border-b-white"
+              className={`${textColor} ${styles.linkBorder}   pb-2 w-max ${
+                bg === "white" ? "border-b-black" : "border-b-white "
               }`}
             >
               {option}

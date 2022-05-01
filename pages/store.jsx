@@ -23,7 +23,7 @@ const Store = () => {
   return (
     <div>
       <div>
-        <Navbar darkLogo />
+        <Navbar darkLogo dropDownBg="white" />
       </div>
       <div
         className="w-screen lg:h-[31rem] h-40 lg:px-20 px-10"
@@ -50,9 +50,7 @@ const Store = () => {
           </p>
         </div>
       </div>
-      <section className="lg:hidden ">
-
-      </section>
+      <section className="lg:hidden "></section>
       <section className="px-5 lg:px-20 py-20">
         <div className="flex items-center mb-24">
           <span className="font-semibold mr-[0.857rem]">Related</span>

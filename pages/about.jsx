@@ -107,7 +107,10 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className="lg:mx-20 mt-5 lg:mt-0 flex flex-col space-y-5 lg:space-y-0 justify-between">
+          <div
+            className="lg:mx-20 mt-5 lg:mt-0 flex flex-col space-y-5 lg:space-y-0 justify-between"
+            id="what-we-do"
+          >
             {wwwh.map((w, wIndex) => (
               <div
                 className="flex lg:items-center items-start"
@@ -151,7 +154,7 @@ const About = () => {
             ))}
           </div>
         </section>
-        <section className="px-5 lg:px-20 mt-16 lg:mt-32">
+        <section className="px-5 lg:px-20 mt-16 lg:mt-32" id="volunteering">
           <p className="mb-10 text-sm lg:text-4xl">Volunteering</p>
           <p className="text-[2.8rem] lg:leading-[3.375rem] font-semibold">
             Bridging Africa’s transition from the analog age to the Digital age
@@ -227,7 +230,10 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="lg:px-20 px-5 mt-10 flex flex-col items-start">
+        <section
+          className="lg:px-20 px-5 mt-10 flex flex-col items-start"
+          id="our-team"
+        >
           <p className="text-4xl">The Team</p>
           <div className="w-full hidden lg:flex justify-between mt-6 gap-x-[3.6rem]">
             {team.slice(0, 3).map((teammember, memberIndex) => (
@@ -305,7 +311,7 @@ const About = () => {
             ))}
           </div>
         </section>
-        <section className="px-5 lg:px-20 mt-20 ">
+        <section className="px-5 lg:px-20 mt-20 " id="career">
           <p className=" text-base lg:text-3xl">Career Development</p>
           <p className="text-[2rem] leading-9 lg:text-6xl max-w-screen-xl my-8 font-semibold">
             We exist for your Growth and Success. Got what it takes?
@@ -359,7 +365,10 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="px-5 lg:px-20 mt-32 lg:mb-20 mb-64">
+        <section
+          className="px-5 lg:px-20 mt-32 lg:mb-20 mb-64"
+          id="testimonials"
+        >
           <h3 className="text-xs lg:text-4xl">Testimonials</h3>
           <div className="lg:grid grid-cols-2 gap-x-[6.6rem] my-6">
             <p className="text-3xl lg:text-[2.8rem] font-semibold lg:leading-[3.375rem] lg:pr-10">

@@ -79,9 +79,7 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
           >
             <span
               className={`capitalize text-[1.125rem] select-none drop-down ${
-                path === `/${item}`
-                  ? styles.activeLink
-                  : "font-normal text-white/80 "
+                path === `/${item}` ? styles.activeLink : "font-normal "
               }`}
             >
               {item}
@@ -101,9 +99,7 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
           <a
             href="/contact"
             className={`${
-              path === "/contact"
-                ? styles.activeLink
-                : "font-normal text-white/80 "
+              path === "/contact" ? styles.activeLink : "font-normal  "
             } text-[1.125rem]`}
           >
             Contact

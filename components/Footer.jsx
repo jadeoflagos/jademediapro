@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Logo from "./vectors/Logo";
 import Link from "next/link";
-import { scrollToTop } from "../utils/helper";
+import { handleRoutes, scrollToArea } from "../utils/helper";
 import Button from "./Button";
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
             alt="Avatar"
             width={50}
             height={50}
-            onClick={scrollToTop}
+            onClick={() => scrollToArea("top")}
           />
         </div>
         <div
@@ -24,48 +24,56 @@ const Footer = () => {
         >
           <div className="flex flex-col">
             <Link href="/about">
-              <a href="" className="mb-4 text-2xl">
+              <a href="/about" className="mb-4 text-2xl">
                 About
               </a>
             </Link>
             <div className="flex flex-col space-y-2">
-              <Link href="/about">What we do</Link>
-              <Link href="/about">Our Team</Link>
-              <Link href="/about">Testimonials</Link>
-              <Link href="/about">Volunteering</Link>
-              <Link href="/about">Career</Link>
+              <Link href={handleRoutes("What we do", "about")}>What we do</Link>
+              <Link href={handleRoutes("Our Team", "about")}>Our Team</Link>
+              <Link href={handleRoutes("Testimonials", "about")}>
+                Testimonials
+              </Link>
+              <Link href={handleRoutes("Volunteering", "about")}>
+                Volunteering
+              </Link>
+              <Link href={handleRoutes("Career", "about")}>Career</Link>
             </div>
           </div>
           <div className="flex flex-col">
-            <Link href="/about">
-              <a href="" className="mb-4 text-2xl">
+            <Link href="/services">
+              <a href="/services" className="mb-4 text-2xl">
                 Services
               </a>
             </Link>
             <div className="flex flex-col space-y-2">
-              <Link href="/about">Business</Link>
-              <Link href="/about">Branding</Link>
-              <Link href="/about">Design</Link>
-              <Link href="/about">Marketing</Link>
-              <Link href="/about">Motion</Link>
-              <Link href="/about">Printing</Link>
+              <Link href={handleRoutes("Business", "services")}>Business</Link>
+              <Link href={handleRoutes("Branding", "services")}>Branding</Link>
+              <Link href={handleRoutes("Design", "services")}>Design</Link>
+              <Link href={handleRoutes("Marketing", "services")}>
+                Marketing
+              </Link>
+              <Link href={handleRoutes("Motion", "services")}>Motion</Link>
+              <Link href={handleRoutes("Printing", "services")}>Printing</Link>
             </div>
           </div>
           <div className="flex flex-col">
-            <Link href="/about">
-              <a href="" className="mb-4 text-2xl">
+            <Link href="/projects">
+              <a href="/projects" className="mb-4 text-2xl">
                 Projects
               </a>
             </Link>
             <div className="flex flex-col space-y-2">
-              <Link href="/about">Process</Link>
-              <Link href="/about">Showreel</Link>
-              <Link href="/case-study">Case Study</Link>
-              <Link href="/about">Training</Link>
+              <Link href={handleRoutes("Process", "projects")}>Process</Link>
+              <Link href={handleRoutes("Showreel", "projects")}>Showreel</Link>
+              <Link href={handleRoutes("case study", "projects")}>
+                Case Study
+              </Link>
+              <Link href={handleRoutes("Training", "projects")}>Training</Link>
             </div>
           </div>
           <div className="flex flex-col">
-            <Link href="/about">
+            <Link href="/">
               <a href="" className="mb-4 text-2xl">
                 Hub
               </a>
@@ -217,7 +225,7 @@ const Footer = () => {
             alt="Avatar"
             width={50}
             height={50}
-            onClick={scrollToTop}
+            onClick={() => scrollToArea("top")}
           />
         </div>
         <p className="cursor-pointer py-3 px-12 flex mt-12  bg-[#0DFFE5] max-w-[24.16rem] text-black justify-center">
@@ -226,44 +234,52 @@ const Footer = () => {
         <div className=" grid grid-cols-2 gap-y-9 mt-20">
           <div className="flex flex-col">
             <Link href="/about">
-              <a href="" className="mb-4 text-2xl">
+              <a href="/about" className="mb-4 text-2xl">
                 About
               </a>
             </Link>
             <div className="flex flex-col space-y-2">
-              <Link href="/about">What we do</Link>
-              <Link href="/about">Our Team</Link>
-              <Link href="/about">Testimonials</Link>
-              <Link href="/about">Volunteering</Link>
-              <Link href="/about">Career</Link>
+              <Link href={handleRoutes("What we do", "about")}>What we do</Link>
+              <Link href={handleRoutes("Our Team", "about")}>Our Team</Link>
+              <Link href={handleRoutes("Testimonials", "about")}>
+                Testimonials
+              </Link>
+              <Link href={handleRoutes("Volunteering", "about")}>
+                Volunteering
+              </Link>
+              <Link href={handleRoutes("Career", "about")}>Career</Link>
             </div>
           </div>
           <div className="flex flex-col">
-            <Link href="/about">
-              <a href="" className="mb-4 text-2xl">
+            <Link href="/services">
+              <a href="/services" className="mb-4 text-2xl">
                 Services
               </a>
             </Link>
             <div className="flex flex-col space-y-2">
-              <Link href="/about">Business</Link>
-              <Link href="/about">Branding</Link>
-              <Link href="/about">Design</Link>
-              <Link href="/about">Marketing</Link>
-              <Link href="/about">Motion</Link>
-              <Link href="/about">Printing</Link>
+              <Link href={handleRoutes("Business", "services")}>Business</Link>
+              <Link href={handleRoutes("Branding", "services")}>Branding</Link>
+              <Link href={handleRoutes("Design", "services")}>Design</Link>
+              <Link href={handleRoutes("Marketing", "services")}>
+                Marketing
+              </Link>
+              <Link href={handleRoutes("Motion", "services")}>Motion</Link>
+              <Link href={handleRoutes("Printing", "services")}>Printing</Link>
             </div>
           </div>
           <div className="flex flex-col">
-            <Link href="/about">
-              <a href="" className="mb-4 text-2xl">
+            <Link href="/projects">
+              <a href="/projects" className="mb-4 text-2xl">
                 Projects
               </a>
             </Link>
             <div className="flex flex-col space-y-2">
-              <Link href="/about">Process</Link>
-              <Link href="/about">Showreel</Link>
-              <Link href="/about">Case Study</Link>
-              <Link href="/about">Training</Link>
+              <Link href={handleRoutes("Process", "projects")}>Process</Link>
+              <Link href={handleRoutes("Showreel", "projects")}>Showreel</Link>
+              <Link href={handleRoutes("Case Study", "projects")}>
+                Case Study
+              </Link>
+              <Link href={handleRoutes("Training", "projects")}>Training</Link>
             </div>
           </div>
           <div className="flex flex-col">

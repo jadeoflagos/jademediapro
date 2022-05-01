@@ -19,7 +19,7 @@ const CaseStudy = () => {
   return (
     <div>
       <div>
-        <Navbar dropDownBg="black" bg="#fff" textColor="#000" darkLogo />
+        <Navbar dropDownBg="white" bg="#fff" textColor="#000" darkLogo />
       </div>
       <Image
         // layout="fill"

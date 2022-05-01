@@ -6,15 +6,21 @@ import PostCard from "../components/PostCard";
 import { projectData } from "../data/ProjectPage";
 import SectionHeader from "../components/organism/SectionHeader";
 import { useRouter } from "next/router";
+import { scrollToArea } from "../utils/helper";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(-1);
   const [activeSubTab, setActiveSubTab] = useState(0);
 
-  const { query } = useRouter();
+  const { query, replace } = useRouter();
   const id = query.id;
   useEffect(() => {
-    setActiveTab(id);
+    if (id) {
+      const projectTitle = projectData[id].title;
+      setActiveTab(id);
+      scrollToArea(projectTitle);
+      replace("/projects", undefined, { shallow: true });
+    }
   }, [id]);
 
   return (
@@ -27,6 +33,7 @@ const Projects = () => {
         title="We create a fully unique journey for all our clients"
         headerImage="Projects-header.png"
         subTitle="Jade Media Pro has always been about people, and we've worked hard over the years to ensure that our clients are fully satisfied. Here are some unique stories behind the works we’ve undertaken."
+        dropDownBg="purple"
       />
       <section className="mt-20 lg:px-20 px-5 py-20 ">
         <div className="w-full space-y-6">
@@ -58,7 +65,7 @@ const Projects = () => {
               </div>
 
               {activeTab == projectIndex ? (
-                <div className="pt-6 pb-10 ">
+                <div className="pt-6 pb-10 " id={project.title}>
                   <div className="w-full">
                     {projectData[projectIndex].details.map(
                       (item, itemIndex) => (

@@ -36,7 +36,6 @@ const Card = ({ title, description, gif, link }) => {
               fontSize: "0.94rem",
               borderRadius: " 1.42325px",
             }}
-            variant="contained"
             className="py-[0.75rem] font-semibold hover:opacity-90"
           >
             LEARN MORE
