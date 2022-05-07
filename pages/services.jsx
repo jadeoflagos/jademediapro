@@ -105,7 +105,7 @@ const Services = () => {
         <div className="flex flex-col lg:flex-row items-start ">
           <form
             action=""
-            className="lg:w-3/5 lg:pr-12 grid grid-cols-2 gap-x-10 gap-y-4 lg:pt-11  order-2 lg:order-1"
+            className="lg:w-3/5 lg:pr-12 grid grid-cols-2 gap-10 lg:pt-11  order-2 lg:order-1"
           >
             <TextField
               id="standard-basic"
@@ -120,12 +120,15 @@ const Services = () => {
             />
             <DatePickerComponent />
             <TimePickerComponent />
-            <TextField
-              id="standard-basic"
-              label="Message"
-              variant="standard"
-              className="col-span-2"
-            />
+            <div className="col-span-2">
+              <textarea
+                name=""
+                id=""
+                rows={2}
+                className="border-b border-gray-500 focus:outline-none w-full resize-none"
+                placeholder="Message"
+              ></textarea>
+            </div>
             <div className="col-span-2 mt-16 mb-10 lg:mb-0 ">
               <Button
                 variant="contained"
