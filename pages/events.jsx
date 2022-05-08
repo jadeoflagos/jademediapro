@@ -22,6 +22,7 @@ const Events = () => {
         title="Bringing people of like-mind and goals together"
         headerImage="Event-header.png"
         subTitle="We connect professionals, businesses, and people to have  seamless experience every stage of an online or in-person event. Get detailed information about ticket sales, events, and more."
+        dropDownBg="green"
       />
 
       <section className="px-5 lg:px-20 grid lg:grid-cols-3 lg:gap-x-32 mt-12 lg:mb-12">

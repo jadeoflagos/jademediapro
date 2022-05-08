@@ -25,7 +25,7 @@ const Blog = () => {
     <div>
       <section className={`w-screen  bg-[#502A7A] pb-9 `}>
         <div>
-          <Navbar />
+          <Navbar dropDownBg="purple" />
         </div>
         <div className="flex flex-col lg:flex-row lg:pt-16 lg:pb-12 lg:items-center justify-between px-5 lg:px-20 text-white">
           <div className="lg:w-7/12">

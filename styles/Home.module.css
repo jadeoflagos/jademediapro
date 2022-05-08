@@ -151,3 +151,10 @@
 .headerFamily {
   font-family: "Poppins";
 }
+.linkBorder{
+  border-bottom:0px solid;
+  transition: border-bottom-width 0.4s linear;
+}
+.linkBorder:hover{
+  border-bottom-width:2px;
+}

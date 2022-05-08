@@ -8,14 +8,20 @@ import { serviceData } from "../data/ServicePage";
 import SectionHeader from "../components/organism/SectionHeader";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { scrollToArea } from "../utils/helper";
 const Services = () => {
   const [activeTab, setActiveTab] = useState(-1);
   const [activeSubTab, setActiveSubTab] = useState(0);
 
-  const { query } = useRouter();
+  const { query, replace } = useRouter();
   const id = query.id;
   useEffect(() => {
-    setActiveTab(id);
+    if (id) {
+      const serviceTitle = serviceData[id].title;
+      setActiveTab(id);
+      scrollToArea(serviceTitle);
+      replace("/services", undefined, { shallow: true });
+    }
   }, [id]);
 
   return (
@@ -27,6 +33,7 @@ const Services = () => {
         title="We provide professional and value design system"
         headerImage="Services-header.png"
         subTitle="We create magnetic advertisement videos, memorable brand identities, user-friendly websites, and practical marketing strategies. We also create insights on how you can be profitable."
+        dropDownBg="green"
       />
 
       <section className="lg:px-20 px-5 py-16">
@@ -59,7 +66,7 @@ const Services = () => {
               </div>
 
               {activeTab == serviceIndex ? (
-                <div className="pt-6 pb-10">
+                <div className="pt-6 pb-10" id={service.title}>
                   <div className="w-full">
                     {serviceData[serviceIndex].details.map(
                       (item, itemIndex) => (

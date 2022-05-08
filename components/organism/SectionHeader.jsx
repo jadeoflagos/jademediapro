@@ -10,6 +10,7 @@ const SectionHeader = ({
   subTitle,
   darkLogo,
   headerColor,
+  dropDownBg,
   imageWidth = "494",
   imageHeight = "494",
 }) => {
@@ -19,7 +20,11 @@ const SectionHeader = ({
       style={{ background: bgColor }}
     >
       <div>
-        <Navbar textColor={navBarColor} darkLogo={darkLogo} />
+        <Navbar
+          textColor={navBarColor}
+          darkLogo={darkLogo}
+          dropDownBg={dropDownBg ?? "black"}
+        />
       </div>
       <div
         className="flex flex-col lg:flex-row  lg:items-center justify-between px-5 lg:px-20 text-white "

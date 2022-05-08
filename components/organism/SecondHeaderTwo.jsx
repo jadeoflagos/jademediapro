@@ -8,13 +8,14 @@ const SecondHeaderTwo = ({
   subTitle,
   headerImg,
   navBarColor,
+  dropDownBg,
   imageWidth = "456",
   imageHeight = "456",
 }) => {
   return (
     <div className={`w-screen  bg-[#502A7A] `}>
       <div>
-        <Navbar textColor={navBarColor} />
+        <Navbar textColor={navBarColor} dropDownBg={dropDownBg ?? "black"} />
       </div>
       <div className="flex flex-col lg:flex-row lg:items-stretch justify-between px-5 lg:px-20 text-white">
         <div className="lg:w-7/12 lg:pb-[3.375rem] lg:pt-32">

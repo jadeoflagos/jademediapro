@@ -21,6 +21,7 @@ const freebies = () => {
           title="Everything you need for growth and development"
           subTitle="Free daily high-quality design resources hand-picked for creatives, designers and developers, ranging from fonts, mockups, graphics, templates & more from amazing artists. "
           headerImage="Freebies-header.png"
+          dropDownBg="purple"
         />
         <div className="py-32 bg-white px-5 lg:px-20">
           <div className="flex items-center mb-24">

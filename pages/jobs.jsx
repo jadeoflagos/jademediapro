@@ -40,6 +40,7 @@ const Jobs = () => {
         title="Discover your next career move with our efficiently managed job
         searches
 "
+        dropDownBg="white"
         headerImage="jobbg.png"
       />
       <div className="px-5 lg:px-20 py-16">

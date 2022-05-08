@@ -17,6 +17,7 @@ const Interview = () => {
         headerImg="Interview-header.png"
         title="Engaging One-on-One discussion with Big Guns"
         subTitle="We have awesome chat with industry leading professionals from various fields discussing exverything about their experience, business oreintation, and actionable insights  on how to grow."
+        dropDownBg="purple"
       />
       <div className="mt-12 px-5 lg:px-20 py-20 ">
         <p className="font-semibold text-3xl lg:text-6xl mb-8">60 minutes:</p>

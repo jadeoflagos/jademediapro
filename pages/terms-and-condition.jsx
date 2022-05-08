@@ -10,7 +10,7 @@ import {
   termsAndConditionData,
   termsAndConditionMobileData,
   termsAndConditionTOC,
-} from "../data";
+} from "../data/termsAndCondition";
 import { TermsConditionsMobile } from "../components/organism/TOCComponents";
 
 const TermsAndCondition = () => {
