@@ -73,7 +73,7 @@ const Services = () => {
                           <div className="flex items-center w-full">
                             <p className="w-[35%]" />
                             <p
-                              className="w-full lg:w-[37%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer whitespace-nowrap"
+                              className="w-full lg:w-[38%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer whitespace-nowrap"
                               onClick={() => {
                                 activeSubTab == itemIndex
                                   ? setActiveSubTab(-1)
@@ -86,7 +86,7 @@ const Services = () => {
                           {activeSubTab == itemIndex && (
                             <div className=" w-full flex items-center mt-12">
                               <p className="w-[35%]" />
-                              <div className="lg:w-[35%] w-9/12">
+                              <div className="lg:w-[65%] w-9/12">
                                 {item.description}
                               </div>
                             </div>

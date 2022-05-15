@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import GetQoute from "../../components/GetQoute";
 import { DigitalArt, Painting, Photography } from "./ArtAndPhotography";
 import {
   BrandCollateralDesign,
@@ -46,36 +46,63 @@ export const serviceData = [
       {
         title: "Painting",
         description: (
-          <div>
-            {Painting.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12 ">
+              {Painting.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="lg:w-5/12 ">
+              <img src="" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Digital art",
         description: (
-          <div>
-            {DigitalArt.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {DigitalArt.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Photography",
         description: (
-          <div>
-            {Photography.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {Photography.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
@@ -188,18 +215,17 @@ export const serviceData = [
       {
         title: "Analysis & Consultation",
         description: (
-          <div>
-            {AnalysisandConsultation.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
-            <Button
-              variant="contained"
-              className="bg-[#502A7A] w-64 my-5 py-4 hover:bg-[#502A7A] hover:bg-opacity-70"
-            >
-              GET QOUTE
-            </Button>
+          <div className="flex items-center w-full">
+            <div className="w-full lg:w-7/12">
+              {AnalysisandConsultation.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <GetQoute />
+            </div>
           </div>
         ),
       },
