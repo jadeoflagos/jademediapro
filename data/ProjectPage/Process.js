@@ -103,11 +103,6 @@ export const animationProcess = [
       "We will export the animated video file formats to meet your technical requirements and deliver them to you. Whether this piece is a commercial, product training video, or part of a social media campaign, we will rocket your brand new, stunning animated video right to your digital doorstep to make sure you are good to launch and share your piece. But that’s not all, we will also provide you with the latest and greatest tips in the video marketing world to start off right.    ",
     img: "",
   },
-  {
-    header: "",
-    description: "",
-    img: "",
-  },
 ];
 
 export const brandingProcess = [
@@ -239,21 +234,6 @@ export const marketingProcess = [
     header: "Optimize & Automate process",
     description:
       "Our goal is to help you reach maximum customers and to help you generate maximum revenue at the same time. This is why we use marketing automation tools that let us automate your marketing campaigns to remove a lot of repetitive tasks from our to-do list so we have more time to focus on marketing communications and optimizing your messages for the best results. We can automate a lot of your social media activity, your email marketing workflow, etc. to help you build engagement with your audience consistently.",
-    img: "",
-  },
-  {
-    header: "",
-    description: "",
-    img: "",
-  },
-  {
-    header: "",
-    description: "",
-    img: "",
-  },
-  {
-    header: "",
-    description: "",
     img: "",
   },
 ];

@@ -151,11 +151,10 @@ export const projectData = [
             </p>
             <div>
               {marketingProcess.map((item, itemIndex) => (
-                <div className=" mt-7" key={itemIndex}>
+                <div className="mt-7" key={itemIndex}>
                   <p className="font-semibold text-xl text-black">
                     {item.header}
                   </p>
-
                   <div className="flex lg:flex-row flex-col  items-center">
                     <p className="w-full lg:w-5/12">{item.description}</p>
                     <div className="flex-grow flex justify-center">
