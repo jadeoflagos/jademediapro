@@ -58,7 +58,7 @@ export const serviceData = [
               ))}
             </div>
             <div className="lg:w-5/12 ">
-              <img src="" />
+              <img src="/gifs/Painting.gif" className="w-64" />
               <GetQoute />
             </div>
           </div>
@@ -79,7 +79,7 @@ export const serviceData = [
               ))}
             </div>
             <div className="w-5/12">
-              <img src="" />
+              <img src="/gifs/DigitalArt.gif" className="w-64" />
               <GetQoute />
             </div>
           </div>
@@ -100,7 +100,7 @@ export const serviceData = [
               ))}
             </div>
             <div className="w-5/12">
-              <img src="" />
+              <img src="/gifs/Photography.gif" className="w-64" />
               <GetQoute />
             </div>
           </div>
@@ -114,12 +114,17 @@ export const serviceData = [
       {
         title: "Brand strategy",
         description: (
-          <div>
-            {BrandStrategy.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12 ">
+              {BrandStrategy.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
           </div>
         ),
       },
