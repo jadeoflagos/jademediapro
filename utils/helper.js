@@ -1,4 +1,4 @@
-import { serviceData } from "../data/ServicePage/ServicePage";
+import { serviceData } from "../data/ServicePage";
 import { projectData } from "../data/ProjectPage";
 
 export const scrollToArea = (area) => {

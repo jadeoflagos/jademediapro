@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import { DatePickerComponent } from "../components/DatePicker";
 import { TimePickerComponent } from "../components/TimePicker";
-import { serviceData } from "../data/ServicePage/ServicePage";
+import { serviceData } from "../data/ServicePage";
 import SectionHeader from "../components/organism/SectionHeader";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
