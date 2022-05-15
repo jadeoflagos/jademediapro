@@ -1,4 +1,12 @@
 import { Button } from "@mui/material";
+import {
+  AdvertisingCampaigns,
+  DataAnalytics,
+  LeadGeneration,
+  MulticulturalContentMarketing,
+  SearchEngineOptimization,
+  SocialMediaManagement,
+} from "./DigitalMarketing";
 
 const BusinessPlanning = [
   "Most people when they think of creating a business offline or online, think of creating a product, selling the product, and hoping to make enough capital to finance their next product idea. This kind of thinking is short-term about what's hot for the next few months and concentrates on selling a product to fill that hot, but limited need and it's not beneficial to a long-term business venture.",
@@ -35,6 +43,45 @@ const ProjectManagement = [
 ];
 
 // Branding & Design
+const BrandStrategy = [
+  `Business can’t survive if it doesn’t have a strong brand strategy
+– a unified identity, personalized content communication,
+exceptional culture, core business mission, and values, etc.
+Usually misunderstood, brand strategy is just not your logo,
+colour palette, or website, despite the fact that these creative
+ingredients are essential to a successful branding strategy.`,
+  `Our main goal is to let the world know that your brand exists,
+  what purpose it has, what you stand for, the promise you make, the
+  personality you convey, and what defines your brand. We bring your
+  competitive positioning to life, help you communicate your brand
+  personality and tone of voice more effectively with your
+  customers, shape how they feel about your brand, and drive
+  sustainable brand awareness and brand equity.`,
+];
+
+const LogoBrandIdentity = [
+  `
+Many business owners use logos and brands interchangeably, but
+this is incorrect because a logo on its own is not your brand. A
+logo is just a small but important piece of your brand and a key
+part of your brand’s identity. Logo design is not easy, it’s a
+skillful task that not only requires design skills but also proper
+research, expertise, and planning to arrive at a solid working
+concept.`,
+  `We start with a deep analysis of your business purpose to
+understand who you are and how we can translate your essence into
+a visual language that effectively communicates your brand story.
+We make the first impression an everlasting impression by applying
+design principles to create a comprehensive logo and brand
+identity that is attractive, innovative, dynamic, cohesive, and
+promotes your brand integrity at all times in the real world.`,
+];
+const ProductsBrandingPackaging = [
+  `Many businesses are unaware that product design and branding are deeply connected. When a product is not planned, designed, created, marketed, and sold with the brand value at its core, it can sabotage its own success. Besides that, effective packaging not only ensures that the product is protected from damage but also ensures that it is presentable and attractive. Packaging is an effective way of marketing because it is the first thing customers view.
+`,
+  `We design simple, clear concepts that catch your targeted customers, stir up emotions of excitement, joy, delight, or amazement, and encourage them to buy your product giving them no choice but to keep coming back to your brand. Because first impressions are so important, we develop a unique well-designed high-quality product packaging that appeals to your consumers and encourages them to pick up your product over and over again.
+  `,
+];
 
 export const serviceData = [
   {
@@ -48,11 +95,58 @@ export const serviceData = [
   {
     title: "Branding & Design",
     details: [
-      { title: "Brand strategy", description: "" },
-      { title: "Logo and Brand identity", description: "" },
-      { title: "Products branding and packaging", description: "" },
-      { title: "Brand collateral/stationery design", description: "" },
-      { title: "Company Profile & Editorial design", description: "" },
+      {
+        title: "Brand strategy",
+        description: (
+          <div>
+            {BrandStrategy.map((item, itemIndex) => (
+              <p className="mb-12" key={itemIndex}>
+                {item}
+              </p>
+            ))}
+          </div>
+        ),
+      },
+      {
+        title: "Logo and Brand identity",
+        description: (
+          <div>
+            {LogoBrandIdentity.map((item, itemIndex) => (
+              <p className="mb-12" key={itemIndex}>
+                {item}
+              </p>
+            ))}
+          </div>
+        ),
+      },
+      {
+        title: "Products branding and packaging",
+        description: (
+          <div>
+            {ProductsBrandingPackaging.map((item, itemIndex) => (
+              <p className="mb-12" key={itemIndex}>
+                {item}
+              </p>
+            ))}
+          </div>
+        ),
+      },
+      {
+        title: "Brand collateral/stationery design",
+        description: (
+          <div>
+            {LogoBrandIdentity.map((item, itemIndex) => (
+              <p className="mb-12" key={itemIndex}>
+                {item}
+              </p>
+            ))}
+          </div>
+        ),
+      },
+      {
+        title: "Company Profile & Editorial design",
+        description: "",
+      },
       { title: "Environmental & Retail Graphics", description: "" },
       { title: "Infographic and Illustration Graphics", description: "" },
     ],
@@ -131,12 +225,78 @@ export const serviceData = [
   {
     title: "Digital Marketing",
     details: [
-      { title: "Multicultural content marketing", description: "" },
-      { title: "Social media management/marketing", description: "" },
-      { title: "Search engine optimization", description: "" },
-      { title: "Advertising campaigns", description: "" },
-      { title: "Lead generation", description: "" },
-      { title: "Data analytics", description: "" },
+      {
+        title: "Multicultural content marketing",
+        description: (
+          <div>
+            {MulticulturalContentMarketing.map((item, itemIndex) => (
+              <p className="mb-12" key={itemIndex}>
+                {item}
+              </p>
+            ))}
+          </div>
+        ),
+      },
+      {
+        title: "Social media management/marketing",
+        description: (
+          <div>
+            {SocialMediaManagement.map((item, itemIndex) => (
+              <p className="mb-12" key={itemIndex}>
+                {item}
+              </p>
+            ))}
+          </div>
+        ),
+      },
+      {
+        title: "Search engine optimization",
+        description: (
+          <div>
+            {SearchEngineOptimization.map((item, itemIndex) => (
+              <p className="mb-12" key={itemIndex}>
+                {item}
+              </p>
+            ))}
+          </div>
+        ),
+      },
+      {
+        title: "Advertising campaigns",
+        description: (
+          <div>
+            {AdvertisingCampaigns.map((item, itemIndex) => (
+              <p className="mb-12" key={itemIndex}>
+                {item}
+              </p>
+            ))}
+          </div>
+        ),
+      },
+      {
+        title: "Lead generation",
+        description: (
+          <div>
+            {LeadGeneration.map((item, itemIndex) => (
+              <p className="mb-12" key={itemIndex}>
+                {item}
+              </p>
+            ))}
+          </div>
+        ),
+      },
+      {
+        title: "Data analytics",
+        description: (
+          <div>
+            {DataAnalytics.map((item, itemIndex) => (
+              <p className="mb-12" key={itemIndex}>
+                {item}
+              </p>
+            ))}
+          </div>
+        ),
+      },
     ],
   },
   {

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import { DatePickerComponent } from "../components/DatePicker";
 import { TimePickerComponent } from "../components/TimePicker";
-import { serviceData } from "../data/ServicePage";
+import { serviceData } from "../data/ServicePage/ServicePage";
 import SectionHeader from "../components/organism/SectionHeader";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
@@ -41,7 +41,7 @@ const Services = () => {
           {serviceData.map((service, serviceIndex) => (
             <div key={`service-${serviceIndex}`}>
               <div
-                className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-[70%] cursor-pointer "
+                className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-[73%] cursor-pointer "
                 onClick={() => {
                   activeTab == serviceIndex
                     ? setActiveTab(-1)
@@ -64,7 +64,6 @@ const Services = () => {
                   />
                 </span>
               </div>
-
               {activeTab == serviceIndex ? (
                 <div className="pt-6 pb-10" id={service.title}>
                   <div className="w-full">
@@ -74,7 +73,7 @@ const Services = () => {
                           <div className="flex items-center w-full">
                             <p className="w-[35%]" />
                             <p
-                              className="w-full lg:w-[35%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer "
+                              className="w-full lg:w-[37%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer whitespace-nowrap"
                               onClick={() => {
                                 activeSubTab == itemIndex
                                   ? setActiveSubTab(-1)
