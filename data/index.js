@@ -339,11 +339,11 @@ export const opportunities = [
 
 export const dropDown = {
   services:
-    "Business strategy,Branding,Graphic Design,Digital Marketing,Motion Design,Art/Photography".split(
+    "Business strategy,Branding,Graphic Design,Digital Marketing,Motion Design,Art/Photography,Web & App Dev".split(
       ","
     ),
   projects: "Case Study,Process,Showreel,Training".split(","),
-  hub: "Blog,interview,Community,Events,Job/intership".split(","),
+  hub: "Blog,Interview,Community,Events,Job/Intership".split(","),
   resources: "Store,Freebies".split(","),
   about: "What we do,Testimonials,Volunteering,Career".split(","),
 };
