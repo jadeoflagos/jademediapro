@@ -53,55 +53,55 @@ export const animationProcess = [
     header: "Briefing",
     description:
       "First, we will have a kick-off meeting where we listen to your purpose, goals, target audience, tone, and messaging to understand the story you wish to convey along with your target audience, deadline, and budget requirements. Key elements of this information feed into the project brief - your script, treatment, and style frames to help us come up with the concept and determine the best format to tell your story in a unique and powerful way.",
-    img: "feasibility.png",
+    img: "Briefing.svg",
   },
   {
     header: "Scripting",
     description:
       "Your story is developed during this stage of the animation process. Whether you are skilled at writing your own script or require our help and collaboration to form your story based on the brief - which translates the key messaging into a story, you will always have the opportunity to steer, amend, and finally sign off your script as only once the script is signed off will we move ahead. ",
-    img: "",
+    img: "Scripting.svg",
   },
   {
     header: "Style Frames",
     description:
       "This is where we look at the different animation design style techniques. We will explore what style - colours, mediums, textures, photography, and assets - is most appropriate for your story yet still working in accordance with your brand guidelines and your brief.  We will create a mood board or compilation of visual references to give you the best understanding of how the animation will look, what elements it will include, and what to expect with the project.",
-    img: "",
+    img: "Styleframes.svg",
   },
   {
     header: "Storyboard",
     description:
       "This stage builds upon the previous stage, we will design the assets to match the approved style frames and layout fully-designed scenes into a digital storyboard with text descriptions. A perfect way to pre-visualize your story in the form of an image sequence. We will show you scene-by-scene how the video or story will flow by defining the visuals, objects, and elements with arrows and notes of the actions within a shot, camera movements, and voiceover/sound effects details.",
-    img: "",
+    img: "Storyboard.svg",
   },
   {
     header: "Voiceover Recording",
     description:
       "We can help you find the ideal professional voice to match your brand and budget. We are happy to accept your recorded voiceover if you already have a voice artist or want to take a more unique approach and record your CEO. We will provide direction for the voice performance on pace, tone, mood, etc. However, some stories can work without a voiceover if it’s a visual music or typography piece.",
-    img: "",
+    img: "VORecording.svg",
   },
   {
     header: "Design & Illustration ",
     description:
       "After the storyboard is are approved, we will design the visual elements that are animation-ready. They include background, infographic, characters, illustrations, text, full-colour images, icons, etc. It can be hand-drawn sketches, coloured illustrations, or a mix of both based on the selected style. This is a time-consuming and dynamic stage of the animation process. To achieve the greatest outcomes, we let our designers take care of the rest - undisturbed.",
-    img: "",
+    img: "Design.svg",
   },
   {
     header: "Animation",
     description:
       "We are finally ready to animate! This is where the magic truly happens although this process will take a couple of weeks depending on the length and amplification of the voice-over. Animation is not a fast process - that is why getting all the above steps approved is essential to save costs and prevent major revisions later. Our animators get to work, working closely with you to make sure each frame is animated exactly as you envisioned.    ",
-    img: "",
+    img: "Animation.svg",
   },
   {
     header: "Music & Sound effects",
     description:
       "Animation and music are deeply connected. To improve the aesthetics and story flow, your animation sequences will be accompanied by the appropriate music and sound effects. Any additional sound effects are now added, the voiceover's huffs and puffs are edited, and the chosen music track is blended in to bring the composition to life! We will put the finishing touches to the sound to make your animation even more engaging.    ",
-    img: "",
+    img: "Music.svg",
   },
   {
     header: "Release",
     description:
       "We will export the animated video file formats to meet your technical requirements and deliver them to you. Whether this piece is a commercial, product training video, or part of a social media campaign, we will rocket your brand new, stunning animated video right to your digital doorstep to make sure you are good to launch and share your piece. But that’s not all, we will also provide you with the latest and greatest tips in the video marketing world to start off right.    ",
-    img: "",
+    img: "Release.svg",
   },
 ];
 

@@ -51,7 +51,7 @@ export const projectData = [
                     <p className="w-full lg:w-7/12">{item.description}</p>
                     <div className="flex-grow lg:w-5/12  flex justify-center">
                       <Image
-                        src={`/images/${item.img}`}
+                        src={`/vectors/Processess/${item.img}`}
                         width={370}
                         height={240}
                         alt="illustration"
@@ -68,7 +68,7 @@ export const projectData = [
         title: "Branding Process",
         description: (
           <div>
-            <p className="w-full lg:w-5/12">
+            <p className="w-full lg:w-[60%] ">
               At Jade Media Pro, we deliver brand strategies that will support
               the success of your business for years to come whether you are
               launching a new business, product or service, or rebranding an
@@ -84,10 +84,10 @@ export const projectData = [
                   </p>
 
                   <div className="flex lg:flex-row flex-col  items-center">
-                    <p className="w-full lg:w-5/12">{item.description}</p>
-                    <div className="flex-grow flex justify-center">
+                    <p className="w-full lg:w-7/12">{item.description}</p>
+                    <div className="flex-grow lg:w-5/12  flex justify-center">
                       <Image
-                        src={`/images/${item.img}`}
+                        src={`/vectors/Processess/branding/${item.img}`}
                         width={370}
                         height={240}
                         alt="illustration"
