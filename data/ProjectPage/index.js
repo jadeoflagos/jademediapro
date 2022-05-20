@@ -158,7 +158,7 @@ export const projectData = [
                     <p className="w-full lg:w-7/12">{item.description}</p>
                     <div className="flex-grow lg:w-5/12  flex justify-center">
                       <Image
-                        src={`/vectors/Processess/illustrations/${item.img}`}
+                        src={`/vectors/Processess/marketing/${item.img}`}
                         width={370}
                         height={240}
                         alt="illustration"

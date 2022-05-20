@@ -204,36 +204,36 @@ export const marketingProcess = [
     header: "Understanding Marketing Goals",
     description:
       "To get started, we have to determine what exactly you are trying to achieve corresponding with your overall business strategy. We help you to come up with a very detailed and specific set of goals using the SMART goals framework: specific, measurable, attainable, relevant, and time-bound goals with a mixture of short, medium, and long-term goals. This will also help us in organizing your advertising endeavors and making sure they correspond to your business goals.",
-    img: "",
+    img: "Understanding.svg",
   },
   {
     header: "Research & Situational analysis",
     description:
       "In the research stage, we will collect all the necessary information related to your products, services, your target audience, market conditions, your competitors, SWOT analysis, and any existing marketing strategy. Most importantly, we do some thorough research to really understand your audience – who they are, as well as their wants and needs, to create customer personas for each of your target markets.",
-    img: "",
+    img: "Research.svg",
   },
   {
     header: "Develop Marketing Strategy",
     description:
       "At this stage, we will develop a specific marketing strategy for every channel that attracts your customers. We will define the right strategy for carrying out your objectives using some of these options; SEO (search engine optimization), content marketing, SEM (search engine marketing), email marketing, social media marketing, video marketing for creating, distributing, and managing original content that attracts users and positions your brand with a lasting impression in your user’s mind on as many platforms as possible.",
-    img: "",
+    img: "DevelopMarketing.svg",
   },
   {
     header: "Implement Strategies and Tactics",
     description:
       "Based on our objectives, we will start to carry out different strategies incorporating creativity, to personalize messages based on your already created customer persona and convert them into clients, depending on their interactions with your brand to make your message go further. As your online presence grows, we can always expand into other areas according to your marketing objectives and business goals.",
-    img: "",
+    img: "DevelopImplementstrategies.svg",
   },
   {
     header: "Measure Results & KPIs",
     description:
       "After executing your digital marketing strategy, we constantly monitor and make sure that the strategy works efficiently and effectively, and correct what doesn’t work to achieve the goals we set. We do not leave anything to chance, we periodically control test your KPIs and analyse the results to be sure that our marketing efforts are paying off. If they are not, we will adapt our plan based on what isn't working. If they are, we can build on our existing plan and find new ways to continuously improve.",
-    img: "",
+    img: "DevelopMeasureResults.svg",
   },
   {
     header: "Optimize & Automate process",
     description:
       "Our goal is to help you reach maximum customers and to help you generate maximum revenue at the same time. This is why we use marketing automation tools that let us automate your marketing campaigns to remove a lot of repetitive tasks from our to-do list so we have more time to focus on marketing communications and optimizing your messages for the best results. We can automate a lot of your social media activity, your email marketing workflow, etc. to help you build engagement with your audience consistently.",
-    img: "",
+    img: "Optimize.svg",
   },
 ];
