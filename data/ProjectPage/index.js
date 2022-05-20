@@ -104,7 +104,7 @@ export const projectData = [
         title: "Illustration Process",
         description: (
           <div>
-            <p className="w-full lg:w-5/12">
+            <p className="w-full lg:w-[60%] ">
               At Jade Media Pro, we have created a big bunch of illustrations
               for not only our clients but also studio projects using so many
               different styles and techniques, and there’s definitely no right
@@ -118,12 +118,11 @@ export const projectData = [
                   <p className="font-semibold text-xl text-black">
                     {item.header}
                   </p>
-
                   <div className="flex lg:flex-row flex-col  items-center">
-                    <p className="w-full lg:w-5/12">{item.description}</p>
-                    <div className="flex-grow flex justify-center">
+                    <p className="w-full lg:w-7/12">{item.description}</p>
+                    <div className="flex-grow lg:w-5/12  flex justify-center">
                       <Image
-                        src={`/images/${item.img}`}
+                        src={`/vectors/Processess/illustrations/${item.img}`}
                         width={370}
                         height={240}
                         alt="illustration"
@@ -156,10 +155,10 @@ export const projectData = [
                     {item.header}
                   </p>
                   <div className="flex lg:flex-row flex-col  items-center">
-                    <p className="w-full lg:w-5/12">{item.description}</p>
-                    <div className="flex-grow flex justify-center">
+                    <p className="w-full lg:w-7/12">{item.description}</p>
+                    <div className="flex-grow lg:w-5/12  flex justify-center">
                       <Image
-                        src={`/images/${item.img}`}
+                        src={`/vectors/Processess/illustrations/${item.img}`}
                         width={370}
                         height={240}
                         alt="illustration"
