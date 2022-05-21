@@ -33,7 +33,7 @@ export const projectData = [
         title: "Animation Process",
         description: (
           <div>
-            <p className="w-full lg:w-[60%] ">
+            <p className="w-full lg:w-7/12">
               At Jade Media Pro, our animation process differs slightly for
               every project we create, partly due to the range of clients we
               have, but also for the range of projects we create. However, our
@@ -68,7 +68,7 @@ export const projectData = [
         title: "Branding Process",
         description: (
           <div>
-            <p className="w-full lg:w-[60%] ">
+            <p className="w-full lg:w-7/12">
               At Jade Media Pro, we deliver brand strategies that will support
               the success of your business for years to come whether you are
               launching a new business, product or service, or rebranding an
@@ -104,7 +104,7 @@ export const projectData = [
         title: "Illustration Process",
         description: (
           <div>
-            <p className="w-full lg:w-[60%] ">
+            <p className="w-full lg:w-7/12">
               At Jade Media Pro, we have created a big bunch of illustrations
               for not only our clients but also studio projects using so many
               different styles and techniques, and there’s definitely no right
@@ -175,7 +175,7 @@ export const projectData = [
         title: "Web/App Dev. Process",
         description: (
           <div>
-            <p className="w-full lg:w-[60%] ">
+            <p className="w-full lg:w-7/12">
               At Jade Media Pro, with 5 years of experience in product (website,
               mobile app, and software) development, we break down the project
               life cycle into a step-by-step approach for design and development
