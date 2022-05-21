@@ -139,7 +139,7 @@ export const projectData = [
         title: "Marketing Process",
         description: (
           <div>
-            <p className="w-full lg:w-[60%] ">
+            <p className="w-full lg:w-7/12">
               At Jade Media Pro, we constantly find ways to maximize our digital
               marketing strategy to increase productivity, keep up with
               technology trends and all the tools online marketing offers in

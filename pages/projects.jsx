@@ -86,7 +86,7 @@ const Projects = () => {
                           {activeSubTab == itemIndex && (
                             <div className=" w-full flex items-center mt-12 text-[#666666]">
                               <p className="w-[20%]" />
-                              <div className="lg:w-[80%] flex-grow w-9/12 lg:text-[1.3rem]  ">
+                              <div className="lg:w-[80%] flex-grow w-9/12 lg:text-[1.3rem]  mb-12">
                                 {item.description}
                               </div>
                             </div>
