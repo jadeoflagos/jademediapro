@@ -561,48 +561,96 @@ export const serviceData = [
       {
         title: "Corporate Promotional Video ",
         description: (
-          <div>
-            {CorporatePromotionalVideo.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {CorporatePromotionalVideo.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/MotionDesign/CorporatePromotionalVideo.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "2D/3D Animation Video",
         description: (
-          <div>
-            {DAnimationVideo.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {DAnimationVideo.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/MotionDesign/2D3DAnimation.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Production/Filming",
         description: (
-          <div>
-            {ProductionFilming.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {ProductionFilming.map((item, itemIndex) => (
+                <p className="mb-12 " key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/MotionDesign/ProductionFilming.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Post production",
         description: (
-          <div>
-            {Postproduction.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {Postproduction.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/MotionDesign/PostProduction.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
@@ -614,60 +662,114 @@ export const serviceData = [
       {
         title: "UI/UX design",
         description: (
-          <div>
-            {UIUXDesign.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {UIUXDesign.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="/gifs/WebApp/UI-UX.gif" className="w-64" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Website development",
         description: (
-          <div>
-            {WebsiteDevelopment.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {WebsiteDevelopment.map((item, itemIndex) => (
+                <p className="mb-12 " key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="/gifs/WebApp/WebsiteDevelopment.gif" className="w-64" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Mobile application development",
         description: (
-          <div>
-            {MobileApplicationDevelopment.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {MobileApplicationDevelopment.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/WebApp/MobileApplicationDevelopment.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Software development",
         description: (
-          <div>
-            {SoftwareDevelopment.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {SoftwareDevelopment.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/WebApp/SoftwareDevelopment.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "E-commerce management",
         description: (
-          <div>
-            {EcommerceManagement.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {EcommerceManagement.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/WebApp/Ecommercemanagement.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
