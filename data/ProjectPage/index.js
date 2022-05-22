@@ -33,7 +33,7 @@ export const projectData = [
         title: "Animation Process",
         description: (
           <div>
-            <p className="w-full lg:w-[60%] ">
+            <p className="w-full lg:w-7/12">
               At Jade Media Pro, our animation process differs slightly for
               every project we create, partly due to the range of clients we
               have, but also for the range of projects we create. However, our
@@ -51,7 +51,7 @@ export const projectData = [
                     <p className="w-full lg:w-7/12">{item.description}</p>
                     <div className="flex-grow lg:w-5/12  flex justify-center">
                       <Image
-                        src={`/images/${item.img}`}
+                        src={`/vectors/Processess/${item.img}`}
                         width={370}
                         height={240}
                         alt="illustration"
@@ -68,7 +68,7 @@ export const projectData = [
         title: "Branding Process",
         description: (
           <div>
-            <p className="w-full lg:w-5/12">
+            <p className="w-full lg:w-7/12">
               At Jade Media Pro, we deliver brand strategies that will support
               the success of your business for years to come whether you are
               launching a new business, product or service, or rebranding an
@@ -84,10 +84,10 @@ export const projectData = [
                   </p>
 
                   <div className="flex lg:flex-row flex-col  items-center">
-                    <p className="w-full lg:w-5/12">{item.description}</p>
-                    <div className="flex-grow flex justify-center">
+                    <p className="w-full lg:w-7/12">{item.description}</p>
+                    <div className="flex-grow lg:w-5/12  flex justify-center">
                       <Image
-                        src={`/images/${item.img}`}
+                        src={`/vectors/Processess/branding/${item.img}`}
                         width={370}
                         height={240}
                         alt="illustration"
@@ -104,7 +104,7 @@ export const projectData = [
         title: "Illustration Process",
         description: (
           <div>
-            <p className="w-full lg:w-5/12">
+            <p className="w-full lg:w-7/12">
               At Jade Media Pro, we have created a big bunch of illustrations
               for not only our clients but also studio projects using so many
               different styles and techniques, and there’s definitely no right
@@ -118,12 +118,11 @@ export const projectData = [
                   <p className="font-semibold text-xl text-black">
                     {item.header}
                   </p>
-
                   <div className="flex lg:flex-row flex-col  items-center">
-                    <p className="w-full lg:w-5/12">{item.description}</p>
-                    <div className="flex-grow flex justify-center">
+                    <p className="w-full lg:w-7/12">{item.description}</p>
+                    <div className="flex-grow lg:w-5/12  flex justify-center">
                       <Image
-                        src={`/images/${item.img}`}
+                        src={`/vectors/Processess/illustrations/${item.img}`}
                         width={370}
                         height={240}
                         alt="illustration"
@@ -140,7 +139,7 @@ export const projectData = [
         title: "Marketing Process",
         description: (
           <div>
-            <p className="w-full lg:w-[60%] ">
+            <p className="w-full lg:w-7/12">
               At Jade Media Pro, we constantly find ways to maximize our digital
               marketing strategy to increase productivity, keep up with
               technology trends and all the tools online marketing offers in
@@ -156,10 +155,10 @@ export const projectData = [
                     {item.header}
                   </p>
                   <div className="flex lg:flex-row flex-col  items-center">
-                    <p className="w-full lg:w-5/12">{item.description}</p>
-                    <div className="flex-grow flex justify-center">
+                    <p className="w-full lg:w-7/12">{item.description}</p>
+                    <div className="flex-grow lg:w-5/12  flex justify-center">
                       <Image
-                        src={`/images/${item.img}`}
+                        src={`/vectors/Processess/marketing/${item.img}`}
                         width={370}
                         height={240}
                         alt="illustration"
@@ -176,7 +175,7 @@ export const projectData = [
         title: "Web/App Dev. Process",
         description: (
           <div>
-            <p className="w-full lg:w-[60%] ">
+            <p className="w-full lg:w-7/12">
               At Jade Media Pro, with 5 years of experience in product (website,
               mobile app, and software) development, we break down the project
               life cycle into a step-by-step approach for design and development

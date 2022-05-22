@@ -125,78 +125,148 @@ export const serviceData = [
                 </p>
               ))}
             </div>
+            <div className="w-5/12">
+              <img src="/gifs/Brandstrategy.gif" className="w-64" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Logo and Brand identity",
         description: (
-          <div>
-            {LogoBrandIdentity.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12 ">
+              {LogoBrandIdentity.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="/gifs/LogoBrandidentity.gif" className="w-64" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Products branding and packaging",
         description: (
-          <div>
-            {ProductsBrandingPackaging.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12 ">
+              {ProductsBrandingPackaging.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/Productsbrandingandpackaging.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Brand collateral/stationery design",
         description: (
-          <div>
-            {BrandCollateralDesign.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12 ">
+              {BrandCollateralDesign.map((item, itemIndex) => (
+                <p className="mb-12 " key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/Brandcollateral-Stationery.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Company Profile & Editorial design",
         description: (
-          <div>
-            {CompanyProfileDesign.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12 ">
+              {CompanyProfileDesign.map((item, itemIndex) => (
+                <p className="mb-12  " key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="/gifs/CompanyProfileEditorial.gif" className="w-64" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Environmental & Retail Graphics",
         description: (
-          <div>
-            {EnvironmentalRetailGraphics.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12 ">
+              {EnvironmentalRetailGraphics.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/EnvironmentalRetailGraphics.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Infographic and Illustration Graphics",
         description: (
-          <div>
-            {InfographicIllustrationGraphics.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12 ">
+              {InfographicIllustrationGraphics.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/InfographicIllustrationGraphics.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
@@ -208,19 +278,31 @@ export const serviceData = [
       {
         title: "Business Planning",
         description: (
-          <div>
-            {BusinessPlanning.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12 ">
+              {BusinessPlanning.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="/gifs/BusinessPlanning.gif" className="w-64" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Analysis & Consultation",
         description: (
-          <div className="flex items-center w-full">
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
             <div className="w-full lg:w-7/12">
               {AnalysisandConsultation.map((item, itemIndex) => (
                 <p className="mb-12" key={itemIndex}>
@@ -229,6 +311,7 @@ export const serviceData = [
               ))}
             </div>
             <div className="w-5/12">
+              <img src="/gifs/AnalysisConsult.gif" className="w-64" />
               <GetQoute />
             </div>
           </div>
@@ -237,36 +320,63 @@ export const serviceData = [
       {
         title: "Business Process Automation",
         description: (
-          <div>
-            {BusinessAutomation.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {BusinessAutomation.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="/gifs/BusinessProcessAutomation.gif" className="w-64" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Growth & Expansion System",
         description: (
-          <div>
-            {GrowthAndExpansion.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {GrowthAndExpansion.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="/gifs/Growth&Expansion.gif" className="w-64" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
-        title: "Project Management",
+        title: "Project Management ",
         description: (
-          <div>
-            {ProjectManagement.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {ProjectManagement.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="/gifs/ProjectManagement.gif" className="w-64" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
@@ -278,72 +388,144 @@ export const serviceData = [
       {
         title: "Multicultural content marketing",
         description: (
-          <div>
-            {MulticulturalContentMarketing.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {MulticulturalContentMarketing.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/DigitalMarketing/MulticulturalContentmarketing.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Social media management/marketing",
         description: (
-          <div>
-            {SocialMediaManagement.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {SocialMediaManagement.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/DigitalMarketing/SocialMediaMarketing.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Search engine optimization",
         description: (
-          <div>
-            {SearchEngineOptimization.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {SearchEngineOptimization.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/DigitalMarketing/SearchEngineOptimization.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Advertising campaigns",
         description: (
-          <div>
-            {AdvertisingCampaigns.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {AdvertisingCampaigns.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/DigitalMarketing/AdvertisingCampaign.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Lead generation",
         description: (
-          <div>
-            {LeadGeneration.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {LeadGeneration.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/DigitalMarketing/LeadGeneration.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Data analytics",
         description: (
-          <div>
-            {DataAnalytics.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {DataAnalytics.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/DigitalMarketing/DataAnalytics.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
@@ -355,60 +537,120 @@ export const serviceData = [
       {
         title: "Whiteboard Animation Video",
         description: (
-          <div>
-            {WhiteboardAnimationVideo.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {WhiteboardAnimationVideo.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/MotionDesign/WhiteboardAnimationVideo.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Corporate Promotional Video ",
         description: (
-          <div>
-            {CorporatePromotionalVideo.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {CorporatePromotionalVideo.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/MotionDesign/CorporatePromotionalVideo.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "2D/3D Animation Video",
         description: (
-          <div>
-            {DAnimationVideo.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {DAnimationVideo.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/MotionDesign/2D3DAnimation.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Production/Filming",
         description: (
-          <div>
-            {ProductionFilming.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {ProductionFilming.map((item, itemIndex) => (
+                <p className="mb-12 " key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/MotionDesign/ProductionFilming.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Post production",
         description: (
-          <div>
-            {Postproduction.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {Postproduction.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/MotionDesign/PostProduction.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
@@ -420,60 +662,114 @@ export const serviceData = [
       {
         title: "UI/UX design",
         description: (
-          <div>
-            {UIUXDesign.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {UIUXDesign.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="/gifs/WebApp/UI-UX.gif" className="w-64" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Website development",
         description: (
-          <div>
-            {WebsiteDevelopment.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {WebsiteDevelopment.map((item, itemIndex) => (
+                <p className="mb-12 " key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img src="/gifs/WebApp/WebsiteDevelopment.gif" className="w-64" />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Mobile application development",
         description: (
-          <div>
-            {MobileApplicationDevelopment.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {MobileApplicationDevelopment.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/WebApp/MobileApplicationDevelopment.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "Software development",
         description: (
-          <div>
-            {SoftwareDevelopment.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {SoftwareDevelopment.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/WebApp/SoftwareDevelopment.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
       {
         title: "E-commerce management",
         description: (
-          <div>
-            {EcommerceManagement.map((item, itemIndex) => (
-              <p className="mb-12" key={itemIndex}>
-                {item}
-              </p>
-            ))}
+          <div
+            className="flex lg:flex-row flex-col items-center w-full "
+            style={{ gap: "3.875rem" }}
+          >
+            <div className="w-full lg:w-7/12">
+              {EcommerceManagement.map((item, itemIndex) => (
+                <p className="mb-12" key={itemIndex}>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="w-5/12">
+              <img
+                src="/gifs/WebApp/Ecommercemanagement.gif"
+                className="w-64"
+              />
+              <GetQoute />
+            </div>
           </div>
         ),
       },
