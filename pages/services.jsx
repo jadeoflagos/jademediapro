@@ -41,7 +41,7 @@ const Services = () => {
           {serviceData.map((service, serviceIndex) => (
             <div key={`service-${serviceIndex}`}>
               <div
-                className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-[70%] cursor-pointer "
+                className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-[73%] cursor-pointer "
                 onClick={() => {
                   activeTab == serviceIndex
                     ? setActiveTab(-1)
@@ -64,7 +64,6 @@ const Services = () => {
                   />
                 </span>
               </div>
-
               {activeTab == serviceIndex ? (
                 <div className="pt-6 pb-10" id={service.title}>
                   <div className="w-full">
@@ -74,7 +73,7 @@ const Services = () => {
                           <div className="flex items-center w-full">
                             <p className="w-[35%]" />
                             <p
-                              className="w-full lg:w-[35%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer "
+                              className="w-full lg:w-[38%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer whitespace-nowrap"
                               onClick={() => {
                                 activeSubTab == itemIndex
                                   ? setActiveSubTab(-1)
@@ -87,7 +86,7 @@ const Services = () => {
                           {activeSubTab == itemIndex && (
                             <div className=" w-full flex items-center mt-12">
                               <p className="w-[35%]" />
-                              <div className="lg:w-[35%] w-9/12">
+                              <div className="lg:w-[65%] w-9/12">
                                 {item.description}
                               </div>
                             </div>
@@ -112,7 +111,7 @@ const Services = () => {
         <div className="flex flex-col lg:flex-row items-start ">
           <form
             action=""
-            className="lg:w-3/5 lg:pr-12 grid grid-cols-2 gap-x-10 gap-y-4 lg:pt-11  order-2 lg:order-1"
+            className="lg:w-3/5 lg:pr-12 grid grid-cols-2 gap-10 lg:pt-11  order-2 lg:order-1"
           >
             <TextField
               id="standard-basic"
@@ -127,12 +126,15 @@ const Services = () => {
             />
             <DatePickerComponent />
             <TimePickerComponent />
-            <TextField
-              id="standard-basic"
-              label="Message"
-              variant="standard"
-              className="col-span-2"
-            />
+            <div className="col-span-2">
+              <textarea
+                name=""
+                id=""
+                rows={2}
+                className="border-b border-gray-500 focus:outline-none w-full resize-none"
+                placeholder="Message"
+              ></textarea>
+            </div>
             <div className="col-span-2 mt-16 mb-10 lg:mb-0 ">
               <Button
                 variant="contained"

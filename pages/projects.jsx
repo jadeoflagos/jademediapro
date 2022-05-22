@@ -39,7 +39,7 @@ const Projects = () => {
         <div className="w-full space-y-6">
           {projectData.map((project, projectIndex) => (
             <div key={`project-${projectIndex}`}>
-              <div className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-[60%] ">
+              <div className="flex justify-between items-center border-b-2 border-black px-4 py-2 w-full lg:w-[70%] ">
                 <span className="font-semibold lg:text-4xl text-xl">
                   {project.title}
                 </span>
@@ -73,7 +73,7 @@ const Projects = () => {
                           <div className="flex items-center w-full">
                             <p className="w-[20%]" />
                             <p
-                              className="w-full lg:w-[40%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer "
+                              className="w-full lg:w-[50%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer "
                               onClick={() => {
                                 activeSubTab == itemIndex
                                   ? setActiveSubTab(-1)

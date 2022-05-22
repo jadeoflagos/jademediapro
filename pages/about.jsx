@@ -446,6 +446,7 @@ const About = () => {
                 <textarea
                   name=""
                   id=""
+                  rows={2}
                   className="border-b border-gray-500 focus:outline-none w-full resize-none"
                   placeholder="Message"
                 ></textarea>

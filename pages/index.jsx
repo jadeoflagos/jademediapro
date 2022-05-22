@@ -209,9 +209,13 @@ export default function Home() {
               a new business or you already have an existing business.
             </p>
             <div className="  mt-8 lg:flex items-center hidden">
-              <Link href="/services">
+              <Link
+                href={{
+                  pathname: "/services",
+                  query: { id: 1 },
+                }}
+              >
                 <a
-                  href="/services"
                   className="mr-1 text-[0.94rem]  flex items-center"
                   style={{ fontWeight: "bolder" }}
                 >
@@ -293,7 +297,7 @@ export default function Home() {
             <Link
               href={{
                 pathname: "/projects",
-                query: { id: 1 },
+                query: { id: 2 },
               }}
             >
               <Button label="Get your Brand process" greenBtn />

@@ -1,10 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {
-  Button,
-  TextField,
-  
-} from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import { TimePickerComponent } from "../TimePicker";
 import { DatePickerComponent } from "../DatePicker";
 
@@ -27,12 +23,13 @@ const InfoCollector = ({ title = "", buttonText = "Button" }) => {
           <DatePickerComponent />
           <TimePickerComponent />
           <div className="col-span-2">
-            <TextField
-              fullWidth
-              id="standard-basic"
-              label="Message"
-              variant="standard"
-            />
+            <textarea
+              name=""
+              id=""
+              rows={2}
+              className="border-b border-gray-500 focus:outline-none w-full resize-none"
+              placeholder="Message"
+            ></textarea>
           </div>
           <div className="col-span-2 mt-12">
             <Button
