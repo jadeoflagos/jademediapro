@@ -76,7 +76,7 @@ export default function Home() {
         <div className="py-20  text-white  px-8 w-full lg:px-20 lg:grid grid-cols-12">
           <div className="lg:col-span-7 flex flex-col justify-center">
             <p
-              className={`${styles.headerFamily}  font-bold text-5xl lg:text-[6.5rem] leading-3 md:leading-[6.5rem]`}
+              className={`${styles.headerFamily}  font-bold text-5xl lg:text-[6.5rem] leading-[4rem] max-w-[88.72%] md:max-w-none lg:leading-[6.5rem]`}
             >
               {Header.title}
             </p>
@@ -321,9 +321,8 @@ export default function Home() {
         <div className="md:w-3/5 h-full w-full relative">
           <iframe
             src="https://player.vimeo.com/video/668966622?h=72c3312ed7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            frameborder="0"
+            frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
             title="Interview-Coming-Soon-Trailer.mp4"
             style={{
               position: "absolute",

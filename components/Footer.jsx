@@ -54,7 +54,7 @@ const Footer = () => {
                 Marketing
               </Link>
               <Link href={handleRoutes("Motion", "services")}>Motion</Link>
-              <Link href={handleRoutes("Printing", "services")}>Printing</Link>
+              <Link href={handleRoutes("Web", "services")}>Web & App Dev</Link>
             </div>
           </div>
           <div className="flex flex-col">
@@ -136,7 +136,7 @@ const Footer = () => {
           <div>
             <p>Connect with us on our platforms:</p>
             <div className="flex items-center justify-between mt-3">
-              <a target="_blank" href="">
+              <a target="_blank" href="https://www.facebook.com/jademediapro">
                 <Image
                   src="/gifs/footer-icon-facebook.gif"
                   alt="Avatar"
@@ -152,7 +152,10 @@ const Footer = () => {
                   height={50}
                 />
               </a>
-              <a target="_blank" href="">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/company/jademediapro"
+              >
                 <Image
                   src="/gifs/footer-icon-linkedin.gif"
                   alt="Avatar"
@@ -264,7 +267,7 @@ const Footer = () => {
                 Marketing
               </Link>
               <Link href={handleRoutes("Motion", "services")}>Motion</Link>
-              <Link href={handleRoutes("Printing", "services")}>Printing</Link>
+              <Link href={handleRoutes("Web", "services")}>Web & App Dev</Link>
             </div>
           </div>
           <div className="flex flex-col">
@@ -335,7 +338,7 @@ const Footer = () => {
         <div className="mt-10">
           <p>Connect with us on our platforms:</p>
           <div className="flex items-center justify-between mt-3">
-            <a href="" target="_blank">
+            <a href="https://www.facebook.com/jademediapro" target="_blank">
               <Image
                 src="/vectors/fb.svg"
                 alt="Avatar"
@@ -351,7 +354,10 @@ const Footer = () => {
                 height={15}
               />
             </a>
-            <a href="" target="_blank">
+            <a
+              href="https://www.linkedin.com/company/jademediapro"
+              target="_blank"
+            >
               <Image
                 src="/vectors/linkdin.svg"
                 alt="Avatar"

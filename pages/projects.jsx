@@ -75,9 +75,13 @@ const Projects = () => {
                             <p
                               className="w-full lg:w-[50%] py-2 px-3 text-lg lg:text-3xl border-b-2 border-black cursor-pointer "
                               onClick={() => {
-                                activeSubTab == itemIndex
-                                  ? setActiveSubTab(-1)
-                                  : setActiveSubTab(itemIndex);
+                                if (item.link) {
+                                  window.open(item.link, "_blank");
+                                } else {
+                                  activeSubTab == itemIndex
+                                    ? setActiveSubTab(-1)
+                                    : setActiveSubTab(itemIndex);
+                                }
                               }}
                             >
                               {item.title}

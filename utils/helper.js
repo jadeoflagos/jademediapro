@@ -40,9 +40,8 @@ export const handleRoutes = (option, type) => {
       const link = routesNames.find((route) =>
         route.startsWith(splitedOption[0] || route.startsWith(splitedOption[1]))
       );
-      console.log({ link });
       if (link) return `/${link}`;
-    }
+    } 2
   }
 
   if (routesNames.includes(clickedOption)) {
@@ -55,9 +54,11 @@ export const handleRoutes = (option, type) => {
     const arrayTitle = arrayToMap.map((item) => item.title.toLowerCase());
     const optionToTest = slashTesting
       ? optionLowerCase.split("/")[0]
-      : spaceTesting
-        ? optionLowerCase.split(" ")[1]
-        : optionLowerCase;
+      : optionLowerCase.includes('graphic') ?
+        optionLowerCase.split(" ")[1]
+        : spaceTesting
+          ? optionLowerCase.split(" ")[0]
+          : optionLowerCase;
     const query = arrayTitle.find((title) => title.includes(optionToTest));
 
     if (query) {

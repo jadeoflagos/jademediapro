@@ -171,16 +171,14 @@ const About = () => {
               width="300px"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
             ></iframe>
             <iframe
               src="https://player.vimeo.com/video/672077617?h=d303fb69fb&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
               width="100%"
               className="lg:block hidden"
               height="321"
-              frameborder="0"
+              frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
               title="Parnership-video.mp4"
             ></iframe>
           </div>

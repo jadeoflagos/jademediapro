@@ -11,20 +11,17 @@ export const projectData = [
   {
     title: "Case Studies",
     details: [
-      { title: "Awotele Project", description: "" },
       { title: "Ariwa Project", description: "" },
-      { title: "Gloryland Schools Project", description: "" },
-      { title: "Marketing Process", description: "" },
+      { title: "Tozome Project", description: "" },
+      { title: "CoinPlay Project", description: "" },
+      { title: "Develoful project", description: "" },
     ],
   },
   {
     title: "Showreel",
     details: [
-      { title: "Animation Process", description: "" },
-      { title: "Branding Process", description: "" },
-      { title: "Illustration Process", description: "" },
-      { title: "Marketing Process", description: "" },
-    ],
+      { title: "Tozome showreel", description: "", link: "https://vimeo.com/691920896" },
+    ]
   },
   {
     title: "Process",
@@ -214,10 +211,8 @@ export const projectData = [
   {
     title: "Training",
     details: [
-      { title: "Animation Process", description: "" },
-      { title: "Branding Process", description: "" },
-      { title: "Illustration Process", description: "" },
-      { title: "Marketing Process", description: "" },
+      { title: "Coming Soon!", description: "" },
+
     ],
   },
 ];
