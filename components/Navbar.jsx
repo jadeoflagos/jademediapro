@@ -74,8 +74,15 @@ const Navbar = ({ bg, textColor, darkLogo, dropDownBg }) => {
         {dropdownMenus.map((item, itemIndex) => (
           <div
             className="relative"
-            onClick={(event) => toggleDropDown(event, item)}
+            onClick={(_) => {
+              if (item === "hub" || item === "resources") return;
+              router.push(`/${item}`);
+            }}
             key={`nav-drop-down-${itemIndex}`}
+            onMouseEnter={(event) => toggleDropDown(event, item)}
+            onMouseLeave={() => {
+              setShowDropDown(dropDownDefault);
+            }}
           >
             <span
               className={`capitalize text-[1.125rem] select-none drop-down ${

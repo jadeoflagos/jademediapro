@@ -343,7 +343,7 @@ export const dropDown = {
       ","
     ),
   projects: "Case Study,Process,Showreel,Training".split(","),
-  hub: "Blog,Interview,Community,Events,Job/Intership".split(","),
+  hub: "Blog,Interview,Community,Events,Job/Internship".split(","),
   resources: "Store,Freebies".split(","),
   about: "What we do,Testimonials,Volunteering,Career".split(","),
 };

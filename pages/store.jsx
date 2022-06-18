@@ -34,14 +34,14 @@ const Store = () => {
         }}
       >
         <div
-          className="lg:w-1/3 w-2/3 h-full lg:px-10 px-3 flex flex-col justify-center"
+          className="xl:w-1/3 w-2/3 h-full lg:px-10 px-3 flex flex-col justify-center"
           style={{
             background: `url("/images/storebg2.png")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <p className="text-lg lg:text-5xl mb-2 lg:mb-12 font-semibold">
+          <p className="text-lg lg:text-5xl mb-2 lg:mb-12 font-semibold lg:max-w-[20rem]  lg:leading-[5rem]">
             High-Quality Artistry Framed Just For You
           </p>
           <p className="text-xs lg:text-2xl">
