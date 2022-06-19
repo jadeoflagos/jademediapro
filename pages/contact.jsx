@@ -74,8 +74,7 @@ const Contact = () => {
               </div>
 
               {activeTab == faqIndex ? (
-                <p className="pt-6 pb-10 text-xs lg:text-base">
-                  {" "}
+                <p className="pt-6 pb-10 text-xs px-4 lg:text-base">
                   {faqs[faqIndex].ans}
                 </p>
               ) : (
