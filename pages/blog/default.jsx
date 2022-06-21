@@ -1,5 +1,4 @@
 import axios from "axios";
-
 import Image from "next/image";
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
@@ -7,24 +6,28 @@ import BlogCard from "../../components/BlogCard";
 import Footer from "../../components/Footer";
 import SocialButtons from "../../components/SocialButtons";
 import Tags from "../../components/Tags";
+import blogs from "../../data/Blogs";
 
 export async function getServerSideProps({ query }) {
-  const { blogPost } = query;
-  //   const {data} = await axios(`${baseUrl}/${blogPost}`)
+  let postNo = parseInt(query.blogPost) - 1;
   return {
     props: {
-      //   blogPost:data,
+      blogData: blogs[postNo],
     },
   };
 }
 
-const BlogPost = ({ blodData = {} }) => {
+/**
+ * Renders a blog.
+ * @param {{blogData: import("../../data/Blogs").Blog}} props Blog data
+ */
+const BlogPost = ({ blogData }) => {
   return (
     <div>
       <div className=" w-screen ">
-        <div>{/* <Navbar darkLogo dropDownBg="white" /> */}</div>
+        {/* <div><Navbar darkLogo dropDownBg="white" /></div> */}
         <p className="px-5 lg:px-20 w-full lg:w-7/12 py-12 text-3xl lg:text-7xl lg:tracking-wider">
-          Work from home has taken new turn in the pandemic
+          {blogData.title}
         </p>
       </div>
       <section className="lg:mt-12 px-5 lg:px-20 lg:py-20 flex lg:flex-row flex-col">
