@@ -41,14 +41,14 @@ const Store = () => {
             backgroundPosition: "center",
           }}
         >
-          <p className="text-lg lg:text-5xl mb-2 lg:mb-12 font-semibold lg:max-w-[20rem]  lg:leading-[5rem]">
+          <p className="text-lg lg:text-5xl mb-2 lg:mb-12 font-semibold lg:max-w-[20rem]  lg:leading-[5.5rem]">
             High-Quality Artistry Framed Just For You
           </p>
           <p className="text-xs lg:text-2xl">
             Our gallery is made from selected and best quality designs that are
             suitable for your creative space
           </p>
-          
+        </div>
       </div>
       <section className="lg:hidden "></section>
       <section className="px-5 lg:px-20 py-20">
