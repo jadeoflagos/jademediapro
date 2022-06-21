@@ -48,7 +48,7 @@ const Store = () => {
             Our gallery is made from selected and best quality designs that are
             suitable for your creative space
           </p>
-        </div>
+          
       </div>
       <section className="lg:hidden "></section>
       <section className="px-5 lg:px-20 py-20">
