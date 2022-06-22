@@ -6,7 +6,7 @@ import BlogCard from "../../components/BlogCard";
 import Footer from "../../components/Footer";
 import SocialButtons from "../../components/SocialButtons";
 import Tags from "../../components/Tags";
-import blogs from "../../data/Blogs";
+// import blogs from "../../data/Blogs";
 
 export async function getServerSideProps({ query }) {
   let postNo = parseInt(query.blogPost) - 1;
