@@ -8,7 +8,7 @@ import Button from "./Button";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-[#070707] lg:block hidden px-20 py-6">
+      <footer className="bg-[#070707] xl:block hidden px-20 py-6">
         <div className="flex justify-end mb-2">
           <Image
             src="/vectors/arrow-up.svg"
@@ -218,7 +218,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <footer className="bg-[#070707] lg:hidden px-5 py-6 text-white">
+      <footer className="bg-[#070707] xl:hidden px-5 py-6 text-white">
         <div className="flex justify-between mb-2 items-start">
           <p className="text-[2.7rem] mt-[1.25rem] max-w-[24.16rem]">
             Stay connected to infinite support
