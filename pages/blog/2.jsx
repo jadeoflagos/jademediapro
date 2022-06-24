@@ -74,7 +74,7 @@ const BlogPost2 = () => {
             <h2 className="text-base lg:text-3xl font-bold mt-6 lg:my-10 text-black">
               Who is your ideal customer? And use your knowledge carefully.
             </h2>
-            <p className="my-3 lg:my-10">
+            <div className="my-3 lg:my-10">
               When it comes to branding your business, you'll need a clear
               handle on your target audience, just as you do with your business
               goals.{" "}
@@ -116,7 +116,7 @@ const BlogPost2 = () => {
                   help them?
                 </ListItem>
               </ul>
-            </p>
+            </div>
             <p className="mb-5">
               These are very important questions to answer. And utilizing these
               answers judiciously will make it easier to create a brand that
@@ -222,7 +222,7 @@ const BlogPost2 = () => {
             <h2 className="text-base lg:text-5xl font-bold mt-6 text-black">
               Conclusion
             </h2>
-            <p className="my-3 lg:my-8">
+            <div className="my-3 lg:my-8">
               Proper branding of your business should be a pressing concern for
               you, especially if you have not previously considered doing that.
               This post has tried to explain the importance of branding your
@@ -261,7 +261,7 @@ const BlogPost2 = () => {
                   funnel.
                 </ListItem>
               </ul>
-            </p>
+            </div>
             <p>
               Branding can impact your company's success greatly, whether in the
               short or long term. The good news is that{" "}
