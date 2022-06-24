@@ -11,12 +11,12 @@ export default function PersonalInformationUsage() {
         <Paragraph>
           Jade Media Pro LLC collects and shares your personal information
           through:
-          <ul className="list-disc list-inside">
-            <Li>Targeting cookies/Marketing cookies</Li>
-            <Li>Social media cookies</Li>
-            <Li>Beacons/Pixels/Tags</Li>
-          </ul>
         </Paragraph>
+        <ul className="list-disc list-inside">
+          <Li>Targeting cookies/Marketing cookies</Li>
+          <Li>Social media cookies</Li>
+          <Li>Beacons/Pixels/Tags</Li>
+        </ul>
         <Paragraph>
           More information about our data collection and sharing practices can
           be found in this privacy notice and our{" "}
@@ -63,20 +63,19 @@ export default function PersonalInformationUsage() {
           Jade Media Pro LLC has disclosed the following categories of personal
           information to third parties for a business or commercial purpose in
           the preceding twelve (12) months:
-          <ul className="list-disc list-inside">
-            <Li>
-              Category B. Personal information, as defined in the California
-              Customer Records law, such as your name, contact information,
-              education, employment, employment history and financial
-              information.
-            </Li>
-            <Li>
-              Category K. Inferences drawn from any of the personal information
-              listed above to create a profile or summary about, for example, an
-              individual's preferences and characteristics.
-            </Li>
-          </ul>
         </Paragraph>
+        <ul className="list-disc list-inside">
+          <Li>
+            Category B. Personal information, as defined in the California
+            Customer Records law, such as your name, contact information,
+            education, employment, employment history and financial information.
+          </Li>
+          <Li>
+            Category K. Inferences drawn from any of the personal information
+            listed above to create a profile or summary about, for example, an
+            individual's preferences and characteristics.
+          </Li>
+        </ul>
         <Paragraph>
           The categories of third parties to whom we disclosed personal
           information for a business or commercial purpose can be found under
@@ -104,27 +103,27 @@ export default function PersonalInformationUsage() {
         <PPSSubHeading>Right to be informed - Request to know</PPSSubHeading>
         <Paragraph>
           Depending on the circumstances, you have a right to know:
-          <ul className="list-inside list-disc">
-            <Li>whether we collect and use your personal information;</Li>
-            <Li>the categories of personal information that we collect;</Li>
-            <Li>
-              the purposes for which the collected personal information is used;
-            </Li>
-            <Li>whether we sell your personal information to third parties;</Li>
-            <Li>
-              the categories of personal information that we sold or disclosed
-              for a business purpose;
-            </Li>
-            <Li>
-              the categories of third parties to whom the personal information
-              was sold or disclosed for a business purpose; and
-            </Li>
-            <Li>
-              the business or commercial purpose for collecting or selling
-              personal information.
-            </Li>
-          </ul>
         </Paragraph>
+        <ul className="list-inside list-disc">
+          <Li>whether we collect and use your personal information;</Li>
+          <Li>the categories of personal information that we collect;</Li>
+          <Li>
+            the purposes for which the collected personal information is used;
+          </Li>
+          <Li>whether we sell your personal information to third parties;</Li>
+          <Li>
+            the categories of personal information that we sold or disclosed for
+            a business purpose;
+          </Li>
+          <Li>
+            the categories of third parties to whom the personal information was
+            sold or disclosed for a business purpose; and
+          </Li>
+          <Li>
+            the business or commercial purpose for collecting or selling
+            personal information.
+          </Li>
+        </ul>
         <Paragraph>
           In accordance with applicable law, we are not obligated to provide or
           delete consumer information that is de-identified in response to a
@@ -167,28 +166,26 @@ export default function PersonalInformationUsage() {
         </Paragraph>
         <div className="mt-3"></div>
         <PPSSubHeading>Other privacy rights</PPSSubHeading>
-        <Paragraph>
-          <ul className="list-disc list-inside">
-            <Li>you may object to the processing of your personal data</Li>
-            <Li>
-              you may request correction of your personal data if it is
-              incorrect or no longer relevant, or ask to restrict the processing
-              of the data
-            </Li>
-            <Li>
-              you can designate an authorized agent to make a request under the
-              CCPA on your behalf. We may deny a request from an authorized
-              agent that does not submit proof that they have been validly
-              authorized to act on your behalf in accordance with the CCPA.
-            </Li>
-            <Li>
-              you may request to opt-out from future selling of your personal
-              information to third parties. Upon receiving a request to opt-out,
-              we will act upon the request as soon as feasibly possible, but no
-              later than 15 days from the date of the request submission.
-            </Li>
-          </ul>
-        </Paragraph>
+        <div className="mt-3"></div>
+        <ul className="list-disc list-inside">
+          <Li>you may object to the processing of your personal data</Li>
+          <Li>
+            you may request correction of your personal data if it is incorrect
+            or no longer relevant, or ask to restrict the processing of the data
+          </Li>
+          <Li>
+            you can designate an authorized agent to make a request under the
+            CCPA on your behalf. We may deny a request from an authorized agent
+            that does not submit proof that they have been validly authorized to
+            act on your behalf in accordance with the CCPA.
+          </Li>
+          <Li>
+            you may request to opt-out from future selling of your personal
+            information to third parties. Upon receiving a request to opt-out,
+            we will act upon the request as soon as feasibly possible, but no
+            later than 15 days from the date of the request submission.
+          </Li>
+        </ul>
         <Paragraph>
           To exercise these rights, you can contact us by email at
           solutions@jademediapro.com, by visiting

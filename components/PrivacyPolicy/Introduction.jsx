@@ -10,7 +10,7 @@ export default function Introduction() {
     permission to use our services. If you have any questions or concerns about
     this privacy notice or our practices with regard to your personal
     information, please contact us at solutions@jademediapro.com.
-    <p className="mt-4">
+    <div className="mt-4">
       This privacy notice describes how we might use your information if you:
       <ul className="list-inside list-disc">
         <li className="lg:my-2">
@@ -22,8 +22,8 @@ export default function Introduction() {
           or events
         </li>
       </ul>
-    </p>
-    <p className="mt-4">
+    </div>
+    <div className="mt-4">
       In this privacy notice, if we refer to:
       <ul className="list-inside list-disc">
         <li className="lg:my-2">
@@ -35,6 +35,6 @@ export default function Introduction() {
           services, including any sales, marketing, or events.
         </li>
       </ul>
-    </p>
+    </div>
   </PrivacyPolicySection>;
 }
