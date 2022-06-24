@@ -1,26 +1,15 @@
-import React from "react";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { PrivacyPolicyMobile } from "../components/organism/TOCComponents";
-import PrivacyPolicyIntro from "../components/PrivacyPolicyIntro";
-import Sections from "../components/Sections";
-import TableOfContent from "../components/TableOfContent";
-import {
-  privacyPolicyData,
-  privacyPolicyMobileData,
-  privacyPolicyTOC,
-} from "../data/privacyPolicy";
+import Footer from "../components/Footer";
+import PrivacyPolicy from "../components/PrivacyPolicy";
 
-import styles from "../styles/Home.module.css";
-
-const PrivacyPolicy = () => {
+export default function PPPage() {
   return (
     <div>
       <div className="w-full bg-black">
         <div>
           <Navbar textColor="white" />
         </div>
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between px-[1.83rem] lg:px-20 py-8 bg-black ">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between px-[1.83rem] lg:px-20 py-8 bg-black">
           <div className="flex flex-col text-white text-[4rem] lg:text-8xl font-semibold leading-tight">
             <span>Privacy</span>
             <span>Policy</span>
@@ -34,21 +23,27 @@ const PrivacyPolicy = () => {
           />
         </div>
       </div>
-      <div className="lg:hidden px-[1.83rem] my-[5.33rem]">
-        <PrivacyPolicyIntro />
-        <TableOfContent items={privacyPolicyTOC} />
-        <PrivacyPolicyMobile data={privacyPolicyMobileData} />
-        <p className="text-[#666666] mt-8">
-          This privacy policy was created using Termly's Privacy Policy
-          Generator.
-        </p>
-      </div>
-      <div className={`bg-white hidden lg:block ${styles.privacyContent}`}>
-        <Sections pageTitle="privacy-policy" data={privacyPolicyData} />
+      <div className="bg-white pt-[2.75rem] lg:block lg:pt-[9.8rem]">
+        <PrivacyPolicy.Introduction />
+        <PrivacyPolicy.Purpose />
+        <PrivacyPolicy.TableOfContents />
+        <PrivacyPolicy.InformationWeCollect />
+        <PrivacyPolicy.InformationUsage/>
+        <PrivacyPolicy.InformationAccess/>
+        <PrivacyPolicy.InformationShare/>
+        <PrivacyPolicy.CookiesAndTracking/>
+        <PrivacyPolicy.SocialLogins/>
+        <PrivacyPolicy.ThirdPartyWebsites/>
+        <PrivacyPolicy.InformationDuration/>
+        <PrivacyPolicy.InformationSafety/>
+        <PrivacyPolicy.PrivacyRights/>
+        <PrivacyPolicy.AccountInformation/>
+        <PrivacyPolicy.DoNotTrackFeatures/>
+        <PrivacyPolicy.CarliforniaPrivacyRights/>
+        <PrivacyPolicy.Categories/>
+        <PrivacyPolicy.PersonalInformationUsage/>
       </div>
       <Footer />
     </div>
   );
-};
-
-export default PrivacyPolicy;
+}
