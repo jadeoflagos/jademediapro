@@ -154,7 +154,7 @@ export const serviceData = [
         ),
       },
       {
-        title: "Products branding and packaging",
+        title: "Products branding & packaging",
         description: (
           <div
             className="flex lg:flex-row flex-col items-center w-full "
@@ -247,7 +247,7 @@ export const serviceData = [
         ),
       },
       {
-        title: "Infographic and Illustration Graphics",
+        title: "Infographic & Illustration Graphics",
         description: (
           <div
             className="flex lg:flex-row flex-col items-center w-full "

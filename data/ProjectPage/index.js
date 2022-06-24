@@ -11,16 +11,16 @@ export const projectData = [
   {
     title: "Case Studies",
     details: [
-      { title: "Ariwa Project", description: "" },
-      { title: "Tozome Project", description: "" },
-      { title: "CoinPlay Project", description: "" },
-      { title: "Develoful project", description: "" },
+      { title: "Ariwa Branding Project", description: "" },
+      { title: "Tozome Video Project", description: "" },
+      { title: "CoinPlay Branding Project", description: "" },
+      { title: "Develoful Branding Project", description: "" },
     ],
   },
   {
     title: "Showreel",
     details: [
-      { title: "Tozome showreel", description: "", link: "https://vimeo.com/691920896" },
+      { title: "Tozome Scenery", description: "", link: "https://vimeo.com/691920896" },
     ]
   },
   {
