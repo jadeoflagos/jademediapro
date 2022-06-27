@@ -5,7 +5,7 @@ export const privacyPolicyData = [
     {
         title: "Introduction",
         content:
-            "ThemeRex (website url address: https://themerex.net/ appreciates your business and trust. We are Cyprus based company, creating products to enhance your website building experience. Please read this Privacy Policy, providing consent to both documents in order to have permission to use our services.",
+            `Thank you for choosing to be part of our community at Jade Media Pro LLC ("Company," "we," "us," or "our"). We are committed to protecting your personal information and your right to privacy. Please read this Privacy Policy carefully, providing consent to both documents in order to have permission to use our services. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please contact us at solutions@jademediapro.com.`,
         underline: true,
     },
     {
