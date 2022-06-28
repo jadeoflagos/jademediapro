@@ -10,7 +10,7 @@ const DailyEmailForm = () => {
 
       <p className="text-3xl">Want to keep up-to-date?</p>
       <form action="" className="mt-4 flex flex-col">
-        <h3>Get a daily email of all new events</h3>
+        <h3>Get a daily email of all new Jobs and internships</h3>
         <input
           type="text"
           className="my-8 border-white border-b text-white bg-[#502A7A] outline-none"

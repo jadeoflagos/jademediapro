@@ -117,7 +117,7 @@ const Jobs = () => {
           </aside>
         </section>
       </div>
-      <section className="px-20 pb-16">
+      <section className="px-20 pb-[8.46rem]">
         <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </section>
       <div className="lg:hidden block my-10 mx-5">

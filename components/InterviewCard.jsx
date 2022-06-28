@@ -11,8 +11,8 @@ const InterviewCard = () => {
       }}
     >
       <div className="h-4/5"></div>
-      <span className="interview-detail   h-1/5 flex items-center justify-center lg:text-[1.25rem]">
-        with Tolani of JadeMediaPro
+      <span className="interview-detail   h-1/5 flex items-center justify-center lg:text-[1.25rem text-center">
+        60 minutes with Tolani of JadeMediaPro
       </span>
     </div>
   );

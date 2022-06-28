@@ -52,7 +52,7 @@ export const serviceData = [
           >
             <div className="w-full lg:w-7/12 ">
               {Painting.map((item, itemIndex) => (
-                <p className="mb-12" key={itemIndex}>
+                <p className="mb-12 capitalize" key={itemIndex}>
                   {item}
                 </p>
               ))}
@@ -133,7 +133,7 @@ export const serviceData = [
         ),
       },
       {
-        title: "Logo and Brand identity",
+        title: "Logo & Brand identity",
         description: (
           <div
             className="flex lg:flex-row flex-col items-center w-full "

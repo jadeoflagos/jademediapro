@@ -18,7 +18,7 @@ const BlogPost3 = () => {
           Branding For Profitability
         </p>
       </div>
-      <section className="lg:mt-12 px-5 lg:px-20 lg:py-20 flex lg:flex-row flex-col">
+      <section className="lg:mt-12 px-5 lg:px-20 lg:py-20 flex lg:flex-row flex-col lg:gap-x-[10rem]">
         <div className="lg:w-4/5">
           <SocialButtons />
           <div className="lg:hidden">
