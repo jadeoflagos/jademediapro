@@ -23,21 +23,26 @@ export async function getServerSideProps(ctx) {
     };
   }
 }
-
+/**
+ *
+ * @param {import("../../data/CaseStudies").CaseStudy} props
+ */
 const CaseStudy = (props) => {
   return (
     <div>
       <div>
         <Navbar dropDownBg="white" bg="#fff" textColor="#000" darkLogo />
       </div>
-      <Image
-        // layout="fill"
-        src={props.header}
-        objectFit="contain"
-        width={1920}
-        height={1027}
-        alt={`${props.name}-img`}
-      />
+      {props.header && (
+        <Image
+          // layout="fill"
+          src={props.header}
+          objectFit="contain"
+          width={1920}
+          height={1027}
+          alt={`${props.name}-img`}
+        />
+      )}
       <main className="lg:px-36 px-10">
         <div className="header text-center mt-[11rem] mb-[7rem]">
           <h2 className="text-[4.5rem] font-semibold leading-none">
@@ -124,6 +129,21 @@ const CaseStudy = (props) => {
               )}
               {props.content && (
                 <CaseStudyCard title="Content" contents={props.content} />
+              )}
+              {props.design && (
+                <CaseStudyCard title="Design" contents={props.design} />
+              )}
+              {props.development && (
+                <CaseStudyCard
+                  title="Development"
+                  contents={props.development}
+                />
+              )}
+              {props.collateralContents && (
+                <CaseStudyCard
+                  title="Collateral Contents"
+                  contents={props.collateralContents}
+                />
               )}
             </div>
           </aside>
