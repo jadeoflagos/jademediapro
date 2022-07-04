@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Store = () => {
   const [currentPage, setCurrentPage] = useState(1);
-
+  
   const tabs = [
     "All",
     "UI Design",

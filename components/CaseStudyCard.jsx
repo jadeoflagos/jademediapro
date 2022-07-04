@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const CaseStudyCard = ({ title = "", contents = [], images = [] }) => {
   return (
-    <div className="flex-flex-col mt-16 mb-[7.5rem]">
+    <div className="flex-flex-col mt-16 mb-[4.2rem]">
       <h3 className="text-4xl">{title}</h3>
       <div className="flex flex-col gap-y-2 mt-14 mb-[3.3rem] ">
         {contents.map((content, contentIndex) => (
