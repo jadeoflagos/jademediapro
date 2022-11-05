@@ -34,7 +34,7 @@ const About = () => {
     <>
       <div>
         <SectionHeader
-          imageWidth="415.79"
+          imageWidth="415.8"
           imageHeight="415.79"
           bgColor="#000000"
           navBarColor="white"
