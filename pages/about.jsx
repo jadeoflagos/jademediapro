@@ -19,7 +19,6 @@ import Button from "../components/Button";
 import ReviewSlider from "../components/ReviewSlider";
 import { useRouter } from "next/router";
 import LearnMoreArrow from "../components/LearnMoreArrow";
-import CompanySlider from "../components/CompanySlider";
 import Link from "next/link";
 import SocialShare from "../components/SocialShare";
 import { useClickAway } from "react-use";
